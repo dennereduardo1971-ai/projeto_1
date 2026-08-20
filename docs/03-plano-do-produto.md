@@ -13,16 +13,18 @@ Base de pesquisa: [`01-pesquisa-mercado.md`](./01-pesquisa-mercado.md). Pergunta
 |---|---|
 | **Natureza do app** | Organizador de estudos + revisão espaçada, **com** banco de questões próprio (integrado, não separado) |
 | **Público** | Quem trabalha e estuda ~2h/dia, em blocos picados |
-| **Concurso alvo** | Carreira **Fiscal / Receita / Sefaz** — usado como caso de teste real |
+| **Concurso alvo** | **Auditor-Fiscal da Receita Federal (AFRFB)** — edital autorizado em 07/2026, banca ainda não contratada |
 | **Banca** | **Cebraspe** apenas, no início |
 | **Matérias iniciais** | **Auditoria** e **Direito Civil** |
-| **Origem das questões** | Coleta de **provas oficiais em PDF** (com atribuição de banca/ano/órgão/cargo) |
+| **Origem das questões** | Coleta de **provas oficiais Cebraspe em PDF** — acervo fiscal estadual + controle (ver [`04`](./04-fontes-de-questoes.md)) |
 | **Planejamento** | **Ciclo de estudos** (fila que não pune atraso). Cronograma fica para depois |
 | **Revisão** | **FSRS** (algoritmo moderno), com a matemática escondida do usuário |
 | **Plataforma** | **Web app / PWA** primeiro — celular e computador, sem loja |
 | **Offline** | **Fora do escopo.** Usuário sempre tem internet — esforço realocado para conteúdo |
 | **Tom** | Sóbrio e adulto, com streak, meta semanal e lembrete de revisão. Sem mascote |
 | **Objetivo** | Começa pessoal; monetização só se pegar tração |
+| **Código** | Escrito no repositório (sem construtor visual), publicado via Netlify |
+| **Esquemas** | Gerados com IA a partir das questões, revisados antes de publicar |
 
 ### Escopo do MVP (tudo que foi marcado)
 1. Mapa do edital + ciclo de estudos
@@ -55,7 +57,7 @@ E o **Mapa do Edital** é a tela inicial: cada linha pintada por domínio real (
 
 ## 3. Regras específicas do Cebraspe (não são detalhe, são o produto)
 
-1. **Certo/Errado com placar líquido.** Erro anula acerto. O placar do app é `acertos − erros`, nunca % bruto — senão o número mente.
+1. **A regra de pontuação é da prova, não do app.** Corrigido após a pesquisa de fontes: o Cebraspe usa Certo/Errado no TCU, mas **múltipla escolha nas provas fiscais recentes** (SEFAZ-RJ 2025) — e a própria RFB, pela FGV, foi múltipla escolha A–E. Cada prova guarda `formato` e `penalidade_por_erro`; o placar líquido (`acertos − erros`) só aparece onde o erro realmente pune. Detalhes em [`04-fontes-de-questoes.md`](./04-fontes-de-questoes.md).
 2. **Estratégia de chute é conteúdo.** O app mostra seu saldo líquido por assunto e sugere onde deixar em branco compensa.
 3. **Pegadinha semântica.** Cebraspe troca "poderá" por "deverá", "até" por "no mínimo". O caderno de erros marca o *tipo* de erro: conteúdo desconhecido × leitura apressada × pegadinha semântica × mudança de lei.
 4. **Confiança declarada.** Ao responder, um toque: *chutei / fiquei na dúvida / tinha certeza*. Acertar chutando não é domínio — sem isso, a estatística engana. Nenhum concorrente mede isso.
