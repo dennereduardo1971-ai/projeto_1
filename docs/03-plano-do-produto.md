@@ -1,6 +1,8 @@
 # Plano do produto — app de estudos para concurso fiscal (Cebraspe)
 
 Documento vivo. Consolida as decisões tomadas e o que será construído.
+
+**Versão visual (leitura fácil):** https://claude.ai/code/artifact/89c8b7e9-d8ab-4ff2-958d-8ff126e0c7d6
 Base de pesquisa: [`01-pesquisa-mercado.md`](./01-pesquisa-mercado.md). Perguntas em aberto: [`02-decisoes-em-aberto.md`](./02-decisoes-em-aberto.md).
 
 ---
