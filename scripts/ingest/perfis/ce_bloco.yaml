@@ -1,0 +1,10 @@
+# Certo/Errado em blocos de itens, com texto de apoio compartilhado.
+# É o formato do TCU e das provas de controle do Cebraspe.
+extends: _base
+nome: ce_bloco
+formato: ce
+penalidade_por_erro: true     # erro anula acerto — placar líquido faz sentido aqui
+alternativas_esperadas: 0
+
+marcadores:
+  instrucao: '(?i)\bjulgue\b'

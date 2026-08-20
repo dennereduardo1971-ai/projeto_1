@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Rito</title>
+    <meta name="description" content="O edital como unidade de estudo: esquema, questões, desempenho e revisão na mesma linha." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icone-192.png" />
+    <meta name="theme-color" content="#F6F7F8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0E1216" media="(prefers-color-scheme: dark)" />
+    <script>
+      // Antes do primeiro render: evita o flash branco de quem abre o app à noite.
+      var t = localStorage.getItem('rito.tema');
+      if (t === 'claro') document.documentElement.dataset.theme = 'light';
+      if (t === 'escuro') document.documentElement.dataset.theme = 'dark';
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

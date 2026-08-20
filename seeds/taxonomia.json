@@ -1,0 +1,361 @@
+{
+  "versao": 1,
+  "gerado_em": "2026-08-20",
+  "nota": "Taxonomia provisória de Auditoria e Direito Civil, desenhada antes da primeira ingestão de provas. Serve para o app ter uma árvore de assuntos de pé enquanto o acervo não existe. Será REMAPEADA quando as provas Cebraspe forem ingeridas — é a prova que revela o que a banca chama de assunto, não o índice do livro. Os `slug` são a chave estável: renomear `nome` é barato, trocar `slug` quebra o vínculo com questões, esquemas e progresso já gravados.",
+  "disciplinas": [
+    {
+      "slug": "auditoria",
+      "nome": "Auditoria",
+      "ordem": 1,
+      "assuntos": [
+        {
+          "slug": "auditoria-conceitos-e-estrutura-normativa",
+          "nome": "Conceitos, objetivos e estrutura normativa",
+          "ordem": 1,
+          "topicos": [
+            { "slug": "auditoria-nbc-ta-200", "nome": "NBC TA 200 — objetivos gerais do auditor independente", "ordem": 1 },
+            { "slug": "auditoria-estrutura-nbc-ta-pa-pg", "nome": "Estrutura das normas do CFC: NBC TA, NBC PA e NBC PG", "ordem": 2 },
+            { "slug": "auditoria-estrutura-conceitual-asseguracao", "nome": "Estrutura conceitual para trabalhos de asseguração", "ordem": 3 },
+            { "slug": "auditoria-asseguracao-razoavel-x-limitada", "nome": "Asseguração razoável x asseguração limitada", "ordem": 4 },
+            { "slug": "auditoria-premissa-e-responsabilidades", "nome": "Premissa do trabalho: responsabilidade da administração x do auditor", "ordem": 5 },
+            { "slug": "auditoria-ceticismo-e-julgamento-profissional", "nome": "Ceticismo profissional e julgamento profissional", "ordem": 6 }
+          ]
+        },
+        {
+          "slug": "auditoria-interna-x-independente",
+          "nome": "Auditoria interna x auditoria independente",
+          "ordem": 2,
+          "topicos": [
+            { "slug": "auditoria-nbc-ti-01-auditoria-interna", "nome": "NBC TI 01 — normas de auditoria interna", "ordem": 1 },
+            { "slug": "auditoria-vinculo-e-escopo-da-interna", "nome": "Vínculo, subordinação e escopo: por que a interna não é independente", "ordem": 2 },
+            { "slug": "auditoria-nbc-ta-610-uso-do-trabalho-da-interna", "nome": "NBC TA 610 — utilização do trabalho de auditores internos", "ordem": 3 },
+            { "slug": "auditoria-modelo-das-tres-linhas", "nome": "Modelo das Três Linhas (IIA, 2020) e governança", "ordem": 4 }
+          ]
+        },
+        {
+          "slug": "auditoria-etica-independencia-e-qualidade",
+          "nome": "Ética, independência e controle de qualidade",
+          "ordem": 3,
+          "topicos": [
+            { "slug": "auditoria-nbc-pg-100-principios-fundamentais", "nome": "NBC PG 100 — princípios fundamentais e estrutura conceitual da ética", "ordem": 1 },
+            { "slug": "auditoria-nbc-pa-290-independencia", "nome": "NBC PA 290 — independência em auditoria e revisão", "ordem": 2 },
+            { "slug": "auditoria-ameacas-e-salvaguardas", "nome": "Ameaças à independência (autointeresse, autorrevisão, defesa, familiaridade, intimidação) e salvaguardas", "ordem": 3 },
+            { "slug": "auditoria-nbc-pa-01-gestao-da-qualidade", "nome": "NBC PA 01 (R1) — gestão da qualidade da firma de auditoria", "ordem": 4 },
+            { "slug": "auditoria-nbc-ta-220-qualidade-do-trabalho", "nome": "NBC TA 220 (R1) — gestão da qualidade no trabalho específico", "ordem": 5 },
+            { "slug": "auditoria-rodizio-de-auditor", "nome": "Rodízio de auditor independente e as regras da CVM", "ordem": 6 }
+          ]
+        },
+        {
+          "slug": "auditoria-planejamento",
+          "nome": "Planejamento da auditoria",
+          "ordem": 4,
+          "topicos": [
+            { "slug": "auditoria-nbc-ta-300-planejamento", "nome": "NBC TA 300 — planejamento da auditoria de demonstrações contábeis", "ordem": 1 },
+            { "slug": "auditoria-estrategia-global-x-plano", "nome": "Estratégia global de auditoria x plano de auditoria", "ordem": 2 },
+            { "slug": "auditoria-nbc-ta-210-termos-do-trabalho", "nome": "NBC TA 210 — concordância com os termos do trabalho (carta de contratação)", "ordem": 3 },
+            { "slug": "auditoria-nbc-ta-315-entendimento-da-entidade", "nome": "NBC TA 315 — entendimento da entidade e do seu ambiente", "ordem": 4 },
+            { "slug": "auditoria-nbc-ta-402-organizacao-prestadora-de-servicos", "nome": "NBC TA 402 — entidade que utiliza organização prestadora de serviços", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "auditoria-risco-e-materialidade",
+          "nome": "Risco de auditoria e materialidade",
+          "ordem": 5,
+          "topicos": [
+            { "slug": "auditoria-modelo-do-risco", "nome": "Modelo do risco: risco inerente, risco de controle e risco de detecção", "ordem": 1 },
+            { "slug": "auditoria-risco-de-distorcao-relevante", "nome": "Risco de distorção relevante e sua relação inversa com o risco de detecção", "ordem": 2 },
+            { "slug": "auditoria-nbc-ta-320-materialidade", "nome": "NBC TA 320 — materialidade no planejamento e na execução", "ordem": 3 },
+            { "slug": "auditoria-materialidade-para-execucao", "nome": "Materialidade para execução e materialidade específica", "ordem": 4 },
+            { "slug": "auditoria-nbc-ta-330-respostas-aos-riscos", "nome": "NBC TA 330 — respostas do auditor aos riscos avaliados", "ordem": 5 },
+            { "slug": "auditoria-nbc-ta-450-avaliacao-das-distorcoes", "nome": "NBC TA 450 — avaliação das distorções identificadas", "ordem": 6 }
+          ]
+        },
+        {
+          "slug": "auditoria-controles-internos",
+          "nome": "Controles internos",
+          "ordem": 6,
+          "topicos": [
+            { "slug": "auditoria-coso-icif-componentes", "nome": "COSO ICIF (2013): os cinco componentes e os dezessete princípios", "ordem": 1 },
+            { "slug": "auditoria-coso-erm", "nome": "COSO ERM — gerenciamento de riscos corporativos", "ordem": 2 },
+            { "slug": "auditoria-limitacoes-inerentes-do-controle", "nome": "Limitações inerentes do controle interno (conluio e burla pela administração)", "ordem": 3 },
+            { "slug": "auditoria-testes-de-controle", "nome": "Testes de controle: desenho, implementação e eficácia operacional", "ordem": 4 },
+            { "slug": "auditoria-segregacao-de-funcoes-e-controles-de-ti", "nome": "Segregação de funções e controles gerais de TI", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "auditoria-evidencia",
+          "nome": "Evidência de auditoria",
+          "ordem": 7,
+          "topicos": [
+            { "slug": "auditoria-nbc-ta-500-evidencia", "nome": "NBC TA 500 — evidência de auditoria: suficiência e adequação", "ordem": 1 },
+            { "slug": "auditoria-afirmacoes-das-demonstracoes", "nome": "Afirmações sobre transações, saldos e divulgações (existência, integralidade, direitos e obrigações, valorização, apresentação)", "ordem": 2 },
+            { "slug": "auditoria-nbc-ta-501-itens-especificos", "nome": "NBC TA 501 — estoques, litígios e informações por segmento", "ordem": 3 },
+            { "slug": "auditoria-nbc-ta-505-confirmacoes-externas", "nome": "NBC TA 505 — confirmações externas (circularização positiva e negativa)", "ordem": 4 },
+            { "slug": "auditoria-nbc-ta-580-representacoes-formais", "nome": "NBC TA 580 — representações formais (carta de responsabilidade da administração)", "ordem": 5 },
+            { "slug": "auditoria-nbc-ta-620-uso-de-especialista", "nome": "NBC TA 620 — utilização do trabalho de especialista do auditor", "ordem": 6 }
+          ]
+        },
+        {
+          "slug": "auditoria-procedimentos-e-testes",
+          "nome": "Procedimentos e testes de auditoria",
+          "ordem": 8,
+          "topicos": [
+            { "slug": "auditoria-procedimentos-substantivos", "nome": "Procedimentos substantivos: testes de detalhes e procedimentos analíticos substantivos", "ordem": 1 },
+            { "slug": "auditoria-nbc-ta-520-procedimentos-analiticos", "nome": "NBC TA 520 — procedimentos analíticos", "ordem": 2 },
+            { "slug": "auditoria-nbc-ta-510-saldos-iniciais", "nome": "NBC TA 510 — trabalhos iniciais e saldos iniciais", "ordem": 3 },
+            { "slug": "auditoria-nbc-ta-540-estimativas-contabeis", "nome": "NBC TA 540 — auditoria de estimativas contábeis e do valor justo", "ordem": 4 },
+            { "slug": "auditoria-nbc-ta-550-partes-relacionadas", "nome": "NBC TA 550 — partes relacionadas", "ordem": 5 },
+            { "slug": "auditoria-tecnicas-inspecao-observacao-indagacao", "nome": "Técnicas: inspeção, observação, confirmação, recálculo, reexecução e indagação", "ordem": 6 }
+          ]
+        },
+        {
+          "slug": "auditoria-amostragem",
+          "nome": "Amostragem em auditoria",
+          "ordem": 9,
+          "topicos": [
+            { "slug": "auditoria-nbc-ta-530-amostragem", "nome": "NBC TA 530 — amostragem em auditoria", "ordem": 1 },
+            { "slug": "auditoria-amostragem-estatistica-x-nao-estatistica", "nome": "Amostragem estatística x não estatística", "ordem": 2 },
+            { "slug": "auditoria-risco-de-amostragem-e-nao-amostragem", "nome": "Risco de amostragem e risco alheio à amostragem", "ordem": 3 },
+            { "slug": "auditoria-metodos-de-selecao-da-amostra", "nome": "Métodos de seleção: aleatória, sistemática, por unidade monetária, por bloco e informal", "ordem": 4 },
+            { "slug": "auditoria-estratificacao-e-projecao-das-distorcoes", "nome": "Estratificação, distorção tolerável e projeção das distorções para a população", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "auditoria-fraude-e-erro",
+          "nome": "Fraude e erro",
+          "ordem": 10,
+          "topicos": [
+            { "slug": "auditoria-nbc-ta-240-fraude", "nome": "NBC TA 240 — responsabilidade do auditor em relação à fraude", "ordem": 1 },
+            { "slug": "auditoria-fraude-x-erro", "nome": "Fraude x erro: a diferença está na intencionalidade", "ordem": 2 },
+            { "slug": "auditoria-triangulo-da-fraude", "nome": "Triângulo da fraude: pressão/incentivo, oportunidade e racionalização", "ordem": 3 },
+            { "slug": "auditoria-presuncao-de-risco-em-receitas", "nome": "Presunção de risco de fraude no reconhecimento de receitas e o teste de lançamentos contábeis", "ordem": 4 },
+            { "slug": "auditoria-nbc-ta-250-leis-e-regulamentos", "nome": "NBC TA 250 — consideração de leis e regulamentos", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "auditoria-papeis-de-trabalho",
+          "nome": "Papéis de trabalho e documentação",
+          "ordem": 11,
+          "topicos": [
+            { "slug": "auditoria-nbc-ta-230-documentacao", "nome": "NBC TA 230 — documentação de auditoria", "ordem": 1 },
+            { "slug": "auditoria-criterio-do-auditor-experiente", "nome": "Critério do auditor experiente sem envolvimento anterior no trabalho", "ordem": 2 },
+            { "slug": "auditoria-montagem-e-guarda-do-arquivo", "nome": "Montagem do arquivo final (até 60 dias) e guarda dos papéis (não inferior a 5 anos)", "ordem": 3 },
+            { "slug": "auditoria-propriedade-e-sigilo-dos-papeis", "nome": "Propriedade e sigilo dos papéis de trabalho", "ordem": 4 }
+          ]
+        },
+        {
+          "slug": "auditoria-continuidade-e-eventos-subsequentes",
+          "nome": "Continuidade operacional e eventos subsequentes",
+          "ordem": 12,
+          "topicos": [
+            { "slug": "auditoria-nbc-ta-570-continuidade", "nome": "NBC TA 570 — continuidade operacional", "ordem": 1 },
+            { "slug": "auditoria-nbc-ta-560-eventos-subsequentes", "nome": "NBC TA 560 — eventos subsequentes", "ordem": 2 },
+            { "slug": "auditoria-incerteza-relevante-no-relatorio", "nome": "Incerteza relevante sobre continuidade e seu efeito no relatório", "ordem": 3 }
+          ]
+        },
+        {
+          "slug": "auditoria-relatorio-do-auditor",
+          "nome": "Relatório do auditor independente",
+          "ordem": 13,
+          "topicos": [
+            { "slug": "auditoria-nbc-ta-700-formacao-da-opiniao", "nome": "NBC TA 700 — formação da opinião e relatório sobre as demonstrações contábeis", "ordem": 1 },
+            { "slug": "auditoria-nbc-ta-701-principais-assuntos", "nome": "NBC TA 701 — comunicação dos principais assuntos de auditoria (PAA)", "ordem": 2 },
+            { "slug": "auditoria-nbc-ta-705-modificacoes-na-opiniao", "nome": "NBC TA 705 — opinião com ressalva, opinião adversa e abstenção de opinião", "ordem": 3 },
+            { "slug": "auditoria-nbc-ta-706-enfase-e-outros-assuntos", "nome": "NBC TA 706 — parágrafos de ênfase e de outros assuntos", "ordem": 4 },
+            { "slug": "auditoria-nbc-ta-710-informacoes-comparativas", "nome": "NBC TA 710 — informações comparativas", "ordem": 5 },
+            { "slug": "auditoria-nbc-ta-720-outras-informacoes", "nome": "NBC TA 720 — outras informações que acompanham as demonstrações contábeis", "ordem": 6 }
+          ]
+        },
+        {
+          "slug": "auditoria-governamental-e-operacional",
+          "nome": "Auditoria governamental e auditoria operacional",
+          "ordem": 14,
+          "topicos": [
+            { "slug": "auditoria-controle-interno-e-externo-cf88", "nome": "Controle interno e controle externo na CF/88 (arts. 70 a 75)", "ordem": 1 },
+            { "slug": "auditoria-tipos-financeira-conformidade-operacional", "nome": "Tipos de auditoria no setor público: financeira, de conformidade e operacional", "ordem": 2 },
+            { "slug": "auditoria-operacional-tres-es", "nome": "Auditoria operacional: economicidade, eficiência, eficácia e efetividade", "ordem": 3 },
+            { "slug": "auditoria-issai-intosai", "nome": "Normas ISSAI e GUID da INTOSAI aplicadas ao controle externo brasileiro", "ordem": 4 },
+            { "slug": "auditoria-tcu-e-cgu", "nome": "Competências do TCU e atuação da CGU no controle interno federal", "ordem": 5 }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "direito-civil",
+      "nome": "Direito Civil",
+      "ordem": 2,
+      "assuntos": [
+        {
+          "slug": "civil-lindb",
+          "nome": "LINDB — Lei de Introdução às Normas do Direito Brasileiro",
+          "ordem": 1,
+          "topicos": [
+            { "slug": "civil-lindb-vigencia-e-repristinacao", "nome": "Vigência, vacatio legis, revogação e repristinação (arts. 1º e 2º)", "ordem": 1 },
+            { "slug": "civil-lindb-integracao-e-lacunas", "nome": "Analogia, costumes e princípios gerais de direito (art. 4º)", "ordem": 2 },
+            { "slug": "civil-lindb-irretroatividade", "nome": "Ato jurídico perfeito, direito adquirido e coisa julgada (art. 6º)", "ordem": 3 },
+            { "slug": "civil-lindb-direito-internacional-privado", "nome": "Regras de conexão: lei do domicílio, do local da obrigação e da situação do bem (arts. 7º a 12)", "ordem": 4 },
+            { "slug": "civil-lindb-arts-20-a-30", "nome": "Segurança jurídica e eficiência na esfera pública: arts. 20 a 30 (Lei 13.655/2018)", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "civil-pessoas-naturais",
+          "nome": "Pessoas naturais",
+          "ordem": 2,
+          "topicos": [
+            { "slug": "civil-personalidade-e-nascituro", "nome": "Início da personalidade civil e direitos do nascituro (art. 2º)", "ordem": 1 },
+            { "slug": "civil-capacidade-e-incapacidade", "nome": "Capacidade, incapacidade absoluta e relativa após o Estatuto da Pessoa com Deficiência (arts. 3º e 4º)", "ordem": 2 },
+            { "slug": "civil-emancipacao", "nome": "Emancipação voluntária, judicial e legal (art. 5º, parágrafo único)", "ordem": 3 },
+            { "slug": "civil-direitos-da-personalidade", "nome": "Direitos da personalidade: intransmissibilidade, irrenunciabilidade e limites (arts. 11 a 21)", "ordem": 4 },
+            { "slug": "civil-ausencia-e-morte-presumida", "nome": "Ausência, sucessão provisória e definitiva; morte presumida (arts. 6º e 22 a 39)", "ordem": 5 },
+            { "slug": "civil-domicilio", "nome": "Domicílio da pessoa natural: pluralidade, necessário e de eleição (arts. 70 a 78)", "ordem": 6 }
+          ]
+        },
+        {
+          "slug": "civil-pessoas-juridicas",
+          "nome": "Pessoas jurídicas",
+          "ordem": 3,
+          "topicos": [
+            { "slug": "civil-inicio-da-existencia-legal", "nome": "Início da existência legal e o registro dos atos constitutivos (art. 45)", "ordem": 1 },
+            { "slug": "civil-especies-de-pessoa-juridica", "nome": "Pessoas jurídicas de direito privado: associações, sociedades, fundações, organizações religiosas e partidos (art. 44)", "ordem": 2 },
+            { "slug": "civil-desconsideracao-da-personalidade", "nome": "Desconsideração da personalidade jurídica: desvio de finalidade e confusão patrimonial (art. 50, red. Lei 13.874/2019)", "ordem": 3 },
+            { "slug": "civil-associacoes", "nome": "Associações: exclusão de associado e destino do patrimônio (arts. 53 a 61)", "ordem": 4 },
+            { "slug": "civil-fundacoes", "nome": "Fundações: fins admitidos e velamento pelo Ministério Público (arts. 62 a 69)", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "civil-bens",
+          "nome": "Bens",
+          "ordem": 4,
+          "topicos": [
+            { "slug": "civil-bens-imoveis-e-moveis", "nome": "Bens imóveis e móveis; bens por determinação legal (arts. 79 a 84)", "ordem": 1 },
+            { "slug": "civil-fungiveis-consumiveis-divisiveis-coletivos", "nome": "Fungíveis, consumíveis, divisíveis, singulares e coletivos (arts. 85 a 91)", "ordem": 2 },
+            { "slug": "civil-principal-acessorio-pertencas-benfeitorias", "nome": "Bem principal e acessório; pertenças, frutos e benfeitorias (arts. 92 a 97)", "ordem": 3 },
+            { "slug": "civil-bens-publicos", "nome": "Bens públicos: uso comum, uso especial e dominicais; inalienabilidade e imprescritibilidade (arts. 98 a 103)", "ordem": 4 }
+          ]
+        },
+        {
+          "slug": "civil-fato-e-negocio-juridico",
+          "nome": "Fato e negócio jurídico",
+          "ordem": 5,
+          "topicos": [
+            { "slug": "civil-planos-do-negocio-juridico", "nome": "Escada ponteana: planos da existência, da validade e da eficácia", "ordem": 1 },
+            { "slug": "civil-requisitos-de-validade", "nome": "Requisitos de validade: agente capaz, objeto lícito e possível, forma prescrita (art. 104)", "ordem": 2 },
+            { "slug": "civil-representacao", "nome": "Representação legal e convencional; contrato consigo mesmo (arts. 115 a 120)", "ordem": 3 },
+            { "slug": "civil-condicao-termo-encargo", "nome": "Elementos acidentais: condição, termo e encargo (arts. 121 a 137)", "ordem": 4 },
+            { "slug": "civil-forma-e-prova", "nome": "Forma prescrita, escritura pública (art. 108) e prova do negócio jurídico (arts. 212 a 232)", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "civil-defeitos-e-invalidade",
+          "nome": "Defeitos e invalidade do negócio jurídico",
+          "ordem": 6,
+          "topicos": [
+            { "slug": "civil-vicios-do-consentimento", "nome": "Erro, dolo, coação, estado de perigo e lesão (arts. 138 a 157)", "ordem": 1 },
+            { "slug": "civil-fraude-contra-credores", "nome": "Fraude contra credores e ação pauliana (arts. 158 a 165)", "ordem": 2 },
+            { "slug": "civil-simulacao", "nome": "Simulação: nulidade do negócio simulado e subsistência do dissimulado (art. 167)", "ordem": 3 },
+            { "slug": "civil-nulidade-x-anulabilidade", "nome": "Nulidade x anulabilidade: legitimidade, prazos e possibilidade de confirmação (arts. 166 a 184)", "ordem": 4 }
+          ]
+        },
+        {
+          "slug": "civil-prescricao-e-decadencia",
+          "nome": "Prescrição e decadência",
+          "ordem": 7,
+          "topicos": [
+            { "slug": "civil-prescricao-pretensao-e-prazo-geral", "nome": "Pretensão, actio nata e prazo geral de 10 anos (arts. 189 e 205)", "ordem": 1 },
+            { "slug": "civil-prazos-especiais-art-206", "nome": "Prazos especiais do art. 206, com destaque para a reparação civil (3 anos)", "ordem": 2 },
+            { "slug": "civil-impedimento-suspensao-interrupcao", "nome": "Causas impeditivas, suspensivas e interruptivas (arts. 197 a 204)", "ordem": 3 },
+            { "slug": "civil-decadencia", "nome": "Decadência legal e convencional; o que não se aplica à decadência (arts. 207 a 211)", "ordem": 4 },
+            { "slug": "civil-renuncia-e-conhecimento-de-oficio", "nome": "Renúncia da prescrição (art. 191) e reconhecimento de ofício", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "civil-obrigacoes",
+          "nome": "Direito das obrigações",
+          "ordem": 8,
+          "topicos": [
+            { "slug": "civil-modalidades-de-obrigacoes", "nome": "Obrigações de dar, fazer e não fazer; alternativas e divisíveis (arts. 233 a 263)", "ordem": 1 },
+            { "slug": "civil-solidariedade", "nome": "Obrigações solidárias ativas e passivas; a solidariedade não se presume (arts. 264 a 285)", "ordem": 2 },
+            { "slug": "civil-transmissao-das-obrigacoes", "nome": "Cessão de crédito e assunção de dívida (arts. 286 a 303)", "ordem": 3 },
+            { "slug": "civil-pagamento", "nome": "Pagamento: quem deve pagar, a quem, objeto, lugar e tempo (arts. 304 a 333)", "ordem": 4 },
+            { "slug": "civil-formas-especiais-de-extincao", "nome": "Consignação, sub-rogação, imputação, dação, novação, compensação, confusão e remissão (arts. 334 a 388)", "ordem": 5 },
+            { "slug": "civil-inadimplemento-mora-e-clausula-penal", "nome": "Inadimplemento, mora, perdas e danos, juros e cláusula penal (arts. 389 a 420)", "ordem": 6 }
+          ]
+        },
+        {
+          "slug": "civil-contratos-em-geral",
+          "nome": "Contratos em geral",
+          "ordem": 9,
+          "topicos": [
+            { "slug": "civil-principios-contratuais", "nome": "Autonomia privada, função social e boa-fé objetiva (arts. 421, 421-A e 422)", "ordem": 1 },
+            { "slug": "civil-formacao-do-contrato", "nome": "Proposta, aceitação e momento da formação; contratos entre ausentes (arts. 427 a 435)", "ordem": 2 },
+            { "slug": "civil-estipulacao-a-terceiro-e-contrato-preliminar", "nome": "Estipulação em favor de terceiro (arts. 436 a 438) e contrato preliminar (arts. 462 a 466)", "ordem": 3 },
+            { "slug": "civil-vicios-redibitorios-e-evicao", "nome": "Vícios redibitórios (arts. 441 a 446) e evicção (arts. 447 a 457)", "ordem": 4 },
+            { "slug": "civil-extincao-do-contrato", "nome": "Exceção do contrato não cumprido, resolução e onerosidade excessiva (arts. 474 a 480)", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "civil-contratos-em-especie",
+          "nome": "Contratos em espécie",
+          "ordem": 10,
+          "topicos": [
+            { "slug": "civil-compra-e-venda", "nome": "Compra e venda e cláusulas especiais: retrovenda, preempção e reserva de domínio (arts. 481 a 532)", "ordem": 1 },
+            { "slug": "civil-doacao", "nome": "Doação: espécies, limites e revogação por ingratidão (arts. 538 a 564)", "ordem": 2 },
+            { "slug": "civil-locacao-comodato-e-mutuo", "nome": "Locação de coisas (arts. 565 a 578), comodato (arts. 579 a 585) e mútuo (arts. 586 a 592)", "ordem": 3 },
+            { "slug": "civil-prestacao-de-servico-e-empreitada", "nome": "Prestação de serviço (arts. 593 a 609) e empreitada (arts. 610 a 626)", "ordem": 4 },
+            { "slug": "civil-mandato-fianca-e-seguro", "nome": "Mandato (arts. 653 a 692), seguro (arts. 757 a 802) e fiança (arts. 818 a 839)", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "civil-responsabilidade-civil",
+          "nome": "Responsabilidade civil",
+          "ordem": 11,
+          "topicos": [
+            { "slug": "civil-ato-ilicito-e-abuso-de-direito", "nome": "Ato ilícito (art. 186) e abuso de direito (art. 187)", "ordem": 1 },
+            { "slug": "civil-responsabilidade-subjetiva-e-objetiva", "nome": "Responsabilidade subjetiva, objetiva e a teoria do risco da atividade (art. 927, parágrafo único)", "ordem": 2 },
+            { "slug": "civil-responsabilidade-por-fato-de-terceiro-e-da-coisa", "nome": "Responsabilidade por fato de terceiro, do animal e do edifício (arts. 932 a 938)", "ordem": 3 },
+            { "slug": "civil-excludentes-de-responsabilidade", "nome": "Excludentes: legítima defesa, estado de necessidade, caso fortuito e força maior (arts. 188 e 393)", "ordem": 4 },
+            { "slug": "civil-indenizacao-e-dano-moral", "nome": "Fixação da indenização, culpa concorrente e dano moral (arts. 944 a 954)", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "civil-direitos-reais-posse-e-propriedade",
+          "nome": "Direitos reais: posse e propriedade",
+          "ordem": 12,
+          "topicos": [
+            { "slug": "civil-posse-conceito-e-classificacao", "nome": "Posse e detenção; posse direta e indireta, justa e injusta, de boa e má-fé (arts. 1.196 a 1.203)", "ordem": 1 },
+            { "slug": "civil-efeitos-da-posse", "nome": "Efeitos da posse: interditos possessórios, frutos, benfeitorias e usucapião (arts. 1.210 a 1.222)", "ordem": 2 },
+            { "slug": "civil-propriedade-funcao-social-e-perda", "nome": "Propriedade: faculdades, função social e formas de perda (arts. 1.228 e 1.275)", "ordem": 3 },
+            { "slug": "civil-aquisicao-da-propriedade-imovel", "nome": "Aquisição da propriedade imóvel: usucapião, registro e acessão (arts. 1.238 a 1.259)", "ordem": 4 },
+            { "slug": "civil-aquisicao-da-propriedade-movel", "nome": "Aquisição da propriedade móvel: ocupação, achado do tesouro, tradição e especificação (arts. 1.260 a 1.274)", "ordem": 5 },
+            { "slug": "civil-direitos-reais-de-gozo-e-de-garantia", "nome": "Superfície, servidões, usufruto, penhor, hipoteca e anticrese (arts. 1.369 a 1.510)", "ordem": 6 }
+          ]
+        },
+        {
+          "slug": "civil-familia",
+          "nome": "Direito de família",
+          "ordem": 13,
+          "topicos": [
+            { "slug": "civil-casamento-e-uniao-estavel", "nome": "Casamento: impedimentos, causas suspensivas e efeitos; união estável (arts. 1.511 a 1.590 e 1.723 a 1.727)", "ordem": 1 },
+            { "slug": "civil-regime-de-bens", "nome": "Regimes de bens e pacto antenupcial (arts. 1.639 a 1.688)", "ordem": 2 },
+            { "slug": "civil-parentesco-filiacao-e-poder-familiar", "nome": "Parentesco, filiação, reconhecimento e poder familiar (arts. 1.591 a 1.638)", "ordem": 3 },
+            { "slug": "civil-alimentos", "nome": "Obrigação alimentar: binômio necessidade-possibilidade e irrepetibilidade (arts. 1.694 a 1.710)", "ordem": 4 },
+            { "slug": "civil-bem-de-familia", "nome": "Bem de família convencional (arts. 1.711 a 1.722) e legal (Lei 8.009/1990)", "ordem": 5 }
+          ]
+        },
+        {
+          "slug": "civil-sucessoes",
+          "nome": "Direito das sucessões",
+          "ordem": 14,
+          "topicos": [
+            { "slug": "civil-abertura-da-sucessao-e-saisine", "nome": "Abertura da sucessão, princípio da saisine e herança como bem imóvel (arts. 1.784 a 1.797)", "ordem": 1 },
+            { "slug": "civil-aceitacao-renuncia-e-cessao", "nome": "Aceitação, renúncia e cessão de herança (arts. 1.804 a 1.813)", "ordem": 2 },
+            { "slug": "civil-sucessao-legitima-e-ordem-de-vocacao", "nome": "Sucessão legítima e ordem de vocação hereditária; concorrência do cônjuge (arts. 1.829 a 1.844)", "ordem": 3 },
+            { "slug": "civil-herdeiros-necessarios-e-legitima", "nome": "Herdeiros necessários, legítima e parte disponível (arts. 1.845 a 1.850)", "ordem": 4 },
+            { "slug": "civil-testamento", "nome": "Formas ordinárias e especiais de testamento, codicilo e revogação (arts. 1.857 a 1.990)", "ordem": 5 },
+            { "slug": "civil-inventario-colacao-e-partilha", "nome": "Inventário, colação, sonegados e partilha (arts. 1.991 a 2.027)", "ordem": 6 }
+          ]
+        }
+      ]
+    }
+  ]
+}

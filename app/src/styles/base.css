@@ -1,0 +1,47 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: var(--fw-normal, 400) var(--fs-body)/var(--lh-body) var(--font-ui);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Foco: uma regra, os dois temas, sem exceção. Nunca `outline: none` solto. */
+:focus-visible {
+  outline: var(--focus-width) solid var(--focus);
+  outline-offset: var(--focus-offset);
+  border-radius: inherit;
+}
+
+/* Todo dado numérico alinha em coluna e não dança ao atualizar. */
+.num, time, [data-num] { font-variant-numeric: tabular-nums; }
+
+/* Pula para o conteúdo: visível só quando recebe foco pelo teclado. */
+.pular-para-conteudo {
+  position: absolute;
+  left: -9999px;
+  top: var(--space-2);
+  z-index: 50;
+}
+.pular-para-conteudo:focus {
+  left: var(--space-2);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur: 0ms; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,25 @@
+# ── Dados da ingestão ────────────────────────────────────────────────────────
+# `data/` inteiro fica fora do git: PDFs da banca, textos extraídos e,
+# principalmente, `data/justificativas/` (texto autoral da banca — nunca versionar,
+# nunca publicar; ver CLAUDE.md regra 5).
+data/*
+!data/00_manual/
+data/00_manual/*
+!data/00_manual/README.md
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# ── Node / build (front-end, quando existir) ─────────────────────────────────
+node_modules/
+dist/
+.env
+.env.local
+
+# ── Sistema ──────────────────────────────────────────────────────────────────
+.DS_Store

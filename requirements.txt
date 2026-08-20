@@ -1,0 +1,16 @@
+# Pipeline de ingestão do Rito (scripts/ingest).
+# Instale com:  python3 -m pip install -r requirements.txt
+pdfplumber>=0.11,<1.0      # extração de texto com coordenadas
+pypdfium2>=4.30            # renderização de região da página em PNG (usado pelo pdfplumber)
+pypdf>=5.0                 # leitura de metadados e contagem de páginas
+Pillow>=10.0               # manipulação dos PNGs recortados
+PyYAML>=6.0                # perfis de parser
+jsonschema>=4.20           # validação do artefato final
+requests>=2.31             # download educado dos PDFs da banca
+
+# Só para desenvolvimento / testes
+pytest>=8.0
+reportlab>=4.0             # gera as fixtures sintéticas de teste
+
+# Opcional — só para 6_classificar.py com LLM de verdade.
+# anthropic>=0.70

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./base.css";
+
+/* `@theme inline` gera as classes APONTANDO para as variáveis.
+   Consequência: trocar de tema não exige uma única classe `dark:` no app. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-sunken: var(--surface-sunken);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-subtle: var(--text-subtle);
+  --color-inverse: var(--text-inverse);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-fg: var(--primary-fg);
+  --color-primary-soft: var(--primary-soft);
+
+  --color-ok: var(--ok);     --color-ok-bg: var(--ok-bg);     --color-ok-fg: var(--ok-fg);
+  --color-err: var(--err);   --color-err-bg: var(--err-bg);   --color-err-fg: var(--err-fg);
+  --color-warn: var(--warn); --color-warn-bg: var(--warn-bg); --color-warn-fg: var(--warn-fg);
+  --color-info: var(--info); --color-info-bg: var(--info-bg); --color-info-fg: var(--info-fg);
+
+  --color-nivel-0: var(--nivel-0);
+  --color-nivel-1: var(--nivel-1);
+  --color-nivel-2: var(--nivel-2);
+  --color-nivel-3: var(--nivel-3);
+
+  --text-caption: var(--fs-caption);  --text-caption--line-height: var(--lh-caption);
+  --text-sm:      var(--fs-sm);       --text-sm--line-height: var(--lh-sm);
+  --text-body:    var(--fs-body);     --text-body--line-height: var(--lh-body);
+  --text-read:    var(--fs-read);     --text-read--line-height: var(--lh-read);
+  --text-h3:      var(--fs-h3);       --text-h3--line-height: var(--lh-h3);
+  --text-h2:      var(--fs-h2);       --text-h2--line-height: var(--lh-h2);
+  --text-h1:      var(--fs-h1);       --text-h1--line-height: var(--lh-h1);
+  --text-display: var(--fs-display);  --text-display--line-height: var(--lh-display);
+
+  --font-sans: var(--font-ui);
+  --font-mono: var(--font-mono);
+
+  --spacing: 4px;
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  --shadow-sticky: var(--shadow-sticky);
+  --shadow-pop: var(--shadow-pop);
+
+  --ease-out: var(--ease);
+}
+
+/* Existe para casos raros (ilustração, screenshot). Não é para cor de UI. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));

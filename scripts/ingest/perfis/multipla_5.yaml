@@ -1,0 +1,20 @@
+# Múltipla escolha A–E ("assinale a opção correta").
+# É o formato observado nas provas fiscais recentes (SEFAZ-RJ 2025) — a confirmar
+# no caderno oficial (ver docs/04-fontes-de-questoes.md).
+extends: _base
+nome: multipla_5
+formato: multipla
+penalidade_por_erro: false    # sem anulação por erro ⇒ nada de placar líquido
+alternativas_esperadas: 5
+
+marcadores:
+  # CALIBRAR: nos cadernos de múltipla escolha o Cebraspe às vezes numera como
+  # "QUESTÃO 37" em linha própria em vez do número na margem. Se for o caso,
+  # trocar `item` por: '(?i)^quest[ãa]o\s+(?P<numero>\d{1,3})\s*(?P<resto>.*)$'
+  item: '^(?P<numero>\d{1,3})\s+(?P<resto>\S.*)$'
+  alternativa: '^(?P<letra>[A-E])\s+(?P<resto>\S.*)$'
+  instrucao: '(?i)(assinale\s+a\s+op[çc][ãa]o|\bjulgue\b)'
+
+numeracao:
+  minimo: 1
+  maximo: 140

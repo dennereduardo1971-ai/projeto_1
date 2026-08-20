@@ -1,0 +1,361 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rito.app/schema/prova.schema.json",
+  "title": "Artefato de prova do Rito",
+  "description": "Formato do arquivo acervo/provas/{slug}.json. additionalProperties é false em todo nível de propósito: é a primeira barreira contra o texto de justificativa da banca vazar para dentro do artefato.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "versao_artefato",
+    "gerado_em",
+    "status",
+    "prova",
+    "questoes"
+  ],
+  "properties": {
+    "versao_artefato": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "gerado_em": {
+      "type": "string",
+      "minLength": 10
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "segmentado",
+        "pendente_definitivo",
+        "precisa_ocr",
+        "pendente_classificacao",
+        "publicavel"
+      ]
+    },
+    "avisos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prova": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slug",
+        "banca",
+        "ano",
+        "orgao",
+        "cargo",
+        "formato",
+        "penalidade_por_erro",
+        "fonte_pdf"
+      ],
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "banca": {
+          "type": "string",
+          "minLength": 2
+        },
+        "ano": {
+          "type": "integer",
+          "minimum": 1990,
+          "maximum": 2100
+        },
+        "orgao": {
+          "type": "string",
+          "minLength": 2
+        },
+        "cargo": {
+          "type": "string",
+          "minLength": 2
+        },
+        "formato": {
+          "type": "string",
+          "enum": [
+            "ce",
+            "multipla"
+          ]
+        },
+        "penalidade_por_erro": {
+          "type": "boolean"
+        },
+        "tipo_caderno": {
+          "type": "string"
+        },
+        "fonte_pdf": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fonte_gabarito": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256_pdf": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "sha256_gabarito": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "perfil": {
+          "type": "string"
+        }
+      },
+      "description": "fonte_gabarito NÃO é obrigatória aqui de propósito: uma prova em `pendente_definitivo` ainda não tem gabarito definitivo público. A exigência existe, mas na camada de regra do validador, só na publicação."
+    },
+    "textos_apoio": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "texto"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "texto": {
+            "type": "string",
+            "minLength": 1
+          },
+          "paginas": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "assets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/asset"
+            }
+          }
+        }
+      }
+    },
+    "questoes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "numero",
+          "tipo",
+          "enunciado",
+          "pagina",
+          "atribuicao",
+          "anulada"
+        ],
+        "properties": {
+          "numero": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "ce",
+              "multipla"
+            ]
+          },
+          "enunciado": {
+            "type": "string",
+            "minLength": 10
+          },
+          "pagina": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "texto_apoio_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "alternativas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "letra",
+                "texto"
+              ],
+              "properties": {
+                "letra": {
+                  "type": "string",
+                  "enum": [
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E"
+                  ]
+                },
+                "texto": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "gabarito": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
+          "anulada": {
+            "type": "boolean"
+          },
+          "desatualizada": {
+            "type": "boolean"
+          },
+          "assets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/asset"
+            }
+          },
+          "disciplina": {
+            "type": "string",
+            "minLength": 2
+          },
+          "assunto": {
+            "type": "string",
+            "minLength": 2
+          },
+          "classificacao_confianca": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "classificacao_metodo": {
+            "type": "string"
+          },
+          "atribuicao": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "banca",
+              "ano",
+              "orgao",
+              "cargo",
+              "numero_original",
+              "url_pdf"
+            ],
+            "properties": {
+              "banca": {
+                "type": "string",
+                "minLength": 2
+              },
+              "ano": {
+                "type": "integer",
+                "minimum": 1990,
+                "maximum": 2100
+              },
+              "orgao": {
+                "type": "string",
+                "minLength": 2
+              },
+              "cargo": {
+                "type": "string",
+                "minLength": 2
+              },
+              "numero_original": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "url_pdf": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "justificativa_ref": {
+            "type": "object",
+            "description": "PONTEIRO, nunca o texto. O texto autoral da banca fica em data/justificativas/{slug}.json, fora do git e fora do app.",
+            "additionalProperties": false,
+            "required": [
+              "sha256",
+              "pagina",
+              "url"
+            ],
+            "properties": {
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "pagina": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "url": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "tipo",
+        "arquivo",
+        "sha256",
+        "pagina"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tipo": {
+          "type": "string",
+          "enum": [
+            "tabela",
+            "formula",
+            "imagem"
+          ]
+        },
+        "arquivo": {
+          "type": "string",
+          "pattern": "^acervo/assets/"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "pagina": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bbox": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        }
+      }
+    }
+  }
+}

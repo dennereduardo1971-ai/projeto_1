@@ -1,0 +1,150 @@
+/* Rito — a ÚNICA fonte de cor do app.
+   Regra: nenhum componente escreve hex, nenhum componente usa a variante `dark:`.
+   Os tokens trocam; o componente não sabe qual é o tema. */
+
+:root {
+  /* superfície */
+  --bg:             #F6F7F8;
+  --surface:        #FFFFFF;
+  --surface-2:      #ECEEF0;
+  --surface-sunken: #E3E6E9;
+  --border:         #DDE1E5;
+  --border-strong:  #C4CAD0;
+
+  /* texto — contraste medido sobre --surface */
+  --text:         #171C21; /* 16.0:1 */
+  --text-muted:   #4E5862; /*  7.2:1 */
+  --text-subtle:  #626C76; /*  5.3:1 — piso de contraste do sistema */
+  --text-inverse: #FFFFFF;
+
+  /* ação */
+  --primary:       #1D4ED8;
+  --primary-hover: #1A45BC;
+  --primary-fg:    #FFFFFF;
+  --primary-soft:  #E7EDFD;
+  --focus:         #1D4ED8;
+
+  /* feedback — nunca sozinho: sempre com glifo e rótulo */
+  --ok:   #15803D;  --ok-bg:   #E7F4EC;  --ok-fg:   #14532D;
+  --err:  #B91C1C;  --err-bg:  #FBEBEB;  --err-fg:  #7F1D1D;
+  --warn: #A16207;  --warn-bg: #FBF1DF;  --warn-fg: #713F12;
+  --info: #0E7490;  --info-bg: #E2F1F5;  --info-fg: #164E63;
+
+  /* níveis de domínio — a cor é o quarto canal, nunca o único */
+  --nivel-0: #C4CAD0;
+  --nivel-1: #7C9BD6;
+  --nivel-2: #1D4ED8;
+  --nivel-3: #15803D;
+
+  /* tipografia */
+  --font-ui: ui-sans-serif, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
+
+  --fs-caption: 0.75rem;   --lh-caption: 1.4;
+  --fs-sm:      0.875rem;  --lh-sm:      1.45;
+  --fs-body:    1rem;      --lh-body:    1.6;
+  --fs-read:    1.0625rem; --lh-read:    1.7;
+  --fs-h3:      1.125rem;  --lh-h3:      1.35;
+  --fs-h2:      1.375rem;  --lh-h2:      1.3;
+  --fs-h1:      1.75rem;   --lh-h1:      1.25;
+  --fs-display: 2.25rem;   --lh-display: 1.1;
+
+  /* espaçamento base 4 */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px;
+
+  /* layout */
+  --gutter: var(--space-4);
+  --measure-read: 68ch;
+  --tap-min: 44px;
+  --header-h: 56px;
+  --tabbar-h: 56px;
+
+  /* raio */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* foco */
+  --focus-width: 2px;
+  --focus-offset: 2px;
+
+  /* elevação — mínima; a borda faz o trabalho */
+  --shadow-sticky: 0 1px 0 0 var(--border), 0 2px 8px -4px rgb(16 22 28 / .12);
+  --shadow-pop:    0 12px 32px -12px rgb(16 22 28 / .28);
+
+  /* movimento */
+  --dur-fast: 120ms; --dur: 180ms;
+  --ease: cubic-bezier(.2, 0, .2, 1);
+}
+
+/* Escuro. Só os tokens mudam — nenhuma cor nasce aqui.
+   O bloco vale para o tema do sistema e para a escolha explícita, nas duas direções. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:             #0E1216;
+    --surface:        #171C21;
+    --surface-2:      #1F262D;
+    --surface-sunken: #252E36;
+    --border:         #2C353D;
+    --border-strong:  #3E4952;
+
+    --text:         #E8EBEE;
+    --text-muted:   #A7B0B9;
+    --text-subtle:  #838D97;
+    --text-inverse: #0E1216;
+
+    --primary:       #7BA5FF;
+    --primary-hover: #9BBAFF;
+    --primary-fg:    #0E1216;
+    --primary-soft:  #17233A;
+    --focus:         #9DC0FF;
+
+    --ok:   #5CC98D;  --ok-bg:   #12271B;  --ok-fg:   #A7E8BF;
+    --err:  #FF8A8A;  --err-bg:  #2A1517;  --err-fg:  #FFC2C2;
+    --warn: #E3B341;  --warn-bg: #2A2011;  --warn-fg: #F3D89A;
+    --info: #56C1DA;  --info-bg: #10262C;  --info-fg: #A9E1EE;
+
+    --nivel-0: #3E4952;
+    --nivel-1: #4E7BC4;
+    --nivel-2: #7BA5FF;
+    --nivel-3: #5CC98D;
+
+    --shadow-sticky: 0 1px 0 0 var(--border);
+    --shadow-pop:    0 12px 32px -12px rgb(0 0 0 / .6);
+  }
+}
+
+[data-theme="dark"] {
+  --bg:             #0E1216;
+  --surface:        #171C21;
+  --surface-2:      #1F262D;
+  --surface-sunken: #252E36;
+  --border:         #2C353D;
+  --border-strong:  #3E4952;
+
+  --text:         #E8EBEE;
+  --text-muted:   #A7B0B9;
+  --text-subtle:  #838D97;
+  --text-inverse: #0E1216;
+
+  --primary:       #7BA5FF;
+  --primary-hover: #9BBAFF;
+  --primary-fg:    #0E1216;
+  --primary-soft:  #17233A;
+  --focus:         #9DC0FF;
+
+  --ok:   #5CC98D;  --ok-bg:   #12271B;  --ok-fg:   #A7E8BF;
+  --err:  #FF8A8A;  --err-bg:  #2A1517;  --err-fg:  #FFC2C2;
+  --warn: #E3B341;  --warn-bg: #2A2011;  --warn-fg: #F3D89A;
+  --info: #56C1DA;  --info-bg: #10262C;  --info-fg: #A9E1EE;
+
+  --nivel-0: #3E4952;
+  --nivel-1: #4E7BC4;
+  --nivel-2: #7BA5FF;
+  --nivel-3: #5CC98D;
+
+  --shadow-sticky: 0 1px 0 0 var(--border);
+  --shadow-pop:    0 12px 32px -12px rgb(0 0 0 / .6);
+}
