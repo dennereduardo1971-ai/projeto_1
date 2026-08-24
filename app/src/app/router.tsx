@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter } from 'react-router-dom'
 import { AppShell } from './AppShell'
 import { Caderno } from './routes/Caderno'
 import { Ciclo } from './routes/Ciclo'
@@ -9,7 +9,14 @@ import { Mapa } from './routes/Mapa'
 import { Questoes } from './routes/Questoes'
 import { Revisao } from './routes/Revisao'
 
-export const router = createBrowserRouter([
+/**
+ * Build normal usa caminho de verdade (/mapa). O build `VITE_ROUTER=hash` gera
+ * a versão de arquivo único, que roda de qualquer lugar — inclusive servida de
+ * uma subpasta, onde caminho absoluto quebraria.
+ */
+const criar = import.meta.env.VITE_ROUTER === 'hash' ? createHashRouter : createBrowserRouter
+
+export const router = criar([
   {
     path: '/',
     element: <AppShell />,
