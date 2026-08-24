@@ -1,0 +1,87 @@
+{
+  "versao": 1,
+  "aviso": "Questões escritas para este projeto — NÃO são de prova real e não têm banca atribuída. Existem só para exercitar o app enquanto o acervo Cebraspe não é ingerido pelo pipeline (docs/04-fontes-de-questoes.md).",
+  "concurso": { "slug": "exemplo", "nome": "Conjunto de exemplo", "orgao": "—", "banca": "EXEMPLO", "ano": 2026 },
+  "cargo": "Auditor-Fiscal",
+  "provas": [
+    {
+      "slug": "exemplo-ce",
+      "formato": "ce",
+      "penalidade_por_erro": true,
+      "questoes": [
+        { "numero": 1, "assunto": "auditoria-amostragem", "gabarito": "C",
+          "enunciado": "Na amostragem em auditoria, o risco de amostragem existe porque a conclusão do auditor com base em uma amostra pode diferir da conclusão que seria obtida caso todo o universo fosse submetido ao mesmo procedimento.",
+          "comentario": "É a definição de risco de amostragem: decorre de examinar parte, e não o todo. Não confundir com o risco alheio à amostragem, que vem de falha do procedimento ou do julgamento." },
+        { "numero": 2, "assunto": "auditoria-procedimentos-e-testes", "gabarito": "E",
+          "enunciado": "Os testes de observância destinam-se a obter evidência sobre os valores registrados nas demonstrações contábeis, enquanto os testes substantivos avaliam o funcionamento dos controles internos.",
+          "comentario": "Os papéis estão invertidos. Observância testa o controle interno; substantivo testa o valor registrado. É a troca de definições que mais se repete." },
+        { "numero": 3, "assunto": "auditoria-controles-internos", "gabarito": "C",
+          "enunciado": "A existência de controle interno bem desenhado não elimina a necessidade de testes substantivos, pois o controle pode não estar operando de maneira efetiva durante todo o período.",
+          "comentario": "Desenho e efetividade operacional são coisas diferentes. Controle bem desenhado reduz a extensão dos testes substantivos, nunca a zero." },
+        { "numero": 4, "assunto": "civil-prescricao-e-decadencia", "gabarito": "E",
+          "enunciado": "Os prazos de decadência podem ser suspensos ou interrompidos nas mesmas hipóteses previstas para a prescrição.",
+          "comentario": "Em regra a decadência legal não se suspende nem se interrompe (art. 207 do Código Civil), salvo disposição legal em contrário." },
+        { "numero": 5, "assunto": "civil-pessoas-naturais", "gabarito": "C",
+          "enunciado": "A personalidade civil da pessoa natural começa com o nascimento com vida, mas a lei põe a salvo, desde a concepção, os direitos do nascituro.",
+          "comentario": "Literalidade do art. 2º do Código Civil." }
+      ]
+    },
+    {
+      "slug": "exemplo-multipla",
+      "formato": "multipla",
+      "penalidade_por_erro": false,
+      "questoes": [
+        { "numero": 1, "assunto": "auditoria-evidencia", "gabarito": "B",
+          "enunciado": "A evidência de auditoria obtida diretamente pelo auditor junto a terceiro independente, por escrito, é classificada como:",
+          "alternativas": [
+            { "letra": "A", "texto": "Evidência interna, de baixa confiabilidade." },
+            { "letra": "B", "texto": "Confirmação externa, de confiabilidade mais alta." },
+            { "letra": "C", "texto": "Indício, sem valor probatório." },
+            { "letra": "D", "texto": "Evidência analítica substitutiva do teste de detalhe." },
+            { "letra": "E", "texto": "Declaração formal da administração." }
+          ],
+          "comentario": "Confirmação externa obtida diretamente pelo auditor é das fontes mais confiáveis, justamente por não passar pelas mãos da entidade auditada." },
+        { "numero": 2, "assunto": "auditoria-relatorio-do-auditor", "gabarito": "C",
+          "enunciado": "Quando o auditor conclui que as distorções, individualmente ou em conjunto, são relevantes e generalizadas nas demonstrações contábeis, ele emite opinião:",
+          "alternativas": [
+            { "letra": "A", "texto": "Sem modificação." },
+            { "letra": "B", "texto": "Com ressalva." },
+            { "letra": "C", "texto": "Adversa." },
+            { "letra": "D", "texto": "Com abstenção de opinião." },
+            { "letra": "E", "texto": "Sem modificação, com parágrafo de ênfase." }
+          ],
+          "comentario": "Distorção comprovada, relevante e generalizada → opinião adversa. Abstenção é para limitação de escopo, quando falta evidência." },
+        { "numero": 3, "assunto": "civil-responsabilidade-civil", "gabarito": "C",
+          "enunciado": "Sobre a responsabilidade civil objetiva, assinale a opção correta.",
+          "alternativas": [
+            { "letra": "A", "texto": "Depende sempre da demonstração de culpa do agente." },
+            { "letra": "B", "texto": "Dispensa a prova do dano." },
+            { "letra": "C", "texto": "Dispensa a prova da culpa, exigindo conduta, dano e nexo causal." },
+            { "letra": "D", "texto": "Só existe quando prevista em contrato." },
+            { "letra": "E", "texto": "Afasta qualquer excludente de responsabilidade." }
+          ],
+          "comentario": "O que a objetiva dispensa é a culpa. Dano e nexo causal continuam exigidos, e as excludentes seguem existindo." },
+        { "numero": 4, "assunto": "civil-contratos-em-especie", "gabarito": "C",
+          "enunciado": "No contrato de compra e venda, a cláusula que reserva ao vendedor o direito de recobrar o imóvel vendido, restituindo o preço, em prazo não superior a três anos, denomina-se:",
+          "alternativas": [
+            { "letra": "A", "texto": "Venda a contento." },
+            { "letra": "B", "texto": "Preempção." },
+            { "letra": "C", "texto": "Retrovenda." },
+            { "letra": "D", "texto": "Venda sobre documentos." },
+            { "letra": "E", "texto": "Pacto comissório." }
+          ],
+          "comentario": "Retrovenda: art. 505 do Código Civil, prazo máximo de três anos e restrita a bem imóvel." },
+        { "numero": 5, "assunto": "civil-obrigacoes", "gabarito": "D",
+          "enunciado": "A obrigação em que o devedor se libera entregando qualquer um de dois objetos distintos, à sua escolha, é classificada como:",
+          "alternativas": [
+            { "letra": "A", "texto": "Solidária." },
+            { "letra": "B", "texto": "Divisível." },
+            { "letra": "C", "texto": "Cumulativa." },
+            { "letra": "D", "texto": "Alternativa." },
+            { "letra": "E", "texto": "Facultativa." }
+          ],
+          "comentario": "Alternativa: duas prestações e o devedor se libera com uma delas. Na facultativa há uma prestação só, com faculdade de substituição." }
+      ]
+    }
+  ]
+}

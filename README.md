@@ -1,48 +1,57 @@
-# Grifo — app de estudos para Auditor-Fiscal da RFB
+# Rito — app de estudos para Auditor-Fiscal da RFB
 
-Versão de teste local. Sem conta, sem servidor: tudo fica no `localStorage` do navegador.
+O edital como unidade central do estudo: cada assunto carrega o que você já estudou, o que já errou
+e quando precisa revisar. Sem conta e sem servidor — tudo fica no IndexedDB do próprio aparelho.
 
 ## Rodar
 
 ```bash
-python3 -m http.server 8080     # ou: npx serve .
+cd app
+npm install
+npm run dev      # http://localhost:5173
 ```
-Abra `http://localhost:8080`. **Não abra o `index.html` com duplo clique** — os módulos ES e o `fetch`
-dos dados exigem um servidor.
 
-No celular: rode o comando acima no computador e acesse `http://SEU-IP:8080` pela rede local.
+Para testar a versão de produção:
+
+```bash
+npm run build && npm run preview
+```
+
+No celular, na mesma rede: `npm run dev -- --host` e acesse o IP que ele imprimir.
 
 ## O que já funciona
 
-| Tela | O que faz |
+| Tela | Estado |
 |---|---|
-| **Hoje** | Fila do dia: revisões vencidas, bloco do ciclo, e os 5 assuntos de maior prioridade (peso na prova × seu desempenho) |
-| **Edital** | Mapa do edital verticalizado, com nível por assunto — distinguível por forma (○ ◔ ◑ ●), não só por cor |
-| **Questões** | Resolve com **confiança declarada** antes de confirmar; erro cai automaticamente na revisão. Placar líquido só em prova com penalidade |
-| **Revisar** | Fila de repetição espaçada com quatro notas |
-| **Ciclo** | Cronômetro por matéria, lançamento manual, e a volta do ciclo (fila que não pune atraso) |
-| **Dados** | Estatísticas, acerto por confiança (revela o falso domínio), exportar/importar/zerar |
+| **Hoje** | Minutos do dia e da semana, revisões devidas, próximo bloco do ciclo |
+| **Mapa** | Árvore de assuntos com nível derivado (não estudado → dominado) por disciplina |
+| **Ciclo** | Fila de blocos que não pune atraso, com cronômetro e lançamento manual |
+| **Questões** | Resolve com confiança declarada; placar líquido só onde o erro pune; erro vira revisão |
+| **Revisão** | Fila de repetição espaçada com quatro notas |
+| **Mais** | Backup exportar/importar, tema, e carregar/remover as questões de exemplo |
 
 ## O que ainda não é real
 
-- **As questões são de exemplo**, escritas para este projeto — não são de prova e não têm banca atribuída.
-  O acervo Cebraspe entra pelo pipeline descrito em `docs/04-fontes-de-questoes.md`.
-- **O agendamento de revisão é interino** (`app/js/srs.js`): FSRS compacto sem dependência, para o app
-  rodar sem build. Troca por `ts-fsrs` quando entrar o bundler. O estado guardado já é o do FSRS.
-- **Sem sincronização.** Limpar o navegador apaga tudo — use Exportar.
-- **Esquemas de leitura** ainda não existem na interface.
+- **Acervo.** As 10 questões disponíveis são **de exemplo**, escritas para o projeto — não são de
+  prova e não têm banca. Carregue e remova em *Mais*. O acervo Cebraspe entra pelo pipeline descrito
+  em `docs/04-fontes-de-questoes.md`, e questão sem gabarito definitivo casado não é publicada.
+- **Edital.** O concurso alvo só tem edital previsto até janeiro de 2027; até lá o Mapa usa a árvore
+  de assuntos provisória em `seeds/taxonomia.json`.
+- **Agendamento.** `app/src/features/revisao/fsrs.ts` é interino: FSRS compacto, sem dependência. O
+  estado gravado já é o do FSRS, então trocar por `ts-fsrs` não perde histórico.
+- **Sem sincronização.** Limpar os dados do navegador apaga o progresso. Exporte em *Mais*.
 
 ## Estrutura
 
 ```
-index.html              casca e navegação
-app/css/app.css         tokens, light/dark, componentes
-app/js/store.js         estado, invariantes, níveis derivados
-app/js/srs.js           agendamento de revisões
-app/js/views.js         telas
-app/js/main.js          rotas e eventos
-data/edital-afrfb.json  edital verticalizado (esboço 2022/23, reconferir no edital novo)
-data/questoes-exemplo.json
+app/                aplicação (Vite + React + TypeScript + Tailwind + Dexie)
+  src/dados/        modelo local espelhando o Postgres do Supabase
+  src/features/     ciclo, revisão (FSRS), questões, tema
+  src/app/routes/   telas
+seeds/              taxonomia de assuntos e questões de exemplo
+scripts/ingest/     pipeline de ingestão dos PDFs da banca
+docs/               pesquisa, plano do produto, fontes de questões
+.claude/agents/     os seis agentes do projeto
 ```
 
-Publicar: qualquer host estático. `netlify.toml` já está configurado (sem build).
+Deploy: Netlify já configurado em `netlify.toml` (base `app`, build `npm run build`).

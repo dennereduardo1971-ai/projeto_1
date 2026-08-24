@@ -109,6 +109,8 @@ export interface Questao {
   /** Sem casamento com o gabarito DEFINITIVO, não publica. Regra 3 do projeto. */
   gabarito_casado_em: string | null
   anulada: boolean
+  /** Explicação NOSSA. Justificativa da banca é fonte, nunca cópia (regra 5). */
+  comentario: string | null
   desatualizada: boolean
   motivo_desatualizacao: string | null
   status: StatusPublicacao

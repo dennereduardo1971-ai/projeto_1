@@ -39,7 +39,7 @@ export function Hoje() {
             <Stat
               rotulo="Revisões devidas"
               valor={resumo?.revisoesDevidas ? String(resumo.revisoesDevidas) : '—'}
-              nota={resumo?.revisoesDevidas ? undefined : 'fila entra na Fase 3'}
+              nota={resumo?.revisoesDevidas ? 'toque em Revisão' : 'erre uma questão e a fila enche'}
             />
           </div>
         </Card>

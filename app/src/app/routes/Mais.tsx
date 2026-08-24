@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { estadoAcervo, type EstadoAcervo } from '@/dados/consultas'
 import { baixarBackup, importar, BackupInvalido } from '@/dados/backup'
+import { carregarExemplo, removerExemplo, temExemplo } from '@/dados/exemplo'
+import { db } from '@/dados/db'
+import { estaDevida } from '@/features/revisao/fsrs'
 import { ThemeToggle } from '@/features/tema/ThemeToggle'
 import { Button, Card, InlineAlert, TopBar } from '@/ui'
 
@@ -13,9 +16,20 @@ import { Button, Card, InlineAlert, TopBar } from '@/ui'
 export function Mais() {
   const [acervo, setAcervo] = useState<EstadoAcervo | null>(null)
   const [aviso, setAviso] = useState<{ tom: 'ok' | 'err'; texto: string } | null>(null)
+  const [comExemplo, setComExemplo] = useState(false)
+  const [revisoesDevidas, setRevisoesDevidas] = useState(0)
   const arquivo = useRef<HTMLInputElement>(null)
 
-  useEffect(() => { void estadoAcervo().then(setAcervo) }, [])
+  const recarregar = async () => {
+    const [estado, exemplo, revisoes] = await Promise.all([
+      estadoAcervo(), temExemplo(), db.revisao.toArray(),
+    ])
+    setAcervo(estado)
+    setComExemplo(exemplo)
+    setRevisoesDevidas(revisoes.filter((r) => estaDevida(r)).length)
+  }
+
+  useEffect(() => { void recarregar() }, [])
 
   const semAcervo = (acervo?.questoesPublicadas ?? 0) === 0
 
@@ -39,7 +53,7 @@ export function Mais() {
     { para: '/questoes', rotulo: 'Questões', selo: semAcervo ? 'sem acervo' : null },
     { para: '/estatisticas', rotulo: 'Estatísticas', selo: semAcervo ? 'sem dados' : null },
     { para: '/caderno', rotulo: 'Caderno de erros', selo: 'Fase 2' },
-    { para: '/revisao', rotulo: 'Revisão', selo: 'Fase 3' },
+    { para: '/revisao', rotulo: 'Revisão', selo: revisoesDevidas ? `${revisoesDevidas} devida${revisoesDevidas === 1 ? '' : 's'}` : null },
   ]
 
   return (
@@ -91,6 +105,42 @@ export function Mais() {
           </p>
         </Card>
 
+        <Card className="p-4 flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
+            <h2 className="text-h3 font-semibold text-text">Questões de exemplo</h2>
+            <p className="text-sm text-muted max-w-[var(--measure-read)]">
+              Dez questões escritas para este projeto — não são de prova e não têm banca. Existem só
+              para você exercitar o laço de resolver, errar e revisar enquanto o acervo Cebraspe não
+              é ingerido. Remover apaga também as respostas e os cards que vieram delas.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {comExemplo ? (
+              <Button
+                variante="danger"
+                onClick={async () => {
+                  await removerExemplo()
+                  await recarregar()
+                  setAviso({ tom: 'ok', texto: 'Questões de exemplo removidas.' })
+                }}
+              >
+                Remover exemplo
+              </Button>
+            ) : (
+              <Button
+                variante="outline"
+                onClick={async () => {
+                  const n = await carregarExemplo()
+                  await recarregar()
+                  setAviso({ tom: 'ok', texto: `${n} questões de exemplo carregadas.` })
+                }}
+              >
+                Carregar exemplo
+              </Button>
+            )}
+          </div>
+        </Card>
+
         <Card className="p-4">
           <ThemeToggle />
         </Card>
@@ -102,7 +152,7 @@ export function Mais() {
             esquema de leitura, as questões que já caíram, o seu desempenho e as revisões agendadas.
           </p>
           <p className="text-caption text-subtle">
-            Fase 0 e 1 · sem conta · acervo de questões ainda vazio.
+            Sem conta · acervo real entra pelo pipeline de ingestão.
           </p>
         </Card>
       </div>

@@ -1,6 +1,13 @@
 [build]
-  publish = "."
-  command = ""
+  base = "app"
+  publish = "dist"
+  command = "npm ci && npm run build"
+
+# App de página única: qualquer rota cai no index e o router resolve.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/*"
