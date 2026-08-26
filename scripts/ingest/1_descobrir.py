@@ -37,7 +37,12 @@ CLASSES = (
     ("caderno_com_justificativa", re.compile(r"com[_\-]?justificativa", re.I)),
     ("gabarito_definitivo", re.compile(r"gab.*definitiv", re.I)),
     ("gabarito_preliminar", re.compile(r"gab.*preliminar", re.I)),
-    ("caderno", re.compile(r"(matriz|caderno|prova)", re.I)),
+    # Além de MATRIZ_/caderno_/prova_, o Cebraspe também nomeia cadernos como
+    # `{cod}_{SIGLA}{CARGO}_{tipo}_{caderno}.pdf` (ex.: 060_SEFAZRJAUDITOR_001_01.pdf),
+    # sem nenhuma palavra-chave — só reconhecível pelo sufixo numérico. Como esta
+    # regra roda depois das de gabarito, os gabaritos (que têm o mesmo sufixo) já
+    # foram capturados antes e não caem aqui.
+    ("caderno", re.compile(r"(matriz|caderno|prova)|_\d{3}_\d{2}\.pdf$", re.I)),
     ("edital", re.compile(r"edital|retifica", re.I)),
 )
 

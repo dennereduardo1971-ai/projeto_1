@@ -196,10 +196,12 @@ def problemas_de_regra(dados: dict, *, para_publicar: bool) -> list[str]:
         rot = f"questao {q.get('numero')}"
         if not q.get("anulada") and not q.get("gabarito"):
             problemas.append(f"{rot}: sem gabarito definitivo casado — não publica")
+        # Decisão do dono (2026-08-26): publicar sem classificação por assunto
+        # é aceitável — a questão fica utilizável (resolver, gabarito, caderno
+        # de erros) com "assunto: null" visível no dado, não escondido. Não
+        # gastar em LLM agora; classificar depois sem reprocessar o resto.
         classificacao = q.get("classificacao_confianca")
-        if not q.get("assunto"):
-            problemas.append(f"{rot}: sem assunto classificado")
-        elif classificacao is not None and classificacao < LIMIAR_CONFIANCA:
+        if q.get("assunto") and classificacao is not None and classificacao < LIMIAR_CONFIANCA:
             problemas.append(
                 f"{rot}: confiança {classificacao:.2f} abaixo de {LIMIAR_CONFIANCA:.2f} "
                 "— vai para a fila de revisão, não para o ar"

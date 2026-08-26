@@ -36,6 +36,38 @@ PADROES = (
 )
 
 
+RE_LINHA_QUESTAO = re.compile(r"(?i)^quest[ãa]o\s+(?P<nums>[\d\s]+)$")
+RE_LINHA_GABARITO = re.compile(r"(?i)^gabarito\s+(?P<vals>[A-EX?\s]+)$")
+
+
+def _ler_grade_tabela(texto: str) -> dict[int, dict]:
+    """Formato observado no gabarito definitivo real (grade em duas linhas):
+
+        Questão 1 2 3 4 5 6 7 8 9 10 ...
+        Gabarito A C B C A E A B A D ...
+
+    "X" marca item anulado. Cada bloco de 20 colunas se repete até o fim da
+    prova — a linha `Questão` seguinte sempre é seguida pela `Gabarito`
+    correspondente, então basta emparelhar a última pendente.
+    """
+    grade: dict[int, dict] = {}
+    pendentes: list[int] | None = None
+    for linha in texto.splitlines():
+        bruto = linha.strip()
+        if m := RE_LINHA_QUESTAO.match(bruto):
+            pendentes = [int(x) for x in m.group("nums").split()]
+            continue
+        if pendentes and (m := RE_LINHA_GABARITO.match(bruto)):
+            for numero, val in zip(pendentes, m.group("vals").split()):
+                v = val.upper()
+                if v == "X":
+                    grade[numero] = {"gabarito": None, "anulada": True}
+                elif v in "ABCDE":
+                    grade.setdefault(numero, {"gabarito": v, "anulada": False})
+            pendentes = None
+    return grade
+
+
 def ler_grade(pdf_path: Path) -> dict[int, dict]:
     """Extrai {numero: {gabarito|anulada}} do PDF do gabarito definitivo."""
     grade: dict[int, dict] = {}
@@ -51,6 +83,8 @@ def ler_grade(pdf_path: Path) -> dict[int, dict]:
                             grade[numero] = {"gabarito": None, "anulada": True}
                         elif grupos.get("letra"):
                             grade.setdefault(numero, {"gabarito": grupos["letra"], "anulada": False})
+            if not grade:
+                grade.update(_ler_grade_tabela(texto))
     return grade
 
 

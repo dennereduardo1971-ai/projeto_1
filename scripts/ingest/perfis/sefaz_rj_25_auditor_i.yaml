@@ -1,0 +1,31 @@
+# Prova piloto de fiscal: SEFAZ-RJ 2025 — Auditor Fiscal da Receita Estadual
+# (3ª categoria) — Caderno de Conhecimentos Específicos I. Múltipla escolha
+# A–E, sem anulação por erro. Numeração própria deste caderno (reinicia em 1);
+# o Caderno II é ingerido à parte, em `sefaz_rj_25_auditor_ii`.
+extends: multipla_5
+nome: sefaz_rj_25_auditor_i
+
+prova:
+  banca: CEBRASPE
+  ano: 2025
+  orgao: SEFAZ-RJ
+  cargo: "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos I"
+  # CALIBRAR: confirmar rótulo exato do tipo de caderno no PDF (ex.: "Tipo 1 — Branca").
+  tipo_caderno: "1"
+  pagina_concurso: https://www.cebraspe.org.br/concursos/sefaz_rj_25_auditor
+
+numeracao:
+  minimo: 1
+  maximo: 140
+  exige_sequencia: true
+
+marcadores:
+  # Ver sefaz_rj_25_auditor_ii.yaml — mesmo caderno, mesma numeração "Questão N".
+  item: '(?i)^.*?quest[ãa]o\s+(?P<numero>\d{1,3})\s*(?P<resto>.*)$'
+
+layout:
+  colunas: auto
+  # CALIBRADO: mesma calha estreita (~17pt) observada no Caderno II; ver
+  # sefaz_rj_25_auditor_ii.yaml.
+  gap_coluna_min: 10
+  margem_topo_frac: 0.045

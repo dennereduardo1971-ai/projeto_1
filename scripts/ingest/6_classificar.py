@@ -73,6 +73,21 @@ class ClassificadorStub:
         )
 
 
+class ClassificadorNulo:
+    """Não classifica de propósito: publica com assunto/disciplina nulos.
+
+    Decisão do dono (2026-08-26): não gastar em LLM agora. A questão fica
+    utilizável (resolver, gabarito, caderno de erros) sem entrar na fila de
+    revisão — "assunto: null" é visível no dado, não escondido. Classificar
+    depois (manual ou com IA) não precisa reprocessar o resto do pipeline.
+    """
+
+    nome = "nulo"
+
+    def classificar(self, enunciado: str, opcoes: list[dict], passada: int) -> Palpite:
+        return Palpite(disciplina="", assunto="", confianca=0.0)
+
+
 class ClassificadorLLM:
     """Cliente real. Só é instanciado quando há chave no ambiente."""
 
@@ -149,6 +164,15 @@ def executar(
 
     for q in dados["questoes"]:
         enunciado = q["enunciado"]
+
+        if clf.nome == "nulo":
+            q["classificacao_metodo"] = "nulo"
+            q["disciplina"] = None
+            q["assunto"] = None
+            q["classificacao_confianca"] = None
+            publicaveis += 1
+            continue
+
         a = clf.classificar(enunciado, opcoes, 1)
         b = clf.classificar(enunciado, opcoes, 2)
         concordam = a.assunto == b.assunto and bool(a.assunto)
@@ -199,12 +223,18 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("slug")
     ap.add_argument("--stub", action="store_true", help="não chamar LLM (padrão quando não há chave)")
+    ap.add_argument(
+        "--sem-classificacao", action="store_true",
+        help="publica com assunto/disciplina nulos, sem chamar LLM nem usar a fila de revisão",
+    )
     ap.add_argument("--modelo", default="claude-sonnet-5")
     ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
 
     clf: Classificador
-    if args.stub or not os.environ.get("ANTHROPIC_API_KEY"):
+    if args.sem_classificacao:
+        clf = ClassificadorNulo()
+    elif args.stub or not os.environ.get("ANTHROPIC_API_KEY"):
         clf = ClassificadorStub()
     else:
         clf = ClassificadorLLM(args.modelo)

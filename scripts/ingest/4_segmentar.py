@@ -106,6 +106,16 @@ def executar(
         fechar_alternativa()
         if questao_atual:
             questao_atual.enunciado = _fechar_texto([questao_atual.enunciado, *buffer_questao])
+            # Reparo: "A" de artigo ("A partir da...", "A seguir...") no meio
+            # do enunciado às vezes ainda passa pelo marcador de alternativa
+            # mesmo com a guarda de `tem_enunciado` — sobra como uma "A"
+            # fantasma antes da alternativa A de verdade. Se as duas primeiras
+            # alternativas têm a mesma letra, a primeira é lixo: devolve o
+            # texto dela para o enunciado e descarta.
+            alts = questao_atual.alternativas
+            while len(alts) >= 2 and alts[0].letra == alts[1].letra:
+                fantasma = alts.pop(0)
+                questao_atual.enunciado = _fechar_texto([questao_atual.enunciado, fantasma.texto])
             questoes.append(questao_atual)
         questao_atual, buffer_questao = None, []
 
@@ -172,7 +182,20 @@ def executar(
                     continue
 
             # ── marcador de alternativa (só em múltipla escolha) ────────────
-            if formato == "multipla" and questao_atual and re_alt and (m_alt := re_alt.match(bruto)):
+            # Guarda contra falso positivo: "A seguir, são apresentadas..." é o
+            # artigo "A" começando frase, não a alternativa A — e isso só pode
+            # ser confundido com marcador ANTES de a questão ter algum
+            # enunciado. Uma alternativa de verdade nunca é a primeira linha
+            # depois do "Questão N".
+            tem_enunciado = bool((questao_atual.enunciado if questao_atual else "").strip()) or bool(buffer_questao)
+            pode_ser_alternativa = alternativa_atual is not None or tem_enunciado
+            if (
+                formato == "multipla"
+                and questao_atual
+                and pode_ser_alternativa
+                and re_alt
+                and (m_alt := re_alt.match(bruto))
+            ):
                 fechar_alternativa()
                 alternativa_atual = Alternativa(letra=m_alt.group("letra"), texto=m_alt.group("resto"))
                 buffer_alt = []

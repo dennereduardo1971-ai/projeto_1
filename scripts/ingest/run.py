@@ -84,7 +84,8 @@ def main() -> int:
             continue
         print(f"\n── etapa {numero}: {descricao}")
         modulo = carregar(nome)
-        kwargs: dict = {"forcar": args.force}
+        # 7_publicar não tem cache (não é reprocessamento caro) — não aceita `forcar`.
+        kwargs: dict = {} if nome == "7_publicar" else {"forcar": args.force}
         if nome == "1_descobrir":
             kwargs["usar_rede"] = args.online
         if nome in {"3_extrair", "4_segmentar"} and args.perfil:

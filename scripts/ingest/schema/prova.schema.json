@@ -207,13 +207,14 @@
             }
           },
           "gabarito": {
-            "type": "string",
+            "type": ["string", "null"],
             "enum": [
               "A",
               "B",
               "C",
               "D",
-              "E"
+              "E",
+              null
             ]
           },
           "anulada": {
@@ -229,15 +230,15 @@
             }
           },
           "disciplina": {
-            "type": "string",
+            "type": ["string", "null"],
             "minLength": 2
           },
           "assunto": {
-            "type": "string",
+            "type": ["string", "null"],
             "minLength": 2
           },
           "classificacao_confianca": {
-            "type": "number",
+            "type": ["number", "null"],
             "minimum": 0,
             "maximum": 1
           },

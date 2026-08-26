@@ -178,13 +178,15 @@ Derivado da realidade da prova, não do livro:
 |---|---|---|
 | **0** | Esqueleto: app publicado, banco criado, taxonomia de Auditoria e Direito Civil | **Feita.** App de pé, taxonomia carregada (14 + 14 assuntos). Sem login — segue fora do escopo enquanto tudo roda local |
 | **1** | Edital do concurso alvo cadastrado + Mapa + ciclo de estudos com cronômetro | **Feita, com uma ressalva.** Mapa e ciclo funcionam; o **edital não está cadastrado** porque o concurso alvo só tem edital previsto até janeiro de 2027. Até lá o Mapa usa a árvore de assuntos |
-| **2** | Pipeline de ingestão + primeiras provas Cebraspe + tela de resolver questões + caderno de erros | **Parcial.** Pipeline pronto (7 etapas, 16 testes passando) e tela de questões pronta (confiança declarada, placar por formato da prova). **Acervo real vazio** — nenhuma prova ingerida. Caderno de erros ainda é stub |
+| **2** | Pipeline de ingestão + primeiras provas Cebraspe + tela de resolver questões + caderno de erros | **Parcial, gargalo movido.** Primeira prova real ingerida ponta a ponta (SEFAZ-RJ 2025, Auditor Fiscal — dois cadernos, 200 questões, gabarito definitivo casado 100%) até a etapa 6; publicação bloqueada corretamente por falta de **classificação por disciplina/assunto** (precisa de LLM real, hoje só há o stub). Dois bugs de layout do extrator (colunas juntadas antes da separação, numeração "Questão N") corrigidos — valem para as próximas provas. Caderno de erros ainda é stub |
 | **3** | Fila FSRS unificada + erro vira card automaticamente + streak e lembrete | **Parcial.** Fila FSRS e erro-vira-card funcionando ponta a ponta. Streak e lembrete não existem |
-| **4** | Material esquematizado dos assuntos de maior incidência | Não iniciada — depende do acervo, que define a ordem por incidência |
+| **4** | Material esquematizado dos assuntos de maior incidência | Não iniciada — depende da classificação por assunto (Fase 2) |
 | **5** | Estatísticas e diagnóstico (prioridade, falso domínio, evolução) | Não iniciada. O dado já está sendo coletado (confiança em cada resposta) |
 
-> O gargalo é um só e não é código: **ingerir a primeira prova real**. Fases 2, 4 e 5 destravam
-> juntas quando isso acontecer.
+> O gargalo deixou de ser "ingerir a primeira prova real" — isso já aconteceu (ver `data/`,
+> não versionado, e os perfis em `scripts/ingest/perfis/sefaz_rj_25_auditor_*.yaml`). O gargalo
+> agora é **ligar `6_classificar.py` a um LLM de verdade** (hoje roda em modo `--stub`, que manda
+> tudo para revisão humana) para poder publicar as 200 questões já casadas com gabarito.
 
 ---
 

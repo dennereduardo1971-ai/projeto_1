@@ -46,28 +46,30 @@ def _linhas(palavras: list[dict], tolerancia: float) -> list[dict]:
     return sorted(linhas, key=lambda l: l["top"])
 
 
-def _detectar_colunas(linhas: list[dict], largura: float, gap_min: float) -> int:
-    """Duas colunas se existe uma calha vertical vazia larga perto do meio.
+def _achar_calha(palavras: list[dict], largura: float, gap_min: float) -> float | None:
+    """Acha o x de uma calha vertical vazia perto do meio da página.
 
-    CALIBRAR: o teste é grosseiro de propósito — mede quantas linhas cruzam a
-    faixa central. Se o primeiro caderno real tiver figura atravessando o meio,
-    trave `layout.colunas` em 2 no perfil da prova.
+    Decide por PALAVRA, não por linha já agrupada — agrupar em linha primeiro
+    e só depois repartir em colunas é o bug que isto substitui: duas colunas na
+    mesma altura viram uma linha só, com o fim da esquerda colado no começo da
+    direita (ex.: "TECNOLOGIA DA INFORMAÇÃO... Questão 4" quando "Questão 4" é
+    na verdade o topo da coluna da direita, não continuação do título).
+
+    Procura o maior vão entre centros de palavra na faixa central da página
+    (30%–70% da largura) para não confundir com a margem das bordas. Sem vão
+    largo o bastante ali, a página é de 1 coluna.
     """
-    if not linhas:
-        return 1
-    meio = largura / 2
-    faixa = gap_min / 2
-    cruzam = sum(1 for l in linhas if l["x0"] < meio - faixa and l["x1"] > meio + faixa)
-    return 1 if cruzam > len(linhas) * 0.25 else 2
-
-
-def _ordenar_por_coluna(linhas: list[dict], largura: float, colunas: int) -> list[dict]:
-    if colunas == 1:
-        return linhas
-    meio = largura / 2
-    esquerda = [l for l in linhas if (l["x0"] + l["x1"]) / 2 <= meio]
-    direita = [l for l in linhas if (l["x0"] + l["x1"]) / 2 > meio]
-    return esquerda + direita
+    if not palavras:
+        return None
+    lo, hi = largura * 0.3, largura * 0.7
+    centros = sorted(c for c in ((w["x0"] + w["x1"]) / 2 for w in palavras) if lo <= c <= hi)
+    if len(centros) < 2:
+        return None
+    maior_gap, corte = 0.0, None
+    for a, b in zip(centros, centros[1:]):
+        if b - a > maior_gap:
+            maior_gap, corte = b - a, (a + b) / 2
+    return corte if maior_gap >= gap_min else None
 
 
 def executar(slug: str, *, nome_perfil: str | None = None, forcar: bool = False) -> dict:
@@ -104,13 +106,25 @@ def executar(slug: str, *, nome_perfil: str | None = None, forcar: bool = False)
             corte_rodape = pagina.height * (1 - rodape_frac)
 
             miolo = [w for w in palavras if corte_topo <= w["top"] <= corte_rodape]
-            linhas = _linhas(miolo, tolerancia)
-            colunas = (
-                _detectar_colunas(linhas, pagina.width, gap_min)
-                if colunas_cfg == "auto"
-                else int(colunas_cfg)
-            )
-            linhas = _ordenar_por_coluna(linhas, pagina.width, colunas)
+
+            # A calha entre colunas precisa ser achada ANTES de agrupar em
+            # linha: agrupar primeiro e repartir depois mistura, na mesma
+            # linha, o fim de uma coluna com o começo da outra.
+            if colunas_cfg == "auto":
+                calha = _achar_calha(miolo, pagina.width, gap_min)
+            elif int(colunas_cfg) == 2:
+                calha = _achar_calha(miolo, pagina.width, gap_min) or pagina.width / 2
+            else:
+                calha = None
+
+            if calha is None:
+                colunas = 1
+                linhas = _linhas(miolo, tolerancia)
+            else:
+                colunas = 2
+                esquerda = [w for w in miolo if (w["x0"] + w["x1"]) / 2 <= calha]
+                direita = [w for w in miolo if (w["x0"] + w["x1"]) / 2 > calha]
+                linhas = _linhas(esquerda, tolerancia) + _linhas(direita, tolerancia)
 
             paginas.append(
                 {

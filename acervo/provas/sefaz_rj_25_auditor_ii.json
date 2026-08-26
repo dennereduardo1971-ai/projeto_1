@@ -1,0 +1,4384 @@
+{
+  "avisos": [
+    "texto de apoio sem questão apontando: ['TA-2A1-I', 'TA-2A1-II', 'TA-2A3']",
+    "questões com número inesperado de alternativas: [60]",
+    "questao 60 excluida manualmente: mistura de conteudo de secao diferente (colunas), nao reparavel automaticamente — ver docs/03-plano-do-produto.md"
+  ],
+  "gerado_em": "2026-08-26T20:26:30+00:00",
+  "prova": {
+    "ano": 2025,
+    "banca": "CEBRASPE",
+    "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+    "fonte_gabarito": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/Gab_Definitivo_060_SEFAZRJAUDITOR_002_01.pdf",
+    "fonte_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf",
+    "formato": "multipla",
+    "orgao": "SEFAZ-RJ",
+    "penalidade_por_erro": false,
+    "perfil": "sefaz_rj_25_auditor_ii",
+    "sha256_gabarito": "dab2cb0c83b33986fdbfcef09867292937927d9789f384e3492f4cce32095eb5",
+    "sha256_pdf": "cfda2c732b8fa7d28ebcd0411895006189e83904104e089f98d3c195b7af23d6",
+    "slug": "sefaz_rj_25_auditor_ii",
+    "tipo_caderno": "1"
+  },
+  "questoes": [
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "exemplificada mais de uma vez ao longo do texto."
+        },
+        {
+          "letra": "B",
+          "texto": "descrita como uma habilidade determinante para a formação\nda identidade carioca."
+        },
+        {
+          "letra": "C",
+          "texto": "conceituada de maneira técnica a partir de sua manifestação\nem uma obra literária."
+        },
+        {
+          "letra": "D",
+          "texto": "apresentada como forma de fuga permanente à realidade."
+        },
+        {
+          "letra": "E",
+          "texto": "listada como um fenômeno irrefreável que se observa em\ncamadas mais pobres da sociedade.\ncorreta, de acordo com o respectivo comando. Para as devidas\npara a correção das suas respostas.\nFolha de Respostas, será igual a: 1,00 ponto, caso a resposta do(a)\ndefinitivo da prova; 0,00 ponto, caso a resposta do(a) candidato(a)\nnão haja marcação ou haja mais de uma marcação.\n“Espaço livre” — que constarem deste caderno de provas\nOBJETIVA P --\n2\nESPECÍFICOS II --"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 1,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No texto 2A1-I, a noção de estratégia de ficção é",
+      "gabarito": "A",
+      "numero": 1,
+      "pagina": 1,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "exprime um juízo de valor sobre a realidade."
+        },
+        {
+          "letra": "B",
+          "texto": "indica uma forma de criar histórias extravagantes."
+        },
+        {
+          "letra": "C",
+          "texto": "reflete um elemento do tema central do texto."
+        },
+        {
+          "letra": "D",
+          "texto": "exemplifica uma tentativa de mudar a realidade."
+        },
+        {
+          "letra": "E",
+          "texto": "expressa uma valorização do excesso de ficção."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 2,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "O trecho “De dentro da máscara, nada ao redor é realidade”\n(penúltimo período do texto 2A1-I)",
+      "gabarito": "C",
+      "numero": 2,
+      "pagina": 1,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "“Machado” (terceiro período)."
+        },
+        {
+          "letra": "B",
+          "texto": "“rapaz” (primeiro período)."
+        },
+        {
+          "letra": "C",
+          "texto": "“negro” (primeiro período)."
+        },
+        {
+          "letra": "D",
+          "texto": "“bombom” (segundo período)."
+        },
+        {
+          "letra": "E",
+          "texto": "“pregão” (segundo período)."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 3,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No terceiro parágrafo do texto 2A1-I, o vocábulo “ele” (último\nperíodo) retoma, por coesão, o termo",
+      "gabarito": "B",
+      "numero": 3,
+      "pagina": 1,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Nenhum item está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas o item II está certo."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas o item III está certo."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens I e II estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Apenas os itens I e III estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 4,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Julgue os itens a seguir, relativos a aspectos linguísticos do texto\n2A1-I.\nI Seria mantida a correção gramatical do trecho “Não se trata\nde inventar histórias” (primeiro período do segundo\nparágrafo) caso ele fosse assim reescrito: Isso não se trata de\ninventar histórias.\nII Estaria preservada a correção gramatical do primeiro período\ndo quarto parágrafo caso se substituísse o segmento “com as\nquais convivia” por que eu convivia.\nIII Sem prejuízo da correção gramatical do primeiro período do\núltimo parágrafo, a forma pronominal “se” poderia ser\ndeslocada para a posição proclítica — se negar.\nAssinale a opção correta.",
+      "gabarito": "C",
+      "numero": 4,
+      "pagina": 1,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "indivíduo."
+        },
+        {
+          "letra": "B",
+          "texto": "intérprete."
+        },
+        {
+          "letra": "C",
+          "texto": "gênero."
+        },
+        {
+          "letra": "D",
+          "texto": "modelo."
+        },
+        {
+          "letra": "E",
+          "texto": "artesão."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 5,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No penúltimo período do quarto parágrafo do texto 2A1-I, a\npalavra “tipo” é empregada com o sentido de",
+      "gabarito": "A",
+      "numero": 5,
+      "pagina": 1,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "“se apropriou” (último período do terceiro parágrafo) por\ntomou"
+        },
+        {
+          "letra": "B",
+          "texto": "“desfilam” (sexto período do último parágrafo) por se\nexibem"
+        },
+        {
+          "letra": "C",
+          "texto": "“gostei” (primeiro período do primeiro parágrafo) por\napreciei"
+        },
+        {
+          "letra": "D",
+          "texto": "“escolhe” (último período do texto) por se decide"
+        },
+        {
+          "letra": "E",
+          "texto": "“resisto” (terceiro período do quarto parágrafo) por me\nrecuso"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 6,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção em que a proposta de substituição apresentada\npara termo presente no texto 2A1-I preserva tanto os sentidos\nquanto a correção gramatical do texto.",
+      "gabarito": "E",
+      "numero": 6,
+      "pagina": 2,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "marcar o deslocamento de uma oração adverbial."
+        },
+        {
+          "letra": "B",
+          "texto": "isolar elementos que exercem a mesma função sintática."
+        },
+        {
+          "letra": "C",
+          "texto": "introduzir uma oração de valor adversativo."
+        },
+        {
+          "letra": "D",
+          "texto": "separar orações aditivas com sujeitos diferentes."
+        },
+        {
+          "letra": "E",
+          "texto": "delimitar uma oração com valor explicativo."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 7,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No texto 2A1-I, a vírgula logo após o vocábulo “funcionava”\n(primeiro período do quarto parágrafo) é empregada para",
+      "gabarito": "A",
+      "numero": 7,
+      "pagina": 2,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "“grife” (último período do segundo parágrafo) e “compre”\n(penúltimo período do terceiro parágrafo)."
+        },
+        {
+          "letra": "B",
+          "texto": "“presente” (primeiro período do primeiro parágrafo) e\n“carioca” (primeiro período do segundo parágrafo)."
+        },
+        {
+          "letra": "C",
+          "texto": "“anasalada” (primeiro período do terceiro parágrafo) e\n“cocada” (primeiro período do terceiro parágrafo)."
+        },
+        {
+          "letra": "D",
+          "texto": "“plástico” (último período do segundo parágrafo) e\n“sociológico” (primeiro período do terceiro parágrafo)."
+        },
+        {
+          "letra": "E",
+          "texto": "“ameaça” (penúltimo período do quarto parágrafo) e “atraso”\n(último período do quarto parágrafo)."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 8,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No texto 2A1-I, pertencem à mesma classe de palavras os\nvocábulos",
+      "gabarito": "B",
+      "numero": 8,
+      "pagina": 2,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Os pensamentos se relacionam estruturalmente às sentenças,\nsendo ambos constituídos de partes menores."
+        },
+        {
+          "letra": "B",
+          "texto": "A possibilidade de segmentar sentenças depende da forma\ncomo os pensamentos se combinam entre si."
+        },
+        {
+          "letra": "C",
+          "texto": "A capacidade de compreender sentenças e pensamentos\nnovos é típica dos seres humanos."
+        },
+        {
+          "letra": "D",
+          "texto": "A possibilidade de construir infinitas sentenças decorre da\nexistência de sílabas."
+        },
+        {
+          "letra": "E",
+          "texto": "Os pensamentos são qualitativa e estruturalmente uniformes\nentre os seres humanos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 9,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção em que é apresentada a ideia principal do texto\n2A1-II.",
+      "gabarito": "A",
+      "numero": 9,
+      "pagina": 2,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "distinção entre sentença e pensamento."
+        },
+        {
+          "letra": "B",
+          "texto": "atribuição de roupagem, pela linguagem, a pensamentos."
+        },
+        {
+          "letra": "C",
+          "texto": "decomposição da sentença em segmentos."
+        },
+        {
+          "letra": "D",
+          "texto": "aplicação da relação todo-parte a pensamentos."
+        },
+        {
+          "letra": "E",
+          "texto": "apreensão de pensamentos por meio de palavras."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 10,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No primeiro parágrafo do texto 2A1-II, a expressão “Essa\nanalogia” (último período) refere-se à",
+      "gabarito": "D",
+      "numero": 10,
+      "pagina": 2,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "“incalculável” – predicativo"
+        },
+        {
+          "letra": "B",
+          "texto": "“esse pensamento” – objeto direto"
+        },
+        {
+          "letra": "C",
+          "texto": "“lhe” – objeto indireto"
+        },
+        {
+          "letra": "D",
+          "texto": "“de apreendê-lo” – complemento nominal"
+        },
+        {
+          "letra": "E",
+          "texto": "“um ser humano” – sujeito"
+        }
+      ],
+      "anulada": true,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 11,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção em que há correta correspondência entre o\ntermo ou o segmento extraído do segundo período do primeiro\nparágrafo do texto 2A1-II e a função sintática por ele exercida.",
+      "gabarito": null,
+      "numero": 11,
+      "pagina": 2,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "pois podemos compreender como, a partir de poucas partes\nda sentença, é possível formar uma grande variedade de\nsentenças, que, por sua vez, correspondem à uma grande\nvariedade de pensamentos."
+        },
+        {
+          "letra": "B",
+          "texto": "podemos outrossim, compreender como é possível formar, a\npartir de poucas partes da sentença, uma grande variedade de\nsentenças, as quais, por sua vez, correspondem uma grande\nvariedade de pensamentos."
+        },
+        {
+          "letra": "C",
+          "texto": "podemos compreender assim, como é possível formar, a\npartir de poucas partes da sentença, uma grande variedade de\nsentenças, a que, por sua vez, corresponde a uma grande\nvariedade de pensamentos."
+        },
+        {
+          "letra": "D",
+          "texto": "logo podemos compreender como a partir de poucas partes da\nsentença, é possível formar uma grande variedade de\nsentenças, às quais por sua vez corresponde uma grande\nvariedade de pensamentos."
+        },
+        {
+          "letra": "E",
+          "texto": "podemos, pois, compreender como é possível, a partir de\npoucas partes da sentença, formar uma grande variedade de\nsentenças, a que, por sua vez, corresponde uma grande\nvariedade de pensamentos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 12,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção em que é apresentada proposta de reescrita\ngramaticalmente correta e coerente para o seguinte trecho do\nprimeiro período do último parágrafo do texto 2A1-II: “então\npodemos compreender como é possível formar, a partir de\npoucas partes da sentença, uma grande variedade de sentenças, às\nquais, por sua vez, corresponde uma grande variedade de\npensamentos.”",
+      "gabarito": "E",
+      "numero": 12,
+      "pagina": 2,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "“quando aplicamos” (penúltimo período do primeiro\nparágrafo)."
+        },
+        {
+          "letra": "B",
+          "texto": "“ao pensamento” (penúltimo período do primeiro parágrafo)."
+        },
+        {
+          "letra": "C",
+          "texto": "“no pensamento” (terceiro período do primeiro parágrafo)."
+        },
+        {
+          "letra": "D",
+          "texto": "“como imagem” (terceiro período do primeiro parágrafo)."
+        },
+        {
+          "letra": "E",
+          "texto": "“que correspondem” (terceiro período do primeiro parágrafo)."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 13,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "A correção gramatical e a coerência do texto 2A1-II seriam\nmantidas caso fosse isolado por vírgulas o trecho",
+      "gabarito": "C",
+      "numero": 13,
+      "pagina": 3,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "“que” (último período do primeiro parágrafo) – consequência"
+        },
+        {
+          "letra": "B",
+          "texto": "“como”, em “como compostos de partes simples” ( primeiro\nperíodo do segundo parágrafo) – causa"
+        },
+        {
+          "letra": "C",
+          "texto": "“por” (último período do primeiro parágrafo) – lugar"
+        },
+        {
+          "letra": "D",
+          "texto": "“Com” (segundo período do primeiro parágrafo) – companhia"
+        },
+        {
+          "letra": "E",
+          "texto": "“ainda” (segundo período do primeiro parágrafo) – tempo"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 14,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção em que há correta correspondência entre o termo\ndestacado e seu respectivo valor semântico no texto 2A1-II.",
+      "gabarito": "A",
+      "numero": 14,
+      "pagina": 3,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "“estas” e “uma grande variedade de sentenças”."
+        },
+        {
+          "letra": "B",
+          "texto": "“partes simples da sentença” e “uma grande variedade de\npensamentos”."
+        },
+        {
+          "letra": "C",
+          "texto": "“partes simples da sentença” e “uma grande variedade de\nsentenças”."
+        },
+        {
+          "letra": "D",
+          "texto": "“os pensamentos” e “uma grande variedade de pensamentos”."
+        },
+        {
+          "letra": "E",
+          "texto": "“estas” e “uma grande variedade de pensamentos”.\nAD MINISTRAÇÃO"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 15,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No primeiro período do segundo parágrafo do texto 2A1-II, os\ntermos “correspondem” e “corresponde” concordam,\nrespectivamente, com",
+      "gabarito": "B",
+      "numero": 15,
+      "pagina": 3,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "disciplina."
+        },
+        {
+          "letra": "B",
+          "texto": "autoridade e responsabilidade."
+        },
+        {
+          "letra": "C",
+          "texto": "divisão do trabalho."
+        },
+        {
+          "letra": "D",
+          "texto": "unidade de direção."
+        },
+        {
+          "letra": "E",
+          "texto": "unidade de comando."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 16,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Na teoria clássica da administração, o princípio defendido por\nFayol, segundo o qual os funcionários e administradores são\nalocados nas diversas áreas funcionais da organização, tais como\na técnica, a administrativa, a contábil, a financeira e a de\nsegurança, com base na especialização, denomina-se",
+      "gabarito": "C",
+      "numero": 16,
+      "pagina": 3,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A função controle concentra-se na padronização do\ndesempenho, mediante procedimentos e inspeções, e na\nproteção dos bens organizacionais."
+        },
+        {
+          "letra": "B",
+          "texto": "No nível operacional, a função direção compreende a\ngerência e a alocação de recursos com vistas à ação\norganizacional e liderança."
+        },
+        {
+          "letra": "C",
+          "texto": "O componente pessoas, concernente à função planejamento,\ndiz respeito à designação de cada colaborador para ocupar um\ncargo ou função, que é parte específica do trabalho geral da\norganização."
+        },
+        {
+          "letra": "D",
+          "texto": "No nível departamental, a função organização focaliza cada\ntarefa, atividade ou operação especificamente, mediante a\ndescrição e análise dos cargos."
+        },
+        {
+          "letra": "E",
+          "texto": "O desenho organizacional consiste na definição da estrutura\norganizacional mais adequada ao ambiente, estratégia,\ntecnologia, pessoas, atividades e tamanho da organização."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 17,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta no que se refere às funções\nadministrativas nas organizações.",
+      "gabarito": "E",
+      "numero": 17,
+      "pagina": 3,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "I e II."
+        },
+        {
+          "letra": "B",
+          "texto": "I e IV."
+        },
+        {
+          "letra": "C",
+          "texto": "II e III."
+        },
+        {
+          "letra": "D",
+          "texto": "I, III e IV."
+        },
+        {
+          "letra": "E",
+          "texto": "II, III e IV."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 18,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No que diz respeito ao planejamento estratégico organizacional,\njulgue os itens seguintes.\nI Mercados em expansão e novos segmentos no mercado com\nalta rentabilidade constituem pontos fortes de uma\norganização que devem ser explorados.\nII Ausência de fatores de diferenciação e debilitada visibilidade\nno mercado representam fraquezas de uma organização.\nIII Na matriz GUT, a letra G associa-se ao fator que mede o\nimpacto de um problema ou demanda para os demais\nprocessos de negócio da organização.\nIV O uso da ferramenta 5W2H facilita a implementação de\nmelhorias, independentemente da racionalização dos\nprocessos de trabalho.\nEstão certos apenas os itens",
+      "gabarito": "C",
+      "numero": 18,
+      "pagina": 3,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Apenas os itens I, II e III estão certos."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas os itens I, II e IV estão certos."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I, III e IV estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens II, III e IV estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 19,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Julgue os itens seguintes, em relação aos fatores que estão\nrelacionados ao sucesso na implementação do balanced scorecard\nnas organizações.\nI adoção de visão estratégica real\nII identificação das metas estratégicas de forma abrangente e\nprecisa\nIII comunicação eficiente do plano estratégico a todos os\ncolaboradores da organização\nIV alocação de recursos adequada e suficiente à execução das\nmetas estratégicas\nAssinale a opção correta.",
+      "gabarito": "E",
+      "numero": 19,
+      "pagina": 3,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "área geográfica."
+        },
+        {
+          "letra": "B",
+          "texto": "projeto."
+        },
+        {
+          "letra": "C",
+          "texto": "processo."
+        },
+        {
+          "letra": "D",
+          "texto": "função."
+        },
+        {
+          "letra": "E",
+          "texto": "clientela."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 20,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "O tipo de departamentalização relacionado à sequência do\nmétodo produtivo, na qual cada departamento consiste em um\ncentro de produção, e indicado para situações cujo foco é a\ntecnologia e para quando os atributos da tecnologia utilizada e\ndos produtos ou serviços produzidos são estáveis e permanentes\ndenomina-se departamentalização por",
+      "gabarito": "C",
+      "numero": 20,
+      "pagina": 3,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "No processo de comunicação, tanto o emissor quanto o\nreceptor veem e escutam com base em suas próprias\nnecessidades, motivações e experiências, ao que se chama de\npercepção inclusiva."
+        },
+        {
+          "letra": "B",
+          "texto": "Os valores dominantes e as irregularidades nos\ncomportamentos observados são características definidoras da\ncultura de uma organização."
+        },
+        {
+          "letra": "C",
+          "texto": "Na cultura organizacional, o componente filosofia consiste\nnas políticas que afirmam as crenças sobre como os\ncolaboradores ou clientes devem ser tratados."
+        },
+        {
+          "letra": "D",
+          "texto": "O enriquecimento de tarefas constitui uma forma de construir\nmotivadores extrínsecos ao próprio trabalho."
+        },
+        {
+          "letra": "E",
+          "texto": "O sistema administrativo do tipo consultivo pende mais para\no lado autocrático que para o lado participativo, sendo\nencontrado em organizações industriais mais avançadas."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 21,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta no que concerne à cultura\norganizacional, à motivação e liderança, e à comunicação nas\norganizações.",
+      "gabarito": "C",
+      "numero": 21,
+      "pagina": 4,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "oportunidades de crescimento e desenvolvimento."
+        },
+        {
+          "letra": "B",
+          "texto": "reconhecimento e recompensas."
+        },
+        {
+          "letra": "C",
+          "texto": "divertimento, alegria e satisfação."
+        },
+        {
+          "letra": "D",
+          "texto": "liberdade e autonomia."
+        },
+        {
+          "letra": "E",
+          "texto": "camaradagem e coleguismo."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 22,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Os colaboradores buscam um relacionamento humano mais\npróximo e franco, caracterizado pelo respeito mútuo, pela\nconfiança recíproca e pela amizade autêntica. Nas organizações,\no aspecto descrito está associado a",
+      "gabarito": "E",
+      "numero": 22,
+      "pagina": 4,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A introdução da gestão por competências nas organizações\ntende a dificultar o relacionamento entre gestores e liderados,\nem face dos constantes feedbacks."
+        },
+        {
+          "letra": "B",
+          "texto": "As pessoas dotadas de competências possuem maior potencial\npara desempenhar suas tarefas, embora tal condição lese\ndiretamente sua produtividade."
+        },
+        {
+          "letra": "C",
+          "texto": "A gestão por competências aumenta o viés pessoal, visto que\nprioriza a seleção do candidato cujas competências melhor se\nadéquam às estratégias organizacionais."
+        },
+        {
+          "letra": "D",
+          "texto": "Uma das dificuldades da implantação da gestão por\ncompetências nas organizações é a existência de dissociação\nentre a gestão de competências e as estratégias\norganizacionais."
+        },
+        {
+          "letra": "E",
+          "texto": "A gestão por competências estabelece a necessidade de\ntreinamentos e concentra-se no mais adequado para aprimorar\nas capacidades do colaborador, sendo ineficaz para\ntransformá-las em vantagem competitiva."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 23,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta a respeito da gestão por competências\nnas organizações.",
+      "gabarito": "D",
+      "numero": 23,
+      "pagina": 4,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "I, II, III e IV."
+        },
+        {
+          "letra": "B",
+          "texto": "I, II, III e V."
+        },
+        {
+          "letra": "C",
+          "texto": "I, II, IV e V."
+        },
+        {
+          "letra": "D",
+          "texto": "I, III, IV e V."
+        },
+        {
+          "letra": "E",
+          "texto": "II, III, IV e V."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 24,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Considerando as contribuições dos principais teóricos para a gestão\nda qualidade, julgue os itens seguintes.\nI Shewhart foi um dos pioneiros na aplicação da estatística ao\ncontrole de qualidade, tendo preparado o primeiro rascunho\ndo que viria a ser conhecido como carta de controle.\nII Deming defendia a constância de propósitos para a melhoria\ndo produto e do serviço, para que a organização se tornasse\ncompetitiva, se mantivesse em atividade e gerasse empregos.\nIII Ishikawa contribuiu para o desenvolvimento da visão ampla\nda qualidade, com ênfase no lado humano, tendo\ndesenvolvido o diagrama de causa e efeito.\nIV Segundo Juran, há duas dimensões no conceito de qualidade:\numa externa, relativa às necessidades dos consumidores, e\numa interna, relacionada à correta execução do produto ou\nserviço.\nV A proposta de Feigenbaurn é a de que devem existir limites\nde tolerância, ao invés de valores fixos, para as especificações\nde projeto.\nEstão certos apenas os itens",
+      "gabarito": "A",
+      "numero": 24,
+      "pagina": 4,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "folha de verificação"
+        },
+        {
+          "letra": "B",
+          "texto": "carta de controle"
+        },
+        {
+          "letra": "C",
+          "texto": "diagrama de Pareto"
+        },
+        {
+          "letra": "D",
+          "texto": "diagrama de dispersão"
+        },
+        {
+          "letra": "E",
+          "texto": "histograma"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 25,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção em que é apresentada a denominação da\nferramenta que, usada na gestão de qualidade, é caracterizada\npela representação de seus resultados em um gráfico de pontos\ncartesianos que permite verificar se existe relação de causa e\nefeito entre duas variáveis de natureza quantitativa e possibilita\nencontrar a intensidade da relação entre as variáveis pesquisadas.",
+      "gabarito": "D",
+      "numero": 25,
+      "pagina": 4,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Com o desenrolar do projeto, a incerteza a respeito do risco\ndiminui na mesma proporção em que diminui a quantidade\ndos recursos arriscada."
+        },
+        {
+          "letra": "B",
+          "texto": "A análise do ciclo de vida do projeto é imprópria na\ndeterminação do que foi, ou não, realizado pelo projeto."
+        },
+        {
+          "letra": "C",
+          "texto": "A imprecisão relativa aos prazos e custos propendem a\naumentar com a conclusão de cada fase."
+        },
+        {
+          "letra": "D",
+          "texto": "Os momentos finais do projeto são favoráveis a novas ideias\ne criatividade relacionadas aos processos de mudança,\ninclusive as corretivas."
+        },
+        {
+          "letra": "E",
+          "texto": "A velocidade de desenvolvimento do projeto, na maioria das\nvezes, segue o padrão denominado lento-rápido-lento."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 26,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta no que se refere à elaboração, análise e\navaliação de projetos nas organizações.",
+      "gabarito": "E",
+      "numero": 26,
+      "pagina": 4,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "construção de projetos em torno de colaboradores motivados,\nem um ambiente de confiança e com suporte necessário para\na execução do trabalho."
+        },
+        {
+          "letra": "B",
+          "texto": "comunicação protocolar na transmissão de informações para e\nentre a equipe de desenvolvimento do projeto."
+        },
+        {
+          "letra": "C",
+          "texto": "priorização da satisfação do chefe da equipe de projeto\nmediante a entrega contínua e adiantada do projeto com valor\nagregado."
+        },
+        {
+          "letra": "D",
+          "texto": "aversão às mudanças nos requisitos, principalmente as\nsolicitadas tardiamente no desenvolvimento do projeto."
+        },
+        {
+          "letra": "E",
+          "texto": "participação diária de colaboradores do negócio\norganizacional e desenvolvedores, segregados de suas\nfunções, durante todo o projeto."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 27,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "As metodologias ágeis de gestão de projetos caracterizam-se pela",
+      "gabarito": "A",
+      "numero": 27,
+      "pagina": 5,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "27"
+        },
+        {
+          "letra": "B",
+          "texto": "28,6"
+        },
+        {
+          "letra": "C",
+          "texto": "25"
+        },
+        {
+          "letra": "D",
+          "texto": "35"
+        },
+        {
+          "letra": "E",
+          "texto": "28"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 28,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "quantidade de\nano processos não\nconformes\n2015 30\n2016 27\n2017 35\n2018 27\n2019 25\n2020 28\n2021 27\n2022 27\n2023 29\n2024 31\nCom base na tabela precedente, que evidencia a distribuição, por\nano, de ocorrências de não conformidades em processos\nadministrativos sancionadores, assinale a opção em que é\ncorretamente apresentada a moda para essa distribuição.",
+      "gabarito": "A",
+      "numero": 28,
+      "pagina": 5,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "método CPM."
+        },
+        {
+          "letra": "B",
+          "texto": "blueprinting."
+        },
+        {
+          "letra": "C",
+          "texto": "gráfico de Weibull."
+        },
+        {
+          "letra": "D",
+          "texto": "mapofluxograma."
+        },
+        {
+          "letra": "E",
+          "texto": "diagrama homem-máquina."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 29,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No mapeamento de processos, a ferramenta utilizada na\nrepresentação do fluxograma das transações integrantes de um\nprocesso de prestação de serviço é denominada",
+      "gabarito": "B",
+      "numero": 29,
+      "pagina": 5,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "71,42%."
+        },
+        {
+          "letra": "B",
+          "texto": "70,00%."
+        },
+        {
+          "letra": "C",
+          "texto": "50,00%."
+        },
+        {
+          "letra": "D",
+          "texto": "20,00%."
+        },
+        {
+          "letra": "E",
+          "texto": "6,66%.\nECONOMIA E FINANÇAS PÚBLICAS"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 30,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Uma organização apresentou, no início do ano, um total\nde ativo no valor de R$ 60.000, um passivo exigível de\nR$ 45.000 e contabilizou, ao final do ano, um lucro líquido do\nexercício de R$ 3.000.\nNessa situação hipotética, a organização obteve, sobre o capital\npróprio, uma rentabilidade de",
+      "gabarito": "D",
+      "numero": 30,
+      "pagina": 5,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "$ 225."
+        },
+        {
+          "letra": "B",
+          "texto": "$ 135."
+        },
+        {
+          "letra": "C",
+          "texto": "$ 165."
+        },
+        {
+          "letra": "D",
+          "texto": "$ 235."
+        },
+        {
+          "letra": "E",
+          "texto": "$ 270."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 31,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Com base nas contas nacionais mencionadas no texto 2A3, é\ncorreto concluir que o valor da renda nacional, na economia em\napreço, é igual a",
+      "gabarito": "C",
+      "numero": 31,
+      "pagina": 5,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "$ 235."
+        },
+        {
+          "letra": "B",
+          "texto": "$ 225."
+        },
+        {
+          "letra": "C",
+          "texto": "$ 270."
+        },
+        {
+          "letra": "D",
+          "texto": "$ 265."
+        },
+        {
+          "letra": "E",
+          "texto": "$ 295."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 32,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "O valor do produto nacional líquido a preço de mercado da\neconomia hipotética referida no texto 2A3 é igual a",
+      "gabarito": "A",
+      "numero": 32,
+      "pagina": 5,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "O ponto d tem maior ineficiência que o ponto a."
+        },
+        {
+          "letra": "B",
+          "texto": "O ponto a é o ponto de máxima produção."
+        },
+        {
+          "letra": "C",
+          "texto": "O que faz a economia sair do ponto b para o ponto e, ou\nvice-versa, é o custo de oportunidade."
+        },
+        {
+          "letra": "D",
+          "texto": "O que induz a mudança do ponto c para o ponto b é o avanço\ntecnológico."
+        },
+        {
+          "letra": "E",
+          "texto": "O ponto e é ineficiente quando comparado ao ponto b."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 33,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Com base na curva ou fronteira de possibilidades de produção\nem uma economia com dois produtos (alimento e vestuário),\nrepresentada na imagem precedente, assinale a opção correta.",
+      "gabarito": "C",
+      "numero": 33,
+      "pagina": 6,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Apenas o item II está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas o item III está certo."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I e II estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens I e III estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 34,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "exportações importações\npaís\nUS$ (bilhões) ranking US$ (bilhões) ranking\nEstados Unidos 173,7 1 172,4 2\nHolanda 114,0 2 78,6 4\nBrasil 101,6 3 12,4 34\nAlemanha 87,1 4 104,9 3\nFrança 76,5 5 63,7 7\nEspanha 63,5 6 39,5 10\nChina 54,6 7 157,9 1\nItália 59,4 8 49,1 8\nCanadá 58,9 9 40,1 9\nBélgica 50,9 10 44,2 11\nZ. R. Ferreira e J. E. R. Vieira Filho. Competitividade internacional do agronegócio. In: J. E. R. Vieira\nFilho e J. G. Gasques. Agropecuária brasileira: evolução, resiliência e oportunidades. Brasília: IPEA,\n2023, cap. 4, p. 71 (com adaptações).\nCom base nas informações da tabela precedente, que fornece\nestatísticas de comércio internacional do setor agropecuário para\nos dez principais países agroexportadores, julgue os itens a\nseguir.\nI Os Estados Unidos são o maior exportador líquido do mundo.\nII O Brasil é o terceiro maior exportador líquido do mundo.\nIII O Brasil tem o maior saldo comercial agropecuário entre os\npaíses listados.\nAssinale a opção correta.",
+      "gabarito": "B",
+      "numero": 34,
+      "pagina": 6,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "uma política monetária contracionista deslocará a curva LM\npara a direita, induzindo a queda dos juros e aumentando o\nnível de renda da economia."
+        },
+        {
+          "letra": "B",
+          "texto": "o aumento do estoque de moeda deslocará a curva LM para a\nesquerda, aumentando juros e reduzindo o nível de renda da\neconomia."
+        },
+        {
+          "letra": "C",
+          "texto": "a política monetária expansionista será menos eficaz."
+        },
+        {
+          "letra": "D",
+          "texto": "a política monetária somente será eficaz quando o\ninvestimento for inelástico aos juros."
+        },
+        {
+          "letra": "E",
+          "texto": "o aumento do estoque de moeda reduzirá a taxa de juros e,\nconsequentemente, ampliará o nível de renda, o que implica\nmaior eficácia."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 35,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No modelo IS-LM, se a curva IS for menos inclinada,",
+      "gabarito": "E",
+      "numero": 35,
+      "pagina": 6,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Se a curva IS for muito inclinada, a política monetária será\neficaz."
+        },
+        {
+          "letra": "B",
+          "texto": "Se a curva IS for muito inclinada, a política fiscal será\nineficaz."
+        },
+        {
+          "letra": "C",
+          "texto": "Se a curva IS for pouco inclinada, a política fiscal será\nineficaz."
+        },
+        {
+          "letra": "D",
+          "texto": "Se a curva LM for pouco inclinada, a política monetária será\neficaz."
+        },
+        {
+          "letra": "E",
+          "texto": "Se a curva LM for muito inclinada, a política fiscal será\neficaz."
+        }
+      ],
+      "anulada": true,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 36,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Acerca da eficácia relativa das políticas monetária e fiscal,\nassinale a opção correta, considerando o modelo IS-LM.",
+      "gabarito": null,
+      "numero": 36,
+      "pagina": 6,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Apenas o item I está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas o item II está certo."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I e III estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens II e III estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 37,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No que concerne à previdência social no Brasil atual, julgue os\nitens seguintes.\nI Nos últimos anos, houve redução da expectativa de vida do\nbrasileiro, o que atenuou o impacto dos gastos\nprevidenciários.\nII A inversão do bônus econômico demográfico prejudica o\nequilíbrio das contas previdenciárias.\nIII O gasto com previdência social, em 2024, só não foi maior\nque o gasto com saúde.\nAssinale a opção correta.",
+      "gabarito": "B",
+      "numero": 37,
+      "pagina": 6,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Apenas o item I está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas o item III está certo."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I e II estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens II e III estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 38,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Em relação às finanças públicas e às funções do Estado, julgue os\nitens que se seguem.\nI As finanças públicas visam à promoção do bem-estar coletivo\npor meio da maximização da eficiência alocativa e\ndistributiva dos recursos.\nII A definição de metas fiscais está dissociada da função\nestabilizadora do Estado, pois depende exclusivamente de\nobjetivos políticos.\nIII As finanças públicas abrangem as atividades relacionadas à\narrecadação de tributos, excluída a gestão de despesas e da\ndívida pública.\nAssinale a opção correta.",
+      "gabarito": "A",
+      "numero": 38,
+      "pagina": 7,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o controle da base monetária."
+        },
+        {
+          "letra": "B",
+          "texto": "a sustentabilidade da dívida pública."
+        },
+        {
+          "letra": "C",
+          "texto": "a alocação eficiente de recursos."
+        },
+        {
+          "letra": "D",
+          "texto": "a eficiência na política de distribuição de renda."
+        },
+        {
+          "letra": "E",
+          "texto": "a equidade tributária."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 39,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Entre os principais objetivos das finanças públicas, o que está\ndiretamente associado à correção de falhas de mercado e à\nprovisão de bens públicos é",
+      "gabarito": "C",
+      "numero": 39,
+      "pagina": 7,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Apenas o item II está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas o item III está certo."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I e II estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens I e III estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 40,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Considerando os critérios estabelecidos na teoria econômica do\nbem-estar para a avaliação da eficiência e da equidade das\nalocações de recursos, julgue os itens a seguir.\nI Uma alocação é considerada eficiente no sentido de Pareto se\nnão for possível realocar recursos de forma a melhorar a\nsituação de um agente sem piorar a de outro.\nII A eficiência de Pareto garante uma distribuição equitativa de\nrecursos entre os indivíduos.\nIII A busca por eficiência pode entrar em conflito com objetivos\nde equidade, o que exige compensações por meio de políticas\npúblicas.\nAssinale a opção correta.",
+      "gabarito": "D",
+      "numero": 40,
+      "pagina": 7,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "no estabelecimento de metas rígidas de superávit primário,\nindependentemente do ciclo econômico."
+        },
+        {
+          "letra": "B",
+          "texto": "na implementação de políticas monetárias contracionistas em\nperíodos de crescimento econômico acelerado."
+        },
+        {
+          "letra": "C",
+          "texto": "no aumento da alíquota do imposto de renda em períodos de\nrecessão."
+        },
+        {
+          "letra": "D",
+          "texto": "na privatização de empresas estatais com vistas à redução do\ndéficit público."
+        },
+        {
+          "letra": "E",
+          "texto": "na redução dos gastos públicos durante uma crise econômica."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 41,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No contexto das políticas públicas, a função estabilizadora do\ngoverno é implementada por meio de instrumentos que visam\natenuar as flutuações econômicas. Um desses instrumentos\nconsiste",
+      "gabarito": "B",
+      "numero": 41,
+      "pagina": 7,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A distinção entre progressividade e regressividade perdeu\nrelevância diante da complexidade fiscal contemporânea,\ntendo sido substituída por critérios de arrecadação eficiente e\nequilíbrio orçamentário."
+        },
+        {
+          "letra": "B",
+          "texto": "Tributos diretos são sempre progressivos, pois possuem\nestrutura de alíquotas escalonadas que, por definição,\ngarantem justiça fiscal e redução das desigualdades."
+        },
+        {
+          "letra": "C",
+          "texto": "A neutralidade dos tributos indiretos no Brasil é garantida\npela ampla aplicação do princípio da não cumulatividade e\npela uniformidade das alíquotas sobre todos os bens de\nconsumo."
+        },
+        {
+          "letra": "D",
+          "texto": "A regressividade dos tributos indiretos no Brasil é\nintegralmente compensada pela atuação das transferências\ngovernamentais e pelos mecanismos de devolução fiscal,\ncomo o cashback tributário."
+        },
+        {
+          "letra": "E",
+          "texto": "Tributos indiretos tendem a ser regressivos por incidirem\nproporcionalmente mais sobre os mais pobres, sendo essa\ndistorção agravada quando combinada com um sistema de\ntributos diretos que possui brechas e privilégios estruturais."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 42,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No debate sobre justiça tributária, equidade e eficiência\neconômica, é essencial a compreensão dos efeitos práticos da\nestrutura dos tributos diretos e indiretos.\nConsiderando a afirmativa precedente no contexto da realidade\ndo sistema tributário brasileiro, assinale a opção correta em\nrelação à análise técnica sobre os efeitos redistributivos dos\ntributos.",
+      "gabarito": "E",
+      "numero": 42,
+      "pagina": 7,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o ICMS é fortemente seletivo, e seu efeito progressivo resulta\nem maior desigualdade, dada a proteção do consumo de bens\nde luxo"
+        },
+        {
+          "letra": "B",
+          "texto": "a predominância de contribuições sobre a folha de salários,\ncomo a feita para o INSS, torna o sistema progressivo, mas\nreduz a produtividade do trabalho formal"
+        },
+        {
+          "letra": "C",
+          "texto": "a elevada carga tributária brasileira é majoritariamente\ncomposta por tributos diretos com baixa elasticidade-renda, o\nque agrava a desigualdade"
+        },
+        {
+          "letra": "D",
+          "texto": "a estrutura de tributos sobre consumo, aliada à baixa\nincidência sobre rendimentos do capital, reduz a capacidade\nredistributiva do sistema tributário"
+        },
+        {
+          "letra": "E",
+          "texto": "a isenção de lucros e dividendos no IRPF favorece a base da\npirâmide social, mas compromete o potencial arrecadatório\ndo Estado"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 43,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No que tange à distribuição da carga tributária no Brasil, assinale\na opção em que é apresentada uma razão estrutural para a baixa\nefetividade da redução das desigualdades.",
+      "gabarito": "D",
+      "numero": 43,
+      "pagina": 7,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o governo deve evitar déficits primários durante períodos de\nrecessão para assegurar um balanço orçamentário cíclico"
+        },
+        {
+          "letra": "B",
+          "texto": "a taxa real de juros deve ser inferior à taxa de crescimento\nreal do PIB no longo prazo"
+        },
+        {
+          "letra": "C",
+          "texto": "o crescimento do PIB deve superar, de forma persistente, o\ncrescimento da base monetária"
+        },
+        {
+          "letra": "D",
+          "texto": "a taxa real de juros da dívida pública deve ser inferior ao\nsuperávit primário estrutural"
+        },
+        {
+          "letra": "E",
+          "texto": "o déficit nominal deve ser sempre menor que o déficit em\nconta corrente do balanço de pagamentos"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 44,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Considerando que a restrição orçamentária intertemporal do\ngoverno é essencial para a sustentabilidade da dívida pública,\nassinale a opção em que é indicada a condição-chave para a\ngarantia da solvência fiscal no longo prazo.",
+      "gabarito": "B",
+      "numero": 44,
+      "pagina": 7,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "substituição do ICMS, estadual, pelo IPI, federal, com\nredistribuição de recursos via fundo de participação dos\nmunicípios e fundo de participação dos estados"
+        },
+        {
+          "letra": "B",
+          "texto": "extinção do fundo de participação dos estados e concentração\ndos recursos financeiros na União para posterior distribuição\npor meio de emendas parlamentares impositivas"
+        },
+        {
+          "letra": "C",
+          "texto": "criação de um conselho federativo com poderes deliberativos\ne vinculantes sobre a repartição de receitas e mecanismos de\ncompensação regional, de modo a promover maior\ncoordenação fiscal entre União, estados e municípios"
+        },
+        {
+          "letra": "D",
+          "texto": "manutenção da autonomia tributária plena dos entes\nsubnacionais, mesmo diante de desequilíbrios regionais,\ncomo expressão da soberania federativa"
+        },
+        {
+          "letra": "E",
+          "texto": "unificação dos regimes próprios de previdência social dos\nentes federativos em um único fundo nacional de\ncapitalização administrado centralmente\nMATEMÁTICA FINANCEIRA E ESTATÍSTICA"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 45,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Considerando os desequilíbrios verticais e horizontais na\nalocação de recursos entre os entes no federalismo fiscal\nbrasileiro, assinale a opção em que é apresentada medida que\nrepresenta uma proposta tecnicamente sólida para fortalecer a\nequidade e a coordenação intergovernamental.",
+      "gabarito": "C",
+      "numero": 45,
+      "pagina": 8,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "R$ 560.000."
+        },
+        {
+          "letra": "B",
+          "texto": "R$ 466.666."
+        },
+        {
+          "letra": "C",
+          "texto": "R$ 420.000."
+        },
+        {
+          "letra": "D",
+          "texto": "R$ 390.000."
+        },
+        {
+          "letra": "E",
+          "texto": "R$ 385.000."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 46,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Durante uma auditoria, verificou-se que, no ano de 2024,\nas receitas de determinada empresa haviam sido de R$ 350.000,\nenquanto suas despesas operacionais haviam sido de R$ 200.000.\nAlém disso, foi feita a previsão de que as despesas operacionais\nda empresa aumentariam para R$ 240.000 no ano de 2025.\nNa situação hipotética precedente, para que a margem de lucro\nda empresa em 2025 seja mantida igual à de 2024, o valor\nprevisto das receitas para o ano de 2025 deverá ser igual a",
+      "gabarito": "C",
+      "numero": 46,
+      "pagina": 8,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "0,8%."
+        },
+        {
+          "letra": "B",
+          "texto": "6,12%."
+        },
+        {
+          "letra": "C",
+          "texto": "44%."
+        },
+        {
+          "letra": "D",
+          "texto": "60%."
+        },
+        {
+          "letra": "E",
+          "texto": "72,8%."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 47,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Caso se realize um investimento em um fundo que rende 20% de\njuros a cada dois anos, com capitalização composta, então, ao\nfinal do sexto ano, o valor inicialmente investido terá aumentado",
+      "gabarito": "E",
+      "numero": 47,
+      "pagina": 8,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "R$ 236.600."
+        },
+        {
+          "letra": "B",
+          "texto": "R$ 289.835."
+        },
+        {
+          "letra": "C",
+          "texto": "R$ 350.000."
+        },
+        {
+          "letra": "D",
+          "texto": "R$ 369.687."
+        },
+        {
+          "letra": "E",
+          "texto": "R$ 455.000."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 48,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Suponha que uma empresa possua um título a receber no valor de\nR$ 591.500 com vencimento em quatro anos e que a taxa de\ndesconto seja de 30% ao biênio, com capitalização composta.\nNesse caso, o valor presente do referido título é",
+      "gabarito": "C",
+      "numero": 48,
+      "pagina": 8,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A taxa de juros efetiva é sempre maior que a taxa de juros\nreal."
+        },
+        {
+          "letra": "B",
+          "texto": "Para um mesmo período, a taxa de juros efetiva sempre será\ninferior à taxa de juros nominal."
+        },
+        {
+          "letra": "C",
+          "texto": "A taxa de juros real é aquela que considera os efeitos da\ninflação."
+        },
+        {
+          "letra": "D",
+          "texto": "Quanto maior a frequência de capitalização, menor será a\ntaxa de juros efetiva."
+        },
+        {
+          "letra": "E",
+          "texto": "A taxa de juros real é sempre igual a taxa de juros efetiva."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 49,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Acerca das diferentes taxas de juros, assinale a opção correta.",
+      "gabarito": "C",
+      "numero": 49,
+      "pagina": 8,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "R$ 117.128."
+        },
+        {
+          "letra": "B",
+          "texto": "R$ 92.820."
+        },
+        {
+          "letra": "C",
+          "texto": "R$ 106.480."
+        },
+        {
+          "letra": "D",
+          "texto": "R$ 408.408."
+        },
+        {
+          "letra": "E",
+          "texto": "R$ 88.000."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 50,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Considere que Joana venha realizando, todos os anos, sempre no\nmês de julho, aplicações de R$ 20.000 em um fundo de\ninvestimento que paga 10% de juros compostos ao ano. Nesse\ncaso, se Joana verificar seu saldo logo após o quarto depósito, ela\nencontrará um valor igual a",
+      "gabarito": "B",
+      "numero": 50,
+      "pagina": 8,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "R$ 4.000."
+        },
+        {
+          "letra": "B",
+          "texto": "R$ 3.600."
+        },
+        {
+          "letra": "C",
+          "texto": "R$ 400."
+        },
+        {
+          "letra": "D",
+          "texto": "R$ 3.200."
+        },
+        {
+          "letra": "E",
+          "texto": "R$ 4.800."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 51,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Considere que um empréstimo de R$ 240.000 tenha sido\nrealizado pelo sistema de amortização constante e deva ser\nquitado em 12 parcelas mensais. Nessa situação, se a taxa de\njuros for de 2% ao mês, então o valor dos juros pagos na quarta\nparcela será igual a",
+      "gabarito": "B",
+      "numero": 51,
+      "pagina": 8,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "R$ 111.104."
+        },
+        {
+          "letra": "B",
+          "texto": "R$ 66.640."
+        },
+        {
+          "letra": "C",
+          "texto": "R$ 66.048."
+        },
+        {
+          "letra": "D",
+          "texto": "R$ 23.680."
+        },
+        {
+          "letra": "E",
+          "texto": "−R$ 16.000."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 52,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Uma empresa pretende realizar um investimento de\nR$ 400.000 que possui uma expectativa de três retornos anuais\nconsecutivos com valor fixo de R$ 170.368.\nNesse caso, considerando-se que a taxa de desconto é de 10%\nao ano, é correto afirmar que o valor presente líquido dessa\nproposta de investimento é igual a",
+      "gabarito": "D",
+      "numero": 52,
+      "pagina": 8,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "relaciona-se ao período de retorno do capital investido."
+        },
+        {
+          "letra": "B",
+          "texto": "é a taxa de desconto que iguala a zero o valor presente líquido\ndas entradas e saídas de caixa do investimento."
+        },
+        {
+          "letra": "C",
+          "texto": "é a taxa de desconto que maximiza o valor presente líquido\ndos fluxos de caixa do investimento."
+        },
+        {
+          "letra": "D",
+          "texto": "reduz o custo do investimento inicial ao menor valor possível."
+        },
+        {
+          "letra": "E",
+          "texto": "é a taxa de desconto que gera o menor prejuízo percentual em\nrelação ao investimento realizado."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 53,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "A taxa interna de retorno (TIR)",
+      "gabarito": "B",
+      "numero": 53,
+      "pagina": 8,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A mediana de X é igual a 3."
+        },
+        {
+          "letra": "B",
+          "texto": "A moda de X é igual a 4."
+        },
+        {
+          "letra": "C",
+          "texto": "O primeiro quartil de X é igual a zero."
+        },
+        {
+          "letra": "D",
+          "texto": "O valor máximo de X é 5."
+        },
+        {
+          "letra": "E",
+          "texto": "O terceiro quartil de X é igual a 5."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 54,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Considerando que a figura precedente apresenta as frequências\nrelativas acumuladas, em porcentagem, de uma variável\nquantitativa discreta X, assinale a opção correta.",
+      "gabarito": "A",
+      "numero": 54,
+      "pagina": 9,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "dispersão."
+        },
+        {
+          "letra": "B",
+          "texto": "curtose."
+        },
+        {
+          "letra": "C",
+          "texto": "posição."
+        },
+        {
+          "letra": "D",
+          "texto": "assimetria (positiva)."
+        },
+        {
+          "letra": "E",
+          "texto": "assimetria (negativa)."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 55,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Um auditor fiscal está analisando os valores de notas\nfiscais emitidas por um grupo de empresas durante determinado\nperíodo. Ao organizar os valores em ordem crescente e calcular\nos quartis, ele observa que o primeiro quartil (Q ) é igual a\n1\nR$ 1.000 e o terceiro quartil (Q ) é igual a R$ 9.000.\n3\nCom base nessa situação, é correto afirmar que a diferença entre\nesses dois valores, Q − Q , chamada de amplitude\n3 1\ninterquartílica, representa uma medida de",
+      "gabarito": "A",
+      "numero": 55,
+      "pagina": 9,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "10"
+        },
+        {
+          "letra": "B",
+          "texto": "20"
+        },
+        {
+          "letra": "C",
+          "texto": "104"
+        },
+        {
+          "letra": "D",
+          "texto": "400"
+        },
+        {
+          "letra": "E",
+          "texto": "676"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 56,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Y frequência absoluta\n20 13\n40 13\ntotal 26\nConsiderando que o quadro precedente mostra a distribuição de\nfrequência absoluta de uma variável quantitativa discreta Y,\nassinale a opção que apresenta corretamente sua variância\namostral.",
+      "gabarito": "C",
+      "numero": 56,
+      "pagina": 9,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "0,28"
+        },
+        {
+          "letra": "B",
+          "texto": "0,40"
+        },
+        {
+          "letra": "C",
+          "texto": "0,55"
+        },
+        {
+          "letra": "D",
+          "texto": "0,67"
+        },
+        {
+          "letra": "E",
+          "texto": "0,70"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 57,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Um auditor verificou que a probabilidade de determinado\ntipo de documento, quando feito em papel, ser preenchido\ncorretamente é igual a (cid:2)(cid:3)(cid:4)|(cid:6)(cid:7)(cid:8)0,4. Por outro lado, a\nprobabilidade de esse mesmo documento ser preenchido\ncorretamente por meio de um aplicativo computacional é igual a\n(cid:2)(cid:3)(cid:4)|(cid:12)(cid:7)(cid:8)0,7. Cada interessado deve optar por apenas uma das\nmodalidades — papel ou aplicativo —, não sendo possível\npreencher o documento simultaneamente pelas duas formas.\nConsiderando a situação hipotética precedente e sabendo que o\npreenchimento por aplicativo computacional representa 90% dos\ncasos, assinale a opção em que é apresentada a probabilidade de\num processo ser preenchido corretamente, ou seja, (cid:2)(cid:3)(cid:4)(cid:7).",
+      "gabarito": "D",
+      "numero": 57,
+      "pagina": 10,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "(cid:2)(cid:3)(cid:14)|(cid:15)(cid:7)(cid:8)0,6"
+        },
+        {
+          "letra": "B",
+          "texto": "(cid:2)(cid:3)(cid:14)∪(cid:15)(cid:7)(cid:8)1"
+        },
+        {
+          "letra": "C",
+          "texto": "(cid:2)(cid:3)(cid:14)∩(cid:15)(cid:7)(cid:8)0"
+        },
+        {
+          "letra": "D",
+          "texto": "(cid:2)(cid:3)(cid:14)(cid:2)∩(cid:15)(cid:2)(cid:7)(cid:8)0,24"
+        },
+        {
+          "letra": "E",
+          "texto": "(cid:2)(cid:3)(cid:15)(cid:2)|(cid:14)(cid:7)(cid:8)0,6"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 58,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Supondo que as probabilidades de ocorrência de dois eventos\nindependentes sejam (cid:2)(cid:3)(cid:14)(cid:7)(cid:8)0,4 e (cid:2)(cid:3)(cid:15)(cid:7)(cid:8)0,6, e considerando\nque (cid:14)(cid:2) e (cid:15)(cid:2) denotem, respectivamente, os eventos\ncomplementares a (cid:14) e (cid:15), assinale a opção correta.",
+      "gabarito": "D",
+      "numero": 58,
+      "pagina": 10,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "sistemática."
+        },
+        {
+          "letra": "B",
+          "texto": "aleatória por conglomerados."
+        },
+        {
+          "letra": "C",
+          "texto": "aleatória estratificada com alocação ótima."
+        },
+        {
+          "letra": "D",
+          "texto": "aleatória simples."
+        },
+        {
+          "letra": "E",
+          "texto": "aleatória estratificada com alocação proporcional."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 59,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Com o objetivo de avaliar o cumprimento das obrigações\nacessórias relativas à emissão de documentos fiscais eletrônicos,\na equipe de auditoria da secretaria da fazenda de certo estado\ndecidiu realizar uma fiscalização em estabelecimentos comerciais\nde médio porte. Devido ao grande número de empresas\ndistribuídas por todo o território estadual, os auditores decidiram,\nem um primeiro momento, selecionar aleatoriamente\n10 municípios dentre os 92 existentes. Em seguida, todos os\nestabelecimentos comerciais localizados em cada um dos\nmunicípios sorteados foram incluídos na amostra e inspecionados\nquanto à regularidade do uso do sistema de emissão de notas\nfiscais.\nNessa situação hipotética, o tipo de levantamento amostral\ndescrito corresponde à amostragem",
+      "gabarito": "B",
+      "numero": 59,
+      "pagina": 10,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "isonomia tributária."
+        },
+        {
+          "letra": "B",
+          "texto": "uniformidade geográfica."
+        },
+        {
+          "letra": "C",
+          "texto": "vedação à discriminação baseada em procedência ou destino."
+        },
+        {
+          "letra": "D",
+          "texto": "capacidade contributiva."
+        },
+        {
+          "letra": "E",
+          "texto": "competência tributária."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 61,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "O princípio do direito tributário referente à proibição das\nisenções heterônomas está diretamente relacionado à",
+      "gabarito": "E",
+      "numero": 61,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "IOF"
+        },
+        {
+          "letra": "B",
+          "texto": "IPI"
+        },
+        {
+          "letra": "C",
+          "texto": "taxa de coleta de lixo"
+        },
+        {
+          "letra": "D",
+          "texto": "contribuição social"
+        },
+        {
+          "letra": "E",
+          "texto": "ICMS"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 62,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção em que é indicado o tributo que pode ser\ncobrado pelo novo valor antes de decorridos noventa dias da data\nem que tenha sido publicada a lei que o majorou.",
+      "gabarito": "A",
+      "numero": 62,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "dicotômica."
+        },
+        {
+          "letra": "B",
+          "texto": "tricotômica."
+        },
+        {
+          "letra": "C",
+          "texto": "bipartite."
+        },
+        {
+          "letra": "D",
+          "texto": "tripartite."
+        },
+        {
+          "letra": "E",
+          "texto": "pentapartite."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 63,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Segundo o entendimento majoritário do Supremo Tribunal\nFederal (STF), o sistema vigente de classificação de tributos\nquanto à sua espécie segue a teoria",
+      "gabarito": "E",
+      "numero": 63,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "assumir a responsabilidade tributária."
+        },
+        {
+          "letra": "B",
+          "texto": "arrecadar e fiscalizar tributos."
+        },
+        {
+          "letra": "C",
+          "texto": "adquirir e exercer direitos e obrigações na seara tributária."
+        },
+        {
+          "letra": "D",
+          "texto": "realizar o fato gerador de uma obrigação tributária."
+        },
+        {
+          "letra": "E",
+          "texto": "figurar como contribuinte."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 64,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Entende-se por capacidade tributária ativa a aptidão para",
+      "gabarito": "B",
+      "numero": 64,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "garantia infraconstitucional de não incidência tributária."
+        },
+        {
+          "letra": "B",
+          "texto": "exclusão do crédito tributário."
+        },
+        {
+          "letra": "C",
+          "texto": "extinção do crédito tributário."
+        },
+        {
+          "letra": "D",
+          "texto": "norma negativa de competência tributária."
+        },
+        {
+          "letra": "E",
+          "texto": "dispensa do pagamento do tributo."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 65,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "A imunidade tributária é uma hipótese de",
+      "gabarito": "D",
+      "numero": 65,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "são normas complementares à legislação tributária."
+        },
+        {
+          "letra": "B",
+          "texto": "não são cogentes."
+        },
+        {
+          "letra": "C",
+          "texto": "modificam a legislação tributária interna."
+        },
+        {
+          "letra": "D",
+          "texto": "são válidos se compatíveis com a legislação tributária interna."
+        },
+        {
+          "letra": "E",
+          "texto": "não são oponíveis ao fisco."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 66,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Com base no que prevê o Código Tributário Nacional, é correto\nafirmar que os tratados internacionais sobre matéria tributária\nque tenham sido devidamente internalizados",
+      "gabarito": "C",
+      "numero": 66,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "for expressamente interpretativa, excluída a aplicação de\npenalidade à infração dos dispositivos interpretados."
+        },
+        {
+          "letra": "B",
+          "texto": "o ato for fraudulento."
+        },
+        {
+          "letra": "C",
+          "texto": "o ato tiver implicado no não pagamento do tributo, de acordo\ncom a norma então vigente."
+        },
+        {
+          "letra": "D",
+          "texto": "defini-los como infração, excluída a aplicação de penalidade\nà infração dos dispositivos modificados."
+        },
+        {
+          "letra": "E",
+          "texto": "cominar penalidade menos branda."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 67,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "A legislação tributária inovadora pode ser aplicada a atos\npretéritos se",
+      "gabarito": "A",
+      "numero": 67,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "não poderá ser progressivo, salvo nos casos de propriedade\ncom mais de 1.000 metros quadrados de área útil."
+        },
+        {
+          "letra": "B",
+          "texto": "não poderá ser progressivo em nenhuma situação."
+        },
+        {
+          "letra": "C",
+          "texto": "poderá ser progressivo, nos termos da legislação municipal."
+        },
+        {
+          "letra": "D",
+          "texto": "deverá ser progressivo, na forma da legislação federal."
+        },
+        {
+          "letra": "E",
+          "texto": "poderá ser progressivo ou regressivo definitivo, de acordo\ncom a lei orgânica de cada município."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 68,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "De acordo com a Constituição do Estado do Rio de Janeiro, o\nIPTU a ser cobrado pelos municípios situados no referido estado",
+      "gabarito": "C",
+      "numero": 68,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o depósito do seu montante integral, a dação em pagamento\nem bens imóveis e a moratória."
+        },
+        {
+          "letra": "B",
+          "texto": "a remissão, a dação em pagamento em bens imóveis e o\nparcelamento."
+        },
+        {
+          "letra": "C",
+          "texto": "o depósito do seu montante integral, a transação e a remissão."
+        },
+        {
+          "letra": "D",
+          "texto": "a moratória, o parcelamento e a dação em pagamento em bens\nimóveis."
+        },
+        {
+          "letra": "E",
+          "texto": "o depósito do seu montante integral, a moratória e o\nparcelamento."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 69,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "São modalidades de suspensão do crédito tributário",
+      "gabarito": "E",
+      "numero": 69,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "na transmissão do domínio do credor para o devedor\ndecorrente da extinção da alienação fiduciária em garantia."
+        },
+        {
+          "letra": "B",
+          "texto": "na transferência de bens móveis salvados de sinistro para\ncompanhias seguradoras."
+        },
+        {
+          "letra": "C",
+          "texto": "em operações interestaduais de energia elétrica destinada à\ncomercialização."
+        },
+        {
+          "letra": "D",
+          "texto": "no fornecimento de alimentação e bebidas em bares,\nrestaurantes e estabelecimentos similares."
+        },
+        {
+          "letra": "E",
+          "texto": "em operações com ouro como ativo financeiro."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 70,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Pode haver incidência de ICMS",
+      "gabarito": "D",
+      "numero": 70,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "verbas de patrocínio e venda de bens do ativo imobilizado."
+        },
+        {
+          "letra": "B",
+          "texto": "gorjetas, royalties e verbas de patrocínio."
+        },
+        {
+          "letra": "C",
+          "texto": "royalties, ganhos líquidos auferidos em aplicações de renda\nvariável e gorjetas."
+        },
+        {
+          "letra": "D",
+          "texto": "ganhos líquidos auferidos em aplicações de renda fixa, venda\nde bens do ativo imobilizado e royalties."
+        },
+        {
+          "letra": "E",
+          "texto": "venda de bens do ativo imobilizado, verbas de patrocínio e\nganhos líquidos auferidos em aplicações de renda variável."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 71,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "De acordo com a Resolução CGSN n.º 140/2018, para fins de\nopção e permanência no regime tributário do simples nacional,\nsão consideradas receitas brutas as que decorram de",
+      "gabarito": "B",
+      "numero": 71,
+      "pagina": 11,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "a partir da data da convalidação da isenção, admitidas apenas\na restituição e a compensação de tributo."
+        },
+        {
+          "letra": "B",
+          "texto": "a partir da data da entrada em vigor da nova lei, permitidas a\nrestituição e a compensação e vedada a apropriação de crédito\nextemporâneo."
+        },
+        {
+          "letra": "C",
+          "texto": "retroativamente à data original de concessão da isenção,\npermitindo-se a restituição, a compensação de tributo e a\napropriação de crédito extemporâneo."
+        },
+        {
+          "letra": "D",
+          "texto": "retroativamente à data original de concessão da isenção,\nvedadas a restituição, a compensação de tributo e a\napropriação de crédito extemporâneo."
+        },
+        {
+          "letra": "E",
+          "texto": "a partir da data da convalidação da isenção, vedadas a\nrestituição, a compensação de tributo e a apropriação de\ncrédito extemporâneo."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 72,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Determinada lei estadual que previa isenção de ICMS foi\ndeclarada inconstitucional pelo STF, pelo fato de a isenção não\nter sido aprovada por convênio entre os estados. Essa declaração\nde inconstitucionalidade não previu nenhuma modulação dos\nefeitos no tempo. Posteriormente, a isenção foi devidamente\nconvalidada pelos estados, tendo a nova lei previsto a remissão\nretroativa dos créditos de ICMS decorrentes da isenção declarada\ninconstitucional.\nNo caso hipotético em apreço, conforme a\nLei Complementar n.º 160/2017, as sanções decorrentes do não\npagamento do tributo durante o período abrangido pela remissão\nserão afastadas",
+      "gabarito": "D",
+      "numero": 72,
+      "pagina": 12,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "pela justiça estadual."
+        },
+        {
+          "letra": "B",
+          "texto": "pela justiça federal."
+        },
+        {
+          "letra": "C",
+          "texto": "pelo STF."
+        },
+        {
+          "letra": "D",
+          "texto": "pelo Superior Tribunal de Justiça."
+        },
+        {
+          "letra": "E",
+          "texto": "pelos tribunais de justiça."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 73,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Com o advento da Emenda Constitucional n.º 132/2023, os\nconflitos entre os entes federativos e o Comitê Gestor do Imposto\nsobre Bens e Serviços relativos a esse imposto devem ser\njulgados",
+      "gabarito": "D",
+      "numero": 73,
+      "pagina": 12,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "a metade do valor cobrado."
+        },
+        {
+          "letra": "B",
+          "texto": "o valor de mercado da passagem de volta."
+        },
+        {
+          "letra": "C",
+          "texto": "o valor cobrado."
+        },
+        {
+          "letra": "D",
+          "texto": "o valor de mercado da passagem de ida."
+        },
+        {
+          "letra": "E",
+          "texto": "arbitrado pela administração tributária."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 74,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Caso os trechos de ida e volta no transporte internacional de\npassageiros sejam vendidos em conjunto, a base de cálculo da\ncontribuição sobre bens e serviços (CBS) será",
+      "gabarito": "A",
+      "numero": 74,
+      "pagina": 12,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Apenas o item I está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas o item II está certo."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I e III estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens II e III estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 75,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Julgue os itens a seguir, com base na Lei estadual n.º 2.877/1997.\nI O adquirente do veículo responde pelo pagamento do IPVA\nanteriormente devido e não pago.\nII O leiloeiro ou a empresa contratada para realizar o leilão\njamais respondem pelo IPVA de veículo arrematado em\nleilão público.\nIII O arrendatário não responde pelo pagamento do IPVA de\nveículo objeto de arrendamento mercantil.\nAssinale a opção correta.",
+      "gabarito": "A",
+      "numero": 75,
+      "pagina": 12,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "O órgão de trânsito pode promover o licenciamento de\nveículos com débito de IPVA, hipótese em que o débito\ndeverá ser averbado no certificado de registro de veículo."
+        },
+        {
+          "letra": "B",
+          "texto": "Tratores e máquinas agrícolas estão isentos do tributo."
+        },
+        {
+          "letra": "C",
+          "texto": "O valor do imposto de veículos automotores usados será igual\nao dos veículos automotores novos."
+        },
+        {
+          "letra": "D",
+          "texto": "Veículos híbridos e elétricos estão sujeitos às mesmas\nalíquotas do IPVA aplicáveis aos automóveis de passeio."
+        },
+        {
+          "letra": "E",
+          "texto": "Camionetas estão isentas do tributo."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 76,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta em relação ao IPVA no estado do Rio\nde Janeiro.",
+      "gabarito": "B",
+      "numero": 76,
+      "pagina": 12,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Apenas o item II está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas o item III está certo."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I e II estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens I e III estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 77,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Ainda no que diz respeito ao IPVA no estado do Rio de Janeiro,\njulgue os itens que se seguem.\nI O imposto é devido anualmente, podendo ser pago à vista ou\nparcelado conforme previsto na legislação.\nII Na aquisição de veículo novo no curso do exercício, por\nconsumidor final, o imposto será devido por duodécimo ou\nfração que falte para o término do exercício.\nIII Na hipótese de roubo ou furto do veículo, o imposto já pago\nserá restituído proporcionalmente, desde que feito o registro\nda ocorrência perante a autoridade policial competente.\nAssinale a opção correta.",
+      "gabarito": "E",
+      "numero": 77,
+      "pagina": 12,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "É proibida a permuta de qualquer informação relativa ao\ncadastro dos proprietários de veículos entre a Secretaria de\nEstado da Fazenda e o órgão executivo de trânsito."
+        },
+        {
+          "letra": "B",
+          "texto": "Competem ao órgão estadual de trânsito as atividades\nrelacionadas ao lançamento do imposto."
+        },
+        {
+          "letra": "C",
+          "texto": "Somente as pessoas físicas são contribuintes desse imposto."
+        },
+        {
+          "letra": "D",
+          "texto": "Os táxis de propriedade de profissionais autônomos estão\nisentos do imposto."
+        },
+        {
+          "letra": "E",
+          "texto": "Em se tratando de veículo novo, considera-se ocorrido o fato\ngerador do imposto no exercício seguinte à data da aquisição\npelo consumidor final."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 78,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta ainda no que se refere ao IPVA no\nestado do Rio de Janeiro.",
+      "gabarito": "D",
+      "numero": 78,
+      "pagina": 12,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Todos os veículos automotores terrestres com mais de\n10 anos de fabricação são isentos do pagamento desse\nimposto."
+        },
+        {
+          "letra": "B",
+          "texto": "Veículos automotores terrestres de propriedade de pessoas\nfísicas beneficiárias do bolsa família estão isentos do\npagamento de IPVA."
+        },
+        {
+          "letra": "C",
+          "texto": "Ônibus e microônibus utilizados para o transporte\nintermunicipal de atletas para competição esportiva são\nisentos do pagamento de IPVA."
+        },
+        {
+          "letra": "D",
+          "texto": "Veículos automotores terrestres utilizados em competições\nautomobilísticas são isentos do pagamento desse tributo."
+        },
+        {
+          "letra": "E",
+          "texto": "São isentos desse tributo os veículos automotores de\ntransporte escolar devidamente legalizados pelo órgão\npúblico competente, na forma regulamentada por ato do\nPoder Executivo."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 79,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Ainda no que concerne ao IPVA no estado do Rio de Janeiro,\nassinale a opção correta.",
+      "gabarito": "E",
+      "numero": 79,
+      "pagina": 12,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Nenhum item está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas os itens I e II estão certos."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I e III estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens II e III estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 80,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "No que diz respeito ao imposto sobre a transmissão causa mortis\ne doação de quaisquer bens e direitos, julgue os itens seguintes,\nde acordo com o disposto na Lei estadual n.º 7.174/2015.\nI O fato gerador na transmissão causa mortis ocorre na data da\nabertura do inventário.\nII A legislação estadual do Rio de Janeiro estabelece alíquotas\nprogressivas que variam de 4% a 8%, de acordo com o valor\ndos bens e direitos transmitidos.\nIII Não há incidência do imposto quando da extinção do usufruto\nou de qualquer outro direito real.\nAssinale a opção correta.",
+      "gabarito": "D",
+      "numero": 80,
+      "pagina": 13,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Estão isentas do imposto as doações em dinheiro de até\nR$ 159.530 por ano, para os herdeiros necessários."
+        },
+        {
+          "letra": "B",
+          "texto": "Estão isentas do imposto as doações de imóvel destinado a\nprograma habitacional promovido pelo poder público a\npessoas de baixa renda."
+        },
+        {
+          "letra": "C",
+          "texto": "Os notários não podem ser responsabilizados pelo pagamento\ndo imposto em relação aos atos por eles praticados."
+        },
+        {
+          "letra": "D",
+          "texto": "Na doação, o contribuinte do imposto é o doador."
+        },
+        {
+          "letra": "E",
+          "texto": "A extinção de direito real não interfere na incidência do\nimposto."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 81,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Considerando as disposições da Lei estadual n.º 7.174/2015,\nassinale a opção correta em relação ao imposto sobre transmissão\ncausa mortis e doação de qualquer natureza.",
+      "gabarito": "B",
+      "numero": 81,
+      "pagina": 13,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Apenas o item II está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas o item III está certo."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I e II estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens I e III estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": true,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 82,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Julgue os próximos itens, acerca do imposto sobre transmissão\ncausa mortis e doação de quaisquer bens e direitos, com base no\ndisposto na Lei estadual n.º 7.174/2015.\nI A base de cálculo do imposto é o valor de mercado do bem\nou do direito transmitido.\nII No caso de transmissão de ações negociadas em bolsa de\nvalores, a base de cálculo do imposto é o valor médio do\npregão na data da ocorrência do fato gerador ou, não havendo\npregão nessa data, o valor médio do pregão anterior.\nIII No caso de transmissão de ações não negociadas em bolsa de\nvalores e cotas de sociedades, a base de cálculo do imposto\nserá o seu custo de aquisição.\nAssinale a opção correta.",
+      "gabarito": null,
+      "numero": 82,
+      "pagina": 13,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Apenas o item II está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas o item III está certo."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I e II estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens I e III estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 83,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "A respeito do processo administrativo tributário no estado do\nRio de Janeiro, julgue os seguintes itens, com base\nno Decreto lei Estadual n.º 5/1975.\nI Considera-se instaurado o contencioso tributário com a\napresentação da impugnação pelo contribuinte.\nII A impugnação terá efeito suspensivo quando formalizada por\nescrito dentro do prazo de 30 dias da comunicação do ato\nimpugnado.\nIII São admitidos todos os meios legais para a comprovação dos\nfatos arguidos na impugnação.\nAssinale a opção correta.",
+      "gabarito": "E",
+      "numero": 83,
+      "pagina": 13,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A intimação por edital poderá ser realizada a critério da\nadministração, independentemente de resultar improfícuo\nqualquer outro meio de intimação."
+        },
+        {
+          "letra": "B",
+          "texto": "A intimação por meio eletrônico só será considerada efetuada\ncinco dias depois de o sujeito passivo acessar a sua caixa\npostal virtual."
+        },
+        {
+          "letra": "C",
+          "texto": "A intimação do interessado somente poderá ser efetuada por\nmeio eletrônico ou por edital."
+        },
+        {
+          "letra": "D",
+          "texto": "A intimação por meio eletrônico somente poderá ser realizada\nquando frustradas a intimação pessoal e a por via postal ou\ntelegráfica."
+        },
+        {
+          "letra": "E",
+          "texto": "A intimação por meio eletrônico se dá pelo envio da\ncomunicação para a caixa postal virtual do sujeito passivo, de\nacordo com a forma estabelecida em regulamento."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 84,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Ainda em relação ao processo administrativo tributário no estado\ndo Rio de Janeiro, assinale a opção correta à luz do Decreto‐lei\nestadual n.º 5/1975.",
+      "gabarito": "E",
+      "numero": 84,
+      "pagina": 13,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "O auditor fiscal pode iniciar procedimento fiscal contra o\nconsulente em relação à matéria consultada ainda que a\nconsulta esteja pendente de resposta."
+        },
+        {
+          "letra": "B",
+          "texto": "Da decisão de primeira instância cabe recurso voluntário para\no conselho de contribuintes, formado exclusivamente por\nrepresentantes do Estado."
+        },
+        {
+          "letra": "C",
+          "texto": "A consulta produz efeitos ainda que formulada depois de\niniciado procedimento fiscal contra o consulente."
+        },
+        {
+          "letra": "D",
+          "texto": "O conselho de contribuintes poderá aprovar proposta ou\nenunciado de súmula de suas reiteradas e uniformes decisões."
+        },
+        {
+          "letra": "E",
+          "texto": "A observância de enunciado de súmula aprovado pelo\nsecretário de Estado de Fazenda e publicado no diário oficial\né facultativa para os órgãos da Secretaria de Estado da\nFazenda."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 85,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta, ainda conforme o disposto no\nDecreto-lei estadual n.º 5/1975.",
+      "gabarito": "D",
+      "numero": 85,
+      "pagina": 13,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Nenhum item está certo."
+        },
+        {
+          "letra": "B",
+          "texto": "Apenas os itens I e II estão certos."
+        },
+        {
+          "letra": "C",
+          "texto": "Apenas os itens I e III estão certos."
+        },
+        {
+          "letra": "D",
+          "texto": "Apenas os itens II e III estão certos."
+        },
+        {
+          "letra": "E",
+          "texto": "Todos os itens estão certos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 86,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Ainda com base no disposto no Decreto-lei estadual n.º 5/1975,\njulgue os itens a seguir.\nI O valor da taxa judiciária será reduzido quando a parte\ncomprovar documentalmente que tentou composição de\nconflitos previamente ao ajuizamento da demanda perante os\nórgãos indicados na legislação.\nII Os litigantes contumazes deverão recolher o valor da taxa\njudiciária em dobro quando sucumbentes.\nIII O Estado poderá impugnar o valor declarado pela parte para\npagamento da taxa judiciária, requerendo, inclusive, o\npagamento que entender devido.\nAssinale a opção correta.",
+      "gabarito": "E",
+      "numero": 86,
+      "pagina": 14,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A autoridade tributária pode prorrogar os prazos ou reabri-los\nna hipótese de caso fortuito ou força maior."
+        },
+        {
+          "letra": "B",
+          "texto": "Os prazos se iniciam e vencem independentemente de haver\nexpediente normal na repartição em que corra o processo ou\ndeva ser praticado o ato."
+        },
+        {
+          "letra": "C",
+          "texto": "Os prazos são contados excluindo-se o dia de início e o dia de\nvencimento."
+        },
+        {
+          "letra": "D",
+          "texto": "Os prazos processuais são contados em dias corridos."
+        },
+        {
+          "letra": "E",
+          "texto": "Os prazos relativos ao pagamento do crédito tributário\nconstituído mediante lançamento de ofício são contados em\ndias corridos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 87,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta ainda de acordo com as disposições\ndo Decreto-lei estadual n.º 5/1975.",
+      "gabarito": "A",
+      "numero": 87,
+      "pagina": 14,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "do consumo do bem mineral, devendo-se considerar consumo\na utilização de bem mineral, a qualquer título, pelo detentor\nou arrendatário do direito minerário, assim como pela\nempresa controladora, controlada ou coligada, em processo\nque importe na obtenção de nova espécie."
+        },
+        {
+          "letra": "B",
+          "texto": "da última saída por venda do bem mineral, salvo quando a\nmercadoria estiver sujeita à alíquota zero."
+        },
+        {
+          "letra": "C",
+          "texto": "do ato de arrematação, nos casos de bem mineral adquirido\nem hasta pública, devendo ser considerado bem mineral a\nsubstância mineral já lavrada e antes de seu beneficiamento."
+        },
+        {
+          "letra": "D",
+          "texto": "da saída em transferência entre estabelecimentos do mesmo\ntitular da outorga mineral."
+        },
+        {
+          "letra": "E",
+          "texto": "de todas as aquisições em cadeia do bem mineral extraído sob\no regime de permissão de lavra garimpeira, desde que não\nocorra a descaracterização desse bem mineral."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 88,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "De acordo com o disposto na Lei n.º 7.990/1989, o recolhimento\nda compensação financeira pela exploração de recursos minerais\n(CFEM) ocorrerá por ocasião",
+      "gabarito": "A",
+      "numero": 88,
+      "pagina": 14,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Na hipótese de arrematação em hasta pública de bem mineral,\neste será entregue ao vencedor daquela mediante o\npagamento prévio de 50% da CFEM."
+        },
+        {
+          "letra": "B",
+          "texto": "A energia de hidrelétrica, de uso privativo de produtor,\nquando aproveitada para uso externo de serviço público,\ntambém será gravada com a aplicação de um fator de 6% do\nvalor da energia elétrica correspondente ao faturamento\ncalculado nas mesmas condições e preços do concessionário\ndo serviço público local."
+        },
+        {
+          "letra": "C",
+          "texto": "O valor da compensação financeira corresponderá a um fator\npercentual do valor da energia constante da fatura, excluídos\napenas os impostos."
+        },
+        {
+          "letra": "D",
+          "texto": "Quando o aproveitamento do potencial hidráulico atingir mais\nde um estado ou município, a distribuição dos percentuais\nreferidos na referida lei será feita proporcionalmente,\nlevando-se em consideração o percentual de população e\noutros parâmetros de interesse público regional ou local."
+        },
+        {
+          "letra": "E",
+          "texto": "Os rejeitos e estéreis decorrentes da exploração de áreas\nobjeto de direitos minerários que possibilitem a lavra, na\nhipótese de alienação ou consumo, serão considerados bem\nmineral para fins de recolhimento da CFEM; no caso de\nr e j e it o s e e s té r e is d e m in e ra is a s s o c i a d o s u t i li z a do s e m o u t ra s\nc a d e i as p r o d u t iv a s , h av e rá u m a r e d u ç ã o d e 7 0 % n a al í q u o ta\nda CFEM."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 89,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Com base no que dispõe a Lei n.º 7.990/1989, assinale a opção\ncorreta.",
+      "gabarito": "B",
+      "numero": 89,
+      "pagina": 14,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Admite-se a aplicação dos recursos da CFEM no quadro\npermanente de pessoal."
+        },
+        {
+          "letra": "B",
+          "texto": "É vedada a aplicação dos recursos da CFEM no custeio de\ndespesas com manutenção e desenvolvimento do ensino,\nespecialmente na educação básica pública em tempo integral,\ninclusive as relativas a pagamento de salários e outras verbas\nde natureza remuneratória a profissionais do magistério em\nefetivo exercício na rede pública."
+        },
+        {
+          "letra": "C",
+          "texto": "O pagamento da CFEM será efetuado até o último dia útil do\nmês subsequente ao do fato gerador."
+        },
+        {
+          "letra": "D",
+          "texto": "É vedada a aplicação dos recursos da CFEM em pagamento\nde dívida."
+        },
+        {
+          "letra": "E",
+          "texto": "É vedada a aplicação dos recursos da CFEM ao pagamento de\ndívidas para com a União e suas entidades."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 90,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Ainda conforme o disposto na Lei n.º 7.990/1989, assinale a\nopção correta em relação à CFEM.",
+      "gabarito": "D",
+      "numero": 90,
+      "pagina": 14,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A previsão legal de transferência pelos estados aos\nmunicípios situados em sua respectiva territorialidade, de\n25% da parcela da compensação financeira que lhes é\noriginalmente atribuída, não viola o pacto federativo nem a\nautonomia dos estados-membros."
+        },
+        {
+          "letra": "B",
+          "texto": "Conforme entendimento do STF, cabe aos estados-membros,\nDistrito Federal e municípios a definição das condições de\nrecolhimento das CFEM de sua titularidade."
+        },
+        {
+          "letra": "C",
+          "texto": "A CFEM constitui receita originária da União e receita\nderivada dos estados e municípios, por ser transferida por\nrepasse da União."
+        },
+        {
+          "letra": "D",
+          "texto": "Os estados, o Distrito Federal e os municípios possuem\ncompetência para arrecadar diretamente a CFEM, por\nintermédio de seus órgãos fazendários."
+        },
+        {
+          "letra": "E",
+          "texto": "Os tribunais de contas dos estados não possuem competência\npara a fiscalização dos recursos oriundos da compensação\nfinanceira pelo resultado da exploração de petróleo ou gás\nnatural, de recursos hídricos para fins de geração de energia\nelétrica, de recursos minerais em seus respectivos territórios."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 91,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta no que diz respeito ao entendimento do\nSTF acerca da CFEM e das disposições da Lei n.º 7.990/1989.",
+      "gabarito": "A",
+      "numero": 91,
+      "pagina": 14,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A parcela do valor do royalty que exceder a 10% da produção\nterá a distribuição de 55% aos estados onde for realizada a\nprodução quando a lavra ocorrer em terra ou em lagos, rios,\nilhas fluviais e lacustres."
+        },
+        {
+          "letra": "B",
+          "texto": "Para as operações já contratadas na data da promulgação da\nreferida lei, poderão as partes, de comum acordo, ajustar a\ntransferência do depósito dos recursos de participação\nespecial diretamente para conta bancária específica do\ninvestidor ou da entidade representativa dos interesses do\ninvestidor para essa finalidade."
+        },
+        {
+          "letra": "C",
+          "texto": "Os recursos provenientes dos pagamentos da participação\nespecial serão distribuídos com base nos cálculos de valores\ndevidos a cada beneficiário, fornecidos pela autoridade\nadministrativa competente."
+        },
+        {
+          "letra": "D",
+          "texto": "No caso dos estados e dos municípios, os recursos de\nparticipação especial serão creditados em contas bancárias\nespecíficas de titularidade desses entes federativos."
+        },
+        {
+          "letra": "E",
+          "texto": "O Poder Executivo federal poderá reduzir o montante de\nroyalties dos contratos de concessão de exploração e\nprodução de petróleo e gás natural oriundos da denominada\nrodada zero de licitações promovida pela Agência Nacional\nde Petróleo, Gás Natural e Biocombustíveis (ANP) para até\n5% sobre o total da produção como incentivo a investimentos\nem conteúdo local nas atividades de exploração e de\nprodução relativas a esses contratos, nos termos e nas\ncondições previstos em regulamentos."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 92,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Considerando as participações governamentais nos contratos de\nconcessão de exploração e produção de petróleo e gás natural,\nassinale a opção correta com base nas disposições da\nLei n.º 9.478/1997.",
+      "gabarito": "E",
+      "numero": 92,
+      "pagina": 15,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A queima de gás em flares, em prejuízo de sua\ncomercialização, e a perda de produto ocorrida sob a\nresponsabilidade do concessionário não serão incluídas no\nvolume total da produção a ser computada para cálculo dos\nroyalties devidos."
+        },
+        {
+          "letra": "B",
+          "texto": "As receitas provenientes das participações governamentais\nalocadas para órgãos da administração pública federal serão\nmantidas em conta específica para essas verbas do governo\nfederal enquanto não forem destinadas para as respectivas\nprogramações."
+        },
+        {
+          "letra": "C",
+          "texto": "As participações governamentais, os royalties e o pagamento\npela ocupação ou retenção da área serão sempre obrigatórios."
+        },
+        {
+          "letra": "D",
+          "texto": "Os critérios para o cálculo do valor dos royalties serão\nestabelecidos por Resolução do Tribunal de Contas da União,\nem função dos preços de mercado do petróleo, gás natural ou\ncondensado, das especificações do produto e da localização\ndo campo."
+        },
+        {
+          "letra": "E",
+          "texto": "Considerados os riscos biológicos, a ANP poderá prever, no\nedital de licitação correspondente, a redução do valor dos\nroyalties estabelecido na referida lei para um montante\ncorrespondente a, no mínimo, 10% da produção."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 93,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Com base no disposto na Lei n.º 9.478/1997, assinale a opção\ncorreta a respeito das participações governamentais no contrato\nde concessão de exploração e produção de petróleo e gás natural.",
+      "gabarito": "C",
+      "numero": 93,
+      "pagina": 15,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "O edital e o contrato disporão sobre o pagamento pela\nocupação ou retenção de área, a ser feito mensalmente, fixado\npor quilômetro quadrado ou fração da superfície do bloco, na\nforma da regulamentação por decreto do presidente da\nRepública."
+        },
+        {
+          "letra": "B",
+          "texto": "O contrato de concessão conterá cláusula que estabelecerá o\npagamento de participação de valor fixo mensal ao\nproprietário da terra, independentemente do volume de\nprodução ou rentabilidade."
+        },
+        {
+          "letra": "C",
+          "texto": "O bônus de participação corresponde ao valor ofertado pelo\nlicitante na proposta do certame para a obtenção da\nconcessão, com valor mínimo previsto no edital e pago\nimediatamente após o julgamento da licitação."
+        },
+        {
+          "letra": "D",
+          "texto": "Os royalties serão pagos a partir do ano seguinte ao ano em\nque tenha sido iniciada a produção comercial de cada campo,\nem montante correspondente a 10% da produção de petróleo\nou gás natural."
+        },
+        {
+          "letra": "E",
+          "texto": "A participação especial constitui uma compensação\nfinanceira extraordinária devida pelos concessionários de\nexploração e produção de petróleo ou gás, nos casos de\ngrande volume de produção ou grande rentabilidade e será\naplicada sobre a receita bruta da produção, deduzidos os\nroyalties, os investimentos na exploração, os custos\noperacionais, a depreciação e os tributos previstos na\nlegislação em vigor."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 94,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Ainda em relação às participações governamentais no contrato de\nconcessão de exploração e produção de petróleo e gás natural,\nconforme disposto na Lei n.º 9.478/1997, assinale a opção\ncorreta.",
+      "gabarito": "E",
+      "numero": 94,
+      "pagina": 15,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Os relatórios de gastos trimestrais em relação à compensação\nfinanceira pela exploração de petróleo e gás natural\napresentados pelas empresas exploradoras devem\ncompreender, separadamente, os gastos das fases de\nexploração, desenvolvimento e produção de petróleo e gás\nnatural."
+        },
+        {
+          "letra": "B",
+          "texto": "O relatório mensal de atividades é documento obrigatório de\nentrega à SEFAZ em relação à compensação financeira pela\nexploração de recursos minerais."
+        },
+        {
+          "letra": "C",
+          "texto": "O demonstrativo anual da apuração da participação especial é\ndocumento obrigatório de entrega à SEFAZ em relação à\ncompensação financeira pela exploração de petróleo e gás\nnatural."
+        },
+        {
+          "letra": "D",
+          "texto": "Constitui documento obrigatório de entrega à SEFAZ a\ndeclaração de investimento em produção mineral em relação\nà compensação financeira pela exploração de recursos\nminerais."
+        },
+        {
+          "letra": "E",
+          "texto": "As empresas de produção e exploração de petróleo e gás\nnatural devem disponibilizar à SEFAZ todos os meios para a\nmedição ou avaliação nos navios transportadores de petróleo\npara outra unidade da Federação, devendo a ficha de medição\nou avaliação ser verificada pelo representante do fisco\nestadual, mediante sistemática disciplinada em ato do\nConselho Nacional de Política Fazendária (CONFAZ)."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 95,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Tendo como fundamento a Lei estadual n.º 5.139/2007, que\ndispõe sobre o acompanhamento e a fiscalização das\ncompensações financeiras oriundas das concessões, permissões,\ncessões e outras modalidades administrativas para exploração de\nrecursos hídricos e minerais, assinale a opção correta.",
+      "gabarito": "A",
+      "numero": 95,
+      "pagina": 15,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Nos processos para a constituição de créditos das receitas não\ntributárias reguladas pela referida lei, será exclusivamente\nobservado o que determina o Código de Processo Civil."
+        },
+        {
+          "letra": "B",
+          "texto": "Os créditos estaduais relativos às receitas não tributárias\nprevistas na referida lei, antes de serem encaminhados à\ncobrança executiva, deverão ser inscritos em dívida ativa pela\nSEFAZ e a cobrança da dívida ativa será efetuada pela\nprocuradoria-geral do estado."
+        },
+        {
+          "letra": "C",
+          "texto": "É competente para julgar em primeira instância o processo\nadministrativo de constituição de créditos das receitas não\ntributárias disciplinadas na referida lei o auditor responsável\npelo lançamento, cabendo ao Conselho de Contribuintes do\nEstado do Rio de Janeiro decidir eventual recurso."
+        },
+        {
+          "letra": "D",
+          "texto": "Quando se tratar de infração relativa à falta de recolhimento\nde receita não tributária regularmente declarada, será lavrada\nnota de lançamento com o respectivo procedimento de rito\nespecial e sumário, sendo, em seguida, o sujeito passivo\nintimado para o pagamento da dívida com juros de mora e\nacréscimos legais, no prazo de 10 dias, ou apresentar pedido\nde revisão da nota de lançamento; caso ele não pague a dívida\nou não apresente pedido de revisão, haverá a incidência de\nmulta de mora."
+        },
+        {
+          "letra": "E",
+          "texto": "Nos processos para a constituição de créditos das receitas não\ntributárias reguladas por essa lei, os procedimentos, os prazos\ne os atos processuais obedecerão, no que couber, à legislação\nque rege o ICMS."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 96,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Ainda à luz das disposições da Lei estadual n.º 5.139/2007,\nassinale a opção correta.",
+      "gabarito": "E",
+      "numero": 96,
+      "pagina": 16,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Equiparam-se à saída por venda o consumo ou a utilização da\nsubstância mineral em processo de industrialização realizado\ndentro das áreas da jazida, mina, salina ou outros depósitos\nminerais, exceto suas áreas limítrofes, e, ainda, em qualquer\nestabelecimento."
+        },
+        {
+          "letra": "B",
+          "texto": "O estado do Rio de Janeiro, por meio de sua SEFAZ, pode\nfirmar convênios de cooperação técnica com a União, os\nestados, o Distrito Federal, os municípios e seus respectivos\nórgãos e entidades, para auxiliar a fiscalização de que trata o\nregulamento, devendo os referidos convênios ser\ncomunicados ao Tribunal de Contas da União e ao Tribunal\nde Contas do Estado do Rio de Janeiro."
+        },
+        {
+          "letra": "C",
+          "texto": "Os procedimentos de administração, de fiscalização, de\narrecadação e de lançamento das receitas não tributárias serão\nexecutados privativamente por fiscais de rendas da\nSEFAZ/RJ e se restringirão às parcelas de receitas originárias\ne derivadas pertencentes ao estado do Rio de Janeiro."
+        },
+        {
+          "letra": "D",
+          "texto": "Na hipótese de vendas com cláusula CIF em que não tenham\nsido destacados, nas correspondentes notas fiscais, os valores\ndos transportes e dos seguros, estes somente podem ser\ndeduzidos na apuração da base de cálculo da CFEM relativa\nao percentual do estado do Rio de Janeiro, após a sua\nhomologação pela SEFAZ/RJ."
+        },
+        {
+          "letra": "E",
+          "texto": "Na venda de água mineral sujeita à substituição tributária, o\nvalor do ICMS substituição deve ser considerado com base\nno valor total da nota fiscal deduzido o valor do frete e do\nseguro."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 97,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta com base no Regulamento das Receitas\nNão Tributárias (Decreto estadual n.º 42.475/2010).",
+      "gabarito": "D",
+      "numero": 97,
+      "pagina": 16,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Quando a autoridade julgadora entender pela necessidade de\nperícia ou a requerimento da parte interessada, nos casos de\nimpugnação ao auto de infração ou à nota de lançamento, a\nautoridade julgadora remeterá o processo à repartição\ncompetente, a fim de ser designado servidor para proceder\naos exames, na qualidade de perito, ficando a autoridade\njulgadora adstrita ao laudo pericial público."
+        },
+        {
+          "letra": "B",
+          "texto": "O procedimento de fiscalização das receitas não tributárias\nserá iniciado com a lavratura de intimação, de termo de início\nde fiscalização, de auto de infração, de nota de lançamento ou\nde denúncia devidamente formalizada na SEFAZ."
+        },
+        {
+          "letra": "C",
+          "texto": "Enquanto perdurarem as normas da legislação federal que\nestipulem que os pagamentos das participações ou das CFEM\ncaibam diretamente à União, a parcela das receitas não\ntributárias pertencentes ao estado do Rio de Janeiro deverá\nser paga do seguinte modo: a parcela principal, recolhida\ndiretamente à União; e as multas, juros e acréscimos\nmoratórios, diretamente ao estado."
+        },
+        {
+          "letra": "D",
+          "texto": "Quando houver o pagamento espontâneo fora do prazo\nestabelecido, antes, porém, de qualquer procedimento fiscal,\ndas participações ou das compensações financeiras\ndecorrentes da exploração de recursos hídricos e de recursos\nminerais, não haverá a incidência de multa de mora."
+        },
+        {
+          "letra": "E",
+          "texto": "Se da apuração levada a efeito pela fiscalização estadual\nresultar valor superior ao obtido pelos órgãos e entidades da\nUnião quanto ao pagamento das participações ou das CFEM,\ndeverá a SEFAZ solicitar aos órgãos e entidades da União\nque efetuem a cobrança, diretamente ao concessionário, das\ndiferenças constatadas."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 98,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Ainda conforme o disposto no Decreto estadual n.º 42.475/2010,\nassinale a opção correta.",
+      "gabarito": "C",
+      "numero": 98,
+      "pagina": 16,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Na impugnação do auto de infração ou da nota de\nlançamento, em havendo perícia, o assistente técnico não\nassinará o laudo em conjunto com o perito, limitando-se a\napresentar os seus quesitos."
+        },
+        {
+          "letra": "B",
+          "texto": "É permitido reunir, em uma só petição, impugnações\nreferentes a mais de um auto de infração, desde que ela verse\nsobre assunto da mesma natureza ou se refira ao mesmo\nresponsável, em respeito ao princípio da economia\nprocessual."
+        },
+        {
+          "letra": "C",
+          "texto": "As incorreções ou omissões do auto de infração acarretarão a\nsua nulidade, ainda que do processo constem elementos\nsuficientes para determinar, com segurança, a natureza da\ninfração e a pessoa do infrator."
+        },
+        {
+          "letra": "D",
+          "texto": "Do valor da arrecadação de multas e de juros de mora por\ninfração à legislação de receitas não tributárias, inclusive\ndecorrentes de débitos inscritos em dívida ativa, serão\ndestacados 15% para compor o Fundo de Administração\nFazendária e 15% para compor o Fundo de Modernização e\nIncentivo à Cobrança da Dívida Ativa e de Reestruturação\nAdministrativa da Procuradoria-Geral do Estado."
+        },
+        {
+          "letra": "E",
+          "texto": "Os requisitos formais para o pedido de impugnação do auto\nde infração ou da nota de lançamento deverão basear-se nas\nnormas do Código Tributário Nacional."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 99,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "Assinale a opção correta ainda de acordo com o que dispõe o\nDecreto estadual n.º 42.475/2010.",
+      "gabarito": "D",
+      "numero": 99,
+      "pagina": 16,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Consideram-se transmitidos os arquivos relativos ao boletim mensal\nparticipação especial (DAPE) no momento em que for emitido o recibo\nindicativa de que o processo de transmissão foi realizado com sucesso."
+        },
+        {
+          "letra": "B",
+          "texto": "A geração, o armazenamento e o envio dos arquivos digitais dispensam\nsua empresa líder, da guarda dos documentos que deram origem às\nestabelecidos pela legislação aplicável."
+        },
+        {
+          "letra": "C",
+          "texto": "Os arquivos digitais do boletim mensal de produção (BMP) e(ou) do\ndeverão ser retificados no prazo estabelecido pela referida resolução,\narquivos originalmente encaminhados e regularmente recebidos pela"
+        },
+        {
+          "letra": "D",
+          "texto": "Os arquivos do boletim mensal de produção (BMP) e do demonstrativo\narmazenados pelo prazo de 10 anos."
+        },
+        {
+          "letra": "E",
+          "texto": "Para a garantia da validade jurídica do boletim mensal de produção\nespecial (DAPE), que compreende a autenticidade, a integridade, a\nprestadas em arquivo digital com assinatura digital da concessionária\nintegrantes.\ncorreta.\nde produção (BMP) e ao demonstrativo de apuração da\nde entrega com um número de protocolo e uma mensagem\nas empresas concessionárias e os consórcios, por meio de\ninformações nele constantes, segundo a forma e os prazos\ndemonstrativo de apuração da participação especial (DAPE)\nmediante envio de arquivos de ajuste, mantendo-se os\nadministração fazendária.\nde apuração da participação especial (DAPE) deverão ser\n(BMP) e do demonstrativo de apuração da participação\nprivacidade e o não repúdio, as informações deverão ser\nou do consórcio por meio de qualquer de suas empresas"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": null,
+      "atribuicao": {
+        "ano": 2025,
+        "banca": "CEBRASPE",
+        "cargo": "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II",
+        "numero_original": 100,
+        "orgao": "SEFAZ-RJ",
+        "url_pdf": "https://cdn.cebraspe.org.br/concursos/sefaz_rj_25_auditor_ii/arquivos/060_SEFAZRJAUDITOR_002_01.pdf"
+      },
+      "classificacao_confianca": null,
+      "classificacao_metodo": "nulo",
+      "desatualizada": false,
+      "disciplina": null,
+      "enunciado": "À luz do disposto na Resolução SEFAZ/RJ n.º 633/2024, assinale a opção",
+      "gabarito": "A",
+      "numero": 100,
+      "pagina": 17,
+      "tipo": "multipla"
+    }
+  ],
+  "status": "publicavel",
+  "textos_apoio": [],
+  "versao_artefato": 1
+}

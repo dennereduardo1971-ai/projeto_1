@@ -1,0 +1,37 @@
+# Prova piloto de fiscal: SEFAZ-RJ 2025 — Auditor Fiscal da Receita Estadual
+# (3ª categoria) — Caderno de Conhecimentos Específicos II. Ver
+# `sefaz_rj_25_auditor_i.yaml` para o Caderno I; numeração própria deste
+# caderno também reinicia em 1.
+extends: multipla_5
+nome: sefaz_rj_25_auditor_ii
+
+prova:
+  banca: CEBRASPE
+  ano: 2025
+  orgao: SEFAZ-RJ
+  cargo: "Auditor Fiscal da Receita Estadual (3ª categoria) — Conhecimentos Específicos II"
+  tipo_caderno: "1"
+  pagina_concurso: https://www.cebraspe.org.br/concursos/sefaz_rj_25_auditor
+
+numeracao:
+  minimo: 1
+  maximo: 140
+  exige_sequencia: true
+
+marcadores:
+  # Este caderno numera por "Questão N" (não número solto na margem), e às
+  # vezes a linha vem colada num cabeçalho de seção ("LÍNGUA PORTUGUESA
+  # Questão 2") por causa de um resíduo do agrupamento de linha por altura.
+  # O prefixo não-guloso absorve esse lixo antes do marcador.
+  item: '(?i)^.*?quest[ãa]o\s+(?P<numero>\d{1,3})\s*(?P<resto>.*)$'
+
+layout:
+  colunas: auto
+  # CALIBRADO: a calha real deste caderno mede ~17pt (medido no PDF), abaixo do
+  # padrão de 24pt do `_base.yaml` — com o padrão, a coluna nunca era detectada.
+  gap_coluna_min: 10
+  # CALIBRADO: o cabeçalho de página ("CEBRASPE — SEFAZ/RJ — Edital: 2025")
+  # termina em ~30pt, e o corpo (ex.: "Questão 6") começa em ~48pt — bem
+  # abaixo do padrão de 6% da altura (≈50,5pt), que cortava a primeira linha
+  # de conteúdo de cada página junto com o cabeçalho.
+  margem_topo_frac: 0.045
