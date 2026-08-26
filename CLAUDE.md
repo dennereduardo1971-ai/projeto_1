@@ -1,4 +1,4 @@
-# Projeto — app de estudos para Auditor-Fiscal da RFB
+# Rito — app de estudos para Auditor-Fiscal da RFB
 
 App web (PWA) que transforma o edital verticalizado na unidade central do estudo: cada linha do edital
 carrega o esquema de leitura, as questões que já caíram, o desempenho e as revisões agendadas.

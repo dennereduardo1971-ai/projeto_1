@@ -53,3 +53,18 @@ Critérios usados: curto (1–2 sílabas fortes), falável ao telefone, escreví
 Grifo é o único que junta as três coisas: verbo que o usuário já usa, ícone pronto e som curto de marca. Pauta é o mais elegante para o nicho fiscal, mas Grifo funciona igualmente bem se o app um dia sair da área fiscal.
 
 Se quiser um nome que já explique o produto na prateleira e não precise de marketing, **Edital Vivo** é a escolha segura.
+
+---
+
+## Decisão
+
+**O app se chama Rito.** Registrado em 2026-08-26 — é o nome que está em `app/package.json`, no
+`<title>` e na interface.
+
+As propostas acima ficam como estão, inclusive a recomendação original por *Grifo*: o histórico da
+escolha vale mais que a coerência retroativa. Rito ganhou pelo que a palavra carrega para este
+público — é termo jurídico (rito ordinário, rito sumário) e, ao mesmo tempo, nomeia a disciplina
+repetida todo dia, que é a tese do produto: constância vence volume.
+
+Falta ainda checar disponibilidade de domínio em `registro.br` — a rede do ambiente de
+desenvolvimento bloqueia registradores.

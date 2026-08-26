@@ -174,14 +174,17 @@ Derivado da realidade da prova, não do livro:
 
 ## 7. Roadmap por fases (cada fase é utilizável sozinha)
 
-| Fase | Entrega | Você consegue... |
+| Fase | Entrega | Estado em 26/08/2026 |
 |---|---|---|
-| **0** | Esqueleto: app publicado, login, banco criado, taxonomia de Auditoria e Direito Civil | Entrar e ver o app de pé |
-| **1** | Edital do concurso alvo cadastrado + Mapa do Edital + ciclo de estudos com cronômetro | Planejar e registrar estudo de verdade |
-| **2** | Pipeline de ingestão + primeiras provas Cebraspe + tela de resolver questões (C/E, placar líquido, confiança) + caderno de erros | Treinar questão de banca com estatística honesta |
-| **3** | Fila FSRS unificada + erro vira card automaticamente + streak e lembrete | Ter motivo para abrir o app todo dia |
-| **4** | Material esquematizado dos assuntos de maior incidência | Estudar teoria dentro do app |
-| **5** | Estatísticas e diagnóstico (prioridade, falso domínio, evolução) | Saber onde investir a próxima hora |
+| **0** | Esqueleto: app publicado, banco criado, taxonomia de Auditoria e Direito Civil | **Feita.** App de pé, taxonomia carregada (14 + 14 assuntos). Sem login — segue fora do escopo enquanto tudo roda local |
+| **1** | Edital do concurso alvo cadastrado + Mapa + ciclo de estudos com cronômetro | **Feita, com uma ressalva.** Mapa e ciclo funcionam; o **edital não está cadastrado** porque o concurso alvo só tem edital previsto até janeiro de 2027. Até lá o Mapa usa a árvore de assuntos |
+| **2** | Pipeline de ingestão + primeiras provas Cebraspe + tela de resolver questões + caderno de erros | **Parcial.** Pipeline pronto (7 etapas, 16 testes passando) e tela de questões pronta (confiança declarada, placar por formato da prova). **Acervo real vazio** — nenhuma prova ingerida. Caderno de erros ainda é stub |
+| **3** | Fila FSRS unificada + erro vira card automaticamente + streak e lembrete | **Parcial.** Fila FSRS e erro-vira-card funcionando ponta a ponta. Streak e lembrete não existem |
+| **4** | Material esquematizado dos assuntos de maior incidência | Não iniciada — depende do acervo, que define a ordem por incidência |
+| **5** | Estatísticas e diagnóstico (prioridade, falso domínio, evolução) | Não iniciada. O dado já está sendo coletado (confiança em cada resposta) |
+
+> O gargalo é um só e não é código: **ingerir a primeira prova real**. Fases 2, 4 e 5 destravam
+> juntas quando isso acontecer.
 
 ---
 
