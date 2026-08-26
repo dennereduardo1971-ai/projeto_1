@@ -178,15 +178,15 @@ Derivado da realidade da prova, não do livro:
 |---|---|---|
 | **0** | Esqueleto: app publicado, banco criado, taxonomia de Auditoria e Direito Civil | **Feita.** App de pé, taxonomia carregada (14 + 14 assuntos). Sem login — segue fora do escopo enquanto tudo roda local |
 | **1** | Edital do concurso alvo cadastrado + Mapa + ciclo de estudos com cronômetro | **Feita, com uma ressalva.** Mapa e ciclo funcionam; o **edital não está cadastrado** porque o concurso alvo só tem edital previsto até janeiro de 2027. Até lá o Mapa usa a árvore de assuntos |
-| **2** | Pipeline de ingestão + primeiras provas Cebraspe + tela de resolver questões + caderno de erros | **Parcial, gargalo movido.** Primeira prova real ingerida ponta a ponta (SEFAZ-RJ 2025, Auditor Fiscal — dois cadernos, 200 questões, gabarito definitivo casado 100%) até a etapa 6; publicação bloqueada corretamente por falta de **classificação por disciplina/assunto** (precisa de LLM real, hoje só há o stub). Dois bugs de layout do extrator (colunas juntadas antes da separação, numeração "Questão N") corrigidos — valem para as próximas provas. Caderno de erros ainda é stub |
+| **2** | Pipeline de ingestão + primeiras provas Cebraspe + tela de resolver questões + caderno de erros | **Parcial, acervo real publicado.** **399 questões reais** publicadas em `acervo/provas/` — SEFAZ-RJ 2025 Auditor Fiscal (2 cadernos, 199) e PGDF 2022 Procurador (200, direito constitucional/civil/administrativo), gabarito definitivo casado 100%. Decisão do dono (26/08/2026): publicar **sem classificação por assunto** por ora (`assunto`/`disciplina` ficam `null` — não gastar em LLM agora). Vários bugs de layout do extrator corrigidos (colunas juntadas antes da separação, numeração "Questão N", capa do caderno virando questões fantasma, barreira contra texto de justificativa da banca vazando no enunciado) — valem para qualquer prova futura. Caderno de erros ainda é stub |
 | **3** | Fila FSRS unificada + erro vira card automaticamente + streak e lembrete | **Parcial.** Fila FSRS e erro-vira-card funcionando ponta a ponta. Streak e lembrete não existem |
 | **4** | Material esquematizado dos assuntos de maior incidência | Não iniciada — depende da classificação por assunto (Fase 2) |
 | **5** | Estatísticas e diagnóstico (prioridade, falso domínio, evolução) | Não iniciada. O dado já está sendo coletado (confiança em cada resposta) |
 
-> O gargalo deixou de ser "ingerir a primeira prova real" — isso já aconteceu (ver `data/`,
-> não versionado, e os perfis em `scripts/ingest/perfis/sefaz_rj_25_auditor_*.yaml`). O gargalo
-> agora é **ligar `6_classificar.py` a um LLM de verdade** (hoje roda em modo `--stub`, que manda
-> tudo para revisão humana) para poder publicar as 200 questões já casadas com gabarito.
+> O gargalo deixou de ser "ingerir a primeira prova real" — isso já aconteceu, três vezes (ver
+> `acervo/provas/` e os perfis em `scripts/ingest/perfis/`). O gargalo agora é **classificar por
+> assunto** as 399 questões já publicadas — manualmente, ou ligando `6_classificar.py` a um LLM de
+> verdade (hoje roda em `--sem-classificacao`, de propósito, por decisão de custo).
 
 ---
 

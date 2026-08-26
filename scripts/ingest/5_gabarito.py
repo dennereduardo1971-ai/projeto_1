@@ -36,7 +36,7 @@ PADROES = (
 )
 
 
-RE_LINHA_QUESTAO = re.compile(r"(?i)^quest[ãa]o\s+(?P<nums>[\d\s]+)$")
+RE_LINHA_QUESTAO = re.compile(r"(?i)^(?:quest[ãa]o|item)\s+(?P<nums>[\d\s]+)$")
 RE_LINHA_GABARITO = re.compile(r"(?i)^gabarito\s+(?P<vals>[A-EX?\s]+)$")
 
 

@@ -62,6 +62,12 @@ def executar(
     re_ref = p.marcador("referencia_texto_apoio")
     re_precedente = p.marcador("referencia_precedente")
     re_fim = p.marcador("fim_prova")
+    # Barreira anti-justificativa (CLAUDE.md, regra 5): cadernos "COM
+    # JUSTIFICATIVA"/"COM_JUST" intercalam o comentário autoral da banca logo
+    # depois de cada item ("JUSTIFICATIVA - Errado. Em se tratando de..."). Se
+    # o perfil define este marcador, tudo da linha que o casa até o próximo
+    # item/alternativa é descartado — nunca vira enunciado ou alternativa.
+    re_justificativa = p.marcador("inicio_justificativa")
 
     minimo = int(p.numeracao.get("minimo", 1))
     maximo = int(p.numeracao.get("maximo", 200))
@@ -91,6 +97,7 @@ def executar(
     buffer_questao: list[str] = []
     alternativa_atual: Alternativa | None = None
     buffer_alt: list[str] = []
+    em_justificativa = False
     esperado = minimo
     paginas_sem_texto = [pg["numero"] for pg in texto["paginas"] if pg["precisa_ocr"]]
 
@@ -131,6 +138,15 @@ def executar(
             bruto = linha["texto"].strip()
             if not bruto or _descartar(bruto, descartaveis):
                 continue
+
+            # ── dentro de um bloco de justificativa: descarta até o próximo
+            # item de verdade aparecer. Nunca vira enunciado ou alternativa.
+            if em_justificativa:
+                if re_item and re_item.match(bruto):
+                    em_justificativa = False
+                else:
+                    continue
+
             if re_fim and re_fim.search(bruto):
                 fechar_questao()
                 fechar_apoio()
@@ -199,6 +215,11 @@ def executar(
                 fechar_alternativa()
                 alternativa_atual = Alternativa(letra=m_alt.group("letra"), texto=m_alt.group("resto"))
                 buffer_alt = []
+                continue
+
+            # ── abertura de bloco de justificativa (texto autoral da banca) ──
+            if re_justificativa and questao_atual and re_justificativa.search(bruto):
+                em_justificativa = True
                 continue
 
             # ── continuação ─────────────────────────────────────────────────

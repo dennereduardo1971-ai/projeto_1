@@ -1,0 +1,33 @@
+# Prova piloto de Direito Civil: PGDF 2022 — Procurador do Distrito Federal,
+# Categoria I. Certo/Errado, 200 itens. Único caderno disponível na Cebraspe
+# para esta prova é "COM_JUST" — vem com a justificativa da banca colada
+# depois de cada item; o marcador `inicio_justificativa` faz o segmentador
+# descartar esse bloco (nunca publicar texto autoral de terceiro).
+extends: ce_bloco
+nome: pg_df_22_procurador
+
+prova:
+  banca: CEBRASPE
+  ano: 2022
+  orgao: PGDF
+  cargo: "Procurador do Distrito Federal (Categoria I)"
+  pagina_concurso: https://www.cebraspe.org.br/concursos/pg_df_22_procurador
+
+numeracao:
+  minimo: 1
+  maximo: 200
+  exige_sequencia: true
+
+marcadores:
+  # "JUSTIFICATIVA - Errado. Em se tratando de..." — sempre logo após o item,
+  # antes do próximo número. Ver 4_segmentar.py, barreira anti-justificativa.
+  inicio_justificativa: '(?i)^justificativa\b'
+
+layout:
+  colunas: auto
+  # CALIBRADO: calha real ~16pt, abaixo do padrão de 24pt do `_base.yaml`.
+  gap_coluna_min: 10
+  # CALIBRADO: cabeçalho ("CEBRASPE — PG/DF — Edital: 2022") termina em
+  # ~30pt, corpo começa em ~45pt — abaixo do padrão de 6% (≈50,5pt), que
+  # cortava a primeira linha de cada página junto com o cabeçalho.
+  margem_topo_frac: 0.045
