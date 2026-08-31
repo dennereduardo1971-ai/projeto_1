@@ -148,6 +148,17 @@ def executar(
     publicaveis = 0
 
     for q in dados["questoes"]:
+        # Apostila comentada de terceiro (pivô 2026-08-31): `lib/apostila.py`
+        # já classifica com confiança 1.0 porque o PDF inteiro é monotemático
+        # (1 apostila = 1 assunto, vindo do `prova:` do perfil). Não faz
+        # sentido gastar 2 passadas de LLM para redescobrir o óbvio — e como
+        # o Cebraspe nunca produz confiança 1.0 nesta etapa, isto não muda
+        # nada do fluxo `prova_oficial`.
+        if q.get("classificacao_confianca") == 1.0 and q.get("assunto"):
+            q["classificacao_metodo"] = q.get("classificacao_metodo") or "apostila:monotematica"
+            publicaveis += 1
+            continue
+
         enunciado = q["enunciado"]
         a = clf.classificar(enunciado, opcoes, 1)
         b = clf.classificar(enunciado, opcoes, 2)

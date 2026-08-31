@@ -1,0 +1,13 @@
+# Apostila comentada — Auditoria, amostragem (NBC TA 530).
+# PDF: data/00_manual/apostila_auditoria_amostragem/amostragem-auditoria-nbc-ta-530.pdf
+# (31 páginas na descrição original do pedido; o PDF de amostra em mãos tem
+# 99 páginas — Gran Cursos, "Noções de Auditoria Governamental").
+extends: apostila_generico
+nome: apostila_auditoria_amostragem
+
+prova:
+  autor_fonte: Marcelo Aragão
+  titulo_fonte: "Amostragem em Auditoria Contábil, NBC TA 530"
+  disciplina: Auditoria
+  # slug de seeds/taxonomia.json → disciplinas[].assuntos[].slug
+  assunto: auditoria-amostragem

@@ -1,0 +1,168 @@
+{
+  "avisos": [],
+  "gerado_em": "2026-08-31T13:48:48+00:00",
+  "prova": {
+    "autor_fonte": "Carlos Elias",
+    "fonte_pdf": "arquivo local: data/02_pdfs/apostila_civil_obrigacoes_1/obrigacoes-parte-i.pdf",
+    "formato": "multipla",
+    "origem_fonte": "apostila_comentada",
+    "penalidade_por_erro": false,
+    "perfil": "apostila_civil_obrigacoes_1",
+    "sha256_pdf": "aab8eb228fc5fdcc2e9a8e7cbaed74c56997b062d649aec11099bc4066c8e644",
+    "slug": "apostila_civil_obrigacoes_1_multipla",
+    "titulo_fonte": "Obrigações – Parte I"
+  },
+  "questoes": [
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "periódica"
+        },
+        {
+          "letra": "B",
+          "texto": "principal"
+        },
+        {
+          "letra": "C",
+          "texto": "divisível"
+        },
+        {
+          "letra": "D",
+          "texto": "acessória"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "civil-obrigacoes",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Na classificação das obrigações reciprocamente consideradas, a obrigação pode ser principal ou acessória. Diz-se acessória quando a obrigação supõe uma principal. É o caso, por exemplo, da obrigação decorrente de um contrato de fiança: ela pressupõe uma obrigação principal que está sendo garantida. Outro exemplo é a obrigação de pagamento de juros: ela supõe uma obrigação principal da qual decorrem os juros. A obrigação decorrente do contrato de locação, por outro lado, é principal, pois não supõe nenhuma outra. Por isso, a resposta é “b”. Os demais itens tratam de outras classificações, como: a) Classificação da obrigação quanto ao momento da execução: (1) de execução instantânea (quando o cumprimento é no momento do nascimento da obrigação); (2) de execução diferida (cumprimento em um momento futuro); e (3) de execução continuada ou de trata- sucessivo (cumprimento em várias parcelas futuras). b) Classificação à pluralidade de sujeitos: (1) obrigação divisível (art. 257, CC); (2) obrigação indivisível (arts. 258 a 263, CC); e (3) obrigação solidária (arts. 264 a 274, CC). Letra b.",
+      "desatualizada": false,
+      "disciplina": "Direito Civil",
+      "enunciado": "(FUNRIO/PROCURADOR/AL-RR/2018) L.R.S, casado, 50 anos, engenheiro, pactuou com W.R.M, solteiro, 32 anos, autônomo, um contrato de Locação de Imóvel Residencial pelo prazo de 30 (trinta) meses. Tendo como direcionamento a classificação das obrigações reciprocamente consideradas, o contrato celebrado entre as partes constitui uma obrigação",
+      "gabarito": "B",
+      "numero": 7,
+      "pagina": 41,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "nula; de garantia pessoal."
+        },
+        {
+          "letra": "B",
+          "texto": "anulável; com debitum sem obrigatio."
+        },
+        {
+          "letra": "C",
+          "texto": "com schuld sem haftung; com haftung sem schuld."
+        },
+        {
+          "letra": "D",
+          "texto": "com debitum e obrigatio; com schuld sem haftung."
+        },
+        {
+          "letra": "E",
+          "texto": "ilícita; com debitum e obligatio."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "civil-obrigacoes",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Pela teoria monista, clássica ou unitária da obrigação, a obrigação forma um vínculo único entre credores e devedores. Só há, pois, um débito. A responsabilidade (ou seja, o dever de pagar em decorrência do inadimplemento) não integra o conceito de obrigação, mas é apenas uma decorrência do descumprimento desta. Pela teoria da dualidade do vínculo obrigacional (= teoria binária ou dualista), a obrigação se divide em débito (schuld ou debitum) e em responsabilidade (haftung ou obligatio). Sob essa ótica, a dívida de jogo, é um exemplo de schuld sem haftung, porque, embora ela seja uma dívida existente e devida (schuld), não pode ser exigida forçosamente (sem haftung). É o mesmo que se dá com a dívida prescrita: ela é existente (schuld), mas não é exigível (sem haftung). Já no caso de fiança, temos um exemplo de haftung sem schuld, pois o fiador pode ser exigido a pagar a dívida (haftung), apesar de a dívida originária ser do afiançado (não há schuld contra o fiador, mas apenas contra o afiançado). Dá-se igual com as garantias reais dadas por terceiro: o garantidor não tem a dívida (sem schuld), mas pode ser responsabilizado por ela (haftung). Letra c.",
+      "desatualizada": false,
+      "disciplina": "Direito Civil",
+      "enunciado": "(VUNESP/PROCURADOR/UNICAMP/2018/ADAPTADA) Os casos de dívida de jogo e garantia real prestada por terceiro representam, respectivamente, obrigação",
+      "gabarito": "C",
+      "numero": 9,
+      "pagina": 42,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Se o objeto a dar corresponde a obrigação alternativa,"
+        },
+        {
+          "letra": "B",
+          "texto": "Se o objeto a dar for incerto, isto é, apenas determinado pelo gênero,"
+        },
+        {
+          "letra": "C",
+          "texto": "Se se tratar de obrigação de dar coisa certa,"
+        },
+        {
+          "letra": "D",
+          "texto": "Se o objeto a dar for coisa divisível,"
+        },
+        {
+          "letra": "E",
+          "texto": "Se o objeto a dar for bem corpóreo, fungível ou infungível"
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "civil-obrigacoes",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "A definição do Clóvis Bevilaqua é da obrigação de dar coisa incerta, pois, nela, o devedor não pode alegar perecimento da coisa como forma de se exonerar da obrigação. Aplica-se aí a regra do genus numquat perit (art. 246, CC). Além disso, salvo pacto em sentido contrário, a escolha da coisa será do devedor, que é obrigado a, no mínimo, escolher uma coisa de padrão médio art. 244, CC). Letra b.",
+      "desatualizada": false,
+      "disciplina": "Direito Civil",
+      "enunciado": "(FCC/PROCURADOR/PGE-AP/2018/ADAPTADA) … não há a possibilidade de perecimento, e, portanto, subsiste a obrigação, cabendo, ao devedor, o direito de escolha, se outra coisa não for convencionada. Este seu direito, porém, não poderá ir ao ponto de preferir a coisa pior da espécie, assim como não terá o credor a faculdade de exigir o melhor, quando lhe for conferido o direito de escolha. (BEVILAQUA, Clóvis. Direito das obrigações. 9. ed. [S. l.]: Livraria Francisco Alves, 1957. p. 56) A conclusão a que acima se chegou pode ter como antecedente o seguinte texto:",
+      "gabarito": "B",
+      "numero": 22,
+      "pagina": 43,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A morte de qualquer dos credores põe fim à solidariedade."
+        },
+        {
+          "letra": "B",
+          "texto": "Os herdeiros de Matheus, reunidos, serão considerados como um devedor solidário em relação a André."
+        },
+        {
+          "letra": "C",
+          "texto": "A morte de qualquer dos devedores põe fim solidariedade."
+        },
+        {
+          "letra": "D",
+          "texto": "Cada um dos herdeiros de Caim poderá exigir toda a dívida de André e dos herdeiros de Matheus."
+        },
+        {
+          "letra": "E",
+          "texto": "Cada um dos herdeiros de Matheus, isoladamente ou reunidos, poderá ser obrigado a pagar por toda a dívida."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "civil-obrigacoes",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "À luz dos arts. 270 e 276 do CC: Art. 270. Se um dos credores solidários falecer deixando herdeiros, cada um destes só terá direito a exigir e receber a quota do crédito que corresponder ao seu quinhão hereditário, salvo se a obrigação for indivisível. Art. 276. Se um dos devedores solidários falecer deixando herdeiros, nenhum destes será obrigado a pagar senão a quota que corresponder ao seu quinhão hereditário, salvo se a obrigação for indivisível; mas todos reunidos serão considerados como um devedor solidário em relação aos demais devedores. Letra b.",
+      "desatualizada": false,
+      "disciplina": "Direito Civil",
+      "enunciado": "(CESPE/PROCURADOR/PGE-AM/2018/ADAPTADA) Em uma obrigação de pagar quantia certa em dinheiro, eram credores solidários Caim e Abel e devedores solidários Matheus e André. Morreu Caim, deixando dois herdeiros. Também morreu Matheus, deixando dois herdeiros.",
+      "gabarito": "B",
+      "numero": 35,
+      "pagina": 45,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    }
+  ],
+  "status": "publicavel",
+  "textos_apoio": [],
+  "versao_artefato": 1
+}

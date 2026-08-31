@@ -1,23 +1,22 @@
-# Apostila comentada de terceiro (pivô 2026-08-31) — ex.: material da
-# professora Tamayo. Questão, gabarito e comentário da própria autora no
-# mesmo PDF, ao contrário do Cebraspe (prova e gabarito em arquivos separados,
-# sem comentário).
+# Apostila comentada de terceiro (pivô 2026-08-31) — layout confirmado nos
+# dois PDFs de amostra da Gran Cursos: "Amostragem em Auditoria Contábil,
+# NBC TA 530" (Marcelo Aragão) e "Obrigações — Parte I" (Carlos Elias).
+# Questão, gabarito e comentário do próprio autor no mesmo PDF, ao contrário
+# do Cebraspe (prova e gabarito em arquivos separados, sem comentário).
 #
-# CHUTE INICIAL, SEM PDF DE AMOSTRA EM MÃOS — ajustar assim que a primeira
-# apostila real (Auditoria ou Direito Civil) chegar. Registrar o que mudar em
-# docs/agents/coletor.md → Armadilhas.
+# Medido nos dois PDFs (pdfplumber, `extract_words`, A4 = 841.89pt de altura):
+#   - cabeçalho fixo de 3 linhas (título do livro / subtítulo / autor) nos
+#     primeiros ~73pt (top 32.4 / 44.9 / 62.6); o corpo começa em ~97.7-98.4pt;
+#   - rodapé fixo (aviso de licença de 2 linhas + "N de M" + "gran.com.br")
+#     a partir de ~780.6pt.
+# `margem_topo_frac`/`margem_rodape_frac` abaixo cortam os dois com folga.
 #
-# O que ainda falta para este perfil sair do papel:
-#   1. Confirmar se o layout é 1 ou 2 colunas (apostilas de cursinho costumam
-#      ser 1 coluna corrida — `layout.colunas` abaixo já assume isso).
-#   2. Confirmar o marcador real de gabarito e de comentário — os regex
-#      abaixo são um palpite ("Gabarito:" / "Comentário:"), não algo visto.
-#   3. `4_segmentar.py`/`5_gabarito.py` hoje assumem prova e gabarito em
-#      arquivos SEPARADOS (padrão Cebraspe) — com tudo no mesmo PDF, a etapa
-#      5 (casar gabarito) muda de forma: não é mais "casar dois arquivos", é
-#      "extrair o gabarito e o comentário que já vieram junto com a questão".
-#      Essa mudança de lógica fica para quando houver amostra real; usar este
-#      perfil hoje só adianta o layout, não substitui esse trabalho.
+# A lógica de parser (negrito duplicado, seções EXERCÍCIOS/QUESTÕES.../
+# GABARITO/GABARITO COMENTADO, grade compacta, comentário do autor) NÃO mora
+# mais em regex de perfil — mora em `lib/apostila.py` (`extrair_itens`,
+# `extrair_grade`, `extrair_comentarios`). Este YAML só carrega o que
+# `3_extrair.py` (recorte de página) e `processar()` (linhas a descartar)
+# realmente consultam.
 extends: _base
 nome: apostila_generico
 origem_fonte: apostila_comentada
@@ -29,17 +28,31 @@ layout:
   colunas: 1
   gap_coluna_min: 24
   tolerancia_linha: 2.5
-  margem_topo_frac: 0.06
-  margem_rodape_frac: 0.05
+  margem_topo_frac: 0.11    # corte ~92.6pt — depois das 3 linhas de cabeçalho (até ~72.6pt), antes do corpo (~97.7pt)
+  margem_rodape_frac: 0.08  # corte ~774.5pt — antes do aviso de licença (780.6pt)
 
-marcadores:
-  item: '^(?P<numero>\d{1,3})[.)]\s+(?P<resto>\S.*)$'
-  alternativa: '^\(?(?P<letra>[A-E])[.)]\s+(?P<resto>\S.*)$'
-  # CALIBRAR contra o PDF real — ver nota 2 acima.
-  gabarito: '(?i)^gabarito\s*:?\s*(?P<letra>[A-E]|certo|errado)\s*$'
-  comentario: '(?i)^coment[áa]rios?\s*:?\s*(?P<resto>.*)$'
+# Herda as entradas de `_base.yaml` (merge de YAML SUBSTITUI listas, não
+# concatena — por isso copiadas aqui) mais o rodapé fixo do Gran e a página
+# de propaganda no final do livro ("Abra caminhos, crie futuros").
+descartar:
+  - '^\s*$'
+  - '(?i)^espa[çc]o\s+livre\.?$'
+  - '(?i)^rascunho$'
+  - '(?i)^cebraspe\b'
+  - '(?i)^cargo\s+\d+\s*:'
+  - '(?i)^aplica[çc][ãa]o\s*:'
+  - '^[\-–—]\s*\d{1,3}\s*[\-–—]$'
+  - '(?i)^p[áa]gina\s+\d+\s+de\s+\d+$'
+  - '(?i)^o\s+conte[úu]do\s+deste\s+livro\s+eletr[ôo]nico\s+é\s+licenciado\s+para\b'
+  - '(?i)^a\s+sua\s+reprodu[çc][ãa]o,\s+c[óo]pia,\s+divulga[çc][ãa]o\b'
+  - '(?i)^gran\.com\.br(\s+\d+\s+de\s+\d+)?$'
+  - '(?i)^\d+\s+de\s+\d+$'
+  - '(?i)^abra$'
+  - '(?i)^caminhos$'
+  - '(?i)^crie$'
+  - '(?i)^futuros$'
 
 numeracao:
   minimo: 1
   maximo: 500
-  exige_sequencia: true
+  exige_sequencia: false   # numeração da apostila pode ter furos; ver lib/apostila.py

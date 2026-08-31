@@ -1,0 +1,13 @@
+# Apostila comentada — Direito Civil, Direito das Obrigações, Parte I.
+# PDF: data/00_manual/apostila_civil_obrigacoes_1/obrigacoes-parte-i.pdf
+# (18 páginas na descrição original do pedido; o PDF de amostra em mãos tem
+# 61 páginas — Gran Cursos, "Direito Civil — Obrigações – Parte I").
+extends: apostila_generico
+nome: apostila_civil_obrigacoes_1
+
+prova:
+  autor_fonte: Carlos Elias
+  titulo_fonte: "Obrigações – Parte I"
+  disciplina: Direito Civil
+  # slug de seeds/taxonomia.json → disciplinas[].assuntos[].slug
+  assunto: civil-obrigacoes

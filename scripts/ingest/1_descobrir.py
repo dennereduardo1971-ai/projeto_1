@@ -72,7 +72,16 @@ def offline(slug: str) -> list[dict]:
             f"nenhum PDF em {caminhos.relativo(c.manual)}.\n"
             f"Precisa do caderno de provas e do gabarito definitivo."
         )
-    return [_fonte(slug, p.name, p, None) for p in pdfs]
+    fontes = [_fonte(slug, p.name, p, None) for p in pdfs]
+    # Apostila comentada de terceiro (pivô 2026-08-31): questão, gabarito e
+    # comentário no MESMO PDF — não tem "caderno"/"gabarito definitivo"
+    # separados, então nenhuma CLASSE conhecida bate no nome do arquivo. Um
+    # único PDF na pasta manual que não bateu em nada é o sinal: é apostila,
+    # não "ignorado". Duas ou mais fontes não classificadas continuam
+    # `ignorado` — não dá para adivinhar qual é o PDF principal.
+    if len(fontes) == 1 and fontes[0]["classe"] == "ignorado":
+        fontes[0]["classe"] = "apostila_comentada"
+    return fontes
 
 
 def online(slug: str) -> list[dict]:

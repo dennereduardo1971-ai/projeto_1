@@ -1,0 +1,1724 @@
+{
+  "avisos": [
+    "itens sem comentário em GABARITO COMENTADO: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]"
+  ],
+  "gerado_em": "2026-08-31T13:48:43+00:00",
+  "prova": {
+    "autor_fonte": "Marcelo Aragão",
+    "fonte_pdf": "arquivo local: data/02_pdfs/apostila_auditoria_amostragem/amostragem-auditoria-nbc-ta-530.pdf",
+    "formato": "multipla",
+    "origem_fonte": "apostila_comentada",
+    "penalidade_por_erro": false,
+    "perfil": "apostila_auditoria_amostragem",
+    "sha256_pdf": "8069a418d4e2cc300cf49ad14f41c6651da18c03b5d3b0651acaca031bcc60d7",
+    "slug": "apostila_auditoria_amostragem_multipla",
+    "titulo_fonte": "Amostragem em Auditoria Contábil, NBC TA 530"
+  },
+  "questoes": [
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "aumento do tamanho da amostra para testes de controles;"
+        },
+        {
+          "letra": "B",
+          "texto": "redução do tamanho da amostra para testes de controles;"
+        },
+        {
+          "letra": "C",
+          "texto": "redução do tamanho da amostra para testes de detalhes;"
+        },
+        {
+          "letra": "D",
+          "texto": "negligenciável para testes de controles;"
+        },
+        {
+          "letra": "E",
+          "texto": "negligenciável para testes de detalhes."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FGV/TCE-AM/AUDITOR/2021) Ao determinar a extensão de um teste de auditoria, o auditor pode empregar técnicas de amostragem. Existem fatores que influenciam o tamanho da amostra, provocando efeitos diversos. Um aumento na taxa esperada de desvio da população a ser testada é um fator cujo efeito é:",
+      "gabarito": "A",
+      "numero": 8,
+      "pagina": 48,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "aleatória;"
+        },
+        {
+          "letra": "B",
+          "texto": "casual;"
+        },
+        {
+          "letra": "C",
+          "texto": "intencional;"
+        },
+        {
+          "letra": "D",
+          "texto": "randômica;"
+        },
+        {
+          "letra": "E",
+          "texto": "sistemática."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FGV/CL DE SALVADOR/ANALISTA/2018) Na execução de trabalhos de auditoria, quando há muitos dados e transações a serem examinados, é muito comum a seleção de uma amostra para exame. A seleção procedida de forma que sempre haja um intervalo constante entre cada item selecionado, seja seleção direta na população ou por estratos, é denominada amostragem:",
+      "gabarito": "E",
+      "numero": 10,
+      "pagina": 48,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "é vedada a escolha de outro cheque cancelado para examinar, o que é referido na norma como “procedimento em item perdido”."
+        },
+        {
+          "letra": "B",
+          "texto": "é possível a escolha de outro cheque cancelado para examinar, o que é referido na norma como “procedimento em item de substituição”."
+        },
+        {
+          "letra": "C",
+          "texto": "é obrigatória a escolha de outro cheque cancelado para examinar, o que é referido na norma como “procedimento alternativo adequado”."
+        },
+        {
+          "letra": "D",
+          "texto": "é recomendável a escolha de outro cheque cancelado para examinar, o que é referido na norma como “procedimento impossível”."
+        },
+        {
+          "letra": "E",
+          "texto": "é vedada a análise de outro cheque cancelado para examinar, o que é referido na norma como “procedimento alternativo inadequado”."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/ISS/MANAUS/2019) Considere a situação hipotética abaixo. Executando amostragem em teste de evidência de autorização, o auditor escolhe um cheque cancelado, e, inspecionando-o, conclui que foi apropriado o cancelamento, de modo que não houve, naquele caso, desvio. O regulamento do CFC aplicável à amostragem estabelece que",
+      "gabarito": "B",
+      "numero": 11,
+      "pagina": 48,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o auditor deve avaliar se o uso de amostragem de auditoria forneceu uma base razoável para conclusões sobre a população que foi testada ou, se preferir, pode transferir este ônus para uma auditoria interna paralela, promovida pela entidade auditada, que deverá efetuar essa avaliação em prazo contratualmente estabelecido."
+        },
+        {
+          "letra": "B",
+          "texto": "caso o auditor conclua que a amostragem de auditoria não forneceu uma base razoável para conclusões sobre a população que foi testada, ele deve comunicar esse fato à administração da entidade auditada, para que ela determine, em prazo contratualmente previsto, os procedimentos substitutivos a serem adotados, se assim o desejar."
+        },
+        {
+          "letra": "C",
+          "texto": "a entidade auditada, por meio de auditoria interna paralela realizada às suas próprias expensas, deve avaliar os resultados da amostra, em prazo contratualmente estabelecido, antes de autorizar o prosseguimento aos demais trabalhos de auditoria."
+        },
+        {
+          "letra": "D",
+          "texto": "caso o auditor conclua que a amostragem de auditoria não forneceu uma base razoável para conclusões sobre a população que foi testada, ele pode solicitar que a administração investigue as distorções identificadas e o potencial para distorções adicionais, e faça quaisquer ajustes necessários."
+        },
+        {
+          "letra": "E",
+          "texto": "caso o auditor conclua que a amostragem de auditoria não forneceu uma base razoável para conclusões sobre a população que foi testada, ele deve abandonar a utilização do critério de amostragem imediatamente."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/SEFAZ-BA/AUDITOR/2019) A avaliação do resultado de uma amostragem em auditoria é um procedimento essencial a ser realizado pelo auditor. De acordo com a NBC TA 530,",
+      "gabarito": "D",
+      "numero": 14,
+      "pagina": 49,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "O julgamento do auditor."
+        },
+        {
+          "letra": "B",
+          "texto": "A experiência do auditor."
+        },
+        {
+          "letra": "C",
+          "texto": "O tamanho da amostra."
+        },
+        {
+          "letra": "D",
+          "texto": "A representatividade da amostra."
+        },
+        {
+          "letra": "E",
+          "texto": "O nível de risco de amostragem/m que a empresa auditada oferece."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "De acordo com a NBC TA n. 530 (item A9), a decisão quanto ao uso de abordagem de amostragem estatística ou não estatística é uma questão de julgamento do auditor, entretanto, o tamanho da amostra não é um critério válido para distinguir entre as abordagens estatísticas e não estatísticas. Letra a.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FGV/ALE-RO/CONSULTOR LEGISLATIVO/2018) Assinale a opção que indica o critério que deve ser adotado na decisão quanto ao uso de abordagem de amostragem estatística ou não estatística no processo de auditoria de uma entidade.",
+      "gabarito": "A",
+      "numero": 15,
+      "pagina": 50,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "tem finalidade de subsidiar inferências e fornecer base razoável para o auditor concluir quanto à população da qual a amostra é selecionada, desprezando-se critérios de representatividade na escolha de itens da amostra."
+        },
+        {
+          "letra": "B",
+          "texto": "caracteriza-se pela seleção aleatória dos itens da amostra e pelo uso da teoria das probabilidades para avaliar os resultados das amostras, incluindo a mensuração do risco da amostragem."
+        },
+        {
+          "letra": "C",
+          "texto": "caracteriza-se pela seleção representativa de itens da amostra conforme o julgamento profissional do auditor, com vistas à fornecer base razoável para o auditor concluir quanto à população da qual a amostra é selecionada."
+        },
+        {
+          "letra": "D",
+          "texto": "pode ser validamente utilizada em auditorias internas, vedado o seu emprego em auditorias independentes, dado o potencial de seleção enviesada de amostra."
+        },
+        {
+          "letra": "E",
+          "texto": "permite que o auditor obtenha evidência de auditoria em relação a todas as características da população selecionada, desde que observado índice de confiança razoável das probabilidades investigadas."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "A alternativa certa acerca da amostragem estatística é que se caracteriza pela seleção aleatória dos itens da amostra e pelo uso da teoria das probabilidades para avaliar os resultados das amostras, incluindo a mensuração do risco da amostragem. Letra b.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/PREFEITURA DE SÃO BERNARDO DO CAMPO/CONTADOR/2018) A amostragem estatística utilizada na definição e seleção da amostra de auditoria, na execução de testes de controles e de detalhes na avaliação dos resultados da amostra",
+      "gabarito": "B",
+      "numero": 16,
+      "pagina": 50,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "População é o conjunto completo de dados sobre o qual a amostra é selecionada e sobre o qual o auditor deseja concluir."
+        },
+        {
+          "letra": "B",
+          "texto": "Amostragem em auditoria é a aplicação de procedimentos de auditoria em 100% dos itens de população relevante para fins de auditoria."
+        },
+        {
+          "letra": "C",
+          "texto": "Risco não resultante da amostragem é o risco de que o auditor chegue a uma conclusão certa por qualquer outra razão que não seja relacionada ao risco de materialidade."
+        },
+        {
+          "letra": "D",
+          "texto": "Amostragem estatística é o único procedimento utilizado pelo auditor a fim de selecionar itens para teste."
+        },
+        {
+          "letra": "E",
+          "texto": "ao se usar a amostragem em auditoria, o auditor deseja proporcionar uma base razoável para concluir quanto ao universo selecionado do qual a amostra perfaz o total do item."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Certa. População é o conjunto completo de dados sobre o qual a amostra é selecionada e sobre o qual o auditor deseja concluir. b) Errada. Amostragem em auditoria é a aplicação de procedimentos de auditoria em menos de 100% dos itens de população relevante para fins de auditoria, de maneira que todas as unidades de amostragem tenham a mesma chance de serem selecionadas para proporcionar uma base razoável que possibilite o auditor concluir sobre toda a população. c) Errada. Risco não resultante da amostragem é o risco de que o auditor chegue a uma conclusão errônea por qualquer outra razão que não seja relacionada ao risco de amostragem. d) Errada. O auditor pode utilizar a amostragem estatística e a não estatística e ainda a seleção de itens específicos e a seleção integral (procedimentos de não amostragem) a fim de selecionar itens para teste. e) Errada. O objetivo do auditor, ao usar a amostragem em auditoria, é o de proporcionar uma base razoável para o auditor concluir quanto à população da qual a amostra é selecionada. Letra a.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/ARSESP/ESPECIALISTA EM REGULAÇÃO/2018) No que tange à amostragem em auditoria, é correto afirmar:",
+      "gabarito": "A",
+      "numero": 17,
+      "pagina": 50,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o risco de que a conclusão do auditor seja errônea por empregar inadequadamente a técnica de circularização."
+        },
+        {
+          "letra": "B",
+          "texto": "o risco de que a conclusão do auditor tenha sido tomada sujeitando toda a população ao mesmo procedimento de auditoria."
+        },
+        {
+          "letra": "C",
+          "texto": "o risco de que a conclusão do auditor, com base em amostra, pudesse ser igual se toda a população fosse sujeita ao mesmo procedimento de auditoria."
+        },
+        {
+          "letra": "D",
+          "texto": "o risco de que a conclusão do auditor, com base em amostra, pudesse ser diferente se toda a população fosse sujeita ao mesmo procedimento de auditoria."
+        },
+        {
+          "letra": "E",
+          "texto": "a distorção ou o desvio que é comprovadamente não representativo de distorção ou desvio em uma população."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Risco de amostragem corresponde à probabilidade de o auditor errar na aplicação do seu teste, em função da amostra selecionada não ser representativa da população. Segundo a NBC TA n. 530, risco de amostragem pode ser definido como o risco (possibilidade ou probabilidade) de que a conclusão do auditor, com base em amostra, pudesse ser diferente se toda a população fosse sujeita ao mesmo procedimento de auditoria. Letra d.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/DPE-AM/ANALISTA/2018) Risco de amostragem pode ser definido como",
+      "gabarito": "D",
+      "numero": 18,
+      "pagina": 51,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "não é possível adotar a técnica conhecida como amostragem, uma vez que ela se destina a situações em que é inviável obter os dados de todas as ocorrências investigadas."
+        },
+        {
+          "letra": "B",
+          "texto": "é possível adotar a técnica conhecida como amostragem, que somente deve ser empregada, entretanto, por meio que garanta a absoluta aleatoriedade do grupo de registros que será analisado."
+        },
+        {
+          "letra": "C",
+          "texto": "é possível adotar a técnica conhecida como amostragem, que pode ser empregada por meio da escolha dos registros a serem analisados, a partir da experiência dos fiscais."
+        },
+        {
+          "letra": "D",
+          "texto": "embora possível, é contraindicada a adoção da técnica conhecida como amostragem, pois não há como garantir a aleatoriedade do grupo de registros que será analisado."
+        },
+        {
+          "letra": "E",
+          "texto": "embora possível, é contraindicada a adoção da técnica conhecida como amostragem, pois não há outras informações disponíveis, indispensáveis para a formação da amostra."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Considerando que os custos de obtenção e análise de todos os dados do IRPF pareceram proibitivos, é possível adotar a técnica conhecida como amostragem, que pode ser empregada por meio da escolha dos registros a serem analisados, a partir da experiência dos fiscais (amostragem não estatística). A letra b está errada, porque pode ser empregada a amostragem estatística, por meio da seleção aleatória do grupo de registros que será analisado, ou ainda a amostragem não estatística, cujo critério de escolha dos elementos a serem auditados é pelo julgamento profissional do auditor, fruto da sua experiência e conhecimento profissional. Letra c.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/SEMFAZ/SÃO LUIS/2018) A Receita Federal do Brasil e a Secretaria Municipal de Fazenda, hipoteticamente, celebram convênio para compartilhamento de informações sujeitas a sigilo fiscal da declaração anual de imposto de renda. Sob os termos do convênio, é obrigatória a solicitação individualizada e motivada do dado a que se deseja ter acesso e haverá custo para sua disponibilização, uma vez que o serviço que assegura os termos do convênio é prestado com exclusividade pelo Serpro, de acordo com tabela de preços por ele praticada. Após o levantamento da base de dados de lançamentos fiscais do ITBI dos últimos cinco anos junto ao sistema da Secretaria de Fazenda, a Municipalidade avalia a possibilidade de confrontar tais registros com os imóveis declarados anualmente pelos proprietários à Fazenda Federal. Os custos de obtenção e análise de todos os dados do IRPF, entretanto, pareceram proibitivos. Na circunstância narrada,",
+      "gabarito": "C",
+      "numero": 19,
+      "pagina": 51,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "aleatória, Seleção sistemática, Seleção com base em valor (amostragem de unidade monetária) e Seleção ao acaso."
+        },
+        {
+          "letra": "B",
+          "texto": "ao acaso, Seleção sistemática, Seleção aleatória e Seleção com base em valor (amostragem de unidade monetária)."
+        },
+        {
+          "letra": "C",
+          "texto": "com base em valor (amostragem de unidade monetária), Seleção aleatória, Seleção sistemática e Seleção ao acaso."
+        },
+        {
+          "letra": "D",
+          "texto": "aleatória, Seleção ao acaso, Seleção com base em valor (amostragem de unidade monetária) e Seleção sistemática."
+        },
+        {
+          "letra": "E",
+          "texto": "aleatória, Seleção sistemática, Seleção ao acaso e Seleção com base em valor (amostragem de unidade monetária)."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "A questão transcreve literalmente o que dispõe o apêndice 3 da NBC TA n. 530, acerca de cada um dos métodos de seleção da amostra. Método A: Aleatória. Método B: Sistemática. Método C: Ao acaso. Método D: Com base em valor. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/SEFAZ-SC/AUDITOR/2018) Na execução de uma auditoria tributária, e de acordo com as normas de amostragem em auditoria (NBC TA 530, aprovada pela Resolução CFC 1222/09), o Auditor pode lançar mão de diversos métodos de seleção da amostra, dentre os quais se destacam: - Método A: aplicado por meio de geradores de números aleatórios como, por exemplo, tabelas de números aleatórios. - Método B: em que a quantidade de unidades de amostragem na população é dividida pelo tamanho da amostra para dar um intervalo de amostragem como, por exemplo, 50, e após determinar um ponto de início dentro das primeiras 50, toda 50a unidade de amostragem seguinte é selecionada. - Método C: no qual o auditor seleciona a amostra sem seguir uma técnica estruturada. Embora nenhuma técnica estruturada seja usada, o auditor, ainda assim, evitaria qualquer tendenciosidade ou previsibilidade consciente (por exemplo, evitar itens difíceis de localizar ou escolher ou evitar sempre os primeiros ou os últimos lançamentos de uma página) e, desse modo, procuraria se assegurar de que todos os itens da população têm uma mesma chance de seleção. - Método D: é um tipo de seleção com base em valores, na qual o tamanho, a seleção e a avaliação da amostra resultam em uma conclusão em valores monetários. Ao considerar as características da população da qual a amostra será retirada, o auditor pode determinar que a estratificação ou a seleção com base em valores é mais apropriada. Os métodos A, B, C e D referem-se, respectivamente, à Seleção",
+      "gabarito": "E",
+      "numero": 20,
+      "pagina": 52,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "não é objetivo da auditoria interna assessorar a administração da entidade no trabalho de prevenção de fraudes e erros."
+        },
+        {
+          "letra": "B",
+          "texto": "as normas não permitem a exclusão dos chamados valores aberrantes (outliers), pois, sem a integralidade do espaço amostral, as conclusões são tendenciosas."
+        },
+        {
+          "letra": "C",
+          "texto": "embora tecnicamente correto, tal trabalho nunca poderia subsidiar uma campanha de auditoria dirigida."
+        },
+        {
+          "letra": "D",
+          "texto": "pode-se dizer que se trata de uma aplicação do método aleatório de seleção de amostra."
+        },
+        {
+          "letra": "E",
+          "texto": "se o auditor desejar aumentar o risco amostragem, deve diminuir o tamanho da amostra."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada. A auditoria interna deve assessorar a administração da entidade no trabalho de prevenção de fraudes e erros, contribuindo para o fortalecimento do sistema de controle interno da entidade. b) Errada. Em estatística, outlier, valor aberrante ou atípico, é uma observação que apresenta um grande afastamento das demais da série (que está “fora” dela), ou que é inconsistente. A existência de outliers implica, tipicamente, em prejuízos a interpretação dos resultados dos testes estatísticos aplicados às amostras. Logo, podem ser excluídos pelo pesquisador/auditor. c) Errada. A identificação de possíveis irregularidades (indícios) com o uso de técnicas de análise e cruzamento de dados permite uma auditoria dirigida e mais eficiente. d) Errada. Não se trata de aplicação do método aleatório de seleção de amostra estatística. No caso retratado, ou se submeteu toda a população ao teste, mediante sistema informatizado ou foi direcionada a escolha para as transações que apresentavam maior risco de desvio. Logo, não foi utilizada amostragem, muito menos a estatística, que requer a escolha da amostra de forma aleatória. e) Certa. Há uma relação inversa entre o risco de amostragem e o tamanho da amostra. Quanto menor a amostra, maior será a probabilidade de que ela não seja representativa da população testada. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/SEFAZ-GO/AUDITOR/2018) Considere a seguinte situação hipotética: Determinado Estado da Federação mantém programa de Cidadania Fiscal por meio do qual a emissão de notas e cupons fiscais pode ser feita com a inclusão do número de CPF do consumidor final. Após cadastro no programa, é possível que esses contribuintes diretos obtenham descontos no imposto sobre a propriedade de veículos automotores – IPVA devido. Em auditoria interna da base de dados de resgates de pontos na forma de descontos no IPVA, realizou-se um teste para apurar a distância geográfica entre os estabelecimentos em que foram realizadas as compras dos bens e serviços de onde se originou a pontuação resgatada, o endereço registrado no cadastro do programa e o domicílio do proprietário constante da anotação no Departamento Estadual de Trânsito. O objetivo pretendido era indicar possíveis erros, fraudes ou simulações. Após inspeção gráfica dos dados, o auditor promoveu a exclusão de uma série de observações que, a seu juízo, não poderiam estar corretas. Ao fim, chegou-se a uma relação de pessoas jurídicas como emissoras de documentação fiscal com afastamento geográfico suspeito entre sede e local de utilização dos pontos derivados. Sobre o caso e considerando a amostragem em auditoria, é correto afirmar.",
+      "gabarito": "E",
+      "numero": 21,
+      "pagina": 52,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "tal opção viola a missão institucional do controle interno, que deve analisar a legalidade de todos os atos praticados pela administração."
+        },
+        {
+          "letra": "B",
+          "texto": "é possível que se realize tal amostra, desde que seus resultados não sirvam de base para conclusão a respeito da população da qual ela é selecionada."
+        },
+        {
+          "letra": "C",
+          "texto": "para que se empregue a amostragem, é necessário considerar a finalidade do procedimento de auditoria e as características da população da qual será retirada a amostra."
+        },
+        {
+          "letra": "D",
+          "texto": "houve equívoco no emprego da amostragem, pois tanto o exercício quanto o tipo de ato são ambos determinados."
+        },
+        {
+          "letra": "E",
+          "texto": "a amostragem é aceita, embora não exista norma específica de auditoria acerca do procedimento."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Nos exatos termos da NBC TA n. 530, ao definir uma amostra de auditoria, o auditor deve considerar a finalidade do procedimento de auditoria e as características da população da qual será retirada a amostra. A consideração do auditor sobre a finalidade do procedimento de auditoria inclui um claro entendimento do que constitui desvio ou distorção, de modo que todas essas condições, e somente elas, que são relevantes para a finalidade do procedimento de auditoria estejam inclusas na avaliação de desvios ou na projeção de distorções. Por exemplo, em um teste de detalhes relacionado com a existência de contas a receber tais como, confirmação, pagamentos efetuados pelo cliente da entidade antes da data de confirmação, mas que a entidade recebeu pouco depois dessa data, não é considerada distorção. Adicionalmente, um registro errôneo entre as contas de clientes não afeta o saldo total das contas a receber. Portanto, pode não ser apropriado considerar que isso seja uma distorção na avaliação dos resultados da amostragem desse procedimento de auditoria em particular, embora isso possa ter um efeito importante em outras áreas da auditoria, como por exemplo, na avaliação do risco de fraude ou da adequação da provisão para créditos de liquidação duvidosa. Ao considerar as características de uma população, para testes de controles, o auditor faz uma avaliação da taxa esperada de desvio com base no entendimento do auditor dos controles relevantes ou no exame de pequena quantidade de itens da população. Essa avaliação é feita para estabelecer a amostra de auditoria e determinar o tamanho dessa amostra. Por exemplo, se a taxa esperada de desvio for inaceitavelmente alta, o auditor geralmente decide por não executar os testes de controles. Da mesma forma, para os testes de detalhes, o auditor faz uma avaliação da distorção esperada na população. Se a distorção esperada for alta, o exame completo ou o uso de amostra maior pode ser apropriado ao executar os testes de detalhes. Letra c.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/MPE-PE/ANALISTA/2018) Ponderando a impossibilidade de analisar todos os documentos de todos os processos de aposentadoria em um determinado ano, a seção de controle interno optou por conduzir investigação pormenorizada de apenas parte dos processos. Nesse caso,",
+      "gabarito": "C",
+      "numero": 22,
+      "pagina": 53,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "afeta o tamanho da amostra exigido, sendo que, quanto menor o risco que o auditor está disposto a aceitar, maior deve ser o tamanho da amostra."
+        },
+        {
+          "letra": "B",
+          "texto": "não afeta o tamanho da amostra exigido, já que a escolha do tamanho da amostra é feita no momento do planejamento do trabalho de auditoria."
+        },
+        {
+          "letra": "C",
+          "texto": "afeta o tamanho da amostra exigido, sendo que, quanto maior o risco que o auditor está disposto a aceitar, maior deve ser o tamanho da amostra."
+        },
+        {
+          "letra": "D",
+          "texto": "não afeta o tamanho da amostra exigido, na medida em que pode ser compensado com o aprofundamento do exame de cada unidade de amostragem e com arbitramentos e critérios de compensações."
+        },
+        {
+          "letra": "E",
+          "texto": "é determinado, em reunião do auditor com os representantes da área contábil da entidade auditada, após a apuração dos resultados de análise por amostragem feita anteriormente, de acordo com o valor cobrado no contrato de auditoria para esse subtrabalho específico."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "O nível de risco de amostragem que o auditor está disposto a aceitar afeta o tamanho da amostra exigido. Quanto menor o risco que o auditor está disposto a aceitar, maior deve ser o tamanho da amostra ou vice-versa. A relação é inversa! Letra a.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/SEFAZ-BA/AUDITOR/2019) A NBC TA 530 estabelece, em seu item 5, que risco de amostragem é o risco de que a conclusão do auditor, com base em amostra” pudesse “ser diferente se toda a população fosse sujeita ao mesmo procedimento de auditoria. O risco de amostragem pode levar a conclusões errôneas. De acordo com a referida NBC, o nível de risco de amostragem que o auditor está disposto a aceitar",
+      "gabarito": "A",
+      "numero": 23,
+      "pagina": 53,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "III e IV, apenas."
+        },
+        {
+          "letra": "B",
+          "texto": "I e II, apenas."
+        },
+        {
+          "letra": "C",
+          "texto": "II e III, apenas."
+        },
+        {
+          "letra": "D",
+          "texto": "I e IV, apenas."
+        },
+        {
+          "letra": "E",
+          "texto": "I, II, III e IV."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Todas as afirmações da questão correspondem a conclusões errôneas decorrentes do risco de amostragem. No caso de teste de controles, o auditor pode considerar que os controles são considerados mais eficazes do que realmente são ou menos eficazes do que realmente são. No caso de teste de detalhes (substantivo), o auditor pode não identificar distorção relevante, quando, na verdade, ela existe ou identificar distorção relevante, quando, na verdade, ela não existe. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/SEFAZ-BA/AUDITOR/2019) A NBC TA 530 arrola as conclusões errôneas a que pode levar o denominado risco de amostragem. De acordo com essa NBC, o risco de amostragem poderá acarretar conclusões equivocadas, tais como: I – no caso de teste de controles, esses controles serem considerados mais eficazes do que realmente são. II – no caso de teste de detalhes, não ser identificada distorção relevante, quando, na verdade, ela existe. III – no caso de teste de controles, esses controles serem considerados menos eficazes do que realmente são. IV – o caso de teste de detalhes, ser identificada distorção relevante, quando, na verdade, ela não existe. Está correto o que se afirma em",
+      "gabarito": "E",
+      "numero": 24,
+      "pagina": 54,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o auditor deve selecionar itens para a amostragem de forma que cada unidade de amostragem da população tenha a mesma chance de ser selecionada."
+        },
+        {
+          "letra": "B",
+          "texto": "ao definir uma amostra de auditoria, o auditor deve flexibilizar a finalidade do procedimento de auditoria bem como relevar as características negativas da população da qual será retirada a amostra."
+        },
+        {
+          "letra": "C",
+          "texto": "cabe à entidade a ser auditada definir o tamanho da amostra, tendo por base os motivos que determinaram a realização da auditoria."
+        },
+        {
+          "letra": "D",
+          "texto": "o auditor e a administração da entidade devem selecionar, conjuntamente, itens para a amostragem de forma que cada unidade de amostragem da população tenha uma maior ou menor chance de ser selecionada."
+        },
+        {
+          "letra": "E",
+          "texto": "norteado pelos princípios da neutralidade e da imparcialidade, o auditor, ao definir uma amostra de auditoria, deve relativizar a finalidade do procedimento de auditoria de modo a suavizar eventuais resultados indesejados."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "A questão refere-se aos requisitos estabelecidos na NBC TA n. 530, itens 6 a 8, para definição da amostra, tamanho e seleção dos itens para teste. a) Certa. A alternativa transcreve literalmente o que dispõe o item 8 da norma. Para que a amostra seja representativa da população, o auditor deve dar chance igual de seleção a todos os itens da população, abstendo-se, por exemplo, de direcionar a seleção para itens com certas caraterísticas, o que não se enquadra na definição de amostragem. b) Errada. O auditor não deve flexibilizar a finalidade do procedimento de auditoria tampouco relevar as características negativas da população. Ao contrário, a NBC TA n. 530 estabelece que, ao definir uma amostra de auditoria, o auditor deve considerar a finalidade do procedimento de auditoria e as características da população da qual será retirada a amostra. Essa consideração é fundamental para que o auditor defina com clareza os critérios a serem considerados na avaliação de desvios ou na projeção de distorções e qual a abordagem será mais adequada. c) Errada. É o auditor, de forma independente, quem elabora o plano de amostragem e define o tamanho da amostra e não a entidade a ser auditada. d) Errada. É o auditor quem seleciona itens para a amostragem e de forma que cada unidade de amostragem da população tenha a mesma chance de ser selecionada. e) Errada. A letra “e” segue a mesma linha absurda desenvolvida na letra “b”, afirmando que o auditor deve relativizar a finalidade do procedimento de auditoria com o intuito de suavizar eventuais resultados indesejados. Letra a.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/SEFAZ-BA/AUDITOR/2019) Conforme estabelece a NBC TA 530, “o objetivo do auditor, ao usar a amostragem em auditoria, é o de proporcionar uma base razoável para o auditor concluir quanto à população da qual a amostra é selecionada”. A adoção do critério de amostragem pressupõe, por parte do auditor, a definição da amostra, a determinação do seu tamanho e a seleção dos itens para teste. De acordo com a referida NBC,",
+      "gabarito": "A",
+      "numero": 25,
+      "pagina": 54,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "ao acaso."
+        },
+        {
+          "letra": "B",
+          "texto": "de periodicidade variável randômica."
+        },
+        {
+          "letra": "C",
+          "texto": "de bloco."
+        },
+        {
+          "letra": "D",
+          "texto": "aleatória."
+        },
+        {
+          "letra": "E",
+          "texto": "sistemática."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Trata-se da seleção sistemática, em que a quantidade de unidades de amostragem na população é dividida pelo tamanho da amostra para dar um intervalo de amostragem, sorteando-se o ponto de partida. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/SEFAZ-BA/AUDITOR/2019) Quando um auditor toma a quantidade de unidades de amostragem na população e a divide pelo tamanho da amostra, para obter um intervalo de amostragem, equivalente a 20, por exemplo, e, após determinar um ponto de início dentro das primeiras 20 unidades, toda 20ª unidade de amostragem seguinte é selecionada, estamos diante de um método específico de seleção de amostra. De acordo com a NBC TA 530, este método de seleção de amostra é denominado seleção",
+      "gabarito": "E",
+      "numero": 26,
+      "pagina": 55,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "pode ser constituída de qualquer percentual inferior à 100% da amostra, todos os itens devem ser relevantes e a seleção deve proporcionar a todos a mesma chance de seleção."
+        },
+        {
+          "letra": "B",
+          "texto": "toda amostragem utilizada em auditoria deve ser realizada de forma aleatória e com utilização da teoria das probabilidades, ou seja, amostragem estatística."
+        },
+        {
+          "letra": "C",
+          "texto": "para avaliar o resultado da amostra de auditoria o auditor deve verificar somente se esta amostra forneceu uma base razoável para suas conclusões em relação a população que ele está sendo ou foi testada."
+        },
+        {
+          "letra": "D",
+          "texto": "ao definir uma amostra o auditor deve considerar o resultado geral esperado da auditoria e o conjunto de procedimentos de auditoria que serão necessários para este fim."
+        },
+        {
+          "letra": "E",
+          "texto": "o risco de amostragem é definido pelo profissional de auditoria considerando o tamanho da população e a expertise do auditor, quanto menor o risco tolerado menor a amostra."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "A única alternativa certa é a que afirma ser possível a amostra ser constituída de qualquer percentual inferior à 100% da amostra, todos os itens devem ser relevantes e a seleção deve proporcionar a todos a mesma chance de seleção. Letra a.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/SANASA CAMPINAS/ANALISTA/CONTABILIDADE/2019) A auditoria contábil realiza a análise dos registros contábeis e financeiros, buscando certificar se os mesmos estão corretos. Um dos procedimentos que pode ser utilizado pelo auditor é a amostragem, tema este normatizado pelo Conselho Federal de Contabilidade, dentre outras pela Norma Brasileira de Contabilidade Técnica de Auditoria − NBC TA 530 – Amostragem em Auditoria. Em relação à amostragem:",
+      "gabarito": "A",
+      "numero": 27,
+      "pagina": 55,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "na taxa tolerável de desvio."
+        },
+        {
+          "letra": "B",
+          "texto": "na taxa esperada de desvio da população a ser testada."
+        },
+        {
+          "letra": "C",
+          "texto": "na quantidade de unidades de amostragem na população."
+        },
+        {
+          "letra": "D",
+          "texto": "na extensão dos riscos de controle, incluídos os controles considerados relevantes na avaliação de riscos do auditor."
+        },
+        {
+          "letra": "E",
+          "texto": "no nível de segurança, conforme o qual a taxa tolerável de desvio não seja excedida pela taxa real de desvio na população."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "A taxa tolerável de desvio tem uma relação inversa com o tamanho da amostra. Logo, um aumento na taxa tolerável de desvio provoca uma redução no tamanho da amostra. Letra a.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(CESPE/CEBRASPE/SEFAZ-RS/AFTE/2019) Em auditoria, o tamanho da amostra é influenciado por vários fatores, mas deve possibilitar que o auditor faça inferências sobre toda a população. Entre esses fatores, aquele que possibilita reduzir o tamanho da amostra é o aumento",
+      "gabarito": "A",
+      "numero": 28,
+      "pagina": 56,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "população."
+        },
+        {
+          "letra": "B",
+          "texto": "anomalia."
+        },
+        {
+          "letra": "C",
+          "texto": "estratificação."
+        },
+        {
+          "letra": "D",
+          "texto": "unidade de amostragem."
+        },
+        {
+          "letra": "E",
+          "texto": "distorção tolerável."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Trata-se da estratificação, técnica de amostragem em que o auditor divide a população objeto dos exames em diferentes grupos de unidades com características semelhantes, denominados de estratos. Letra c.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(CESPE/CEBRASPE/CGE-CE/AUDITOR/2019) Ao dividir um conjunto de registros contábeis em diferentes grupos de unidades com características semelhantes, o auditor independente estará utilizando o procedimento de",
+      "gabarito": "C",
+      "numero": 29,
+      "pagina": 56,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "da extensão na qual a avaliação de risco do auditor leva em consideração os controles relevantes."
+        },
+        {
+          "letra": "B",
+          "texto": "da taxa esperada de desvio da população a ser testada."
+        },
+        {
+          "letra": "C",
+          "texto": "do nível de segurança desejado pelo auditor de que a taxa real de desvio na população não exceda a taxa tolerável."
+        },
+        {
+          "letra": "D",
+          "texto": "da quantidade de unidades de amostragem em populações grandes."
+        },
+        {
+          "letra": "E",
+          "texto": "da taxa tolerável de desvio definida pelo auditor."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "O aumento da taxa tolerável de desvio definida e aceita pelo auditor tem como efeito a redução do tamanho necessário da amostra a ser realizada. Nas demais alternativas, o aumento dos elementos indicados (extensão, taxa esperada de desvio, nível de segurança e quantidade de unidades de amostragem ou tamanho da população) provocam aumento no tamanho da amostra. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(CESPE/CEBRASPE/CGE-CE/AUDITOR/2019) Considerando o uso de amostragem na realização de testes de controle, o fator que, mantidos todos os demais constantes, acarreta redução do tamanho necessário da amostra a ser realizada é o aumento",
+      "gabarito": "E",
+      "numero": 30,
+      "pagina": 56,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A utilização de amostras nos trabalhos de auditoria não é autorizada pelas normas brasileiras de auditoria por comprometer a imparcialidade que deve orientar os trabalhos do auditor."
+        },
+        {
+          "letra": "B",
+          "texto": "Ao determinar a extensão de um teste de auditoria ou um método de seleção de itens a serem testados, não poderão ser empregadas técnicas de amostragem."
+        },
+        {
+          "letra": "C",
+          "texto": "A utilização de amostragem estatística deve ser evitada nos trabalhos de auditoria por não permitir segurança suficiente a respeito dos seus achados."
+        },
+        {
+          "letra": "D",
+          "texto": "Ao usar método de amostragem, estatística ou não, deve ser projetada e selecionada uma amostra que possa proporcionar evidência de auditoria suficiente e apropriada."
+        },
+        {
+          "letra": "E",
+          "texto": "Amostra e população são conceitos sinônimos em matéria de procedimentos de auditoria com base em estatísticas."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Questão de nível básico. a) Errada. Na medida em a utilização de amostras nos trabalhos de auditoria é autorizada pelas normas brasileiras de auditoria e não compromete a imparcialidade que deve orientar os trabalhos do auditor. b) Errada, pois podem ser empregadas técnicas de amostragem, incluindo a amostragem estatística. c) Errada, pois podem ser empregadas técnicas de amostragem, incluindo a amostragem estatística. d) Certa. O objetivo do auditor, ao usar a amostragem em auditoria, estatística ou não, é o de proporcionar uma base razoável para o auditor concluir quanto à população da qual a amostra é selecionada. Por fim, vê-se que a letra “e” está errada, na medida em que a amostra e a população não são conceitos sinônimos em matéria de procedimentos de auditoria com base em estatísticas. População é o conjunto completo de dados sobre o qual a amostra é selecionada e sobre o qual o auditor deseja concluir. Letra d.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/TJ-SP/CONTADOR/2019) A respeito do uso de amostras para a realização dos trabalhos de auditoria, assinale a alternativa correta.",
+      "gabarito": "D",
+      "numero": 31,
+      "pagina": 57,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o tamanho da amostra deve ser determinado mediante aplicação de fórmula com base em estatística, e o auditor está impedido de utilizar seu julgamento profissional para evitar qualquer escolha tendenciosa."
+        },
+        {
+          "letra": "B",
+          "texto": "a amostra estratificada consiste na seleção aleatória dos itens da amostra, com probabilidade conhecida de cada evento possível."
+        },
+        {
+          "letra": "C",
+          "texto": "para os testes de controles, se a taxa esperada de desvio for inaceitavelmente baixa, o auditor geralmente decide por executar os testes de controles."
+        },
+        {
+          "letra": "D",
+          "texto": "o nível de risco de amostragem que o auditor está disposto a aceitar está inversamente correlacionado com o tamanho da amostra exigido."
+        },
+        {
+          "letra": "E",
+          "texto": "a seleção de bloco geralmente pode ser usada em amostragem de auditoria porque a maioria das populações está estruturada de modo que esses itens em sequência podem ter características semelhantes entre si."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada. O tamanho da amostra pode ser determinado mediante aplicação de fórmula com base em estatística e não estatística, sendo esta a que o auditor utiliza seu julgamento profissional para escolha da amostra. b) Errada. Estratificação é o processo de dividir uma população em subpopulações, cada uma sendo um grupo de unidades de amostragem com características semelhantes (geralmente valor monetário). Pela amostragem estatística, os itens da amostra são selecionados de modo que cada unidade de amostragem tenha uma probabilidade conhecida de ser selecionada. c) Errada. Quanto mais baixa for a taxa esperada de desvio, menor será o tamanho da amostra e quanto mais alta a taxa esperada de desvio, maior o tamanho da amostra precisa ser para que o auditor esteja em posição de fazer uma estimativa razoável da taxa real de desvio. d) Certa. O nível de risco de amostragem que o auditor está disposto a aceitar afeta o tamanho da amostra exigido. Quanto menor o risco que o auditor está disposto a aceitar, maior deve ser o tamanho da amostra. A relação é inversa. e) Errada. A seleção de bloco geralmente não pode ser usada em amostragem de auditoria porque a maioria das populações está estruturada de modo que esses itens em sequência podem ter características semelhantes entre si, mas características diferentes de outros itens de outros lugares da população. Letra d.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/PREFEITURA DE ITAPEVI/AUDITOR FISCAL/2019) Em relação à utilização da amostragem para obtenção de evidência de auditoria, é correto afirmar que",
+      "gabarito": "D",
+      "numero": 32,
+      "pagina": 57,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "seleção da amostra a critério do auditor."
+        },
+        {
+          "letra": "B",
+          "texto": "inexistência de risco de amostragem."
+        },
+        {
+          "letra": "C",
+          "texto": "seleção da amostra com base no conhecimento da empresa a ser auditada."
+        },
+        {
+          "letra": "D",
+          "texto": "uso da teoria de probabilidades para avaliar os resultados."
+        },
+        {
+          "letra": "E",
+          "texto": "seu uso é indicado quando a população a ser auditada é pequena."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "A caraterística correta da amostragem estatística é o uso da teoria de probabilidades para avaliar os resultados. Na amostragem estatística: (i) a seleção é aleatória e não a critério do auditor, como afirmado na letra “a”; (ii) o risco de amostragem é sempre considerado e quantificado quando estatístico, diferente do que informa a letra “b”; (iii) a seleção é aleatória/randômica e não com base no conhecimento da empresa a ser auditada, como afirmado na letra “c”; (iv) o seu uso é indicado quando a população é grande, ao contrário do que afirma a letra “e”. Letra d.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/PREFEITURA DE GUARULHOS/INSPETOR FISCAL/2019) São características da amostragem estatística:",
+      "gabarito": "D",
+      "numero": 33,
+      "pagina": 57,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "ao definir uma amostra de auditoria, o auditor deve considerar a possibilidade de anomalia do procedimento de auditoria e as características da amostra da qual será retirada a unidade da amostra."
+        },
+        {
+          "letra": "B",
+          "texto": "o auditor deve determinar o tamanho de amostra suficiente para reduzir o risco de amostragem a um nível mínimo aceitável."
+        },
+        {
+          "letra": "C",
+          "texto": "o auditor deve determinar o tamanho de amostra suficiente para reduzir o Risco não resultante da amostragem a um nível mínimo aceitável."
+        },
+        {
+          "letra": "D",
+          "texto": "o auditor deve selecionar itens para a estratificação da população de forma que cada unidade de amostragem da população tenha a mesma chance de ser selecionada."
+        },
+        {
+          "letra": "E",
+          "texto": "o auditor deve selecionar itens para a amostragem de forma que a população tenha a mesma Distorção tolerável."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada. Ao definir uma amostra de auditoria, o auditor deve considerar a finalidade do procedimento de auditoria e as características da população da qual será retirada a amostra. b) Certa. O auditor deve determinar o tamanho de amostra suficiente para reduzir o risco de amostragem a um nível mínimo aceitável. c) Errada. O auditor deve determinar o tamanho de amostra suficiente para reduzir o risco de amostragem a um nível mínimo aceitável. O tamanho da amostra tem relação com o risco da amostragem. d) Errada. O auditor deve selecionar itens para a amostragem de forma que cada unidade de amostragem da população tenha a mesma chance de ser selecionada. e) Errada. O auditor deve selecionar itens para a amostragem de forma que cada unidade de amostragem da população tenha a mesma chance de ser selecionada. A distorção tolerável tem relação com o nível de materialidade e de risco. Letra b.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/PREF. DE FRANCISCO MORATO/AUDITOR FISCAL/2019) Sobre os requisitos para definição e tamanho da amostra, é correto afirmar:",
+      "gabarito": "B",
+      "numero": 34,
+      "pagina": 58,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A amostra aleatória é função proporcional da população."
+        },
+        {
+          "letra": "B",
+          "texto": "O auditor não pode solicitar amostra por julgamento."
+        },
+        {
+          "letra": "C",
+          "texto": "A amostra por estratificação é utilizada quando há pequena dispersão dos valores envolvidos."
+        },
+        {
+          "letra": "D",
+          "texto": "A escolha da amostra deve seguir padrão determinístico."
+        },
+        {
+          "letra": "E",
+          "texto": "A amostra exploratória é indicada para pesquisa de fraudes, caso em que tabelas de auditoria mostram a probabilidade de se encontrar uma ocorrência em amostra preestabelecida."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada, pois a amostra aleatória não é função proporcional da população; ela é uma representação da população. b) Errada, pois o auditor pode solicitar ou realizar amostra por julgamento, utilizando amostragem não estatística. c) Errada, pois ao contrário, a amostra por estratificação é utilizada quando há grande dispersão dos valores envolvidos (heterogeneidade). d) Errada. Em amostragem estatística aplicada à auditoria, a escolha da amostra segue padrão probabilístico e não determinístico. e) Certa. Como vimos, a amostra exploratória é indicada para pesquisa de fraudes, caso em que tabelas de auditoria mostram a probabilidade de se encontrar uma ocorrência em amostra preestabelecida. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(CESPE/CEBRASPE/PREF. ARACAJU/AUDITOR/2020) No que tange à importância da amostragem estatística nos trabalhos da auditoria, assinale a opção correta.",
+      "gabarito": "E",
+      "numero": 35,
+      "pagina": 58,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Aumento na extensão na qual a avaliação de risco do auditor leva em consideração os controles relevantes: redução."
+        },
+        {
+          "letra": "B",
+          "texto": "Aumento no nível de segurança desejado do auditor de que a taxa tolerável de desvio não seja excedida pela taxa real de desvio na população: redução."
+        },
+        {
+          "letra": "C",
+          "texto": "Aumento na taxa tolerável de desvio: aumento."
+        },
+        {
+          "letra": "D",
+          "texto": "Aumento na quantidade de unidades de amostragem na população: aumento."
+        },
+        {
+          "letra": "E",
+          "texto": "Aumento na taxa esperada de desvio da população a ser testada: aumento."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada. Um aumento na extensão na qual a avaliação de risco do auditor leva em consideração os controles relevantes provoca aumento na amostra. b) Errada. Um aumento no nível de segurança desejado do auditor de que a taxa tolerável de desvio não seja excedida pela taxa real de desvio na população enseja um aumento na amostra. c) Errada. Um aumento na taxa tolerável de desvio provoca redução no tamanho da amostra. d) Errada. Um aumento na quantidade de unidades de amostragem na população tem pouco efeito se tiver sobre o tamanho da amostra. e) Certa. A única alternativa correta é o aumento na taxa esperada de desvio da população a ser testada e que provoca aumento no tamanho da amostra. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FGV/SEFAZ-ES/AUDITOR/2021) Assinale a opção que indica o fator levado em consideração pelo auditor na determinação do tamanho da amostra em testes de controle e o efeito no tamanho da amostra, mantendo os outros fatores iguais.",
+      "gabarito": "E",
+      "numero": 36,
+      "pagina": 58,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "anomalia."
+        },
+        {
+          "letra": "B",
+          "texto": "risco inerente."
+        },
+        {
+          "letra": "C",
+          "texto": "distorção tolerável."
+        },
+        {
+          "letra": "D",
+          "texto": "risco de amostragem."
+        },
+        {
+          "letra": "E",
+          "texto": "risco não resultante de amostragem."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "O uso de procedimentos de auditoria não apropriados, a interpretação errônea da evidência de auditoria e o não reconhecimento de uma distorção ou de um desvio, são exemplos de riscos de não amostragem (ou de detecção), pois não estão relacionados ao tamanho da amostra ou ao plano amostral, mas à aplicação dos testes e procedimentos de auditoria. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FGV/FUNSAUDE/AUDITOR/2021) O uso de procedimentos de auditoria não apropriados, a interpretação errônea da evidência de auditoria e o não reconhecimento de uma distorção ou de um desvio, são exemplos de",
+      "gabarito": "E",
+      "numero": 37,
+      "pagina": 58,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "O auditor deve determinar o tamanho da amostra suficiente para eliminar o risco de amostragem."
+        },
+        {
+          "letra": "B",
+          "texto": "Ao definir uma amostra de auditoria, o auditor deve considerar a finalidade do procedimento de auditoria e as características da população da qual será retirada a amostra."
+        },
+        {
+          "letra": "C",
+          "texto": "O auditor deve selecionar itens para amostra de forma que as unidades mais representativas da população tenham mais chance de serem selecionadas."
+        },
+        {
+          "letra": "D",
+          "texto": "A decisão quanto ao uso de abordagem de amostragem estatística ou não estatística pelo auditor tem como critério o tamanho da amostra."
+        },
+        {
+          "letra": "E",
+          "texto": "Ao considerar as características de uma população, para testes de controle, o auditor deve avaliar a taxa esperada de desvio com base no entendimento da administração dos controles relevantes."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada. O auditor deve determinar o tamanho de amostra suficiente para reduzir o risco de amostragem a um nível mínimo aceitável. b) Certa. Ao definir uma amostra de auditoria, o auditor deve considerar a finalidade do procedimento de auditoria e as características da população da qual será retirada a amostra. c) Errada. O auditor deve selecionar itens para a amostragem de forma que cada unidade de amostragem da população tenha a mesma chance de ser selecionada. d) Errada. A decisão quanto ao uso de abordagem de amostragem estatística ou não estatística é uma questão de julgamento do auditor, entretanto, o tamanho da amostra não é um critério válido para distinguir entre as abordagens estatísticas e não estatísticas. e) Errada. Ao considerar as características de uma população, para testes de controles, o auditor faz uma avaliação da taxa esperada de desvio com base no entendimento do auditor dos controles relevantes ou no exame de pequena quantidade de itens da população. Obviamente que não é com base no entendimento da administração dos controles relevantes e sim do próprio auditor, em função da experiência de trabalhos anteriores. Letra b.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FGV/FUNSAUDE/AUDITOR/2021) Em relação à definição da amostra, do tamanho e seleção dos itens para teste, assinale a afirmativa correta.",
+      "gabarito": "B",
+      "numero": 38,
+      "pagina": 59,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "o tamanho da amostra pode ser determinado mediante aplicação de fórmula com base em estatística ou pode ser aleatoriamente definido, mediante sorteio em computador de uso do auditor profissional."
+        },
+        {
+          "letra": "B",
+          "texto": "amostragem em auditoria é a aplicação de procedimentos de auditoria em menos de dez por cento dos itens de uma população qualquer para fins de auditoria, de maneira que as unidades selecionadas tenham chance elevada de comprovar que as demonstrações contábeis estão consistentes."
+        },
+        {
+          "letra": "C",
+          "texto": "risco de amostragem é o risco de que a conclusão do auditor, com base em amostra, pudesse ser diferente se toda a população fosse sujeita ao mesmo procedimento de auditoria."
+        },
+        {
+          "letra": "D",
+          "texto": "ao definir uma amostra de auditoria, o auditor deve se abster de considerar a finalidade do procedimento de auditoria e as características da população da qual será retirada a amostra, e ser neutro, imparcial e objetivo."
+        },
+        {
+          "letra": "E",
+          "texto": "distorção tolerável é a aplicação do princípio da significância na execução da auditoria, e pode ter o valor igual ou superior ao valor da materialidade específica."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada. O tamanho da amostra pode ser determinado mediante aplicação de fórmula com base em estatística (amostragem estatística) ou por meio do exercício do julgamento profissional (amostragem não estatística). b) Errada. Amostragem em auditoria é a aplicação de procedimentos de auditoria em menos de 100% dos itens de população relevante para fins de auditoria, de maneira que todas as unidades de amostragem tenham a mesma chance de serem selecionadas para proporcionar uma base razoável que possibilite o auditor concluir sobre toda a população. c) Certa. Risco de amostragem é o risco de que a conclusão do auditor, com base em amostra, pudesse ser diferente se toda a população fosse sujeita ao mesmo procedimento de auditoria. d) Errada. Ao definir uma amostra de auditoria, o auditor deve considerar a finalidade do procedimento de auditoria e as características da população da qual será retirada a amostra. e) Errada. Ao definir uma amostra, o auditor determina a distorção tolerável para avaliar o risco de que o conjunto de distorções individualmente irrelevantes possa fazer com que as demonstrações contábeis apresentem distorções relevantes e forneça margem para possíveis distorções não detectadas. A distorção tolerável é a aplicação da materialidade na execução da auditoria. A distorção tolerável pode ter o mesmo valor ou valor menor do que o da materialidade na execução da auditoria. Letra c.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/SEA-AP/FISCAL DA RECEITA/2022) Existe uma NBC TA específica que se aplica quando o auditor independente decide usar amostragem na execução de procedimentos de auditoria. Segundo esta norma,",
+      "gabarito": "C",
+      "numero": 42,
+      "pagina": 59,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "aplicação de procedimentos de auditoria em 100% dos itens de população relevante para fins de auditoria."
+        },
+        {
+          "letra": "B",
+          "texto": "seleção aleatória dos itens da amostra e uso da teoria das probabilidades para avaliar os resultados."
+        },
+        {
+          "letra": "C",
+          "texto": "aplicação de procedimentos de auditoria de maneira que nem todas as unidades de amostragem tenham a mesma chance de serem selecionadas."
+        },
+        {
+          "letra": "D",
+          "texto": "seleção aleatória dos itens da amostra, somente."
+        },
+        {
+          "letra": "E",
+          "texto": "uso da teoria das probabilidades para avaliar os resultados, somente."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Amostragem estatística é a abordagem à amostragem com as seguintes características: (a) seleção aleatória dos itens da amostra; e (b) o uso da teoria das probabilidades para avaliar os resultados das amostras, incluindo a mensuração do risco de amostragem. Letra b.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/DETRAN-AP/ANALISTA/2022) A NBC TA 530 define amostragem estatística como a abordagem em que há",
+      "gabarito": "B",
+      "numero": 43,
+      "pagina": 60,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Seleção com base em valor consiste em dividir a população em subpopulações distintas que tenham características similares."
+        },
+        {
+          "letra": "B",
+          "texto": "A amostragem em auditoria pode ser feita tanto mediante uma abordagem estatística como não estatística."
+        },
+        {
+          "letra": "C",
+          "texto": "O tamanho da amostra não é afetado pelo nível de risco que o auditor está disposto a aceitar."
+        },
+        {
+          "letra": "D",
+          "texto": "O tamanho da amostra deve ser determinado pela aplicação de fórmula estatística, não cabendo o exercício de julgamento profissional, pois esse procedimento seria subjetivo."
+        },
+        {
+          "letra": "E",
+          "texto": "Seleção aleatória ocorre quando o auditor seleciona a amostra sem seguir uma técnica estruturada."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada. Amostragem de unidade monetária é um tipo de seleção com base em valores, na qual o tamanho, a seleção e a avaliação da amostra resultam em uma conclusão em valores monetários. b) Certa. A amostragem em auditoria pode ser feita tanto mediante uma abordagem estatística como não estatística. c) Errada. O tamanho da amostra é afetado pelo nível de risco que o auditor está disposto a aceitar (risco de amostragem). d) Errada. O tamanho da amostra pode ser determinado pela aplicação de fórmula estatística, bem como pelo exercício de julgamento profissional, em amostragem não estatística. e) Errada. Seleção aleatória ocorre quando o auditor seleciona a amostra por meio de geradores de números aleatórios como, por exemplo, tabelas de números aleatórios. Seleção ao acaso ocorre quando o auditor seleciona a amostra sem seguir uma técnica estruturada. Letra b.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(CESPE/CEBRASPE/SEFAZ-SE/AUDITOR/2022) No que se refere à definição da amostra de auditoria, seu tamanho e escolha dos seus itens, conforme preceitua a NBC TA 530, assinale a opção correta.",
+      "gabarito": "B",
+      "numero": 44,
+      "pagina": 60,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "amostra."
+        },
+        {
+          "letra": "B",
+          "texto": "amostragem em auditoria."
+        },
+        {
+          "letra": "C",
+          "texto": "estratificação."
+        },
+        {
+          "letra": "D",
+          "texto": "subpopulação."
+        },
+        {
+          "letra": "E",
+          "texto": "amostragem estatística."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "À divisão de uma população em subpopulações que constituam grupos de unidade de amostragem com características similares denomina-se estratificação. A eficiência da auditoria pode ser melhorada se o auditor estratificar a população dividindo-a em subpopulações distintas que tenham características similares. O objetivo da estratificação é o de reduzir a variabilidade dos itens de cada estrato e, portanto, permitir que o tamanho da amostra seja reduzido sem aumentar o risco de amostragem. Letra c.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(CESPE/CEBRASPE/SEFAZ-SE/AUDITOR/2022) À divisão de uma população em subpopulações que constituam grupos de unidade de amostragem com características similares denomina-se",
+      "gabarito": "C",
+      "numero": 45,
+      "pagina": 61,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Quanto mais o auditor confia em outros procedimentos substantivos (testes de detalhes ou procedimentos analíticos substantivos) para reduzir a um nível aceitável o risco de detecção relacionado com uma população em particular, menos segurança o auditor precisa da amostragem e, portanto, menor pode ser o tamanho da amostra."
+        },
+        {
+          "letra": "B",
+          "texto": "Quando houver uma faixa ampla (variabilidade) no tamanho monetário dos itens da população, pode ser útil estratificar a população; quando a população pode ser adequadamente estratificada, o conjunto de tamanhos de amostra dos estratos geralmente será maior do que o tamanho da amostra que seria necessário para alcançar certo nível de risco de amostragem se uma amostra tivesse sido retirada de toda a população."
+        },
+        {
+          "letra": "C",
+          "texto": "Quanto maior o nível de segurança que o auditor precisa de que os resultados da amostra sejam de fato indicativos do valor real de distorção na população, excedido pela distorção real na população, menor o tamanho da amostra precisa ser."
+        },
+        {
+          "letra": "D",
+          "texto": "Quanto maior for o valor da distorção que o auditor espera encontrar na população, menor deve ser o tamanho da amostra para se fazer uma estimativa razoável do valor real de distorção na população."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Certa. Quanto mais o auditor confia em outros procedimentos substantivos (testes de detalhes ou procedimentos analíticos substantivos) para reduzir a um nível aceitável o risco de detecção relacionado com uma população em particular, menos segurança o auditor precisa da amostragem e, portanto, menor pode ser o tamanho da amostra. b) Errada. Quando a população pode ser adequadamente estratificada, o conjunto de tamanhos de amostra dos estratos geralmente será menor do que o tamanho da amostra que seria necessário para alcançar certo nível de risco de amostragem se uma amostra tivesse sido retirada de toda a população. c) Errada. Quanto maior o nível de segurança que o auditor precisa de que os resultados da amostra sejam de fato indicativos do valor real de distorção na população, excedido pela distorção real na população, maior o tamanho da amostra precisa ser. d) Errada. Quanto maior for o valor da distorção que o auditor espera encontrar na população, maior deve ser o tamanho da amostra para se fazer uma estimativa razoável do valor real de distorção na população. Letra a.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(CESPE/CEBRASPE/APEX BRASIL/ANALISTA/AUDITORIA INTERNA/2022) O tamanho de uma amostra pode ser determinado mediante aplicação de fórmula com base em estatística ou por meio do exercício do julgamento profissional. Existem fatores que influenciam o tamanho da amostra para testes de detalhes. Assinale a opção correta que representa o efeito adequado no tamanho da amostra para o respectivo evento apresentado.",
+      "gabarito": "A",
+      "numero": 46,
+      "pagina": 61,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Risco não resultante da amostragem."
+        },
+        {
+          "letra": "B",
+          "texto": "Risco do tipo II."
+        },
+        {
+          "letra": "C",
+          "texto": "Risco do tipo I."
+        },
+        {
+          "letra": "D",
+          "texto": "Risco de taxa tolerável de desvio."
+        },
+        {
+          "letra": "E",
+          "texto": "Risco de amostragem."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "O risco de que a conclusão do auditor, com base em amostra, pudesse ser diferente se toda a população fosse sujeita ao mesmo procedimento de auditoria é o risco de amostragem. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/PREF. DE GUARARAPES/AUDITOR/2023) Assinale a alternativa que apresenta corretamente o risco de que a conclusão do auditor, com base em amostra, pudesse ser diferente se toda a população fosse sujeita ao mesmo procedimento de auditoria.",
+      "gabarito": "E",
+      "numero": 47,
+      "pagina": 61,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "por conglomerados."
+        },
+        {
+          "letra": "B",
+          "texto": "estratificada."
+        },
+        {
+          "letra": "C",
+          "texto": "por contingentes."
+        },
+        {
+          "letra": "D",
+          "texto": "sistemática."
+        },
+        {
+          "letra": "E",
+          "texto": "análise discriminante."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Quando o auditor seleciona uma transação de forma aleatória entre as vendas nesse período e, a partir dessa transação, seleciona outras transações em intervalos regulares ele está realizando a amostragem ou seleção sistemática. Por exemplo, se o auditor selecionar uma venda no dia 10 de janeiro, ele poderia selecionar a próxima venda no dia 20 de janeiro, a próxima no dia 30 de janeiro e assim por diante, até que ele tenha selecionado uma amostra suficiente de transações para testar. Letra d.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/PREF. DE PINDAMONHANGABA/AUDITOR/2023) Suponha que um auditor esteja realizando uma auditoria em uma empresa de varejo e queira testar as vendas realizadas em um determinado período de tempo. O auditor poderia começar selecionando uma transação aleatória entre as vendas nesse período e, a partir dessa transação, selecionar outras transações em intervalos regulares. Por exemplo, se o auditor selecionar uma venda no dia 10 de janeiro, ele poderia selecionar a próxima venda no dia 20 de janeiro, a próxima no dia 30 de janeiro e assim por diante, até que ele tenha selecionado uma amostra suficiente de transações para testar. Este método de amostragem é conhecido como:",
+      "gabarito": "D",
+      "numero": 48,
+      "pagina": 62,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A amostragem não estatística só é utilizada em auditorias internas."
+        },
+        {
+          "letra": "B",
+          "texto": "A amostragem não estatística é determinada pelo conhecimento e experiência do auditor."
+        },
+        {
+          "letra": "C",
+          "texto": "A amostragem estatística é recomendável quando a população for pequena."
+        },
+        {
+          "letra": "D",
+          "texto": "Os dois tipos de amostragem têm as mesmas bases científicas."
+        },
+        {
+          "letra": "E",
+          "texto": "Se a população for muito heterogênea, a amostragem estatística é a mais recomendável."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada. As amostragens estatística e não estatística são utilizadas em auditorias internas e externas. b) Certa. A amostragem não estatística é determinada pelo conhecimento e experiência do auditor; por isso, também denominada de amostragem por julgamento. c) Errada. A amostragem estatística é recomendável quando a população for grande e com unidades de amostragem homogêneas. d) Errada. Os dois tipos de amostragem (estatística e não estatística) têm bases científicas diferentes. e) Errada. Se a população for muito heterogênea, a amostragem não estatística é a mais recomendável ou então o auditor pode adotar a amostragem estatística por estratificação. Letra b.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/TRF 3/ANALISTA JUDICIÁRIO/CONTADORIA/2023) Ao decidir pela amostragem, o auditor pode fazê-la por dois tipos: estatístico e não estatístico. Considerando o exposto, assinale a alternativa correta.",
+      "gabarito": "B",
+      "numero": 49,
+      "pagina": 62,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "distorção tolerável."
+        },
+        {
+          "letra": "B",
+          "texto": "estratificação."
+        },
+        {
+          "letra": "C",
+          "texto": "anomalia."
+        },
+        {
+          "letra": "D",
+          "texto": "taxa tolerável de desvio."
+        },
+        {
+          "letra": "E",
+          "texto": "unidade."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "A anomalia é a distorção ou o desvio que é comprovadamente não representativo de distorção ou desvio em uma população. Em circunstâncias extremamente raras, quando o auditor considera que uma distorção ou um desvio descoberto na amostra são anomalias, o auditor deve obter um alto grau de certeza de que essa distorção ou esse desvio não sejam representativos da população. O auditor deve obter esse grau de certeza mediante a execução de procedimentos adicionais de auditoria, para obter evidência de auditoria apropriada e suficiente de que a distorção ou o desvio não afetam o restante da população. Letra c.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/PREF. DE SÃO PAULO/AUDITOR FISCAL/2023) O objetivo do auditor, ao usar a amostragem em auditoria, é o de proporcionar uma base razoável para ele concluir quanto à população da qual a amostra é selecionada. A distorção ou o desvio que é comprovadamente não representativo de distorção ou desvio em uma população é o conceito de",
+      "gabarito": "C",
+      "numero": 50,
+      "pagina": 62,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "É o de proporcionar uma base razoável para o auditor concluir quanto à população da qual a amostra é selecionada."
+        },
+        {
+          "letra": "B",
+          "texto": "É para minimizar qualquer conflito de interesse ao selecionar os itens para testes de auditoria, uma vez que tal técnica estratifica informações contábeis e financeiras diretamente de fontes independentes."
+        },
+        {
+          "letra": "C",
+          "texto": "É o de facilitar e agilizar os trabalhos de auditoria, tendo em vista a utilização de ferramentas tecnológicas."
+        },
+        {
+          "letra": "D",
+          "texto": "É o de mitigar o risco de que a conclusão do auditor, com base em amostra, pudesse ser diferente se toda a população fosse sujeita ao mesmo procedimento de auditoria."
+        },
+        {
+          "letra": "E",
+          "texto": "É o de identificar eventual distorção ou o desvio que é comprovadamente não representativo de distorção nas demonstrações financeiras."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "O objetivo do auditor, ao usar a amostragem em auditoria, é o de proporcionar uma base razoável para o auditor concluir quanto à população da qual a amostra é selecionada. Letra a.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/PREF. DE APARECIDA/AUDITOR/2024) Assinale a alternativa que confirma o objetivo do auditor ao usar a amostragem em auditoria.",
+      "gabarito": "A",
+      "numero": 51,
+      "pagina": 62,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "menor deve ser o julgamento profissional."
+        },
+        {
+          "letra": "B",
+          "texto": "menor a quantidade de testes substantivos a serem realizados."
+        },
+        {
+          "letra": "C",
+          "texto": "maior deve ser o tamanho da amostra."
+        },
+        {
+          "letra": "D",
+          "texto": "maior deve ser a quantidade de estratificações."
+        },
+        {
+          "letra": "E",
+          "texto": "maior deve ser a quantidade de anomalias encontradas."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "O nível de risco de amostragem que o auditor está disposto a aceitar afeta o tamanho da amostra exigido. Quanto menor o risco que o auditor está disposto a aceitar, maior deve ser o tamanho da amostra. Letra c.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/CÂMARA DE ITAPEVA/CONTADOR/2024) Sobre amostragem em auditoria, é correto afirmar que quanto menor o risco que o auditor está disposto a aceitar",
+      "gabarito": "C",
+      "numero": 52,
+      "pagina": 63,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "paralelos de testes de controles e de detalhes na avaliação ou quantificação dos resultados da amostra para não afetar o restante da população."
+        },
+        {
+          "letra": "B",
+          "texto": "similares do cálculo da taxa de desvio dos procedimentos de controles internos previstos, definida como suficiente pelo auditor para obter um nível apropriado de avaliação."
+        },
+        {
+          "letra": "C",
+          "texto": "condicionantes em um item que substitua o anteriormente selecionado, definido em nota explicativa no escopo da auditoria como adequado, sem afetar o restante da amostra."
+        },
+        {
+          "letra": "D",
+          "texto": "adicionais de auditoria, para obter evidência de auditoria apropriada e suficiente de que a distorção ou o desvio não afetam o restante da população."
+        },
+        {
+          "letra": "E",
+          "texto": "secundários dos procedimentos contábeis das distorções identificadas e avaliar a integração nos efeitos no restante da população."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "O auditor deve obter esse grau de certeza mediante a execução de procedimentos adicionais de auditoria, para obter evidência de auditoria apropriada e suficiente de que a distorção ou o desvio não afetam o restante da população. Letra d.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/UNIFESP/UFSP/AUDITOR/2024) Em circunstâncias extremamente raras, quando o auditor considera que uma distorção, ou desvio, descoberta na amostra é uma anomalia, ele deve obter um alto grau de certeza de que essa distorção, ou desvio, não seja representativa da população. O auditor deve obter esse grau de certeza mediante a execução de procedimentos",
+      "gabarito": "D",
+      "numero": 53,
+      "pagina": 63,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "especializada e técnica."
+        },
+        {
+          "letra": "B",
+          "texto": "quantitativa e qualitativa."
+        },
+        {
+          "letra": "C",
+          "texto": "qualitativa e quantitativa."
+        },
+        {
+          "letra": "D",
+          "texto": "cooperativa e especializada."
+        },
+        {
+          "letra": "E",
+          "texto": "cooperativa e qualitativa."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "Os tipos de amostragem, respectivamente, são a amostragem quantitativa (quando se pretende tirar conclusões sobre a população inteira, usando método probabilístico) e a amostragem qualitativa (quando a amostra não é uma representação da população e se pretende analisar características de indivíduos, grupos, atividades ou processos). Letra b.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FCC/TCE-GO/ACE/TEC. DA INFORMAÇÃO/2023) Considere os tipos de amostragem de auditoria. I – Usada quando se pretende tirar conclusões sobre a população inteira, testando uma amostra dos itens selecionados a partir dela. Nessa amostragem, o risco deve ser reduzido a um nível aceitavelmente baixo o que pode exigir aplicação de técnicas estatísticas. II – É um procedimento seletivo realizado como um processo deliberado e sistemático, para identificar os fatores de variação no objeto. O auditor pode selecionar a amostra com base nas características de indivíduos, grupos, atividades, processos ou na entidade auditada como um todo. Os itens I e II são, correta e respectivamente, correspondentes aos tipos de amostragem",
+      "gabarito": "B",
+      "numero": 54,
+      "pagina": 63,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "a amostra gerada tende a apresentar uma distribuição normal;"
+        },
+        {
+          "letra": "B",
+          "texto": "a seleção de um elemento não interfere na seleção dos demais;"
+        },
+        {
+          "letra": "C",
+          "texto": "é necessário garantir que todos os estratos da população sejam representados nos elementos amostrais;"
+        },
+        {
+          "letra": "D",
+          "texto": "os grupos formados devem ser exaustivos e mutuamente excludentes;"
+        },
+        {
+          "letra": "E",
+          "texto": "recomenda-se aplicá-la unicamente em populações finitas."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada. A distribuição normal é uma distribuição de probabilidade contínua e simétrica que representa o comportamento de um fenômeno natural de forma aleatória e é caracterizada por uma função de probabilidade, cujo gráfico descreve uma curva em forma de sino. A amostra gerada com a amostragem aleatória simples não apresenta necessariamente uma distribuição normal. b) Certa. Ao definir pela aplicação de amostragem aleatória simples, um auditor deve considerar que a seleção de um elemento não interfere na seleção dos demais. c) Errada, pois correspondem a características da amostragem por estratificação e não da aleatória simples. d) Errada, pois correspondem a características da amostragem por estratificação e não da aleatória simples. e) Errada, na medida em que as amostras aleatórias podem ser selecionadas com ou sem reposição de populações finitas ou infinitas. Letra b.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FGV/CGM-RJ/CONTADOR/2023) Em análises estatísticas, somente as amostragens probabilísticas permitem a correta generalização para a população dos resultados amostrais. Um tipo de amostragem que pode cumprir esse objetivo é a amostragem aleatória simples. Ao definir pela aplicação desse tipo de amostragem, um auditor deve considerar que:",
+      "gabarito": "B",
+      "numero": 55,
+      "pagina": 64,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "é considerado um procedimento pouco seguro e que, em geral, deve ser evitado, devendo o auditor dar preferência à análise de toda a população pesquisada, ainda que o custo disso possa parecer elevado em relação ao tempo e aos recursos materiais e humanos disponíveis."
+        },
+        {
+          "letra": "B",
+          "texto": "a amostragem em auditoria pode ser aplicada usando apenas a abordagem de amostragem estatística, pois a abordagem não estatística não confere segurança razoável para as conclusões a serem obtidas, ainda que combinadas com outras evidências de auditoria."
+        },
+        {
+          "letra": "C",
+          "texto": "o nível de risco de amostragem que o auditor está disposto a aceitar afeta o tamanho da amostra exigido. Quanto maior o risco que o auditor está disposto a aceitar, maior deve ser o tamanho da amostra."
+        },
+        {
+          "letra": "D",
+          "texto": "na seleção dos elementos da amostra, é relevante assegurar a existência de viés de maneira que os elementos sejam representativos de um único subconjunto de elementos da população pesquisada."
+        },
+        {
+          "letra": "E",
+          "texto": "ao considerar as características da população da qual a amostra será extraída, o auditor pode determinar que a estratificação ou a seleção com base em valores é apropriada."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "a) Errada. A adoção de amostragem na realização de trabalhos de auditoria é um procedimento seguro e recomendável. b) Errada. A amostragem em auditoria pode ser aplicada usando a abordagem de amostragem estatística e não estatística. c) Errada. Quanto maior o risco que o auditor está disposto a aceitar, menor será ou poderá ser o tamanho da amostra. d) Errada. Na seleção dos elementos da amostra, é relevante assegurar a ausência de viés, de maneira que os elementos sejam representativos de todos os elementos da população pesquisada. e) Certa. Ao considerar as características da população da qual a amostra será extraída, o auditor pode determinar que a estratificação ou a seleção com base em valores é apropriada. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(VUNESP/TCM-SP/AUDITOR/2023) É correto afirmar sobre a adoção de amostragem na realização de trabalhos de auditoria que",
+      "gabarito": "E",
+      "numero": 58,
+      "pagina": 64,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "risco de amostragem."
+        },
+        {
+          "letra": "B",
+          "texto": "distorção tolerável."
+        },
+        {
+          "letra": "C",
+          "texto": "anomalia."
+        },
+        {
+          "letra": "D",
+          "texto": "risco de controle."
+        },
+        {
+          "letra": "E",
+          "texto": "taxa de desvio."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "De acordo com a NBC TA n. 530, quando o auditor encontra distorção ou desvio que é comprovadamente não representativo de distorção ou desvio em uma população, ou seja, é um caso isolado e excepcional, é considerada uma anomalia. A norma prevê que, quando a distorção tiver sido estabelecida como uma anomalia, ela pode ser excluída da projeção das distorções para a população. Entretanto, o efeito de tal distorção, se não for corrigido, ainda precisa ser considerado, além da projeção das distorções não anômalas. Letra c.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FGV/PREF. DE CUIABÁ/AUDITOR FISCAL/2024) Na utilização da amostragem em auditoria, o auditor verificou a existência de distorção ou o desvio que é comprovadamente não representativo de distorção ou desvio em uma população. Nos termos da NBC TA 530 (Res. CFC n.1.222/09), essa hipótese configura a ocorrência de",
+      "gabarito": "C",
+      "numero": 59,
+      "pagina": 65,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    },
+    {
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "apresentam maior relevância dentro da amostra."
+        },
+        {
+          "letra": "B",
+          "texto": "possuem as características desejáveis dentro da população."
+        },
+        {
+          "letra": "C",
+          "texto": "relacionam-se aos maiores valores monetários dentro da amostra."
+        },
+        {
+          "letra": "D",
+          "texto": "cada unidade de amostragem reflete o julgamento inicial do auditor."
+        },
+        {
+          "letra": "E",
+          "texto": "cada unidade de amostragem tem uma probabilidade conhecida de ser selecionada."
+        }
+      ],
+      "anulada": false,
+      "assets": [],
+      "assunto": "auditoria-amostragem",
+      "classificacao_confianca": 1.0,
+      "classificacao_metodo": "apostila:monotematica",
+      "comentario": "De acordo com a NBC TA n. 530, pela amostragem estatística, os itens da amostra são selecionados de modo que cada unidade de amostragem tenha uma probabilidade conhecida de ser selecionada. Pela amostragem não estatística, o julgamento é usado para selecionar os itens da amostra. Letra e.",
+      "desatualizada": false,
+      "disciplina": "Auditoria",
+      "enunciado": "(FGV/PREF. DE NOVA IGUAÇU/AUDITOR FISCAL/2024) O auditor independente de uma entidade utiliza amostragem estatística na execução de procedimentos de auditoria. De acordo com esse tipo de amostragem, os itens da amostra são selecionados de modo que",
+      "gabarito": "E",
+      "numero": 60,
+      "pagina": 65,
+      "revisado_humano": true,
+      "tipo": "multipla"
+    }
+  ],
+  "status": "publicavel",
+  "textos_apoio": [],
+  "versao_artefato": 1
+}

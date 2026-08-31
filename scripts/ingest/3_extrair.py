@@ -76,10 +76,13 @@ def executar(slug: str, *, nome_perfil: str | None = None, forcar: bool = False)
     fontes = modelos.ler_json(c.fontes)
     p = perfil_lib.resolver(slug, nome_perfil)
 
-    caderno = next(
-        (f for f in fontes["fontes"] if f["classe"] == "caderno_com_justificativa"),
-        None,
-    ) or next((f for f in fontes["fontes"] if f["classe"] == "caderno"), None)
+    caderno = (
+        next((f for f in fontes["fontes"] if f["classe"] == "caderno_com_justificativa"), None)
+        or next((f for f in fontes["fontes"] if f["classe"] == "caderno"), None)
+        # Apostila comentada de terceiro (pivô 2026-08-31): questão, gabarito
+        # e comentário no mesmo PDF, sem separação caderno/gabarito.
+        or next((f for f in fontes["fontes"] if f["classe"] == "apostila_comentada"), None)
+    )
     if caderno is None:
         raise SystemExit(f"{slug}: nenhum caderno de provas entre as fontes")
 

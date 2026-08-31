@@ -52,9 +52,25 @@ Isso cria uma **segunda origem de questão**, `origem_fonte = 'apostila_comentad
 | Atribuição | banca, ano, órgão, cargo, número original | autor e título da apostila (`autor_fonte`, `titulo_fonte`) |
 | Onde mora | `scripts/ingest/perfis/*` (perfil por prova Cebraspe) | `scripts/ingest/perfis/apostila_generico.yaml` (chute inicial de layout) |
 
-**Pendência explícita:** o perfil `apostila_generico.yaml` foi escrito **sem PDF de amostra em mãos** —
-é um chute de layout comum (nº da questão, marcador "Gabarito:", marcador "Comentário:"). Ajustar
-assim que a primeira apostila real (Auditoria ou Direito Civil) chegar. Ver `docs/agents/coletor.md`.
+**Atualizado em 2026-08-31 com os dois primeiros PDFs de amostra em mãos** (Gran Cursos —
+"Amostragem em Auditoria Contábil, NBC TA 530", Marcelo Aragão; "Obrigações – Parte I", Carlos Elias):
+o layout real não tem marcador "Gabarito:"/"Comentário:" nenhum. Tem, em vez disso:
+
+- **Negrito é glifo duplicado, não fonte bold** — pdfplumber extrai o número do item e o título de
+  seção com CADA CARACTERE repetido (`"008."` → `"000088.."`, `"GABARITO"` → `"GGAABBAARRIITTOO"`).
+- Estrutura por capítulo: `[prosa]` → `[EXERCÍCIOS]` e/ou `[QUESTÕES COMENTADAS EM AULA]` +
+  `[QUESTÕES DE CONCURSO]` → `GABARITO` (grade compacta tipo `"1. C 35. b"`) → `GABARITO COMENTADO`
+  (repete o item + comentário do autor). Nem toda apostila tem as duas primeiras seções.
+- Tipo é por QUESTÃO, não por documento — a mesma apostila mistura Certo/Errado e múltipla escolha;
+  a grade decide pela caixa da letra (maiúscula = C/E, minúscula = letra de múltipla escolha).
+- Por isso uma apostila que mistura tipos vira **duas provas** no acervo (`{slug}_ce`/`{slug}_multipla`),
+  cada uma com seu `formato`/`penalidade_por_erro` (CLAUDE.md regra 2).
+
+A lógica mora inteira em `scripts/ingest/lib/apostila.py` (`extrair_itens`, `extrair_grade`,
+`extrair_comentarios`, `montar_questoes`, `processar`) — `perfis/apostila_generico.yaml` só carrega o
+recorte de página (cabeçalho/rodapé) e a lista de linhas a descartar. Detalhe completo, inclusive a
+heurística de salto vertical usada para separar a repetição do item do comentário de verdade, em
+`docs/agents/coletor.md` → Decisões e Armadilhas.
 
 Ambas as exceções (regras 3 e 5 do `CLAUDE.md`) estão marcadas como **temporárias — revisar antes de
 lançamento público ou monetização**. A pesquisa jurídica da seção 4 abaixo, sobre justificativa da

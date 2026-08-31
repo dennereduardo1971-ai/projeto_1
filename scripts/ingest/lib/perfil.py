@@ -97,6 +97,14 @@ class Perfil:
         """Metadados fixos da prova, quando o perfil é específico de uma."""
         return self.dados.get("prova", {})
 
+    @property
+    def origem_fonte(self) -> str:
+        """`prova_oficial` (Cebraspe, padrão) ou `apostila_comentada` (pivô
+        2026-08-31) — decide se `run.py` segue o pipeline normal (etapas 4/5,
+        casamento com gabarito definitivo) ou desvia para `lib/apostila.py`.
+        """
+        return self.dados.get("origem_fonte", "prova_oficial")
+
     # ── regexes ──────────────────────────────────────────────────────────────
     def marcador(self, chave: str) -> re.Pattern | None:
         bruto = self.dados["marcadores"].get(chave)

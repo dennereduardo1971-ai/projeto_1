@@ -158,6 +158,11 @@ class Questao:
     # Gate leve para `apostila_comentada`: substitui o gabarito casado com a
     # banca (que não existe nessa origem) na hora de publicar.
     revisado_humano: bool = False
+    # Comentário do AUTOR da apostila (nunca da banca). Só passa da barreira
+    # anti-justificativa quando `Prova.origem_fonte == 'apostila_comentada'` e
+    # `Prova.autor_fonte` preenchido — ver CLAUDE.md regra 5, exceção temporária
+    # de 2026-08-31, e `lib/validador.py::_dados_para_barreira`.
+    comentario: str | None = None
 
 
 @dataclass
@@ -176,7 +181,11 @@ class Prova:
     titulo_fonte: str | None = None
     tipo_caderno: str | None = None
     fonte_pdf: str = ""
-    fonte_gabarito: str = ""
+    # None (não "") quando ainda não há gabarito definitivo casado ou quando
+    # a origem é `apostila_comentada` (não existe "gabarito da banca" nessa
+    # origem) — string vazia falha o schema (minLength 1) quando o campo
+    # está presente; None é removido do JSON por `_limpar`.
+    fonte_gabarito: str | None = None
     sha256_pdf: str | None = None
     sha256_gabarito: str | None = None
     perfil: str | None = None
@@ -265,6 +274,7 @@ def de_dict(dados: dict) -> Artefato:
                     else None
                 ),
                 revisado_humano=q.get("revisado_humano", False),
+                comentario=q.get("comentario"),
             )
         )
     return art
