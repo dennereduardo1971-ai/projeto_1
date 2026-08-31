@@ -95,6 +95,11 @@ export async function carregarExemplo(): Promise<number> {
             desatualizada: false,
             motivo_desatualizacao: null,
             status: 'publicada',
+            origem_fonte: 'prova_oficial',
+            autor_fonte: null,
+            titulo_fonte: null,
+            revisado_humano: true,
+            dificuldade_b: 0,
           }
           await db.questao.put(questao)
           total++
@@ -126,22 +131,29 @@ export async function carregarExemplo(): Promise<number> {
   return total
 }
 
-/** Tira o andaime: questões, respostas dadas a elas e os cards que geraram. */
+/**
+ * Tira o andaime: questões, respostas dadas a elas e o vínculo de domínio.
+ *
+ * `estado_assunto` não sabe distinguir "veio do exemplo" de "veio do acervo
+ * real" (é por assunto, não por questão) — então só é removido se, depois de
+ * tirar as questões de exemplo, aquele assunto não tiver mais nenhuma
+ * resposta válida. Assunto que já tinha domínio real fica intocado.
+ */
 export async function removerExemplo(): Promise<void> {
   const provas = await db.prova.where('concurso_id').equals(CONCURSO_ID).toArray()
   const provaIds = provas.map((p) => p.id)
   const questoes = await db.questao.filter((q) => provaIds.includes(q.prova_id)).toArray()
   const questaoIds = new Set(questoes.map((q) => q.id))
-  const cards = await db.card.filter((c) => !!c.questao_id && questaoIds.has(c.questao_id)).toArray()
+  const assuntoIds = new Set(
+    (await db.questao_assunto.filter((qa) => questaoIds.has(qa.questao_id)).toArray()).map(
+      (qa) => qa.assunto_id,
+    ),
+  )
 
   await db.transaction(
     'rw',
-    [db.concurso, db.cargo, db.prova, db.questao, db.alternativa, db.questao_assunto, db.resposta, db.card, db.revisao],
+    [db.concurso, db.cargo, db.prova, db.questao, db.alternativa, db.questao_assunto, db.resposta, db.estado_assunto],
     async () => {
-      for (const c of cards) {
-        await db.revisao.delete(c.id)
-        await db.card.delete(c.id)
-      }
       for (const q of questoes) {
         await db.alternativa.where('questao_id').equals(q.id).delete()
         await db.questao_assunto.where('questao_id').equals(q.id).delete()
@@ -151,6 +163,11 @@ export async function removerExemplo(): Promise<void> {
       for (const id of provaIds) await db.prova.delete(id)
       await db.cargo.delete(CARGO_ID)
       await db.concurso.delete(CONCURSO_ID)
+
+      for (const assuntoId of assuntoIds) {
+        const aindaTemQuestao = await db.questao_assunto.where('assunto_id').equals(assuntoId).count()
+        if (aindaTemQuestao === 0) await db.estado_assunto.delete(assuntoId)
+      }
     },
   )
 }

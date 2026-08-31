@@ -1,8 +1,8 @@
 import Dexie, { type EntityTable } from 'dexie'
 import type {
-  Ajuste, Alternativa, Assunto, BlocoCiclo, Card, Cargo, Concurso, Disciplina,
-  Edital, ItemEdital, ItemEditalAssunto, Plano, Prova, Questao, QuestaoAssunto,
-  Resposta, Revisao, Sessao, TextoApoio,
+  Ajuste, Alternativa, Assunto, BlocoCiclo, Cargo, Concurso, ConquistaUsuario, Disciplina,
+  Edital, EstadoAssunto, EventoXP, ItemEdital, ItemEditalAssunto, Meta, Plano, Prova, Questao,
+  QuestaoAssunto, Resposta, Sequencia, Sessao, TextoApoio,
 } from './tipos'
 
 /**
@@ -10,6 +10,10 @@ import type {
  *
  * Uma tabela por tabela do Postgres, com o mesmo nome. As tabelas de acervo
  * nascem vazias e só se enchem quando o pipeline de ingestão rodar.
+ *
+ * `estado_assunto`, `sequencia`, `evento_xp`, `conquista_usuario` e `meta`
+ * substituem `card`/`revisao` desde 2026-08-31 (CLAUDE.md, regra 8) — motor
+ * de domínio único por assunto, no molde do APP-CPA-YOHANNA.
  */
 class BancoRito extends Dexie {
   disciplina!: EntityTable<Disciplina, 'id'>
@@ -31,8 +35,12 @@ class BancoRito extends Dexie {
   bloco_ciclo!: EntityTable<BlocoCiclo, 'id'>
   sessao!: EntityTable<Sessao, 'id'>
   resposta!: EntityTable<Resposta, 'id'>
-  card!: EntityTable<Card, 'id'>
-  revisao!: Dexie.Table<Revisao, string>
+
+  estado_assunto!: Dexie.Table<EstadoAssunto, string>
+  sequencia!: Dexie.Table<Sequencia, string>
+  evento_xp!: EntityTable<EventoXP, 'id'>
+  conquista_usuario!: Dexie.Table<ConquistaUsuario, string>
+  meta!: Dexie.Table<Meta, string>
 
   ajuste!: Dexie.Table<Ajuste, string>
 
@@ -63,6 +71,27 @@ class BancoRito extends Dexie {
 
       ajuste: 'chave',
     })
+
+    // v2 (2026-08-31): card/revisao (FSRS separado) saem; entram estado_assunto
+    // e as tabelas de gamificação. CLAUDE.md regra 8.
+    this.version(2)
+      .stores({
+        card: null,
+        revisao: null,
+        estado_assunto: 'assunto_id, revisar_em',
+        // Chave de fora (sem campo `id` no tipo): 1 linha fixa sob 'local'
+        // enquanto não há login — ver comentário no `.upgrade()` abaixo.
+        sequencia: '',
+        evento_xp: 'id, data',
+        conquista_usuario: 'conquista_id, obtida_em',
+        meta: '',
+      })
+      .upgrade(async (tx) => {
+        // Sem usuário logado ainda, cada tabela de gamificação guarda 1 linha
+        // fixa sob a chave 'local' — quando houver login, a chave vira usuario_id.
+        await tx.table('sequencia').put({ atual: 0, recorde: 0, ultimo_dia: null, congelamentos: 0 }, 'local')
+        await tx.table('meta').put({ minutos_dia: 0, questoes_dia: 0, dias_semana: 0, data_prova: null }, 'local')
+      })
   }
 }
 

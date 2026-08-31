@@ -15,7 +15,11 @@ e `[data-theme="dark"]` para o botão vencer nos dois sentidos). Alternância em
 `IconButton`, `InlineAlert`, `NivelMeter`, `Stat`, `TopBar`.
 
 **Telas** — `app/src/app/routes/`: Hoje, Mapa, Ciclo, Questões, Revisão, Estatísticas, Caderno,
-Mais. `Caderno` ainda é stub (16 linhas).
+Mais. Em 2026-08-31 (pivô do motor de domínio, ver `docs/agents/dados.md`), `Caderno`, `Revisão` e
+`Estatísticas` saíram de stub e passaram a ler dado de verdade — mas a reescrita foi funcional, feita
+por quem mexeu no motor, não uma passada de design. Estão com o kit visual (`Card`, `Button`,
+`EstadoVazio`) e o layout é simples de lista, sem polimento de hierarquia visual, sem gráfico de
+evolução e sem os textos re-trabalhados que essas telas merecem. Tratar como rascunho funcional.
 
 ## Decisões
 
@@ -44,6 +48,15 @@ Mais. `Caderno` ainda é stub (16 linhas).
 
 ## Pendências
 
-- `Caderno` é stub e precisa de tela de verdade.
-- Não há streak nem lembrete na interface, embora o tom sóbrio com streak seja decisão travada.
+- `Caderno`, `Revisão` e `Estatísticas` precisam de uma passada de design de verdade (ver Estado
+  atual) — hoje são rascunho funcional em lista simples.
+- **XP, sequência e conquistas não têm NENHUMA interface ainda.** O motor existe
+  (`app/src/features/dominio/gamification.ts`, tabelas `sequencia`/`evento_xp`/`conquista_usuario`
+  no Dexie) mas nada na tela mostra XP ganho, sequência atual ou conquista desbloqueada — é dado
+  sendo calculado no vácuo. Tom sóbrio (CLAUDE.md regra 7): mecânica de jogo sim, estética de jogo
+  infantil não — nada de confete, mascote ou emoji de celebração.
 - Faltou passar o contraste do tema escuro no medidor de nível com olho de acessibilidade.
+- `NivelMeter`/`classeArestaNivel` (`app/src/ui/NivelMeter.tsx`) continuam com 4 níveis (0–3), mas o
+  motor novo tem 5 (`inicial/desenvolvimento/intermediario/bom/dominado`, em
+  `features/dominio/mastery.ts`) — `dados/nivel.ts` faz a compressão 5→4 hoje. Vale decidir se o Mapa
+  merece os 5 níveis do motor em vez dessa compressão.

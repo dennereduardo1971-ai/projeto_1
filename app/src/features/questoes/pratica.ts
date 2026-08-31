@@ -1,13 +1,14 @@
 import { agora, db, novoId } from '@/dados/db'
-import { novaRevisao } from '@/features/revisao/fsrs'
-import type { Alternativa, Assunto, Confianca, Prova, Questao } from '@/dados/tipos'
+import { estadoInicial, registrarResposta } from '@/features/dominio/mastery'
+import type { Alternativa, Assunto, Confianca, Prova, Questao, TipoErro } from '@/dados/tipos'
 
 /**
  * A prática de questões.
  *
  * Duas regras do projeto vivem aqui e não podem ser contornadas pela tela:
- * questão anulada ou não publicada nunca é servida, e todo ERRO vira card de
- * revisão na hora — é o que fecha o laço entre praticar e lembrar.
+ * questão anulada ou não publicada nunca é servida, e todo ERRO atualiza o
+ * `estado_assunto` na hora (habilidade cai, erro fica em aberto, revisão é
+ * reagendada) — é o que fecha o laço entre praticar e lembrar.
  */
 
 export interface QuestaoCompleta {
@@ -63,7 +64,8 @@ export interface Veredito {
   correta: boolean
   gabarito: string
   comentario: string | null
-  virouCard: boolean
+  /** `true` quando a resposta atualizou (ou criou) o estado de domínio do assunto. */
+  atualizouDominio: boolean
 }
 
 export async function responder(
@@ -71,6 +73,7 @@ export async function responder(
   marcada: string,
   confianca: Confianca,
   segundos: number | null = null,
+  tipoErro: TipoErro | null = null,
 ): Promise<Veredito> {
   const { questao } = alvo
   const correta = marcada === questao.gabarito
@@ -86,31 +89,19 @@ export async function responder(
     correta,
     segundos,
     confianca,
-    tipo_erro: null,
+    tipo_erro: correta ? null : tipoErro,
     respondida_em: agora(),
   })
 
-  let virouCard = false
-  if (!correta) {
-    const jaTem = await db.card.where('questao_id').equals(questao.id).first()
-    if (!jaTem) {
-      const cardId = novoId()
-      await db.card.add({
-        id: cardId,
-        origem: 'erro',
-        questao_id: questao.id,
-        assunto_id: alvo.assunto?.id ?? null,
-        frente: questao.enunciado,
-        verso: questao.comentario ?? `Gabarito: ${questao.gabarito}`,
-        suspenso: false,
-        criado_em: agora(),
-      })
-      await db.revisao.add(novaRevisao(cardId))
-      virouCard = true
-    }
+  let atualizouDominio = false
+  if (alvo.assunto) {
+    const anterior = (await db.estado_assunto.get(alvo.assunto.id)) ?? estadoInicial(alvo.assunto.id)
+    const { estado } = registrarResposta(anterior, correta, questao.dificuldade_b, Date.now(), tipoErro)
+    await db.estado_assunto.put(estado)
+    atualizouDominio = true
   }
 
-  return { correta, gabarito: questao.gabarito ?? '', comentario: questao.comentario, virouCard }
+  return { correta, gabarito: questao.gabarito ?? '', comentario: questao.comentario, atualizouDominio }
 }
 
 export interface Placar {

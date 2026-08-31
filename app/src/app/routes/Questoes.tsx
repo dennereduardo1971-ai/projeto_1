@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { estadoAcervo, type EstadoAcervo } from '@/dados/consultas'
 import { AVISO_EXEMPLO, carregarExemplo, ehExemplo, temExemplo } from '@/dados/exemplo'
 import {
@@ -21,6 +21,9 @@ const CE = [
 ]
 
 export function Questoes() {
+  const [params] = useSearchParams()
+  const assuntoId = params.get('assunto') ?? undefined
+
   const [acervo, setAcervo] = useState<EstadoAcervo | null>(null)
   const [comExemplo, setComExemplo] = useState(false)
   const [alvo, setAlvo] = useState<QuestaoCompleta | null>(null)
@@ -32,7 +35,7 @@ export function Questoes() {
 
   const puxar = useCallback(async () => {
     const [estado, exemploAtivo, proxima] = await Promise.all([
-      estadoAcervo(), temExemplo(), proximaQuestao(),
+      estadoAcervo(), temExemplo(), proximaQuestao(assuntoId),
     ])
     setAcervo(estado)
     setComExemplo(exemploAtivo)
@@ -41,7 +44,7 @@ export function Questoes() {
     setConfianca(null)
     setVeredito(null)
     setCarregando(false)
-  }, [])
+  }, [assuntoId])
 
   useEffect(() => { void puxar() }, [puxar])
 
@@ -180,7 +183,7 @@ export function Questoes() {
             <div className="flex flex-col gap-3">
               <InlineAlert tom={veredito.correta ? 'ok' : 'err'} titulo={veredito.correta ? 'Certo.' : `Errou — gabarito ${veredito.gabarito}.`}>
                 {veredito.comentario}
-                {veredito.virouCard && (
+                {!veredito.correta && veredito.atualizouDominio && (
                   <span className="block mt-2 text-caption">Entrou na sua fila de revisão.</span>
                 )}
                 {veredito.correta && confianca === 'chutei' && (

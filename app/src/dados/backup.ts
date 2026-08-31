@@ -12,7 +12,9 @@ const TABELAS = [
   'disciplina', 'assunto',
   'concurso', 'cargo', 'edital', 'item_edital', 'item_edital_assunto',
   'prova', 'texto_apoio', 'questao', 'alternativa', 'questao_assunto',
-  'plano', 'bloco_ciclo', 'sessao', 'resposta', 'card', 'revisao', 'ajuste',
+  'plano', 'bloco_ciclo', 'sessao', 'resposta',
+  'estado_assunto', 'sequencia', 'evento_xp', 'conquista_usuario', 'meta',
+  'ajuste',
 ] as const
 
 export interface Backup {

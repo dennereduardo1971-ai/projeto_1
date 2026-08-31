@@ -1,6 +1,7 @@
+import { dominioEfetivo } from '@/features/dominio/mastery'
 import { db } from './db'
 import { derivarNivel, type Nivel } from './nivel'
-import type { Assunto, Disciplina } from './tipos'
+import type { Assunto, Disciplina, EstadoAssunto } from './tipos'
 
 /**
  * Leituras do app. Toda agregação de desempenho passa por aqui, e por aqui
@@ -24,7 +25,7 @@ export async function estadoAcervo(): Promise<EstadoAcervo> {
 }
 
 /** Respostas que entram em estatística: 1ª tentativa e questão não anulada. */
-async function respostasValidas() {
+export async function respostasValidas() {
   const primeiras = await db.resposta.filter((r) => r.tentativa === 1).toArray()
   if (primeiras.length === 0) return []
   const anuladas = new Set(
@@ -33,13 +34,19 @@ async function respostasValidas() {
   return primeiras.filter((r) => !anuladas.has(r.questao_id))
 }
 
+/** Todo `estado_assunto`, indexado por assunto — a forma que o motor de domínio consome. */
+export async function todosEstados(): Promise<Record<string, EstadoAssunto>> {
+  const estados = await db.estado_assunto.toArray()
+  return Object.fromEntries(estados.map((e) => [e.assunto_id, e]))
+}
+
 export interface LinhaAssunto {
   assunto: Assunto
   topicos: Assunto[]
   minutos: number
   respondidas: number
   acertos: number
-  cardsAtrasados: number
+  revisoesAtrasadas: number
   questoesNoAcervo: number
   nivel: Nivel
 }
@@ -57,28 +64,16 @@ export interface GrupoDisciplina {
  * assuntos e o progresso acumulado aqui continua valendo.
  */
 export async function mapa(): Promise<GrupoDisciplina[]> {
-  const [disciplinas, assuntos, sessoes, respostas, questaoAssunto, revisoes] =
-    await Promise.all([
-      db.disciplina.orderBy('ordem').toArray(),
-      db.assunto.toArray(),
-      db.sessao.filter((s) => s.fim !== null).toArray(),
-      respostasValidas(),
-      db.questao_assunto.toArray(),
-      db.revisao.toArray(),
-    ])
+  const [disciplinas, assuntos, sessoes, respostas, questaoAssunto, estados] = await Promise.all([
+    db.disciplina.orderBy('ordem').toArray(),
+    db.assunto.toArray(),
+    db.sessao.filter((s) => s.fim !== null).toArray(),
+    respostasValidas(),
+    db.questao_assunto.toArray(),
+    todosEstados(),
+  ])
 
   const agoraMs = Date.now()
-  const cardsPorAssunto = new Map<string, number>()
-  if (revisoes.length > 0) {
-    const cards = await db.card.toArray()
-    const porId = new Map(cards.map((c) => [c.id, c]))
-    for (const r of revisoes) {
-      if (new Date(r.devida_em).getTime() > agoraMs) continue
-      const card = porId.get(r.card_id)
-      if (!card?.assunto_id) continue
-      cardsPorAssunto.set(card.assunto_id, (cardsPorAssunto.get(card.assunto_id) ?? 0) + 1)
-    }
-  }
 
   const minutosPorAssunto = new Map<string, number>()
   for (const s of sessoes) {
@@ -128,14 +123,21 @@ export async function mapa(): Promise<GrupoDisciplina[]> {
         },
         { respondidas: 0, acertos: 0 },
       )
-      const cardsAtrasados = idsDoRamo.reduce((s, id) => s + (cardsPorAssunto.get(id) ?? 0), 0)
+      const revisoesAtrasadas = idsDoRamo.filter((id) => {
+        const e = estados[id]
+        return e && e.revisar_em && new Date(e.revisar_em).getTime() <= agoraMs
+      }).length
       const questoesNoAcervo = idsDoRamo.reduce((s, id) => s + (questoesPorAssunto.get(id) ?? 0), 0)
 
-      const nivel = derivarNivel({ minutos, respondidas: d.respondidas, acertos: d.acertos, cardsAtrasados })
+      const dominio = idsDoRamo.length
+        ? idsDoRamo.reduce((s, id) => s + (estados[id] ? dominioEfetivo(estados[id], agoraMs) : 0), 0) /
+          idsDoRamo.length
+        : 0
+      const nivel = derivarNivel({ minutos, respostas: d.respondidas, dominioEfetivo: dominio })
       porNivel[nivel]++
       minutosDisciplina += minutos
 
-      return { assunto, topicos, minutos, ...d, cardsAtrasados, questoesNoAcervo, nivel }
+      return { assunto, topicos, minutos, ...d, revisoesAtrasadas, questoesNoAcervo, nivel }
     })
 
     return { disciplina, linhas, minutos: minutosDisciplina, porNivel }
@@ -169,8 +171,8 @@ export async function resumoDeHoje(): Promise<ResumoDeHoje> {
   }
 
   const agoraMs = Date.now()
-  const revisoesDevidas = await db.revisao
-    .filter((r) => new Date(r.devida_em).getTime() <= agoraMs)
+  const revisoesDevidas = await db.estado_assunto
+    .filter((e) => !!e.revisar_em && new Date(e.revisar_em).getTime() <= agoraMs)
     .count()
 
   return { minutosHoje, minutosSemana, sessoesHoje, revisoesDevidas }

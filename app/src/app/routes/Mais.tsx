@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { estadoAcervo, type EstadoAcervo } from '@/dados/consultas'
+import { estadoAcervo, todosEstados, type EstadoAcervo } from '@/dados/consultas'
 import { baixarBackup, importar, BackupInvalido } from '@/dados/backup'
 import { carregarExemplo, removerExemplo, temExemplo } from '@/dados/exemplo'
-import { db } from '@/dados/db'
-import { estaDevida } from '@/features/revisao/fsrs'
+import { filaDeRevisao } from '@/features/dominio/scheduler'
 import { ThemeToggle } from '@/features/tema/ThemeToggle'
 import { Button, Card, InlineAlert, TopBar } from '@/ui'
 
@@ -21,12 +20,12 @@ export function Mais() {
   const arquivo = useRef<HTMLInputElement>(null)
 
   const recarregar = async () => {
-    const [estado, exemplo, revisoes] = await Promise.all([
-      estadoAcervo(), temExemplo(), db.revisao.toArray(),
+    const [estado, exemplo, estados] = await Promise.all([
+      estadoAcervo(), temExemplo(), todosEstados(),
     ])
     setAcervo(estado)
     setComExemplo(exemplo)
-    setRevisoesDevidas(revisoes.filter((r) => estaDevida(r)).length)
+    setRevisoesDevidas(filaDeRevisao(estados, Date.now()).length)
   }
 
   useEffect(() => { void recarregar() }, [])
@@ -52,7 +51,7 @@ export function Mais() {
   const destinos = [
     { para: '/questoes', rotulo: 'Questões', selo: semAcervo ? 'sem acervo' : null },
     { para: '/estatisticas', rotulo: 'Estatísticas', selo: semAcervo ? 'sem dados' : null },
-    { para: '/caderno', rotulo: 'Caderno de erros', selo: 'Fase 2' },
+    { para: '/caderno', rotulo: 'Caderno de erros', selo: semAcervo ? 'sem acervo' : null },
     { para: '/revisao', rotulo: 'Revisão', selo: revisoesDevidas ? `${revisoesDevidas} devida${revisoesDevidas === 1 ? '' : 's'}` : null },
   ]
 
@@ -111,7 +110,7 @@ export function Mais() {
             <p className="text-sm text-muted max-w-[var(--measure-read)]">
               Dez questões escritas para este projeto — não são de prova e não têm banca. Existem só
               para você exercitar o laço de resolver, errar e revisar enquanto o acervo Cebraspe não
-              é ingerido. Remover apaga também as respostas e os cards que vieram delas.
+              é ingerido. Remover apaga também as respostas e o domínio de assunto que vieram delas.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">

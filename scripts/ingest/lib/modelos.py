@@ -65,6 +65,20 @@ CAMPOS_PROIBIDOS = frozenset(
 # Chaves permitidas dentro de justificativa_ref. Nada além disso.
 CAMPOS_JUSTIFICATIVA_REF = frozenset({"sha256", "pagina", "url"})
 
+# ── Pivô 2026-08-31: segunda origem de questão (CLAUDE.md, regras 3-5) ──────
+# `prova_oficial` é o Cebraspe: gabarito casado, sem comentário de terceiro.
+# `apostila_comentada` é PDF de terceiro (tipo apostila de professor) — sem
+# banca para casar gabarito, comentário do autor pode ser guardado com
+# atribuição. Exceção TEMPORÁRIA, revisar antes de lançamento público ou
+# monetização. Ver docs/04-fontes-de-questoes.md, seção 1.3.
+ORIGENS_FONTE = frozenset({"prova_oficial", "apostila_comentada"})
+
+# Campos que a barreira anti-justificativa deixa passar quando a prova é uma
+# `apostila_comentada` com autoria clara (`prova.autor_fonte` preenchido).
+# Fora desse caso — em particular para `prova_oficial` — continuam proibidos
+# em QUALQUER nível, sem exceção.
+CAMPOS_LIBERADOS_APOSTILA = frozenset({"comentario", "comentarios"})
+
 
 # ── Dataclasses ──────────────────────────────────────────────────────────────
 @dataclass
@@ -127,7 +141,9 @@ class Questao:
     tipo: str  # ce | multipla
     enunciado: str
     pagina: int
-    atribuicao: Atribuicao
+    # Obrigatória para `prova_oficial`; ausente em `apostila_comentada`, cuja
+    # atribuição (autor/título) vive na PROVA — ver `Prova.origem_fonte`.
+    atribuicao: Atribuicao | None = None
     texto_apoio_id: str | None = None
     alternativas: list[Alternativa] = field(default_factory=list)
     gabarito: str | None = None
@@ -139,17 +155,25 @@ class Questao:
     classificacao_confianca: float | None = None
     classificacao_metodo: str | None = None
     justificativa_ref: JustificativaRef | None = None
+    # Gate leve para `apostila_comentada`: substitui o gabarito casado com a
+    # banca (que não existe nessa origem) na hora de publicar.
+    revisado_humano: bool = False
 
 
 @dataclass
 class Prova:
     slug: str
-    banca: str
-    ano: int
-    orgao: str
-    cargo: str
     formato: str
     penalidade_por_erro: bool
+    # `prova_oficial` (default): banca/ano/orgao/cargo obrigatórios (regra 4).
+    # `apostila_comentada`: autor_fonte/titulo_fonte obrigatórios no lugar.
+    origem_fonte: str = "prova_oficial"
+    banca: str | None = None
+    ano: int | None = None
+    orgao: str | None = None
+    cargo: str | None = None
+    autor_fonte: str | None = None
+    titulo_fonte: str | None = None
     tipo_caderno: str | None = None
     fonte_pdf: str = ""
     fonte_gabarito: str = ""
@@ -222,7 +246,9 @@ def de_dict(dados: dict) -> Artefato:
                 tipo=q["tipo"],
                 enunciado=q["enunciado"],
                 pagina=q["pagina"],
-                atribuicao=Atribuicao(**q["atribuicao"]),
+                # Ausente em questão de `apostila_comentada` — a atribuição
+                # dela é `Prova.autor_fonte`/`titulo_fonte`, não por questão.
+                atribuicao=Atribuicao(**q["atribuicao"]) if q.get("atribuicao") else None,
                 texto_apoio_id=q.get("texto_apoio_id"),
                 alternativas=[Alternativa(**a) for a in q.get("alternativas", [])],
                 gabarito=q.get("gabarito"),
@@ -238,6 +264,7 @@ def de_dict(dados: dict) -> Artefato:
                     if q.get("justificativa_ref")
                     else None
                 ),
+                revisado_humano=q.get("revisado_humano", False),
             )
         )
     return art

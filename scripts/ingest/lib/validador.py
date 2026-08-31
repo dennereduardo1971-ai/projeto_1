@@ -22,11 +22,13 @@ from jsonschema import Draft202012Validator
 from . import modelos
 from .modelos import (
     CAMPOS_JUSTIFICATIVA_REF,
+    CAMPOS_LIBERADOS_APOSTILA,
     CAMPOS_PROIBIDOS,
     FORMATOS,
     GABARITO_CE,
     GABARITO_MULTIPLA,
     LIMIAR_CONFIANCA,
+    ORIGENS_FONTE,
     STATUS_PUBLICAVEL,
     STATUS_VALIDOS,
     normalizar,
@@ -64,6 +66,25 @@ def problemas_de_schema(dados: dict) -> list[str]:
 
 
 # ── camada 2: barreira anti-justificativa ────────────────────────────────────
+def _dados_para_barreira(dados: dict) -> dict:
+    """Cópia usada só pela barreira anti-justificativa.
+
+    Pivô 2026-08-31 (CLAUDE.md, regra 5, exceção temporária): quando a prova é
+    uma `apostila_comentada` com `autor_fonte` preenchido, o comentário do
+    PRÓPRIO autor deixa de ser barrado. Para `prova_oficial` (padrão) nada
+    muda — a barreira contra a justificativa da banca continua sem exceção.
+    """
+    prova = dados.get("prova", {})
+    liberado = prova.get("origem_fonte") == "apostila_comentada" and bool(prova.get("autor_fonte"))
+    if not liberado:
+        return dados
+    questoes = [
+        {k: v for k, v in q.items() if k not in CAMPOS_LIBERADOS_APOSTILA}
+        for q in dados.get("questoes", [])
+    ]
+    return {**dados, "questoes": questoes}
+
+
 def _varrer_campos_proibidos(no: Any, caminho: str = "") -> list[str]:
     """Procura texto autoral da banca em QUALQUER nível do artefato.
 
@@ -104,6 +125,13 @@ def problemas_de_regra(dados: dict, *, para_publicar: bool) -> list[str]:
     if status not in STATUS_VALIDOS:
         problemas.append(f"prova: status desconhecido '{status}'")
 
+    # Pivô 2026-08-31 (CLAUDE.md regras 3-5): a atribuição exigida depende da
+    # origem. Ausente = 'prova_oficial', para não quebrar artefato antigo.
+    origem = prova.get("origem_fonte", "prova_oficial")
+    if origem not in ORIGENS_FONTE:
+        problemas.append(f"prova: origem_fonte desconhecida '{origem}'")
+    oficial = origem == "prova_oficial"
+
     formato = prova.get("formato")
     if formato not in FORMATOS:
         problemas.append(f"prova: formato inválido '{formato}'")
@@ -112,8 +140,14 @@ def problemas_de_regra(dados: dict, *, para_publicar: bool) -> list[str]:
             "prova: caderno Certo/Errado do Cebraspe pune o erro — "
             "penalidade_por_erro não pode ser falsa"
         )
-    if not str(prova.get("banca", "")).strip():
-        problemas.append("prova: banca é obrigatória (é dado, não premissa)")
+    if oficial:
+        if not str(prova.get("banca", "")).strip():
+            problemas.append("prova: banca é obrigatória (é dado, não premissa)")
+    else:
+        if not str(prova.get("autor_fonte", "")).strip():
+            problemas.append("prova: autor_fonte é obrigatório para apostila_comentada (regra 4)")
+        if not str(prova.get("titulo_fonte", "")).strip():
+            problemas.append("prova: titulo_fonte é obrigatório para apostila_comentada (regra 4)")
 
     # ── textos de apoio: amarrados por referência, nunca duplicados ──────────
     ids_apoio = {t["id"] for t in dados.get("textos_apoio", [])}
@@ -125,13 +159,15 @@ def problemas_de_regra(dados: dict, *, para_publicar: bool) -> list[str]:
         rot = f"questao {n}"
         numeros.append(n)
 
-        # atribuição obrigatória (CLAUDE.md, regra 4)
-        atr = q.get("atribuicao") or {}
-        for campo in ("banca", "ano", "orgao", "cargo", "numero_original", "url_pdf"):
-            if not atr.get(campo):
-                problemas.append(f"{rot}: atribuicao.{campo} ausente")
-        if atr.get("numero_original") not in (None, n):
-            problemas.append(f"{rot}: numero_original diverge do numero da questão")
+        # atribuição obrigatória (CLAUDE.md, regra 4) — só para prova_oficial;
+        # apostila_comentada carrega a atribuição na PROVA (autor_fonte/titulo_fonte).
+        if oficial:
+            atr = q.get("atribuicao") or {}
+            for campo in ("banca", "ano", "orgao", "cargo", "numero_original", "url_pdf"):
+                if not atr.get(campo):
+                    problemas.append(f"{rot}: atribuicao.{campo} ausente")
+            if atr.get("numero_original") not in (None, n):
+                problemas.append(f"{rot}: numero_original diverge do numero da questão")
 
         # tipo × alternativas × gabarito
         tipo = q.get("tipo")
@@ -194,8 +230,19 @@ def problemas_de_regra(dados: dict, *, para_publicar: bool) -> list[str]:
         problemas.append(f"prova: status '{status}' não é publicável")
     for q in questoes:
         rot = f"questao {q.get('numero')}"
-        if not q.get("anulada") and not q.get("gabarito"):
-            problemas.append(f"{rot}: sem gabarito definitivo casado — não publica")
+        if not q.get("anulada"):
+            # prova_oficial precisa do casamento com o gabarito definitivo da
+            # banca; apostila_comentada não tem banca — usa gabarito próprio
+            # + revisão humana (CLAUDE.md regra 3, exceção temporária de
+            # 2026-08-31).
+            if oficial:
+                if not q.get("gabarito"):
+                    problemas.append(f"{rot}: sem gabarito definitivo casado — não publica")
+            else:
+                if not q.get("gabarito"):
+                    problemas.append(f"{rot}: sem gabarito — não publica")
+                if not q.get("revisado_humano"):
+                    problemas.append(f"{rot}: falta revisão humana (revisado_humano) — não publica")
         classificacao = q.get("classificacao_confianca")
         if not q.get("assunto"):
             problemas.append(f"{rot}: sem assunto classificado")
@@ -204,7 +251,7 @@ def problemas_de_regra(dados: dict, *, para_publicar: bool) -> list[str]:
                 f"{rot}: confiança {classificacao:.2f} abaixo de {LIMIAR_CONFIANCA:.2f} "
                 "— vai para a fila de revisão, não para o ar"
             )
-    if not prova.get("fonte_gabarito"):
+    if oficial and not prova.get("fonte_gabarito"):
         problemas.append("prova: sem URL do gabarito definitivo")
     return problemas
 
@@ -213,7 +260,7 @@ def problemas_de_regra(dados: dict, *, para_publicar: bool) -> list[str]:
 def validar(dados: dict, *, para_publicar: bool = False) -> list[str]:
     """Devolve TODOS os problemas. Lista vazia = artefato íntegro."""
     problemas = problemas_de_schema(dados)
-    problemas += _varrer_campos_proibidos(dados)
+    problemas += _varrer_campos_proibidos(_dados_para_barreira(dados))
     problemas += problemas_de_regra(dados, para_publicar=para_publicar)
     return problemas
 

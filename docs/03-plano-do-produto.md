@@ -55,7 +55,18 @@ E o **Mapa do Edital** é a tela inicial: cada linha pintada por domínio real (
 
 ---
 
-## 3. Regras específicas do Cebraspe (não são detalhe, são o produto)
+## 3. Origem das questões e regras específicas (não são detalhe, são o produto)
+
+**Pivô de 2026-08-31:** o gargalo do projeto era ingerir a primeira prova oficial Cebraspe. Enquanto
+isso não acontece, o acervo passa a aceitar uma segunda origem: **PDFs de apostilas comentadas de
+terceiros** (estilo "professora Tamayo" — questão, gabarito e comentário da própria autora no mesmo
+documento), começando por Auditoria e Direito Civil. `questao.origem_fonte` distingue
+`'prova_oficial'` de `'apostila_comentada'` — a segunda dispensa gabarito casado com banca (não existe
+banca) e permite guardar o comentário do autor com atribuição, sob exceção temporária das regras 3 e 5
+do `CLAUDE.md` (revisar antes de lançamento público ou monetização). Detalhe completo em
+[`04-fontes-de-questoes.md`](./04-fontes-de-questoes.md), seção 1.3.
+
+### 3.1 Regras específicas do Cebraspe (continuam valendo para `prova_oficial`)
 
 1. **A regra de pontuação é da prova, não do app.** Corrigido após a pesquisa de fontes: o Cebraspe usa Certo/Errado no TCU, mas **múltipla escolha nas provas fiscais recentes** (SEFAZ-RJ 2025) — e a própria RFB, pela FGV, foi múltipla escolha A–E. Cada prova guarda `formato` e `penalidade_por_erro`; o placar líquido (`acertos − erros`) só aparece onde o erro realmente pune. Detalhes em [`04-fontes-de-questoes.md`](./04-fontes-de-questoes.md).
 2. **Estratégia de chute é conteúdo.** O app mostra seu saldo líquido por assunto e sugere onde deixar em branco compensa.
@@ -96,7 +107,9 @@ item_edital_assunto(item_edital_id, assunto_id)       -- n:n
 
 prova(id, concurso_id, cargo_id, banca, ano, url_pdf, url_gabarito)
 questao(id, prova_id, numero, tipo, enunciado, texto_apoio_id,
-        gabarito, anulada, desatualizada, fonte_citacao)
+        gabarito, anulada, desatualizada, fonte_citacao,
+        origem_fonte, autor_fonte, titulo_fonte, revisado_humano,  -- pivô 2026-08-31, ver seção 3
+        dificuldade_b)                                  -- dificuldade latente p/ o motor de domínio
 questao_assunto(questao_id, assunto_id)
 alternativa(id, questao_id, letra, texto)              -- só p/ múltipla escolha
 
@@ -111,12 +124,26 @@ bloco_ciclo(id, plano_id, disciplina_id, minutos, ordem, peso)
 sessao(id, usuario_id, bloco_ciclo_id, inicio, fim, tipo)          -- teoria|questoes|revisao
 resposta(id, usuario_id, questao_id, marcada, correta, segundos,
          confianca, tipo_erro, respondida_em)
-card(id, usuario_id, origem, questao_id, assunto_id, frente, verso)
-revisao(id, card_id, devida_em, estabilidade, dificuldade, ultima_nota)  -- FSRS
+
+-- Domínio e revisão — pivô 2026-08-31: substitui card + revisao (FSRS separado)
+-- por um único estado por assunto, no molde do motor do APP-CPA-YOHANNA
+-- (habilidade latente + domínio com esquecimento, unificado com a fila de revisão).
+estado_assunto(usuario_id, assunto_id, theta, m, n, acertos, estabilidade,
+               ultima_pratica, revisar_em, esquema_concluido, erros_abertos)
+
+-- Gamificação — motor igual ao APP-CPA-YOHANNA, tom sóbrio (regra 7 do CLAUDE.md)
+sequencia(usuario_id, atual, recorde, ultimo_dia, congelamentos)
+evento_xp(id, usuario_id, pontos, motivo, data)             -- append-only
+conquista_usuario(usuario_id, conquista_id, obtida_em)      -- catálogo fica em código
+meta(usuario_id, minutos_dia, questoes_dia, dias_semana, data_prova)
+
 progresso_item(usuario_id, item_edital_id, minutos, liquido, ultima_revisao, nivel)
 ```
 
-`progresso_item.nivel` é derivado (não digitado): `não estudado → estudado → praticado → dominado`, calculado de minutos de sessão + saldo líquido + confiança + revisões em dia.
+`progresso_item.nivel` é derivado (não digitado): `não estudado → estudado → praticado → dominado`,
+calculado a partir do domínio efetivo de `estado_assunto` (habilidade × retenção), rateado para as
+linhas do edital quando ele existir. Motor em `app/src/features/dominio/` (mastery, scheduler,
+gamification, stats — ver `docs/agents/dados.md`).
 
 ### 4.4 Pipeline de ingestão de questões (Cebraspe)
 
@@ -178,8 +205,8 @@ Derivado da realidade da prova, não do livro:
 |---|---|---|
 | **0** | Esqueleto: app publicado, banco criado, taxonomia de Auditoria e Direito Civil | **Feita.** App de pé, taxonomia carregada (14 + 14 assuntos). Sem login — segue fora do escopo enquanto tudo roda local |
 | **1** | Edital do concurso alvo cadastrado + Mapa + ciclo de estudos com cronômetro | **Feita, com uma ressalva.** Mapa e ciclo funcionam; o **edital não está cadastrado** porque o concurso alvo só tem edital previsto até janeiro de 2027. Até lá o Mapa usa a árvore de assuntos |
-| **2** | Pipeline de ingestão + primeiras provas Cebraspe + tela de resolver questões + caderno de erros | **Parcial.** Pipeline pronto (7 etapas, 16 testes passando) e tela de questões pronta (confiança declarada, placar por formato da prova). **Acervo real vazio** — nenhuma prova ingerida. Caderno de erros ainda é stub |
-| **3** | Fila FSRS unificada + erro vira card automaticamente + streak e lembrete | **Parcial.** Fila FSRS e erro-vira-card funcionando ponta a ponta. Streak e lembrete não existem |
+| **2** | Pipeline de ingestão + primeiras provas Cebraspe + tela de resolver questões + caderno de erros | **Pivô em 2026-08-31.** Pipeline oficial Cebraspe segue pronto (7 etapas, 16 testes passando) mas fica em espera — a via destravada agora é PDF de apostila comentada de terceiro (Auditoria e Direito Civil), com scaffolding de ingestão pronto e parser fino pendente da primeira amostra real. Tela de questões e caderno de erros passam a rodar sobre o motor de domínio novo (seção 4.3) |
+| **3** | Fila de revisão unificada + erro vira prioridade automaticamente + streak e conquistas | **Refeita em 2026-08-31.** Card/Revisão (FSRS separado) foram substituídos por `estado_assunto` — motor de domínio único (habilidade latente + esquecimento) igual ao APP-CPA-YOHANNA, com fila de revisão explicável, gamificação (XP, sequência com congelamentos, conquistas) e estatísticas com prontidão honesta |
 | **4** | Material esquematizado dos assuntos de maior incidência | Não iniciada — depende do acervo, que define a ordem por incidência |
 | **5** | Estatísticas e diagnóstico (prioridade, falso domínio, evolução) | Não iniciada. O dado já está sendo coletado (confiança em cada resposta) |
 

@@ -1,0 +1,45 @@
+# Apostila comentada de terceiro (pivô 2026-08-31) — ex.: material da
+# professora Tamayo. Questão, gabarito e comentário da própria autora no
+# mesmo PDF, ao contrário do Cebraspe (prova e gabarito em arquivos separados,
+# sem comentário).
+#
+# CHUTE INICIAL, SEM PDF DE AMOSTRA EM MÃOS — ajustar assim que a primeira
+# apostila real (Auditoria ou Direito Civil) chegar. Registrar o que mudar em
+# docs/agents/coletor.md → Armadilhas.
+#
+# O que ainda falta para este perfil sair do papel:
+#   1. Confirmar se o layout é 1 ou 2 colunas (apostilas de cursinho costumam
+#      ser 1 coluna corrida — `layout.colunas` abaixo já assume isso).
+#   2. Confirmar o marcador real de gabarito e de comentário — os regex
+#      abaixo são um palpite ("Gabarito:" / "Comentário:"), não algo visto.
+#   3. `4_segmentar.py`/`5_gabarito.py` hoje assumem prova e gabarito em
+#      arquivos SEPARADOS (padrão Cebraspe) — com tudo no mesmo PDF, a etapa
+#      5 (casar gabarito) muda de forma: não é mais "casar dois arquivos", é
+#      "extrair o gabarito e o comentário que já vieram junto com a questão".
+#      Essa mudança de lógica fica para quando houver amostra real; usar este
+#      perfil hoje só adianta o layout, não substitui esse trabalho.
+extends: _base
+nome: apostila_generico
+origem_fonte: apostila_comentada
+formato: multipla
+penalidade_por_erro: false
+alternativas_esperadas: 5
+
+layout:
+  colunas: 1
+  gap_coluna_min: 24
+  tolerancia_linha: 2.5
+  margem_topo_frac: 0.06
+  margem_rodape_frac: 0.05
+
+marcadores:
+  item: '^(?P<numero>\d{1,3})[.)]\s+(?P<resto>\S.*)$'
+  alternativa: '^\(?(?P<letra>[A-E])[.)]\s+(?P<resto>\S.*)$'
+  # CALIBRAR contra o PDF real — ver nota 2 acima.
+  gabarito: '(?i)^gabarito\s*:?\s*(?P<letra>[A-E]|certo|errado)\s*$'
+  comentario: '(?i)^coment[áa]rios?\s*:?\s*(?P<resto>.*)$'
+
+numeracao:
+  minimo: 1
+  maximo: 500
+  exige_sequencia: true

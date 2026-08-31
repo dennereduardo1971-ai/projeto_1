@@ -34,6 +34,35 @@ No documento `03-plano-do-produto.md` eu escrevi que o placar do app seria sempr
 
 ---
 
+## 1.3 Nova origem: apostila comentada de terceiro (decisão de 2026-08-31)
+
+O pipeline abaixo (seções 2–3) continua valendo **integralmente** para prova oficial Cebraspe — nada
+foi apagado, porque volta a ser o caminho principal assim que a banca da RFB sair. Mas o gargalo real
+era ingerir a primeira prova real, e o usuário decidiu destravar por outra via: alimentar o acervo com
+**PDFs de apostilas comentadas de terceiros** (estilo "professora Tamayo" — questão, gabarito e
+comentário da própria autora, tudo no mesmo documento), começando por Auditoria e Direito Civil.
+
+Isso cria uma **segunda origem de questão**, `origem_fonte = 'apostila_comentada'`, ao lado da
+`'prova_oficial'` descrita nas seções seguintes:
+
+| | `prova_oficial` (Cebraspe) | `apostila_comentada` (terceiro) |
+|---|---|---|
+| Gabarito | casado com o definitivo da banca (regra 3) | não existe "definitivo da banca" — publica com `revisado_humano = true` |
+| Comentário | nunca republica o da banca (regra 5); escrevemos o nosso | comentário do autor pode ser guardado e exibido, com atribuição obrigatória |
+| Atribuição | banca, ano, órgão, cargo, número original | autor e título da apostila (`autor_fonte`, `titulo_fonte`) |
+| Onde mora | `scripts/ingest/perfis/*` (perfil por prova Cebraspe) | `scripts/ingest/perfis/apostila_generico.yaml` (chute inicial de layout) |
+
+**Pendência explícita:** o perfil `apostila_generico.yaml` foi escrito **sem PDF de amostra em mãos** —
+é um chute de layout comum (nº da questão, marcador "Gabarito:", marcador "Comentário:"). Ajustar
+assim que a primeira apostila real (Auditoria ou Direito Civil) chegar. Ver `docs/agents/coletor.md`.
+
+Ambas as exceções (regras 3 e 5 do `CLAUDE.md`) estão marcadas como **temporárias — revisar antes de
+lançamento público ou monetização**. A pesquisa jurídica da seção 4 abaixo, sobre justificativa da
+banca, não muda: ela é sobre uma origem diferente e mais delicada (texto oficial da banca), não sobre
+o comentário de um professor terceiro em material próprio dele.
+
+---
+
 ## 2. Onde as provas moram (mapeado)
 
 ### 2.1 Padrão de URL do Cebraspe

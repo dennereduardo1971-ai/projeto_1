@@ -27,10 +27,12 @@ papel não-dono. Isto **não** substitui teste em Supabase real — ver Pendênc
 | 0007 | `plano_e_ciclo.sql` | `plano`, `bloco_ciclo` |
 | 0008 | `sessao.sql` | `sessao` (presa a `assunto_id`, `minutos` gerada) |
 | 0009 | `resposta.sql` | `resposta` (+ triggers de primeira tentativa), `reporte_questao` |
-| 0010 | `fsrs_cards_e_revisoes.sql` | `card`, `revisao`, `revisao_log` |
-| 0011 | `views_de_desempenho.sql` | 13 views, todas `security_invoker = on` |
+| 0010 | `fsrs_cards_e_revisoes.sql` | `card`, `revisao`, `revisao_log` — **substituídas pela 0014** |
+| 0011 | `views_de_desempenho.sql` | 13 views, todas `security_invoker = on` — 4 delas recriadas pela 0014 |
 | 0012 | `rls.sql` | RLS ligado em 24 tabelas + políticas |
 | 0013 | `supabase_auth.sql` | **ISOLADA. Não aplicar nesta fase.** Único arquivo que toca `auth.users`, `auth.uid()` e os papéis `anon`/`authenticated` |
+| 0014 | `dominio_assunto_e_gamificacao.sql` | Pivô 2026-08-31: derruba `card`/`revisao`/`revisao_log` (CASCADE) e recria `vw_revisao_atrasada_assunto`, `vw_caderno_erros`, `vw_progresso_assunto`, `vw_progresso_item_edital` contra `estado_assunto` — estado único de domínio (habilidade + esquecimento), no molde do APP-CPA-YOHANNA. Entram também `sequencia`, `evento_xp`, `conquista_usuario`, `meta` (gamificação) com RLS |
+| 0015 | `questao_origem_fonte.sql` | `questao` ganha `origem_fonte`/`autor_fonte`/`titulo_fonte`/`revisado_humano`/`dificuldade_b`; o CHECK de publicação aceita `apostila_comentada` sem gabarito casado com banca |
 
 ### Como o esquema se sustenta
 
@@ -116,6 +118,20 @@ de esquema, `origem` de card, `estado` do FSRS, `motivo` de reporte) é `text` +
 
 **2026-08-20 — Taxonomia entra por seed.** Migration só com estrutura. Ver `seeds/README.md`.
 
+**2026-08-31 — Card/Revisão (FSRS separado) saem; entra `estado_assunto` único.** Decisão do dono do
+produto: quer progressão e análise "igual ao APP-CPA-YOHANNA" — habilidade latente (Elo-IRT de 1
+parâmetro) e domínio com esquecimento no MESMO registro que a fila de revisão, por assunto. Um card
+por questão errada virou um passo a mais sem necessidade: o que importa é o estado do assunto, não o
+card. Migration 0014. Motor em `app/src/features/dominio/` (TS puro, testado por `vitest`).
+
+**2026-08-31 — Segunda origem de questão: `apostila_comentada`.** O gargalo real era ingerir a
+primeira prova Cebraspe. Destravado por outra via: PDF de apostila comentada de terceiro (autor
+próprio, gabarito e comentário no mesmo documento). Exceção temporária das regras 3 e 5 do
+`CLAUDE.md` — revisar antes de lançamento público ou monetização. Migration 0015. **Decisão
+deliberada:** a tabela `prova` NÃO foi relaxada (banca/ano/orgao/cargo_nome continuam NOT NULL) —
+quem ingerir uma apostila preenche esses campos com o dado real disponível (ex.: `banca` = nome do
+autor). Repensar isso é trabalho futuro, não urgente enquanto o volume for baixo.
+
 ---
 
 ## Armadilhas
@@ -196,6 +212,18 @@ Rodado de outro lugar, a variável vem vazia e o erro natural seria um parse de 
 — por isso o script carrega o texto cru primeiro, checa se está vazio e só então converte para
 `jsonb`, com mensagem que diz o que fazer.
 
+**`app/src/dados/tipos.ts` (espelho do IndexedDB) e `supabase/migrations/` já divergiam antes desta
+sessão** — achado ao trabalhar na 0014/0015, não introduzido por elas. Exemplos: `sessao.inicio/fim`
+(TS) vs `sessao.iniciada_em/encerrada_em` (SQL); `resposta.tentativa` (TS, número) vs
+`resposta.primeira_tentativa` (SQL, boolean gerado por trigger); `questao.status` enum (TS) vs
+`questao.publicada` boolean + `gabarito_casado_em` (TS) vs `gabarito_confirmado_em` (SQL);
+`resposta.tipo_erro` tem valores diferentes nos dois lados (`conteudo_desconhecido`/`lei_mudou` no TS
+× `conteudo`/`mudanca_de_lei`/`chute` no CHECK da 0009). O app roda 100% sobre o Dexie hoje — a SQL
+nunca foi aplicada de verdade — então isto não quebra nada em produção, mas quem for finalmente
+plugar o Supabase vai precisar escolher um lado e reconciliar. Não mexi nisso agora: as tabelas novas
+(`estado_assunto` e gamificação) foram escritas cada uma na convenção do lado onde vivem, sem tentar
+consertar a divergência antiga de passagem.
+
 ---
 
 ## Pendências
@@ -224,9 +252,15 @@ criar os novos e reclassificar `questao_assunto`, mantendo o antigo até a recla
 Nenhum foi medido — não há dado. Revisar com `pg_stat_user_indexes` depois da primeira carga real e
 derrubar o que nunca for usado.
 
-**`ts-fsrs` ainda não escolheu a escala.** `revisao.ultima_nota` e `revisao_log.nota` assumem 1–4
-(again/hard/good/easy). Conferir contra a versão da biblioteca antes da Fase 3; se divergir, é um
-`ALTER` de CHECK, barato — mas só enquanto não houver histórico gravado.
+**Testar 0014/0015 num Supabase real** quando houver projeto — junto com o resto (ver pendência
+acima sobre nada ter sido testado em Supabase real). Conferir em especial: o `DROP ... CASCADE` de
+`card`/`revisao`/`revisao_log` derruba as 4 views na ordem certa e as recriadas ficam com
+`security_invoker = on` (a consulta de conferência já documentada acima serve para isso); e a
+constraint `questao_apostila_exige_atribuicao_ck` da 0015 não conflita com nenhuma linha existente
+se algum dia isto rodar sobre uma base que já tenha `apostila_comentada` sem `revisado_humano`.
+
+**Reconciliar `tipos.ts` × `supabase/migrations/`** (ver Armadilhas acima) fica pendente para quando
+o Supabase entrar de verdade — hoje não é urgente porque nada roda sobre a SQL.
 
 **Interface, para o `designer`:** três coisas que o schema entrega e a tela precisa tratar.
 (1) questão `desatualizada` **conta** na estatística e tem que exibir aviso, com o texto de

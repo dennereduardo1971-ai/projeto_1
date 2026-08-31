@@ -1,54 +1,49 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { todosEstados } from '@/dados/consultas'
 import { db } from '@/dados/db'
-import { agendar, estaDevida, NOTAS, textoProxima, type Nota } from '@/features/revisao/fsrs'
-import type { Card as CardTipo, Revisao as RevisaoTipo } from '@/dados/tipos'
+import { filaDeRevisao } from '@/features/dominio/scheduler'
+import type { EstadoAssunto } from '@/dados/tipos'
 import { Button, Card, EstadoVazio, TopBar } from '@/ui'
 
 interface ItemFila {
-  card: CardTipo
-  revisao: RevisaoTipo
-  assunto: string | null
+  estado: EstadoAssunto
+  nome: string
+  diasAtraso: number
 }
 
+const DIA_MS = 86_400_000
+
+/**
+ * A fila de revisão. Desde 2026-08-31 não existe mais card/flashcard: a
+ * unidade é o ASSUNTO — cada linha vencida leva direto para praticar questão
+ * daquele assunto, que é o que atualiza o domínio e reagenda a revisão.
+ */
 export function Revisao() {
   const [fila, setFila] = useState<ItemFila[]>([])
-  const [proxima, setProxima] = useState<RevisaoTipo | null>(null)
-  const [mostrando, setMostrando] = useState(false)
   const [carregando, setCarregando] = useState(true)
 
   const puxar = useCallback(async () => {
-    const revisoes = (await db.revisao.toArray()).sort(
-      (a, b) => new Date(a.devida_em).getTime() - new Date(b.devida_em).getTime(),
+    const [estados, assuntos] = await Promise.all([todosEstados(), db.assunto.toArray()])
+    const nomePorId = new Map(assuntos.map((a) => [a.id, a.nome]))
+    const agoraMs = Date.now()
+
+    const vencidos = filaDeRevisao(estados, agoraMs)
+    setFila(
+      vencidos.map((estado) => ({
+        estado,
+        nome: nomePorId.get(estado.assunto_id) ?? 'assunto removido',
+        diasAtraso: Math.max(0, Math.round((agoraMs - new Date(estado.revisar_em!).getTime()) / DIA_MS)),
+      })),
     )
-    const devidas = revisoes.filter((r) => estaDevida(r))
-    const itens: ItemFila[] = []
-    for (const r of devidas) {
-      const card = await db.card.get(r.card_id)
-      if (!card || card.suspenso) continue
-      const assunto = card.assunto_id ? await db.assunto.get(card.assunto_id) : null
-      itens.push({ card, revisao: r, assunto: assunto?.nome ?? null })
-    }
-    setFila(itens)
-    setProxima(revisoes.find((r) => !estaDevida(r)) ?? null)
-    setMostrando(false)
     setCarregando(false)
   }, [])
 
   useEffect(() => { void puxar() }, [puxar])
 
-  async function nota(n: Nota) {
-    const item = fila[0]
-    if (!item) return
-    await db.revisao.put(agendar(item.revisao, n))
-    await puxar()
-  }
-
   if (carregando) return <><TopBar titulo="Revisão" /><div className="py-4 text-sm text-muted">Carregando…</div></>
 
-  const item = fila[0]
-
-  if (!item) {
+  if (fila.length === 0) {
     return (
       <>
         <TopBar titulo="Revisão" />
@@ -56,11 +51,7 @@ export function Revisao() {
           <EstadoVazio
             motivo="uso"
             titulo="Nada vencido agora."
-            corpo={
-              proxima
-                ? `A próxima revisão vence ${textoProxima(proxima)}. Cada erro em questão vira um card automaticamente — a fila enche sozinha.`
-                : 'Cada erro em questão vira um card automaticamente. Resolva algumas questões e a fila se forma sozinha.'
-            }
+            corpo="Cada questão respondida atualiza o domínio do assunto e agenda a próxima revisão sozinha. Resolva algumas questões e a fila se forma."
             acao={<Link to="/questoes"><Button>Ir para questões</Button></Link>}
           />
         </div>
@@ -73,39 +64,30 @@ export function Revisao() {
       <TopBar titulo="Revisão" />
       <div className="flex flex-col gap-4 py-4">
         <div className="flex items-center justify-between text-caption text-subtle">
-          <span>{item.assunto ?? 'sem assunto'}</span>
-          <span>{fila.length} na fila</span>
+          <span>{fila.length} assunto{fila.length === 1 ? '' : 's'} vencido{fila.length === 1 ? '' : 's'}</span>
         </div>
 
-        <Card className="p-4 flex flex-col gap-4">
-          <p className="text-base leading-relaxed text-text">{item.card.frente}</p>
-
-          {!mostrando ? (
-            <Button largura="cheia" onClick={() => setMostrando(true)}>Mostrar resposta</Button>
-          ) : (
-            <>
-              <div className="rounded-md border border-border bg-surface-2 p-3 text-sm text-text">
-                {item.card.verso}
-              </div>
-              <span className="text-caption text-subtle">Quanto custou lembrar?</span>
-              <div className="grid grid-cols-2 gap-2">
-                {NOTAS.map((n) => (
-                  <Button
-                    key={n.n}
-                    variante={n.n === 1 ? 'danger' : 'outline'}
-                    onClick={() => void nota(n.n)}
-                  >
-                    {n.rotulo}
-                  </Button>
-                ))}
-              </div>
-            </>
-          )}
+        <Card>
+          <ul>
+            {fila.map((item) => (
+              <li key={item.estado.assunto_id} className="border-b border-border last:border-b-0 p-3">
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex flex-col gap-1 min-w-0">
+                    <span className="text-body text-text">{item.nome}</span>
+                    <span className="text-caption text-subtle num">
+                      {item.diasAtraso === 0 ? 'vence hoje' : `${item.diasAtraso} dia${item.diasAtraso === 1 ? '' : 's'} de atraso`}
+                      {item.estado.erros_abertos > 0 &&
+                        ` · ${item.estado.erros_abertos} erro${item.estado.erros_abertos === 1 ? '' : 's'} em aberto`}
+                    </span>
+                  </div>
+                  <Link to={`/questoes?assunto=${item.estado.assunto_id}`}>
+                    <Button tamanho="sm" variante="outline">Praticar</Button>
+                  </Link>
+                </div>
+              </li>
+            ))}
+          </ul>
         </Card>
-
-        <p className="text-caption text-subtle">
-          Revisado {item.revisao.repeticoes}× · {item.revisao.lapsos} lapso{item.revisao.lapsos === 1 ? '' : 's'}
-        </p>
       </div>
     </>
   )

@@ -40,12 +40,9 @@
     "prova": {
       "type": "object",
       "additionalProperties": false,
+      "description": "banca/ano/orgao/cargo × autor_fonte/titulo_fonte não são obrigatórios aqui: qual par é exigido depende de origem_fonte, e essa conta cruzada vive em lib/validador.py (camada de regra), não no schema.",
       "required": [
         "slug",
-        "banca",
-        "ano",
-        "orgao",
-        "cargo",
         "formato",
         "penalidade_por_erro",
         "fonte_pdf"
@@ -54,6 +51,21 @@
         "slug": {
           "type": "string",
           "pattern": "^[a-z0-9_]+$"
+        },
+        "origem_fonte": {
+          "type": "string",
+          "enum": ["prova_oficial", "apostila_comentada"],
+          "description": "Ausente = 'prova_oficial' (retrocompatível). Ver CLAUDE.md regras 3-5 e docs/04-fontes-de-questoes.md §1.3."
+        },
+        "autor_fonte": {
+          "type": "string",
+          "minLength": 2,
+          "description": "Obrigatório quando origem_fonte = 'apostila_comentada' (regra 4)."
+        },
+        "titulo_fonte": {
+          "type": "string",
+          "minLength": 2,
+          "description": "Obrigatório quando origem_fonte = 'apostila_comentada' (regra 4)."
         },
         "banca": {
           "type": "string",
@@ -152,7 +164,6 @@
           "tipo",
           "enunciado",
           "pagina",
-          "atribuicao",
           "anulada"
         ],
         "properties": {
@@ -221,6 +232,15 @@
           },
           "desatualizada": {
             "type": "boolean"
+          },
+          "revisado_humano": {
+            "type": "boolean",
+            "description": "Gate de publicação para origem_fonte = 'apostila_comentada' — substitui o gabarito casado com a banca, que não existe nessa origem."
+          },
+          "comentario": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Só passa da barreira anti-justificativa (lib/validador.py) quando prova.origem_fonte = 'apostila_comentada' e prova.autor_fonte está preenchido. Fora disso — em particular para prova_oficial — a validação de regra recusa o artefato mesmo que o schema aceite a forma."
           },
           "assets": {
             "type": "array",

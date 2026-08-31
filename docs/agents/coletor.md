@@ -23,6 +23,16 @@ perfis para bloco Certo/Errado, múltipla escolha de 5 alternativas e o TCU 2025
 
 ## Decisões
 
+- **2026-08-31 — Segunda origem de questão: apostila comentada de terceiro.** O gargalo era ingerir
+  a primeira prova Cebraspe; destravado por outra via enquanto isso não acontece — PDF de apostila
+  comentada (estilo "professora Tamayo": questão, gabarito e comentário da própria autora no mesmo
+  documento), começando por Auditoria e Direito Civil. Exceção temporária das regras 3 e 5 do
+  `CLAUDE.md` (revisar antes de lançamento público ou monetização). Scaffolding entrou em
+  `lib/modelos.py` (`Prova.origem_fonte`/`autor_fonte`/`titulo_fonte`, `Questao.revisado_humano`),
+  `lib/validador.py` (barreira anti-justificativa libera `comentario`/`comentarios` só quando
+  `prova.origem_fonte == 'apostila_comentada'` e `autor_fonte` preenchido) e no novo perfil
+  `perfis/apostila_generico.yaml` — escrito **sem PDF de amostra em mãos**, é um chute de layout.
+  Detalhe em `docs/04-fontes-de-questoes.md` §1.3.
 - **2026-08-20 — O coletor não roda em ambiente remoto.** O egresso desta sessão bloqueia
   `cebraspe.org.br`, `cdn.cebraspe.org.br`, `pciconcursos`, `qconcursos` e `fgv.br` (todos deram
   `000` no teste). Por isso o pipeline lê de `data/00_manual/<slug>/`: o usuário baixa os PDFs na
@@ -53,3 +63,13 @@ perfis para bloco Certo/Errado, múltipla escolha de 5 alternativas e o TCU 2025
   SEFAZ-RJ, SE e RN 2025/26; depois TCU 2025 AUFC; PGDF para Direito Civil.
 - Isso depende do usuário baixar os PDFs e rodar o pipeline localmente — está combinado, não feito.
 - Perfis de layout para as provas da SEFAZ ainda não existem; só o do TCU foi escrito.
+- **Prioridade agora: a primeira apostila comentada (Auditoria ou Direito Civil, professora Tamayo).**
+  `perfis/apostila_generico.yaml` é um palpite de layout, não algo visto. Assim que o PDF chegar:
+  confirmar colunas (1 ou 2), o marcador real de gabarito e de comentário, e — mais importante —
+  que `4_segmentar.py`/`5_gabarito.py` hoje assumem prova e gabarito em ARQUIVOS SEPARADOS (padrão
+  Cebraspe); com tudo no mesmo PDF a etapa 5 muda de forma (extrair o que já veio junto, não casar
+  dois arquivos). Isso é trabalho novo, não ajuste de regex — ver nota no topo do perfil.
+- `7_publicar.py` ainda não escreve no Supabase (`--banco` desligado) — quando escrever, precisa
+  decidir como `Prova.origem_fonte`/`autor_fonte`/`titulo_fonte` (nível artefato) viram
+  `questao.origem_fonte`/`autor_fonte`/`titulo_fonte` (nível linha, ver `docs/agents/dados.md`,
+  migration 0015) — hoje são a mesma informação em dois níveis diferentes de propósito.
