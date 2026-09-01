@@ -1,0 +1,374 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rito.app/schema/esquema.schema.json",
+  "title": "Esquema de assunto",
+  "description": "Material esquematizado de UM assunto do edital verticalizado. O arquivo e uma lista ordenada de blocos tipados: a tela renderiza bloco a bloco, na ordem do array, escolhendo o componente pelo campo 'tipo'. Nao ha markdown, nao ha HTML, nao ha logica de layout escondida em string.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "assunto_slug",
+    "disciplina",
+    "titulo",
+    "versao",
+    "atualizado_em",
+    "estado",
+    "incidencia",
+    "resumo",
+    "blocos",
+    "fontes"
+  ],
+  "properties": {
+    "assunto_slug": {
+      "description": "Chave do assunto no edital verticalizado. E por aqui que a tela amarra esquema, questoes e estado_assunto. Nunca use o nome por extenso como chave.",
+      "$ref": "#/$defs/slug"
+    },
+    "disciplina": {
+      "description": "Nome da disciplina como aparece no acervo. Serve de rotulo, nao de chave.",
+      "type": "string",
+      "minLength": 2
+    },
+    "titulo": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 120
+    },
+    "versao": {
+      "description": "Inteiro que sobe a cada reescrita relevante. A tela usa para invalidar cache e para marcar 'esquema mudou desde a sua ultima leitura'.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "atualizado_em": {"$ref": "#/$defs/data"},
+    "estado": {
+      "description": "publicado = pode ir para a tela. rascunho = incompleto, nao publica. revisar = a norma mudou ou o gabarito de apoio mudou; a tela mostra o aviso de desatualizacao no topo (CLAUDE.md, agente esquemas).",
+      "enum": ["publicado", "rascunho", "revisar"]
+    },
+    "motivo_revisar": {
+      "description": "Obrigatorio quando estado = revisar. Uma frase dizendo o que mudou.",
+      "type": "string",
+      "minLength": 10
+    },
+    "incidencia": {
+      "description": "Quantas questoes do acervo sustentam este esquema. E o numero que justifica a existencia do arquivo: prioridade de escrita = incidencia.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["questoes", "provas", "apurado_em"],
+      "properties": {
+        "questoes": {"type": "integer", "minimum": 1},
+        "provas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/slug"}
+        },
+        "apurado_em": {"$ref": "#/$defs/data"}
+      }
+    },
+    "resumo": {
+      "description": "O assunto em uma tela de celular. E o que a tela mostra no card do edital antes de abrir o esquema inteiro.",
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 700
+    },
+    "blocos": {
+      "description": "Ordem do array = ordem de renderizacao. Nao existe campo 'ordem'.",
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/bloco"}
+    },
+    "fontes": {
+      "description": "De onde saiu o conteudo: norma consultada, apostila que serviu de pista, acervo. Atribuicao e obrigatoria (CLAUDE.md, regra 4).",
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/fonte"}
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"estado": {"const": "revisar"}}, "required": ["estado"]},
+      "then": {"required": ["motivo_revisar"]}
+    }
+  ],
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "data": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "texto_curto": {
+      "description": "Texto de uma celula ou de um item de lista. Sem markdown e sem HTML — a validacao de marcacao roda no validador, nao aqui.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 600
+    },
+    "texto_longo": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 2500
+    },
+    "ref_questao": {
+      "description": "Ponteiro para a questao do acervo que cobrou aquilo. E o que permite reescrever o bloco quando o gabarito daquela questao mudar, e o que permite a tela destacar o bloco que o usuario errou.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prova_slug", "numero"],
+      "properties": {
+        "prova_slug": {"$ref": "#/$defs/slug"},
+        "numero": {"type": "integer", "minimum": 1}
+      }
+    },
+    "questoes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/ref_questao"}
+    },
+    "fonte": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "referencia"],
+      "properties": {
+        "tipo": {
+          "description": "norma = texto legal ou norma tecnica. acervo = as proprias questoes. apostila = material de terceiro usado como pista (nunca copiado; CLAUDE.md, regra 5). jurisprudencia = sumula, tese, acordao.",
+          "enum": ["norma", "acervo", "apostila", "jurisprudencia"]
+        },
+        "referencia": {
+          "description": "Como citar. Para apostila, autor e titulo (CLAUDE.md, regra 4).",
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 300
+        },
+        "url": {"type": "string", "format": "uri", "maxLength": 400},
+        "consultado_em": {"$ref": "#/$defs/data"}
+      }
+    },
+    "bloco": {
+      "description": "Uniao discriminada por 'tipo'. A tela faz switch(bloco.tipo) e nada alem disso.",
+      "type": "object",
+      "required": ["tipo", "id"],
+      "properties": {
+        "tipo": {
+          "enum": [
+            "texto",
+            "lista",
+            "tabela",
+            "definicao",
+            "lei_seca",
+            "pegadinha",
+            "alerta",
+            "sumula"
+          ]
+        },
+        "id": {
+          "description": "Slug estavel dentro do esquema. E a ancora que liga um erro do usuario a um pedaco do esquema; renomear id quebra esse vinculo.",
+          "$ref": "#/$defs/slug"
+        }
+      },
+      "oneOf": [
+        {"$ref": "#/$defs/bloco_texto"},
+        {"$ref": "#/$defs/bloco_lista"},
+        {"$ref": "#/$defs/bloco_tabela"},
+        {"$ref": "#/$defs/bloco_definicao"},
+        {"$ref": "#/$defs/bloco_lei_seca"},
+        {"$ref": "#/$defs/bloco_pegadinha"},
+        {"$ref": "#/$defs/bloco_alerta"},
+        {"$ref": "#/$defs/bloco_sumula"}
+      ]
+    },
+    "bloco_texto": {
+      "description": "Paragrafo corrido. Use quando o raciocinio nao cabe em lista nem em tabela.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "id", "texto", "questoes"],
+      "properties": {
+        "tipo": {"const": "texto"},
+        "id": {"$ref": "#/$defs/slug"},
+        "titulo": {"$ref": "#/$defs/texto_curto"},
+        "texto": {"$ref": "#/$defs/texto_longo"},
+        "questoes": {"$ref": "#/$defs/questoes"}
+      }
+    },
+    "bloco_lista": {
+      "description": "Itens curtos. 'ordenada' distingue sequencia obrigatoria (etapas) de rol sem ordem.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "id", "itens", "ordenada", "questoes"],
+      "properties": {
+        "tipo": {"const": "lista"},
+        "id": {"$ref": "#/$defs/slug"},
+        "titulo": {"$ref": "#/$defs/texto_curto"},
+        "ordenada": {"type": "boolean"},
+        "itens": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"$ref": "#/$defs/texto_curto"}
+        },
+        "nota": {"$ref": "#/$defs/texto_curto"},
+        "questoes": {"$ref": "#/$defs/questoes"}
+      }
+    },
+    "bloco_tabela": {
+      "description": "Comparacao. Toda linha tem exatamente o numero de celulas de 'colunas' — o validador confere, a tela nao precisa se defender.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "id", "colunas", "linhas", "questoes"],
+      "properties": {
+        "tipo": {"const": "tabela"},
+        "id": {"$ref": "#/$defs/slug"},
+        "titulo": {"$ref": "#/$defs/texto_curto"},
+        "colunas": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {"$ref": "#/$defs/texto_curto"}
+        },
+        "linhas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 4,
+            "items": {"$ref": "#/$defs/texto_curto"}
+          }
+        },
+        "nota": {"$ref": "#/$defs/texto_curto"},
+        "questoes": {"$ref": "#/$defs/questoes"}
+      }
+    },
+    "bloco_definicao": {
+      "description": "Um termo e o que ele significa. 'literal' marca quando a banca cobra a redacao da norma e nao a ideia. 'nao_confundir_com' guarda o vizinho que a banca troca.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "id", "termo", "texto", "literal", "questoes"],
+      "properties": {
+        "tipo": {"const": "definicao"},
+        "id": {"$ref": "#/$defs/slug"},
+        "termo": {"$ref": "#/$defs/texto_curto"},
+        "texto": {"$ref": "#/$defs/texto_longo"},
+        "literal": {"type": "boolean"},
+        "fonte_norma": {"$ref": "#/$defs/texto_curto"},
+        "nao_confundir_com": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["termo", "texto"],
+            "properties": {
+              "termo": {"$ref": "#/$defs/texto_curto"},
+              "texto": {"$ref": "#/$defs/texto_curto"}
+            }
+          }
+        },
+        "questoes": {"$ref": "#/$defs/questoes"}
+      }
+    },
+    "bloco_lei_seca": {
+      "description": "Texto literal da norma, quando a resposta depende da redacao exata. Norma nao e obra protegida (Lei 9.610/1998, art. 8, IV), entao aqui a citacao literal e legitima — o que nao pode ser copiado e a justificativa autoral de banca ou o comentario de terceiro (CLAUDE.md, regra 5).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "id", "norma", "dispositivos", "questoes"],
+      "properties": {
+        "tipo": {"const": "lei_seca"},
+        "id": {"$ref": "#/$defs/slug"},
+        "titulo": {"$ref": "#/$defs/texto_curto"},
+        "norma": {
+          "description": "Identificacao da norma: 'Codigo Civil (Lei 10.406/2002)', 'NBC TA 530 (R1)'.",
+          "$ref": "#/$defs/texto_curto"
+        },
+        "dispositivos": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["rotulo", "texto"],
+            "properties": {
+              "rotulo": {
+                "description": "'Art. 239', 'item 5', 'Apendice 4'.",
+                "$ref": "#/$defs/texto_curto"
+              },
+              "texto": {"$ref": "#/$defs/texto_longo"},
+              "grifo": {
+                "description": "Trechos que a banca troca. A tela destaca cada trecho DENTRO de 'texto'; se um trecho nao ocorrer literalmente em 'texto', o validador reprova.",
+                "type": "array",
+                "items": {"$ref": "#/$defs/texto_curto"}
+              }
+            }
+          }
+        },
+        "comentario": {
+          "description": "Nosso texto ligando o dispositivo ao que a banca cobra. Autoral, sempre.",
+          "$ref": "#/$defs/texto_longo"
+        },
+        "questoes": {"$ref": "#/$defs/questoes"}
+      }
+    },
+    "bloco_pegadinha": {
+      "description": "A troca semantica que a banca usa naquele assunto. 'isca' e a afirmacao errada como ela aparece na prova; 'correcao' e a versao certa. A tela mostra isca e correcao lado a lado, nunca so a correcao.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "id", "isca", "correcao", "questoes"],
+      "properties": {
+        "tipo": {"const": "pegadinha"},
+        "id": {"$ref": "#/$defs/slug"},
+        "titulo": {"$ref": "#/$defs/texto_curto"},
+        "isca": {"$ref": "#/$defs/texto_longo"},
+        "correcao": {"$ref": "#/$defs/texto_longo"},
+        "explicacao": {"$ref": "#/$defs/texto_longo"},
+        "troca": {
+          "description": "O par de palavras trocadas, quando a pegadinha e lexical: ['podera', 'devera'].",
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/texto_curto"}
+        },
+        "questoes": {"$ref": "#/$defs/questoes"}
+      }
+    },
+    "bloco_alerta": {
+      "description": "Terreno que mexe: norma alterada, projeto em tramitacao, divergencia doutrinaria ou jurisprudencial. Unico bloco em que 'questoes' e opcional — o alerta pode existir justamente porque a questao do acervo ficou velha.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "id", "nivel", "titulo", "texto"],
+      "properties": {
+        "tipo": {"const": "alerta"},
+        "id": {"$ref": "#/$defs/slug"},
+        "nivel": {
+          "description": "mudanca_de_norma = a lei/norma mudou. controversia = posicao divergente. atencao = armadilha de leitura sem troca lexical.",
+          "enum": ["mudanca_de_norma", "controversia", "atencao"]
+        },
+        "titulo": {"$ref": "#/$defs/texto_curto"},
+        "texto": {"$ref": "#/$defs/texto_longo"},
+        "vigencia": {
+          "description": "Desde quando vale o que esta escrito no alerta.",
+          "$ref": "#/$defs/texto_curto"
+        },
+        "questoes": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/ref_questao"}
+        }
+      }
+    },
+    "bloco_sumula": {
+      "description": "Sumula, tese de repetitivo ou enunciado que decide a questao sozinho.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "id", "identificador", "orgao", "texto", "situacao", "questoes"],
+      "properties": {
+        "tipo": {"const": "sumula"},
+        "id": {"$ref": "#/$defs/slug"},
+        "identificador": {
+          "description": "'Sumula 297 do STJ', 'Enunciado 24 da I Jornada de Direito Civil'.",
+          "$ref": "#/$defs/texto_curto"
+        },
+        "orgao": {"$ref": "#/$defs/texto_curto"},
+        "texto": {"$ref": "#/$defs/texto_longo"},
+        "situacao": {"enum": ["vigente", "superada", "cancelada"]},
+        "comentario": {"$ref": "#/$defs/texto_longo"},
+        "questoes": {"$ref": "#/$defs/questoes"}
+      }
+    }
+  }
+}

@@ -13,6 +13,8 @@ export default defineConfig({
       '@': path.resolve(import.meta.dirname, 'src'),
       // A taxonomia é dado do projeto, não do app: fonte única em /seeds.
       '@seeds': path.resolve(import.meta.dirname, '../seeds'),
+      // Artefatos publicados pelo pipeline de ingestão — fonte única em /acervo.
+      '@acervo': path.resolve(import.meta.dirname, '../acervo'),
     },
   },
   server: {

@@ -1,0 +1,866 @@
+{
+  "assunto_slug": "civil-obrigacoes",
+  "disciplina": "Direito Civil",
+  "titulo": "Obrigações: elementos, classificação e modalidades",
+  "versao": 1,
+  "atualizado_em": "2026-09-01",
+  "estado": "publicado",
+  "incidencia": {
+    "questoes": 37,
+    "provas": [
+      "apostila_civil_obrigacoes_1_ce",
+      "apostila_civil_obrigacoes_1_multipla"
+    ],
+    "apurado_em": "2026-09-01"
+  },
+  "resumo": "Assunto de letra da lei. Das 37 questões do acervo, 30 se decidem pelo texto dos arts. 233 a 285 do Código Civil, quase sempre com uma palavra trocada: quem escolhe, quem suporta a perda, quem responde pelas perdas e danos. Guarde os artigos por eixo — dar, restituir, fazer, alternativa, indivisível, solidária — e a maior parte cai.",
+  "blocos": [
+    {
+      "tipo": "lista",
+      "id": "elementos-da-obrigacao",
+      "titulo": "Os três elementos da obrigação",
+      "ordenada": false,
+      "itens": [
+        "Subjetivo: os sujeitos, credor e devedor, determinados ou ao menos determináveis.",
+        "Objetivo: a prestação, que é conduta humana de dar, fazer ou não fazer, lícita, possível e determinável.",
+        "Imaterial, também chamado espiritual ou virtual: o vínculo jurídico que sujeita o devedor à prestação em favor do credor, positiva ou negativa."
+      ],
+      "nota": "O elemento imaterial é o que a banca costuma nomear de outro jeito — vínculo espiritual, vínculo abstrato — para ver se você reconhece a mesma coisa.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 1
+        }
+      ]
+    },
+    {
+      "tipo": "definicao",
+      "id": "schuld-e-haftung",
+      "termo": "Schuld e Haftung (débito e responsabilidade)",
+      "literal": false,
+      "texto": "O vínculo obrigacional tem duas camadas. Schuld, ou debitum, é o dever de prestar. Haftung, ou obligatio, é a sujeição do patrimônio à execução caso a prestação não venha. Em regra andam juntas, mas podem aparecer separadas.",
+      "nao_confundir_com": [
+        {
+          "termo": "Schuld sem Haftung",
+          "texto": "Dívida de jogo: existe o dever, o pagamento espontâneo é válido e não se repete, mas o credor não pode cobrar em juízo."
+        },
+        {
+          "termo": "Haftung sem Schuld",
+          "texto": "Garantia real prestada por terceiro: o dono do bem responde com o patrimônio sem dever a prestação principal."
+        }
+      ],
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_multipla",
+          "numero": 9
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "id": "fontes-das-obrigacoes",
+      "titulo": "Fontes",
+      "texto": "A lei é fonte de obrigações, mas não substitui nem exclui a vontade humana. Contrato, declaração unilateral de vontade e ato ilícito também geram obrigação. Cuidado com a assertiva que apresenta a lei como fonte de deveres que a vontade humana não poderia criar: é generalização falsa, porque a maior parte das obrigações do dia a dia nasce justamente de manifestação de vontade.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 2
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "id": "boa-fe-objetiva",
+      "titulo": "Boa-fé objetiva e deveres anexos",
+      "texto": "A boa-fé objetiva funciona em três frentes: interpreta o negócio, limita o exercício de direitos subjetivos e cria deveres. Os deveres anexos, laterais ou de conduta — proteção, cooperação, informação, lealdade, sigilo — existem mesmo sem cláusula que os preveja e acompanham a relação antes, durante e depois do contrato. Descumprir dever anexo, ainda que a prestação principal tenha sido cumprida, gera responsabilidade: é o que a doutrina chama de violação positiva do contrato.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 3
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 4
+        }
+      ]
+    },
+    {
+      "tipo": "tabela",
+      "id": "classificacoes",
+      "titulo": "Classificações que já foram cobradas",
+      "colunas": [
+        "Classificação",
+        "O que é",
+        "Exemplo do acervo"
+      ],
+      "linhas": [
+        [
+          "Principal e acessória",
+          "A principal existe por si; a acessória depende dela e a segue",
+          "O contrato de locação em si é obrigação principal; a fiança que o garante é acessória"
+        ],
+        [
+          "Simples e complexa",
+          "Simples tem um credor, um devedor e uma prestação; complexa multiplica sujeitos ou prestações",
+          "Compra e venda, em que cada parte é ao mesmo tempo credora e devedora, é relação obrigacional complexa"
+        ]
+      ],
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_multipla",
+          "numero": 7
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 8
+        }
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "art-392",
+      "titulo": "Grau de culpa conforme o contrato aproveite ou não",
+      "norma": "Código Civil (Lei 10.406/2002)",
+      "dispositivos": [
+        {
+          "rotulo": "Art. 392",
+          "texto": "Nos contratos benéficos, responde por simples culpa o contratante, a quem o contrato aproveite, e por dolo aquele a quem não favoreça; nos contratos onerosos, responde cada uma das partes por culpa, salvo as exceções previstas em lei.",
+          "grifo": [
+            "Nos contratos benéficos",
+            "nos contratos onerosos"
+          ]
+        }
+      ],
+      "comentario": "A lógica: no contrato gratuito, quem tira proveito é tratado com rigor e responde por culpa simples; quem só faz favor responde apenas se agir com dolo. No contrato oneroso, em que ambos ganham, os dois respondem por culpa.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 5
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 6
+        }
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "beneficos-x-onerosos-invertidos",
+      "titulo": "Art. 392 com os dois blocos trocados",
+      "isca": "Nos contratos ONEROSOS responde por simples culpa quem o contrato aproveita e por dolo quem ele não favorece; nos BENÉFICOS cada parte responde por culpa.",
+      "correcao": "É o contrário. Benéfico é o contrato em que uma parte aproveita e a outra só concede; oneroso é aquele em que as duas suportam ônus e por isso respondem igualmente por culpa.",
+      "explicacao": "O artigo inteiro é copiado e só os rótulos mudam de lugar. Âncora: se o contrato é de favor, não se cobra do favorecedor mais do que dolo.",
+      "troca": [
+        "benéficos",
+        "onerosos"
+      ],
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 5
+        }
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "dar-coisa-certa",
+      "titulo": "Obrigação de dar coisa certa",
+      "norma": "Código Civil (Lei 10.406/2002)",
+      "dispositivos": [
+        {
+          "rotulo": "Art. 233",
+          "texto": "A obrigação de dar coisa certa abrange os acessórios dela embora não mencionados, salvo se o contrário resultar do título ou das circunstâncias do caso.",
+          "grifo": [
+            "abrange os acessórios dela embora não mencionados",
+            "salvo"
+          ]
+        },
+        {
+          "rotulo": "Art. 234",
+          "texto": "Se, no caso do artigo antecedente, a coisa se perder, sem culpa do devedor, antes da tradição, ou pendente a condição suspensiva, fica resolvida a obrigação para ambas as partes; se a perda resultar de culpa do devedor, responderá este pelo equivalente e mais perdas e danos."
+        },
+        {
+          "rotulo": "Art. 235",
+          "texto": "Deteriorada a coisa, não sendo o devedor culpado, poderá o credor resolver a obrigação, ou aceitar a coisa, abatido de seu preço o valor que perdeu.",
+          "grifo": [
+            "poderá o credor",
+            "abatido de seu preço o valor que perdeu"
+          ]
+        },
+        {
+          "rotulo": "Art. 236",
+          "texto": "Sendo culpado o devedor, poderá o credor exigir o equivalente, ou aceitar a coisa no estado em que se acha, com direito a reclamar, em um ou em outro caso, indenização das perdas e danos.",
+          "grifo": [
+            "com direito a reclamar, em um ou em outro caso, indenização das perdas e danos"
+          ]
+        },
+        {
+          "rotulo": "Art. 237",
+          "texto": "Até a tradição pertence ao devedor a coisa, com os seus melhoramentos e acrescidos, pelos quais poderá exigir aumento no preço; se o credor não anuir, poderá o devedor resolver a obrigação.",
+          "grifo": [
+            "pertence ao devedor a coisa",
+            "se o credor não anuir"
+          ]
+        }
+      ],
+      "comentario": "Cinco artigos, cinco questões Certo/Errado no acervo, todas com uma única palavra virada. Vale ler os cinco em sequência antes da prova.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 10
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 11
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 12
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 13
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 15
+        }
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "acessorios-invertidos",
+      "titulo": "Regra e exceção do art. 233 trocadas",
+      "isca": "Como regra, a obrigação de dar coisa certa NÃO abrange os acessórios, salvo se o contrário resultar do título ou das circunstâncias.",
+      "correcao": "A regra é abranger, ainda que os acessórios não estejam mencionados. A exceção é não abranger, quando o título ou as circunstâncias disserem outra coisa.",
+      "explicacao": "Apareceu duas vezes no acervo, em variantes diferentes: uma negando a regra e outra negando também a exceção. O princípio de fundo é o acessório seguir o principal.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 10
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 11
+        }
+      ]
+    },
+    {
+      "tipo": "tabela",
+      "id": "perda-e-deterioracao",
+      "titulo": "Quem suporta o quê: dar e restituir, com e sem culpa",
+      "colunas": [
+        "Situação",
+        "Dar coisa certa (a coisa é do devedor)",
+        "Restituir coisa certa (a coisa é do credor)"
+      ],
+      "linhas": [
+        [
+          "Perda sem culpa do devedor",
+          "Obrigação resolvida para ambas as partes; cada um volta ao estado anterior (art. 234)",
+          "O credor sofre a perda e a obrigação se resolve, ressalvados os direitos dele até o dia da perda (art. 238)"
+        ],
+        [
+          "Perda com culpa do devedor",
+          "Devedor paga o equivalente mais perdas e danos (art. 234)",
+          "Devedor paga o equivalente mais perdas e danos (art. 239)"
+        ],
+        [
+          "Deterioração sem culpa do devedor",
+          "O credor escolhe: resolver a obrigação ou aceitar a coisa com abatimento do preço (art. 235)",
+          "O credor recebe a coisa como está, sem direito a indenização (art. 240)"
+        ],
+        [
+          "Deterioração com culpa do devedor",
+          "O credor escolhe: exigir o equivalente ou aceitar a coisa como está, e em qualquer caso reclamar perdas e danos (art. 236)",
+          "Aplica-se o art. 239: equivalente mais perdas e danos (art. 240, parte final)"
+        ]
+      ],
+      "nota": "A linha de corte é res perit domino: a coisa perece para o dono. Em dar, o dono até a tradição é o devedor; em restituir, o dono sempre foi o credor, e por isso é ele quem suporta a perda fortuita.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 12
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 13
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 14
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 16
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 17
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 18
+        }
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "restituir-coisa-certa",
+      "titulo": "Obrigação de restituir coisa certa",
+      "norma": "Código Civil (Lei 10.406/2002)",
+      "dispositivos": [
+        {
+          "rotulo": "Art. 238",
+          "texto": "Se a obrigação for de restituir coisa certa, e esta, sem culpa do devedor, se perder antes da tradição, sofrerá o credor a perda, e a obrigação se resolverá, ressalvados os seus direitos até o dia da perda.",
+          "grifo": [
+            "sofrerá o credor a perda"
+          ]
+        },
+        {
+          "rotulo": "Art. 239",
+          "texto": "Se a coisa se perder por culpa do devedor, responderá este pelo equivalente, mais perdas e danos."
+        },
+        {
+          "rotulo": "Art. 240",
+          "texto": "Se a coisa restituível se deteriorar sem culpa do devedor, recebê-la-á o credor, tal qual se ache, sem direito a indenização; se por culpa do devedor, observar-se-á o disposto no art. 239.",
+          "grifo": [
+            "sem direito a indenização"
+          ]
+        }
+      ],
+      "comentario": "Na obrigação de restituir, o devedor é mero detentor de coisa alheia. Por isso, sem culpa dele, o prejuízo fica com o dono, que é o credor. As três questões do acervo sobre restituir atacam exatamente esse ponto: duas confirmam a regra e uma inventa direito a indenização que o art. 240 nega.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 16
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 17
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 18
+        }
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "quem-tem-a-faculdade-de-resolver",
+      "titulo": "Deteriorada sem culpa, quem escolhe é o credor",
+      "isca": "Deteriorando-se o bem sem culpa do devedor, fica assegurada AO DEVEDOR a faculdade de resolver a obrigação.",
+      "correcao": "A escolha é do credor: resolver a obrigação ou ficar com a coisa deteriorada, abatido do preço o que ela perdeu.",
+      "explicacao": "Padrão repetido em vários artigos deste assunto: manter a hipótese e trocar o titular do direito. Ao ler, sublinhe quem pode fazer o quê antes de julgar.",
+      "troca": [
+        "poderá o credor",
+        "poderá o devedor"
+      ],
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 14
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 13
+        }
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "melhoramentos-ate-a-tradicao",
+      "titulo": "Melhoramentos antes da entrega",
+      "isca": "Até a tradição a coisa pertence ao credor, com seus acréscimos, e por eles poderá exigir aumento do preço, com ou sem anuência do devedor.",
+      "correcao": "Até a tradição a coisa é do devedor. É ele quem pode exigir aumento no preço pelos melhoramentos, e se o credor não concordar, o devedor pode resolver a obrigação.",
+      "explicacao": "Dois erros no mesmo período: o titular e o efeito da recusa. A propriedade só passa com a tradição, e é dela que decorre todo o resto.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 15
+        }
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "coisa-incerta",
+      "titulo": "Obrigação de dar coisa incerta",
+      "norma": "Código Civil (Lei 10.406/2002)",
+      "dispositivos": [
+        {
+          "rotulo": "Art. 243",
+          "texto": "A coisa incerta será indicada, ao menos, pelo gênero e pela quantidade.",
+          "grifo": [
+            "ao menos, pelo gênero e pela quantidade"
+          ]
+        },
+        {
+          "rotulo": "Art. 244",
+          "texto": "Nas coisas determinadas pelo gênero e pela quantidade, a escolha pertence ao devedor, se o contrário não resultar do título da obrigação; mas não poderá dar a coisa pior, nem será obrigado a prestar a melhor.",
+          "grifo": [
+            "a escolha pertence ao devedor",
+            "não poderá dar a coisa pior, nem será obrigado a prestar a melhor"
+          ]
+        },
+        {
+          "rotulo": "Art. 245",
+          "texto": "Cientificado da escolha o credor, vigorará o disposto na Seção antecedente."
+        },
+        {
+          "rotulo": "Art. 246",
+          "texto": "Antes da escolha, não poderá o devedor alegar perda ou deterioração da coisa, ainda que por força maior ou caso fortuito.",
+          "grifo": [
+            "ainda que por força maior ou caso fortuito"
+          ]
+        }
+      ],
+      "comentario": "O art. 246 é a tradução do genus numquam perit: o gênero não perece. Enquanto a coisa não estiver individualizada pela escolha, o devedor não se livra alegando que o lote dele se perdeu — sempre há outra unidade do mesmo gênero no mercado. Feita a escolha e cientificado o credor, a obrigação vira de dar coisa certa e passam a valer os arts. 233 a 242.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 19
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 20
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 21
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_multipla",
+          "numero": 22
+        }
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "quem-escolhe",
+      "titulo": "A escolha é do devedor — nas duas modalidades",
+      "isca": "Na coisa determinada pelo gênero e pela quantidade, e também na obrigação alternativa, a escolha pertence ao credor se nada foi estipulado.",
+      "correcao": "Nos dois casos a escolha é do devedor, salvo estipulação em contrário. Coisa incerta: art. 244. Obrigação alternativa: art. 252, caput.",
+      "explicacao": "É a troca mais frequente do assunto: aparece em duas questões do acervo, uma sobre coisa incerta e outra sobre obrigação alternativa, com a mesma inversão. Guarde a regra única: na dúvida, escolhe o devedor.",
+      "troca": [
+        "a escolha pertence ao devedor",
+        "a escolha pertence ao credor"
+      ],
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 20
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 26
+        }
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "obrigacao-de-fazer",
+      "titulo": "Obrigação de fazer",
+      "norma": "Código Civil (Lei 10.406/2002)",
+      "dispositivos": [
+        {
+          "rotulo": "Art. 247",
+          "texto": "Incorre na obrigação de indenizar perdas e danos o devedor que recusar a prestação a ele só imposta, ou só por ele exequível."
+        },
+        {
+          "rotulo": "Art. 248",
+          "texto": "Se a prestação do fato tornar-se impossível sem culpa do devedor, resolver-se-á a obrigação; se por culpa dele, responderá por perdas e danos.",
+          "grifo": [
+            "sem culpa do devedor, resolver-se-á a obrigação"
+          ]
+        },
+        {
+          "rotulo": "Art. 249",
+          "texto": "Se o fato puder ser executado por terceiro, será livre ao credor mandá-lo executar à custa do devedor, havendo recusa ou mora deste, sem prejuízo da indenização cabível.",
+          "grifo": [
+            "executado por terceiro",
+            "à custa do devedor"
+          ]
+        },
+        {
+          "rotulo": "Art. 249, parágrafo único",
+          "texto": "Em caso de urgência, pode o credor, independentemente de autorização judicial, executar ou mandar executar o fato, sendo depois ressarcido.",
+          "grifo": [
+            "independentemente de autorização judicial"
+          ]
+        }
+      ],
+      "comentario": "A divisão que resolve as questões: obrigação de fazer infungível é a personalíssima, aquela imposta só ao devedor ou só por ele executável, e o descumprimento se converte em perdas e danos. Fungível é a que qualquer um faz, e aí o credor pode contratar terceiro por conta do devedor. Dizer que é vedada a substituição por terceiro, sem qualquer ressalva, generaliza a exceção.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 23
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 24
+        }
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "impossibilidade-sem-culpa",
+      "titulo": "Impossibilidade sem culpa não gera perdas e danos",
+      "isca": "Tornando-se impossível a prestação do fato, sem culpa do devedor, este responderá por perdas e danos.",
+      "correcao": "Sem culpa, a obrigação simplesmente se resolve. Perdas e danos só entram quando a impossibilidade decorre de culpa do devedor.",
+      "explicacao": "Vale como regra geral do assunto: sem culpa, resolve; com culpa, indeniza. Serve para o art. 248 e ecoa nos arts. 234, 235 e 236.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 23
+        }
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "obrigacoes-alternativas",
+      "titulo": "Obrigações alternativas",
+      "norma": "Código Civil (Lei 10.406/2002)",
+      "dispositivos": [
+        {
+          "rotulo": "Art. 252, caput",
+          "texto": "Nas obrigações alternativas, a escolha cabe ao devedor, se outra coisa não se estipulou.",
+          "grifo": [
+            "cabe ao devedor"
+          ]
+        },
+        {
+          "rotulo": "Art. 252, § 1º",
+          "texto": "Não pode o devedor obrigar o credor a receber parte em uma prestação e parte em outra.",
+          "grifo": [
+            "parte em uma prestação e parte em outra"
+          ]
+        },
+        {
+          "rotulo": "Art. 252, § 2º",
+          "texto": "Quando a obrigação for de prestações periódicas, a faculdade de opção poderá ser exercida em cada período."
+        },
+        {
+          "rotulo": "Art. 252, § 3º",
+          "texto": "No caso de pluralidade de optantes, não havendo acordo unânime entre eles, decidirá o juiz, findo o prazo por este assinado para a deliberação.",
+          "grifo": [
+            "decidirá o juiz"
+          ]
+        },
+        {
+          "rotulo": "Art. 252, § 4º",
+          "texto": "Se o título deferir a opção a terceiro, e este não quiser, ou não puder exercê-la, caberá ao juiz a escolha se não houver acordo entre as partes."
+        }
+      ],
+      "comentario": "Três das quatro armadilhas do acervo estão aqui: quem escolhe é o devedor, não o credor; o devedor não pode fracionar a prestação entre duas alternativas; e o impasse entre vários optantes vai para o juiz, não para o de maior crédito nem para o mais antigo.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 25
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 26
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 27
+        }
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "impasse-entre-optantes",
+      "titulo": "Empate na escolha vai para o juiz",
+      "isca": "Havendo vários optantes sem acordo unânime, decide quem tiver o maior crédito ou, se iguais, o crédito mais antigo.",
+      "correcao": "Decide o juiz, esgotado o prazo que ele fixar para a deliberação. O critério de maior crédito ou crédito mais antigo não existe no art. 252.",
+      "explicacao": "Critério inventado com aparência de razoável. Sempre que a alternativa trouxer regra de desempate que você não lembra de ter lido, desconfie: no Código o desempate é judicial.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 27
+        }
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "divisiveis-e-indivisiveis",
+      "titulo": "Obrigações divisíveis e indivisíveis",
+      "norma": "Código Civil (Lei 10.406/2002)",
+      "dispositivos": [
+        {
+          "rotulo": "Art. 257",
+          "texto": "Havendo mais de um devedor ou mais de um credor em obrigação divisível, esta presume-se dividida em tantas obrigações, iguais e distintas, quantos os credores ou devedores.",
+          "grifo": [
+            "presume-se dividida"
+          ]
+        },
+        {
+          "rotulo": "Art. 259",
+          "texto": "Se, havendo dois ou mais devedores, a prestação não for divisível, cada um será obrigado pela dívida toda.",
+          "grifo": [
+            "pela dívida toda"
+          ]
+        },
+        {
+          "rotulo": "Art. 259, parágrafo único",
+          "texto": "O devedor, que paga a dívida, sub-roga-se no direito do credor em relação aos outros coobrigados."
+        }
+      ],
+      "comentario": "O art. 259 caiu duas vezes no acervo com a mesma inversão: 'cada um será obrigado pela sua parte'. Se a prestação é indivisível, não existe parte a pagar — cada devedor deve tudo, e quem pagou se volta contra os demais por sub-rogação. Note que a indivisibilidade vem da prestação, e não do acordo entre as partes, o que distingue essa figura da solidariedade.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 28
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 29
+        }
+      ]
+    },
+    {
+      "tipo": "tabela",
+      "id": "indivisivel-x-solidaria",
+      "titulo": "Indivisibilidade e solidariedade: parecem iguais, não são",
+      "colunas": [
+        "Critério",
+        "Obrigação indivisível",
+        "Obrigação solidária"
+      ],
+      "linhas": [
+        [
+          "Fonte",
+          "Natureza da prestação, que não admite fracionamento",
+          "Lei ou vontade das partes; nunca se presume"
+        ],
+        [
+          "Se a prestação vira dinheiro",
+          "Perde a indivisibilidade e a dívida se divide",
+          "A solidariedade permanece"
+        ],
+        [
+          "Morte de devedor com vários herdeiros",
+          "Cada herdeiro continua devendo o todo, porque a prestação segue indivisível",
+          "Cada herdeiro só deve a cota do seu quinhão; reunidos, valem por um devedor solidário"
+        ]
+      ],
+      "nota": "A segunda linha é o teste decisivo: converta a prestação em perdas e danos e veja o que sobra.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 28
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 36
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_multipla",
+          "numero": 35
+        }
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "solidariedade-regras-gerais",
+      "titulo": "Solidariedade: disposições gerais e solidariedade ativa",
+      "norma": "Código Civil (Lei 10.406/2002)",
+      "dispositivos": [
+        {
+          "rotulo": "Art. 265",
+          "texto": "A solidariedade não se presume; resulta da lei ou da vontade das partes.",
+          "grifo": [
+            "não se presume"
+          ]
+        },
+        {
+          "rotulo": "Art. 266",
+          "texto": "A obrigação solidária pode ser pura e simples para um dos co-credores, ou co-devedores, e condicional, ou a prazo, ou pagável em lugar diferente, para o outro.",
+          "grifo": [
+            "pura e simples para um",
+            "condicional, ou a prazo, ou pagável em lugar diferente, para o outro"
+          ]
+        },
+        {
+          "rotulo": "Art. 270",
+          "texto": "Se um dos credores solidários falecer deixando herdeiros, cada um destes só terá direito a exigir e receber a quota do crédito que corresponder ao seu quinhão hereditário, salvo se a obrigação for indivisível.",
+          "grifo": [
+            "salvo se a obrigação for indivisível"
+          ]
+        },
+        {
+          "rotulo": "Art. 273",
+          "texto": "A um dos credores solidários não pode o devedor opor as exceções pessoais oponíveis aos outros.",
+          "grifo": [
+            "não pode o devedor opor as exceções pessoais oponíveis aos outros"
+          ]
+        },
+        {
+          "rotulo": "Art. 274",
+          "texto": "O julgamento contrário a um dos credores solidários não atinge os demais, mas o julgamento favorável aproveita-lhes, sem prejuízo de exceção pessoal que o devedor tenha direito de invocar em relação a qualquer deles.",
+          "grifo": [
+            "não atinge os demais",
+            "aproveita-lhes"
+          ]
+        }
+      ],
+      "comentario": "O art. 266 desmente a intuição de que a solidariedade obriga todos nos mesmos termos: cada coobrigado pode ter condição, prazo ou lugar de pagamento próprios sem que a solidariedade se desfaça. Já os arts. 273 e 274 andam juntos e formam a regra de ouro da solidariedade ativa: o que é pessoal não se estende, o que é favorável se aproveita.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 30
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 33
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 34
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 37
+        }
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "excecao-pessoal-oposta-a-todos",
+      "titulo": "Exceção pessoal não circula entre credores",
+      "isca": "Na solidariedade ativa, o devedor pode opor aos demais credores a exceção pessoal que tiver contra um deles.",
+      "correcao": "Não pode. Defesa pessoal contra um credor vale só contra aquele credor; contra os outros o devedor opõe apenas as defesas comuns.",
+      "explicacao": "Mesma lógica na solidariedade passiva: exceção pessoal de um devedor não aproveita aos demais. O que circula é a defesa comum, ligada à própria dívida.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 30
+        }
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "coisa-julgada-entre-credores",
+      "titulo": "Julgamento favorável aproveita, contrário não atinge",
+      "isca": "Tanto o julgamento favorável quanto o contrário a um dos credores solidários alcançam os demais.",
+      "correcao": "Só o favorável aproveita aos demais. O julgamento contrário fica restrito ao credor que o sofreu.",
+      "explicacao": "A assimetria é proposital: a solidariedade existe para facilitar a cobrança do crédito, não para permitir que a derrota de um contamine os outros.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 34
+        }
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "solidariedade-passiva",
+      "titulo": "Solidariedade passiva: morte do devedor e culpa de um só",
+      "norma": "Código Civil (Lei 10.406/2002)",
+      "dispositivos": [
+        {
+          "rotulo": "Art. 276",
+          "texto": "Se um dos devedores solidários falecer deixando herdeiros, nenhum destes será obrigado a pagar senão a quota que corresponder ao seu quinhão hereditário, salvo se a obrigação for indivisível; mas todos reunidos serão considerados como um devedor solidário em relação aos demais devedores.",
+          "grifo": [
+            "nenhum destes será obrigado a pagar senão a quota",
+            "todos reunidos serão considerados como um devedor solidário"
+          ]
+        },
+        {
+          "rotulo": "Art. 279",
+          "texto": "Impossibilitando-se a prestação por culpa de um dos devedores solidários, subsiste para todos o encargo de pagar o equivalente; mas pelas perdas e danos só responde o culpado.",
+          "grifo": [
+            "subsiste para todos o encargo de pagar o equivalente",
+            "só responde o culpado"
+          ]
+        }
+      ],
+      "comentario": "O art. 279 parte a responsabilidade em duas: o valor da prestação continua solidário, porque a dívida existia antes da culpa; as perdas e danos são pessoais de quem deu causa à impossibilidade. O art. 276, por sua vez, tem duas metades que precisam ser lidas juntas — herdeiro isolado só deve o quinhão, o conjunto dos herdeiros ocupa o lugar do falecido e responde pelo todo.",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 31
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 32
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 36
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_multipla",
+          "numero": 35
+        }
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "perdas-e-danos-solidarias",
+      "titulo": "Perdas e danos não são solidárias",
+      "isca": "Um devedor solidário torna a prestação impossível por culpa sua: todos passam a dever o equivalente E TAMBÉM as perdas e danos.",
+      "correcao": "Todos continuam devendo o equivalente; pelas perdas e danos responde apenas quem teve culpa.",
+      "explicacao": "Caiu duas vezes no acervo, em bancas diferentes, com a mesma construção: reproduzir o art. 279 até a vírgula e emendar as perdas e danos na conta de todos. O corte fica exatamente no ponto e vírgula do artigo.",
+      "troca": [
+        "só responde o culpado",
+        "respondem todos"
+      ],
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 31
+        },
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 32
+        }
+      ]
+    },
+    {
+      "tipo": "alerta",
+      "id": "art-274-alterado-pelo-cpc",
+      "nivel": "mudanca_de_norma",
+      "titulo": "O art. 274 tem redação nova desde 2015",
+      "texto": "A redação em vigor do art. 274 foi dada pela Lei 13.105/2015, o Código de Processo Civil. A redação original condicionava o aproveitamento do julgamento favorável a que ele não se fundasse em exceção pessoal do credor vencedor; a atual ressalva a exceção pessoal que o devedor tenha contra qualquer dos credores. Material anterior a 2016 pode reproduzir o texto antigo — confira a redação antes de decorar.",
+      "vigencia": "Redação da Lei 13.105/2015, vigente em 1º de setembro de 2026",
+      "questoes": [
+        {
+          "prova_slug": "apostila_civil_obrigacoes_1_ce",
+          "numero": 34
+        }
+      ]
+    },
+    {
+      "tipo": "alerta",
+      "id": "reforma-do-codigo-civil",
+      "nivel": "atencao",
+      "titulo": "Reforma do Código Civil: nada em vigor",
+      "texto": "Tramita no Congresso projeto de reforma ampla do Código Civil, com propostas de mudança no livro do direito das obrigações. Enquanto não houver lei aprovada, sancionada e em vigor, a prova cobra a redação atual dos arts. 233 a 285. Este esquema segue a redação vigente e passará para o estado revisar caso a reforma seja aprovada.",
+      "vigencia": "Situação em 1º de setembro de 2026"
+    }
+  ],
+  "fontes": [
+    {
+      "tipo": "norma",
+      "referencia": "Código Civil, Lei 10.406/2002, arts. 233 a 285 e art. 392",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "consultado_em": "2026-09-01"
+    },
+    {
+      "tipo": "norma",
+      "referencia": "Lei 13.105/2015 (Código de Processo Civil), que deu nova redação ao art. 274 do Código Civil",
+      "consultado_em": "2026-09-01"
+    },
+    {
+      "tipo": "acervo",
+      "referencia": "37 questões dos artefatos apostila_civil_obrigacoes_1_ce e apostila_civil_obrigacoes_1_multipla",
+      "consultado_em": "2026-09-01"
+    },
+    {
+      "tipo": "apostila",
+      "referencia": "Carlos Elias, Obrigações – Parte I — usada como pista para localizar o que é cobrado; nenhum trecho reproduzido",
+      "consultado_em": "2026-09-01"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import { createBrowserRouter, createHashRouter } from 'react-router-dom'
 import { AppShell } from './AppShell'
+import { Bemvindo } from './routes/Bemvindo'
 import { Caderno } from './routes/Caderno'
 import { Ciclo } from './routes/Ciclo'
 import { Estatisticas } from './routes/Estatisticas'
@@ -17,6 +18,9 @@ import { Revisao } from './routes/Revisao'
 const criar = import.meta.env.VITE_ROUTER === 'hash' ? createHashRouter : createBrowserRouter
 
 export const router = criar([
+  // Fora do AppShell: sem barra de navegação, tela cheia. AppShell redireciona
+  // para cá quando não existe perfil local ainda (ver AppShell.tsx).
+  { path: '/bemvindo', element: <Bemvindo /> },
   {
     path: '/',
     element: <AppShell />,

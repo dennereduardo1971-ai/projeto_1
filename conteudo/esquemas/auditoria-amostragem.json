@@ -1,0 +1,640 @@
+{
+  "assunto_slug": "auditoria-amostragem",
+  "disciplina": "Auditoria",
+  "titulo": "Amostragem em auditoria (NBC TA 530)",
+  "versao": 1,
+  "atualizado_em": "2026-09-01",
+  "estado": "publicado",
+  "incidencia": {
+    "questoes": 63,
+    "provas": [
+      "apostila_auditoria_amostragem_ce",
+      "apostila_auditoria_amostragem_multipla"
+    ],
+    "apurado_em": "2026-09-01"
+  },
+  "resumo": "Assunto de definição literal. Das 63 questões do acervo, a maioria se resolve sabendo de cor três coisas: as definições do item 5 da NBC TA 530, a relação inversa entre risco aceito e tamanho da amostra, e a diferença entre estratificação, seleção sistemática e seleção com base em valor. Quase nada aqui exige cálculo.",
+  "blocos": [
+    {
+      "tipo": "definicao",
+      "id": "amostragem-em-auditoria",
+      "termo": "Amostragem em auditoria",
+      "literal": true,
+      "fonte_norma": "NBC TA 530, item 5(a)",
+      "texto": "Aplicação de procedimentos de auditoria em menos de 100% dos itens de população relevante para fins de auditoria, de maneira que todas as unidades de amostragem tenham a mesma chance de seleção, para proporcionar ao auditor uma base razoável que lhe permita concluir sobre toda a população.",
+      "nao_confundir_com": [
+        {
+          "termo": "População",
+          "texto": "Conjunto completo de dados do qual a amostra é selecionada e sobre o qual o auditor deseja concluir."
+        },
+        {
+          "termo": "Unidade de amostragem",
+          "texto": "Cada item individual que compõe a população: uma nota fiscal, um cheque, um lançamento, um real de saldo."
+        },
+        {
+          "termo": "Objetivo do auditor",
+          "texto": "Proporcionar base razoável para concluir sobre a população da qual a amostra foi tirada — não sobre a amostra."
+        }
+      ],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 17},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 19},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 27},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 42},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 51},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 62}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "menos-de-100-por-cento",
+      "titulo": "Percentual da população",
+      "isca": "Amostragem é aplicar procedimentos em 100% dos itens relevantes — ou em menos de 10% deles.",
+      "correcao": "É menos de 100%, sem piso. Qualquer percentual abaixo de 100% serve; a norma não fixa mínimo nem máximo.",
+      "explicacao": "A banca ataca esse trecho por dois lados: sobe para 100% (que é exame integral, não amostragem) ou inventa um teto numérico como 10%. Nos dois casos, errado.",
+      "troca": ["menos de 100%", "menos de dez por cento"],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 17},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 42},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 27}
+      ]
+    },
+    {
+      "tipo": "definicao",
+      "id": "risco-de-amostragem",
+      "termo": "Risco de amostragem",
+      "literal": true,
+      "fonte_norma": "NBC TA 530, item 5(c)",
+      "texto": "Risco de que a conclusão do auditor, com base em amostra, pudesse ser diferente se toda a população fosse sujeita ao mesmo procedimento de auditoria.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 18},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 23},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 42},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 47},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 3}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "diferente-x-igual",
+      "titulo": "Uma palavra decide a definição de risco de amostragem",
+      "isca": "Risco de amostragem: a conclusão tirada da amostra seria IGUAL à que o exame de toda a população produziria.",
+      "correcao": "Pudesse ser DIFERENTE. O risco é a amostra levar a uma conclusão que o exame integral desmentiria.",
+      "explicacao": "A definição costuma vir reproduzida quase inteira, com uma única palavra virada. Leia a alternativa até o fim antes de marcar.",
+      "troca": ["diferente", "igual"],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 18}
+      ]
+    },
+    {
+      "tipo": "definicao",
+      "id": "risco-nao-resultante-da-amostragem",
+      "termo": "Risco não resultante da amostragem",
+      "literal": true,
+      "fonte_norma": "NBC TA 530, item 5(d)",
+      "texto": "Risco de que o auditor chegue a uma conclusão errônea por qualquer razão não relacionada ao risco de amostragem.",
+      "nao_confundir_com": [
+        {
+          "termo": "Exemplos típicos",
+          "texto": "Procedimento de auditoria inapropriado, interpretação errada da evidência obtida, não reconhecer uma distorção ou um desvio que estava à vista."
+        }
+      ],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 37},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 17},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 63}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "qual-risco-vem-da-selecao",
+      "titulo": "Quem responde pela amostra malfeita",
+      "isca": "O risco NÃO resultante da amostragem está ligado à seleção inadequada de itens, o que faz o auditor não reconhecer distorções relevantes.",
+      "correcao": "Seleção inadequada de itens e tamanho de amostra são risco DE amostragem. O risco não resultante da amostragem é tudo o que sobra: erro na escolha do procedimento, na leitura da evidência, na conclusão.",
+      "explicacao": "Regra prática: se a causa do erro some quando você testa 100% da população, é risco de amostragem. Se o erro continuaria lá mesmo examinando tudo, é risco não resultante da amostragem.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 63},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 37}
+      ]
+    },
+    {
+      "tipo": "tabela",
+      "id": "conclusoes-erroneas",
+      "titulo": "As quatro conclusões erradas que o risco de amostragem produz",
+      "colunas": ["Tipo de teste", "Erro que compromete a confiabilidade", "Erro que compromete a eficiência"],
+      "linhas": [
+        [
+          "Teste de controles",
+          "Julgar os controles mais eficazes do que são",
+          "Julgar os controles menos eficazes do que são"
+        ],
+        [
+          "Teste de detalhes",
+          "Não identificar distorção relevante existente",
+          "Identificar distorção relevante que não existe"
+        ]
+      ],
+      "nota": "A norma trata os dois erros da coluna do meio como mais graves: levam a opinião inadequada. Os da última coluna geram retrabalho.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 24},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 4}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "aceitacao-x-rejeicao-incorreta",
+      "titulo": "Concluir que o saldo está distorcido quando não está",
+      "isca": "O auditor concluiu que o estoque estava relevantemente distorcido, embora não estivesse: incorreu em risco de aceitação incorreta.",
+      "correcao": "É rejeição incorreta. Aceitação incorreta é o inverso — dar por bom um saldo que está distorcido.",
+      "explicacao": "Ancore pelo verbo: aceitar é deixar passar; rejeitar é acusar. O caso em que a amostra acusa distorção inexistente é rejeição incorreta, e afeta eficiência, não confiabilidade.",
+      "troca": ["aceitação incorreta", "rejeição incorreta"],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 4}
+      ]
+    },
+    {
+      "tipo": "definicao",
+      "id": "anomalia",
+      "termo": "Anomalia",
+      "literal": true,
+      "fonte_norma": "NBC TA 530, item 5(e)",
+      "texto": "Distorção ou desvio comprovadamente não representativo de distorção ou desvio em uma população.",
+      "nao_confundir_com": [
+        {
+          "termo": "O que o auditor tem de fazer",
+          "texto": "Para tratar algo como anomalia, precisa de alto grau de certeza, obtido com procedimentos adicionais de auditoria que mostrem que aquilo não afeta o resto da população."
+        },
+        {
+          "termo": "Efeito prático",
+          "texto": "A anomalia sai da projeção de distorções para a população, mas o valor dela, se não corrigido, continua somando ao efeito total das distorções não corrigidas."
+        }
+      ],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 50},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 53},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 59},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 1}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "anomalia-vestida-de-risco",
+      "titulo": "A definição de anomalia colada no rótulo errado",
+      "isca": "O risco de amostragem está associado ao desvio não representativo do desvio existente na população.",
+      "correcao": "Esse enunciado define anomalia. Risco de amostragem é a possibilidade de a conclusão tirada da amostra divergir da que o exame integral daria.",
+      "explicacao": "Duas definições do item 5 trocadas de lugar. Vale para as duas direções: já caiu com 'anomalia' recebendo a definição de risco de amostragem.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 1},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 50}
+      ]
+    },
+    {
+      "tipo": "definicao",
+      "id": "tolerancia",
+      "termo": "Distorção tolerável e taxa tolerável de desvio",
+      "literal": true,
+      "fonte_norma": "NBC TA 530, itens 5(i) e 5(j)",
+      "texto": "Distorção tolerável é o valor monetário fixado pelo auditor para obter nível apropriado de segurança de que a distorção real da população não o excede. Taxa tolerável de desvio é o percentual de desvio dos controles internos prescritos fixado com a mesma finalidade.",
+      "nao_confundir_com": [
+        {
+          "termo": "Qual vai em qual teste",
+          "texto": "Distorção tolerável é grandeza monetária e serve a testes de detalhes. Taxa tolerável de desvio é percentual e serve a testes de controles."
+        },
+        {
+          "termo": "Limite superior",
+          "texto": "A distorção tolerável é aplicação da materialidade na execução; não pode ser igual nem maior que a materialidade definida para as demonstrações como um todo."
+        }
+      ],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 2},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 42}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "erro-toleravel-em-observancia",
+      "titulo": "Valor monetário em teste de observância",
+      "isca": "Nos testes de observância, o erro tolerável é o erro monetário máximo no saldo de uma conta.",
+      "correcao": "Teste de observância é teste de controle: a tolerância ali é percentual, taxa tolerável de desvio. Valor monetário máximo é distorção tolerável, e essa pertence ao teste substantivo de detalhes.",
+      "explicacao": "Sempre que a assertiva juntar 'controle' com 'valor monetário', ou 'detalhes' com 'percentual de desvio', o par está invertido.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 2}
+      ]
+    },
+    {
+      "tipo": "definicao",
+      "id": "estratificacao",
+      "termo": "Estratificação",
+      "literal": true,
+      "fonte_norma": "NBC TA 530, item 5(g) e Apêndice 1",
+      "texto": "Divisão da população em subpopulações distintas, cada uma sendo um grupo de unidades de amostragem com características similares, normalmente o valor monetário.",
+      "nao_confundir_com": [
+        {
+          "termo": "Para que serve",
+          "texto": "Reduz a variabilidade dentro de cada estrato e, com isso, permite reduzir o tamanho da amostra sem aumentar o risco de amostragem. É recurso de eficiência."
+        },
+        {
+          "termo": "Quando usar",
+          "texto": "Quando os valores dos itens variam muito. Cada estrato é depois tratado como uma população à parte, e a conclusão de um estrato não se estende sozinha aos demais."
+        }
+      ],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 29},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 45},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 58},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 40},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 41}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "estratificar-sempre-por-valor",
+      "titulo": "O advérbio que derruba a estratificação",
+      "isca": "Nos testes de detalhes, a população é estratificada SEMPRE pelo valor monetário.",
+      "correcao": "O valor monetário é o critério mais comum, não o único nem o obrigatório. Idade do crédito, filial, tipo de operação e outros atributos servem de estrato.",
+      "explicacao": "A troca aqui não é de conceito, é de quantificador. A norma descreve prática usual; a banca converte em regra absoluta com 'sempre', 'em todos os casos', 'obrigatoriamente'.",
+      "troca": ["normalmente", "sempre"],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 5}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "estratificacao-x-sistematica",
+      "titulo": "Separar créditos por idade não é amostragem sistemática",
+      "isca": "Separar os créditos a receber por faixa de idade para testar a provisão para perdas é exemplo de amostragem sistemática.",
+      "correcao": "É estratificação: agrupou a população por característica comum. Sistemática é escolher itens em intervalo fixo a partir de um ponto de partida.",
+      "explicacao": "Estratificação é como você divide a população; seleção sistemática é como você tira itens de dentro dela. Uma antecede a outra e não se substituem.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 56}
+      ]
+    },
+    {
+      "tipo": "tabela",
+      "id": "estatistica-x-nao-estatistica",
+      "titulo": "Amostragem estatística e não estatística",
+      "colunas": ["Critério", "Estatística", "Não estatística"],
+      "linhas": [
+        [
+          "Seleção dos itens",
+          "Aleatória: cada unidade tem probabilidade conhecida de ser selecionada",
+          "Julgamento profissional do auditor"
+        ],
+        [
+          "Avaliação do resultado",
+          "Teoria das probabilidades",
+          "Conhecimento e experiência do auditor"
+        ],
+        [
+          "Risco de amostragem",
+          "É mensurado",
+          "Não é mensurado"
+        ],
+        [
+          "Tamanho da amostra",
+          "Fórmula estatística",
+          "Julgamento profissional"
+        ]
+      ],
+      "nota": "As duas abordagens são admitidas pela NBC TA 530. Basta uma das duas características faltar para a amostragem deixar de ser estatística.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 16},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 19},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 33},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 43},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 44},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 49},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 60},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 62}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "so-estatistica-vale",
+      "titulo": "Exclusividade da abordagem estatística",
+      "isca": "Toda amostragem em auditoria deve ser aleatória, com uso da teoria das probabilidades — ou seja, só a estatística é admitida.",
+      "correcao": "As duas abordagens valem. Quem decide entre estatística e não estatística é o julgamento do auditor, considerando custo, benefício e as circunstâncias do trabalho.",
+      "explicacao": "Variante frequente: dizer que o tamanho da amostra tem de sair de fórmula estatística, sem espaço para julgamento. Também errado.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 15},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 19},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 44},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 38}
+      ]
+    },
+    {
+      "tipo": "tabela",
+      "id": "metodos-de-selecao",
+      "titulo": "Os cinco métodos de seleção do Apêndice 4",
+      "colunas": ["Método", "Como funciona", "Serve para amostragem estatística?"],
+      "linhas": [
+        [
+          "Aleatória",
+          "Gerador de números aleatórios ou tabela de números aleatórios",
+          "Sim"
+        ],
+        [
+          "Sistemática",
+          "Divide o total de unidades pelo tamanho da amostra, obtém o intervalo, sorteia o ponto de partida dentro do primeiro intervalo e segue de intervalo em intervalo",
+          "Sim, desde que a população não esteja ordenada em padrão que coincida com o intervalo"
+        ],
+        [
+          "Com base em valor (unidade monetária)",
+          "A unidade de amostragem passa a ser cada unidade de dinheiro; itens de maior valor têm mais chance de entrar",
+          "Sim"
+        ],
+        [
+          "Ao acaso",
+          "O auditor escolhe sem seguir técnica estruturada, mas evitando conscientemente tendenciosidade",
+          "Não"
+        ],
+        [
+          "Bloco",
+          "Toma um conjunto contíguo de itens, por exemplo todas as notas de uma mesma semana",
+          "Não, e a norma desaconselha: um bloco raramente representa a população"
+        ]
+      ],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 10},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 20},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 26},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 44},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 48},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 55},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 9}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "aleatoria-x-ao-acaso",
+      "titulo": "Aleatória e ao acaso não são sinônimos",
+      "isca": "Seleção aleatória é a que o auditor faz sem técnica estruturada, guiado só pelo cuidado de não ser tendencioso.",
+      "correcao": "Sem técnica estruturada é seleção ao acaso. Aleatória usa gerador ou tabela de números aleatórios, e por isso admite tratamento probabilístico.",
+      "explicacao": "Em português corrente as duas expressões se confundem; na NBC TA 530 são métodos distintos do Apêndice 4. Só a aleatória sustenta amostragem estatística.",
+      "troca": ["aleatória", "ao acaso"],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 44},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 20}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "so-tres-metodos",
+      "titulo": "Rol fechado de métodos",
+      "isca": "Os métodos de seleção de amostra limitam-se a três: aleatória, sistemática e de blocos.",
+      "correcao": "São cinco no Apêndice 4, e nem esse rol é fechado: a norma descreve os métodos principais, sem proibir outros.",
+      "explicacao": "Toda vez que a assertiva usar 'limitam-se a', 'apenas', 'exclusivamente' sobre um rol da NBC TA 530, desconfie: a norma é descritiva.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 9}
+      ]
+    },
+    {
+      "tipo": "texto",
+      "id": "regra-do-inverso",
+      "titulo": "A relação inversa que resolve várias questões",
+      "texto": "Risco aceito e tamanho da amostra andam em sentidos opostos. Quanto menor o risco de amostragem que o auditor se dispõe a aceitar, maior a amostra; quanto maior o risco aceito, menor a amostra. A mesma lógica vale para as tolerâncias: taxa tolerável de desvio ou distorção tolerável maiores permitem amostra menor, porque o auditor está admitindo mais folga. Já as expectativas caminham junto com a amostra: taxa esperada de desvio maior ou distorção esperada maior exigem amostra maior. Guarde os dois pares em vez de decorar linha a linha da tabela.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 21},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 23},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 32},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 34},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 52}
+      ]
+    },
+    {
+      "tipo": "tabela",
+      "id": "fatores-testes-de-controles",
+      "titulo": "Testes de controles: o que aumenta a amostra (Apêndice 2)",
+      "colunas": ["Fator que aumenta", "Efeito no tamanho da amostra"],
+      "linhas": [
+        ["Confiança que o auditor pretende depositar nos controles", "Aumenta"],
+        ["Taxa tolerável de desvio", "Diminui"],
+        ["Taxa esperada de desvio na população", "Aumenta"],
+        ["Nível de segurança desejado (menor risco de amostragem aceito)", "Aumenta"],
+        ["Número de unidades de amostragem da população", "Efeito desprezível em populações grandes"]
+      ],
+      "nota": "A taxa tolerável é a única linha em que aumentar o fator reduz a amostra. É justamente a linha que a banca inverte.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 8},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 28},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 30},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 36},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 39}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "taxa-toleravel-invertida",
+      "titulo": "Aumentar a tolerância não aumenta a amostra",
+      "isca": "Nos testes de controle, um aumento na taxa tolerável de desvio aumenta o tamanho da amostra.",
+      "correcao": "Reduz. Tolerar mais desvio significa exigir menos evidência, e amostra menor basta.",
+      "explicacao": "Não confunda taxa TOLERÁVEL com taxa ESPERADA. Esperar mais desvio aumenta a amostra; tolerar mais desvio diminui.",
+      "troca": ["tolerável", "esperada"],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 39},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 30},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 36}
+      ]
+    },
+    {
+      "tipo": "tabela",
+      "id": "fatores-testes-de-detalhes",
+      "titulo": "Testes de detalhes: o que aumenta a amostra (Apêndice 3)",
+      "colunas": ["Fator que aumenta", "Efeito no tamanho da amostra"],
+      "linhas": [
+        ["Avaliação do risco de distorção relevante", "Aumenta"],
+        ["Confiança em outros procedimentos substantivos sobre a mesma afirmação", "Diminui"],
+        ["Nível de segurança desejado", "Aumenta"],
+        ["Distorção tolerável", "Diminui"],
+        ["Distorção esperada na população", "Aumenta"],
+        ["Estratificação da população, quando cabível", "Diminui"]
+      ],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 46},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 7}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "confiar-em-outros-procedimentos",
+      "titulo": "Quanto mais o auditor confia em outros procedimentos substantivos",
+      "isca": "Quanto mais o auditor confia em outros procedimentos substantivos para reduzir o risco de detecção, mais segurança ele precisa da amostragem e maior a amostra.",
+      "correcao": "Menos segurança ele precisa tirar da amostragem, e menor pode ser a amostra. A evidência que vem de outro lugar substitui parte da que viria da amostra.",
+      "explicacao": "O enunciado costuma reproduzir o Apêndice 3 inteiro e virar só o fecho. Leia a última oração com atenção: é onde mora a inversão.",
+      "troca": ["menor pode ser o tamanho da amostra", "maior pode ser o tamanho da amostra"],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 7},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 46}
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "requisitos-6-a-8",
+      "titulo": "Definição, tamanho e seleção da amostra",
+      "norma": "NBC TA 530 — Amostragem em Auditoria",
+      "dispositivos": [
+        {
+          "rotulo": "Item 6",
+          "texto": "Ao definir a amostra de auditoria, o auditor deve considerar a finalidade do procedimento de auditoria e as características da população da qual a amostra será extraída.",
+          "grifo": ["finalidade do procedimento de auditoria", "características da população"]
+        },
+        {
+          "rotulo": "Item 7",
+          "texto": "O auditor deve determinar o tamanho da amostra suficiente para reduzir o risco de amostragem a um nível baixo aceitável.",
+          "grifo": ["nível baixo aceitável"]
+        },
+        {
+          "rotulo": "Item 8",
+          "texto": "O auditor deve selecionar itens para a amostra de modo que cada unidade de amostragem da população tenha a mesma chance de ser selecionada.",
+          "grifo": ["mesma chance de ser selecionada"]
+        }
+      ],
+      "comentario": "Esses três itens sustentam sozinhos várias questões de múltipla escolha do acervo, em geral pedindo qual alternativa reproduz a norma. Duas armadilhas de redação: no item 7 a banca troca 'nível baixo aceitável' por 'nível mínimo' ou 'nível zero'; no item 6 aparece a negativa, dizendo que o auditor deve se abster de considerar a finalidade do procedimento.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 22},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 25},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 34},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 38},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 42},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 6}
+      ]
+    },
+    {
+      "tipo": "texto",
+      "id": "taxa-esperada-de-desvio-como-apurar",
+      "titulo": "De onde sai a taxa esperada de desvio",
+      "texto": "Para dimensionar a amostra em teste de controles, o auditor estima a taxa esperada de desvio a partir do próprio entendimento dos controles relevantes ou do exame de pequena quantidade de itens da população. As duas vias são legítimas e alternativas, e ambas antecedem a definição do tamanho da amostra. Quem decide é o auditor: nem a administração da entidade, nem uma reunião com a área contábil, nem uma fórmula imposta pela norma.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 6},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 23}
+      ]
+    },
+    {
+      "tipo": "texto",
+      "id": "item-nao-examinavel",
+      "titulo": "Item selecionado que o auditor não consegue examinar",
+      "texto": "Duas situações distintas, e a NBC TA 530 dá respostas diferentes. Se o item selecionado não é apropriado para o procedimento — por exemplo, um cheque cancelado sorteado num teste de autorização de pagamentos, cujo cancelamento se confirma correto — o auditor examina um item substituto. Se o item é apropriado, mas o auditor não consegue aplicar nem o procedimento planejado nem procedimento alternativo adequado, ele deve tratá-lo como desvio, em teste de controles, ou como distorção, em teste de detalhes. Não há escolha: o tipo de teste define o rótulo.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 57},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 11}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "faculdade-inexistente",
+      "titulo": "O verbo que a banca afrouxa",
+      "isca": "Não conseguindo aplicar o procedimento nem alternativa adequada, será FACULTADO ao auditor decidir se considera o item um desvio ou uma distorção.",
+      "correcao": "Não é faculdade. Em teste de controles é desvio, em teste de detalhes é distorção, e o auditor não escolhe entre os dois.",
+      "explicacao": "Padrão mais frequente da banca neste assunto: transformar dever em faculdade. 'Deve' vira 'pode', 'é facultado', 'a critério do auditor'.",
+      "troca": ["deve considerar", "é facultado considerar"],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 57}
+      ]
+    },
+    {
+      "tipo": "lei_seca",
+      "id": "avaliacao-dos-resultados",
+      "titulo": "Avaliação dos resultados da amostragem",
+      "norma": "NBC TA 530 — Amostragem em Auditoria",
+      "dispositivos": [
+        {
+          "rotulo": "Item A18",
+          "texto": "Para os testes de controles, uma taxa de desvio da amostra inesperadamente alta pode levar a um aumento no risco avaliado de distorção relevante, a menos que sejam obtidas evidências de auditoria adicionais que comprovem a avaliação inicial.",
+          "grifo": ["a menos que sejam obtidas evidências de auditoria adicionais"]
+        },
+        {
+          "rotulo": "Item A20",
+          "texto": "Para os testes de detalhes, a distorção projetada mais a distorção anômala, se houver, é a melhor estimativa do auditor da distorção na população.",
+          "grifo": ["distorção projetada mais a distorção anômala", "melhor estimativa"]
+        },
+        {
+          "rotulo": "Item 15",
+          "texto": "Se a amostragem de auditoria não fornecer uma base razoável para conclusões sobre a população testada, o auditor pode solicitar que a administração investigue as distorções identificadas e a possibilidade de outras distorções e faça os ajustes necessários, ou adaptar a natureza, a época e a extensão dos procedimentos adicionais de auditoria."
+        }
+      ],
+      "comentario": "As três questões Certo/Errado mais recentes do acervo sobre avaliação de resultados atacam exatamente esses trechos. No A18, a banca corta a ressalva final e fecha com 'independentemente de outras evidências'. No A20, troca a ordem dos termos ou o resultado, dizendo que a soma é a melhor estimativa da distorção anômala, quando o anômalo é uma das parcelas e a estimativa é da distorção na população.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 14},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 12},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 13},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 61}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "independentemente-de-outras-evidencias",
+      "titulo": "A ressalva amputada",
+      "isca": "Taxa de desvio inesperadamente alta nos testes de controles resulta em aumento do risco de distorção relevante, independentemente de outras evidências de auditoria.",
+      "correcao": "Pode levar ao aumento, a menos que evidência adicional confirme a avaliação inicial. É efeito condicionado, não automático.",
+      "explicacao": "Compare com a versão certa da mesma banca, no mesmo assunto: 'pode levar ao aumento no risco identificado de distorção relevante', sem o fecho absoluto, foi dada como certa. O que muda o gabarito é o advérbio final e o verbo 'pode'.",
+      "troca": ["pode levar, a menos que", "resulta, independentemente de"],
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 61},
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 12}
+      ]
+    },
+    {
+      "tipo": "pegadinha",
+      "id": "melhor-estimativa-de-quem",
+      "titulo": "Estimativa da distorção na população, não da anômala",
+      "isca": "A distorção da população mais a distorção projetada, quando houver, é a melhor estimativa de distorção anômala a ser feita pelo auditor.",
+      "correcao": "Distorção projetada mais distorção anômala é a melhor estimativa da distorção na população. As parcelas e o resultado foram embaralhados.",
+      "explicacao": "Fixe a fórmula: projetada + anômala = estimativa da população. Se o enunciado colocar 'população' como parcela ou 'anômala' como resultado, está invertido.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_ce", "numero": 13}
+      ]
+    },
+    {
+      "tipo": "texto",
+      "id": "fora-da-nbc-ta-530",
+      "titulo": "Termos que caem, mas não estão na NBC TA 530",
+      "texto": "Parte das questões do acervo usa vocabulário de estatística geral, não da norma. Amostragem quantitativa é a que permite concluir sobre a população inteira a partir da amostra; amostragem qualitativa é a que investiga um subconjunto de interesse sem essa pretensão de generalização. Amostra exploratória aparece associada à pesquisa de fraude, com tabelas que mostram a probabilidade de encontrar ocorrência numa amostra preestabelecida. Amostragem aleatória simples é a probabilística em que escolher um elemento não altera a chance dos outros entrarem. Nenhum desses termos vem da NBC TA 530: quando a questão citar a norma expressamente, não os procure nela.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 35},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 54},
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 55}
+      ]
+    },
+    {
+      "tipo": "alerta",
+      "id": "vigencia-da-norma",
+      "nivel": "mudanca_de_norma",
+      "titulo": "Qual versão da NBC TA 530 está valendo",
+      "texto": "A NBC TA 530 foi aprovada pela Resolução CFC 1.222/2009 e alterada pela Revisão NBC 11, de agosto de 2021, que mexeu no item A7 e no Apêndice 2, com aplicação a relatórios sobre demonstrações de períodos iniciados em 1º de janeiro de 2022 ou depois. As definições do item 5, os requisitos dos itens 6 a 15 e os métodos de seleção do Apêndice 4 não foram alterados. Questões do acervo anteriores a 2022 continuam válidas nesses pontos.",
+      "vigencia": "Redação vigente em 1º de setembro de 2026"
+    },
+    {
+      "tipo": "alerta",
+      "id": "apendice-errado-em-material-de-cursinho",
+      "nivel": "atencao",
+      "titulo": "Numeração dos apêndices",
+      "texto": "Material de cursinho frequentemente cita os métodos de seleção como Apêndice 3. Na NBC TA 530 são: Apêndice 1, estratificação e seleção com base em valores; Apêndice 2, fatores que influenciam o tamanho da amostra em testes de controles; Apêndice 3, os mesmos fatores em testes de detalhes; Apêndice 4, métodos de seleção da amostra. Se a alternativa amarrar um apêndice a um conteúdo, confira por essa lista.",
+      "questoes": [
+        {"prova_slug": "apostila_auditoria_amostragem_multipla", "numero": 20}
+      ]
+    }
+  ],
+  "fontes": [
+    {
+      "tipo": "norma",
+      "referencia": "NBC TA 530 — Amostragem em Auditoria, aprovada pela Resolução CFC 1.222/2009, com a alteração da Revisão NBC 11/2021",
+      "url": "https://www2.cfc.org.br/sisweb/sre/detalhes_sre.aspx?Codigo=2009/001222",
+      "consultado_em": "2026-09-01"
+    },
+    {
+      "tipo": "norma",
+      "referencia": "Revisão NBC 11, de 19 de agosto de 2021 (altera o item A7 e o Apêndice 2 da NBC TA 530)",
+      "consultado_em": "2026-09-01"
+    },
+    {
+      "tipo": "acervo",
+      "referencia": "63 questões dos artefatos apostila_auditoria_amostragem_ce e apostila_auditoria_amostragem_multipla",
+      "consultado_em": "2026-09-01"
+    },
+    {
+      "tipo": "apostila",
+      "referencia": "Marcelo Aragão, Amostragem em Auditoria Contábil, NBC TA 530 — usada como pista para localizar o que é cobrado; nenhum trecho reproduzido",
+      "consultado_em": "2026-09-01"
+    }
+  ]
+}

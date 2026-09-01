@@ -4,6 +4,10 @@ import type {
   Edital, EstadoAssunto, EventoXP, ItemEdital, ItemEditalAssunto, Meta, Plano, Prova, Questao,
   QuestaoAssunto, Resposta, Sequencia, Sessao, TextoApoio,
 } from './tipos'
+// `Perfil` mora em `features/perfil` (não em `dados/tipos.ts`) enquanto o
+// onboarding sem login é território do agente `designer` — migrar para cá
+// quando o modelo de usuário consolidar.
+import type { Perfil } from '@/features/perfil/tipos'
 
 /**
  * Banco local do Rito.
@@ -41,6 +45,7 @@ class BancoRito extends Dexie {
   evento_xp!: EntityTable<EventoXP, 'id'>
   conquista_usuario!: Dexie.Table<ConquistaUsuario, string>
   meta!: Dexie.Table<Meta, string>
+  perfil!: Dexie.Table<Perfil, string>
 
   ajuste!: Dexie.Table<Ajuste, string>
 
@@ -92,6 +97,13 @@ class BancoRito extends Dexie {
         await tx.table('sequencia').put({ atual: 0, recorde: 0, ultimo_dia: null, congelamentos: 0 }, 'local')
         await tx.table('meta').put({ minutos_dia: 0, questoes_dia: 0, dias_semana: 0, data_prova: null }, 'local')
       })
+
+    // v3 (2026-09-01): onboarding sem login (`/bemvindo`). Mesma convenção de
+    // `sequencia`/`meta` — 1 linha fixa sob 'local', sem `.upgrade()` porque
+    // não existe dado antigo para migrar (tabela nova, ninguém tinha perfil).
+    this.version(3).stores({
+      perfil: '',
+    })
   }
 }
 

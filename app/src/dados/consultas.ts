@@ -1,7 +1,8 @@
 import { dominioEfetivo } from '@/features/dominio/mastery'
 import { db } from './db'
+import { ehExemplo } from './exemplo'
 import { derivarNivel, type Nivel } from './nivel'
-import type { Assunto, Disciplina, EstadoAssunto } from './tipos'
+import type { Assunto, Disciplina, EstadoAssunto, OrigemFonte } from './tipos'
 
 /**
  * Leituras do app. Toda agregação de desempenho passa por aqui, e por aqui
@@ -9,19 +10,70 @@ import type { Assunto, Disciplina, EstadoAssunto } from './tipos'
  * de cada questão conta. Nenhuma tela recalcula isso por conta própria.
  */
 
+/**
+ * Uma fonte distinta dentro do acervo real — uma prova oficial de uma banca,
+ * ou uma apostila comentada de um autor. `Mais.tsx` lista isto para deixar
+ * claro de onde vêm as questões; nunca é o texto autoral da banca, só a
+ * atribuição (regra 4/5 do projeto).
+ */
+export interface FonteAcervo {
+  origemFonte: OrigemFonte
+  /** Banca (prova_oficial) ou autor da apostila (apostila_comentada). */
+  banca: string | null
+  autorFonte: string | null
+  tituloFonte: string | null
+  questoes: number
+}
+
 export interface EstadoAcervo {
   provas: number
   questoesPublicadas: number
   anuladas: number
+  /** Fontes do acervo REAL — exclui o andaime de `exemplo.ts` por definição. */
+  fontes: FonteAcervo[]
 }
 
+/**
+ * Estado do acervo REAL, sem o andaime de `exemplo.ts` — que existe só para
+ * testar o laço de estudo e nunca deve inflar "provas ingeridas" nem
+ * "questões publicadas". Ver `ehExemplo`.
+ */
 export async function estadoAcervo(): Promise<EstadoAcervo> {
-  const [provas, questoesPublicadas, anuladas] = await Promise.all([
-    db.prova.count(),
-    db.questao.where('status').equals('publicada').count(),
-    db.questao.filter((q) => q.anulada).count(),
-  ])
-  return { provas, questoesPublicadas, anuladas }
+  const provas = await db.prova.toArray()
+  const provasReais = provas.filter((p) => !ehExemplo(p.id))
+  const idsProvasReais = new Set(provasReais.map((p) => p.id))
+
+  const concursos = await db.concurso.bulkGet([...new Set(provasReais.map((p) => p.concurso_id))])
+  const bancaPorConcurso = new Map(concursos.filter((c) => c).map((c) => [c!.id, c!.banca]))
+
+  const questoes = await db.questao.filter((q) => idsProvasReais.has(q.prova_id)).toArray()
+  const publicadas = questoes.filter((q) => q.status === 'publicada')
+
+  const porFonte = new Map<string, FonteAcervo>()
+  for (const q of publicadas) {
+    const provaId = q.prova_id
+    const prova = provasReais.find((p) => p.id === provaId)
+    const banca = q.origem_fonte === 'prova_oficial' && prova
+      ? bancaPorConcurso.get(prova.concurso_id) ?? null
+      : null
+    const chave = `${q.origem_fonte}::${q.autor_fonte ?? ''}::${q.titulo_fonte ?? ''}`
+    const atual = porFonte.get(chave)
+    if (atual) atual.questoes++
+    else porFonte.set(chave, {
+      origemFonte: q.origem_fonte,
+      banca,
+      autorFonte: q.autor_fonte,
+      tituloFonte: q.titulo_fonte,
+      questoes: 1,
+    })
+  }
+
+  return {
+    provas: provasReais.length,
+    questoesPublicadas: publicadas.length,
+    anuladas: questoes.filter((q) => q.anulada).length,
+    fontes: [...porFonte.values()],
+  }
 }
 
 /** Respostas que entram em estatística: 1ª tentativa e questão não anulada. */

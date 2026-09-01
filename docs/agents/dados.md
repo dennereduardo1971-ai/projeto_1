@@ -59,6 +59,54 @@ Direito Civil (14 assuntos / 72 tópicos), 174 slugs, todos únicos. `seeds/apli
 upsert por `slug`, é idempotente e **nunca apaga** — slug que sumir do JSON é listado como órfão
 para decisão humana. `seeds/README.md` explica por que taxonomia é seed e não migration.
 
+### Carga do acervo real no app local (`app/src/dados/acervo.ts`) — 2026-09-01
+
+Até esta sessão o app só carregava `seeds/questoes-exemplo.json` (andaime, 10 questões fictícias,
+via `exemplo.ts`). Os artefatos publicados pelo pipeline em `acervo/provas/*.json` (4 arquivos, 100
+questões, todos `status: "publicavel"`) nunca eram lidos por nenhuma tela. Fechado nesta sessão:
+
+- **`carregarAcervo()`** (novo, `app/src/dados/acervo.ts`) lê os artefatos via
+  `import.meta.glob<ArtefatoProva>('@acervo/provas/*.json', { eager: true, import: 'default' })` —
+  alias `@acervo` novo em `vite.config.ts` e `tsconfig.app.json`, apontando para `/acervo` (repo
+  irmão de `/app`) — e faz upsert nas tabelas Dexie `concurso`, `cargo`, `prova`, `texto_apoio`,
+  `questao`, `alternativa`, `questao_assunto`. Chamado em `main.tsx` logo depois de
+  `garantirSeeds()`, a cada boot (a classificação por assunto depende da taxonomia já existir).
+- **Idempotente por construção**, no mesmo molde de `exemplo.ts`: id determinístico
+  `acervo-prova-<slug>` / `<provaId>-q<numero>` / `<questaoId>-<letra>`, tudo via `.put()`.
+  Reimportar não duplica; artefato atualizado sobrescreve sem apagar `resposta`/`estado_assunto` do
+  usuário — mas é upsert, não reconciliação (ver Armadilhas: questão que sumir de uma versão futura
+  do artefato fica órfã, não é apagada).
+- Reproduz em TS só as **duas invariantes que são território do agente `dados`** (o resto — formato
+  ⇒ `penalidade_por_erro`, letra de gabarito válida, texto de apoio referenciado etc. — é do
+  pipeline/`coletor`, já verificado em `scripts/ingest/lib/validador.py`, e não é reconferido aqui):
+  1. **Gabarito/publicação** (CLAUDE.md regra 3): `prova_oficial` exige `gabarito`;
+     `apostila_comentada` exige `gabarito` **e** `revisado_humano` (exceção 2026-08-31). `anulada`
+     sempre passa e nunca conta estatística — importa marcada, fora de `respostasValidas()`.
+  2. **Atribuição obrigatória** (CLAUDE.md regra 4): `prova_oficial` exige `banca` no artefato;
+     `apostila_comentada` exige `autor_fonte` **e** `titulo_fonte`.
+  Artefato inteiro é rejeitado se a prova falhar; questão individual é pulada (o resto da prova
+  entra) se só ela falhar.
+- **Assunto do artefato que não existe na taxonomia local: a questão é pulada, nunca inventa
+  assunto novo.** Reportado em `RelatorioCargaAcervo.assuntosDesconhecidos`.
+- **`estadoAcervo()`** (`app/src/dados/consultas.ts`) passou a excluir o andaime de `exemplo.ts` por
+  definição — `provas`/`questoesPublicadas`/`anuladas` só contam o acervo real — e ganhou `fontes`
+  (banca, ou autor+título de apostila, com contagem por fonte), pra `Mais.tsx` mostrar proveniência
+  sem nunca reexibir justificativa de banca (regra 5).
+
+**Carga real** (rodada nesta sessão contra os 4 artefatos publicados em `acervo/provas/`):
+100/100 questões importadas, 0 rejeitadas, 0 assunto desconhecido.
+
+| Prova (slug) | origem_fonte | formato | penalidade_por_erro | questões |
+|---|---|---|---|---|
+| `apostila_auditoria_amostragem_ce` | apostila_comentada | ce | true | 18 |
+| `apostila_auditoria_amostragem_multipla` | apostila_comentada | multipla | false | 45 |
+| `apostila_civil_obrigacoes_1_ce` | apostila_comentada | ce | true | 33 |
+| `apostila_civil_obrigacoes_1_multipla` | apostila_comentada | multipla | false | 4 |
+
+Por assunto: `auditoria-amostragem` 63, `civil-obrigacoes` 37. As provas `_ce`/`_multipla` da mesma
+apostila (mesmo `prova.perfil`) compartilham um único `concurso`/`cargo` sintéticos — 2 concursos no
+total, um por apostila.
+
 ---
 
 ## Decisões
@@ -131,6 +179,39 @@ próprio, gabarito e comentário no mesmo documento). Exceção temporária das 
 deliberada:** a tabela `prova` NÃO foi relaxada (banca/ano/orgao/cargo_nome continuam NOT NULL) —
 quem ingerir uma apostila preenche esses campos com o dado real disponível (ex.: `banca` = nome do
 autor). Repensar isso é trabalho futuro, não urgente enquanto o volume for baixo.
+
+**2026-09-01 — Atribuição da apostila mora na PROVA no artefato JSON, mas na QUESTÃO no
+Dexie/`tipos.ts` (e na migration 0015).** `carregarAcervo()` resolve isso propagando: toda questão
+de uma prova `apostila_comentada` recebe o mesmo `autor_fonte`/`titulo_fonte` da prova do artefato.
+Isto resolve, do lado do app local, a pendência que o `coletor` registrou no próprio diário
+(`docs/agents/coletor.md`, seção Pendências) sobre `7_publicar.py` ainda não decidir essa conversão
+para o Supabase — quando aquele script escrever de verdade, o padrão de propagação prova→questão
+usado aqui é o candidato natural a repetir lá, para as duas gravações não divergirem.
+
+**2026-09-01 — `Concurso`/`Cargo` sintéticos para `apostila_comentada`.** Não existe "concurso" real
+por trás de uma apostila comentada, mas `prova.concurso_id`/`cargo_id` são NOT NULL no schema (app e
+Postgres). Chave sintética `apostila:<perfil ou slug>` — usar `perfil` (quando presente) em vez do
+`slug` da prova é o que permite as duas provas-gêmeas `_ce`/`_multipla` da mesma apostila
+compartilharem um único concurso/cargo, em vez de um par duplicado por formato. Para
+`prova_oficial`, a chave é `oficial:<banca>:<orgao>:<cargo>:<ano>` — não sintética, é o dado real do
+artefato.
+
+**2026-09-01 — `estadoAcervo()` exclui `exemplo.ts` por definição, não por flag.** O filtro é
+`!ehExemplo(prova.id)` (prefixo do id, mesmo padrão que já existia para `ehExemplo`/`ehAcervo`).
+Alternativa descartada: um campo booleano tipo `eh_exemplo` na tabela `prova` — rejeitada porque
+duplicaria a informação que já mora no formato do id, e porque `exemplo.ts` já se define como "não é
+acervo" na própria doc-string; a consulta deveria refletir isso, não reabrir a decisão.
+
+**2026-09-01 — `carregarAcervo()` roda em todo boot, sem gate de versão (diferente de
+`garantirSeeds()`, que usa `db.meta`).** Decisão deliberada: como é upsert idempotente e barato (4
+artefatos, 100 questões), rodar sempre mantém o Dexie local em dia com o que o pipeline publicou por
+último sem exigir um mecanismo extra de invalidação. Se o acervo crescer a ponto de o upsert-a-cada-
+boot pesar, aí sim vale copiar o gate de versão do `seed.ts`.
+
+**2026-09-01 — `fake-indexeddb` como devDependency nova (`app/package.json`).** Necessário para
+`acervo.test.ts` rodar transação Dexie real (upsert, idempotência, sobrevivência de `resposta` a
+reimportação) em vez de testar só funções puras. Import do subcaminho `/auto`, sempre como primeira
+linha do arquivo de teste — precisa registrar `indexedDB` global antes de `db.ts` importar `dexie`.
 
 ---
 
@@ -224,6 +305,24 @@ plugar o Supabase vai precisar escolher um lado e reconciliar. Não mexi nisso a
 (`estado_assunto` e gamificação) foram escritas cada uma na convenção do lado onde vivem, sem tentar
 consertar a divergência antiga de passagem.
 
+**Heredoc/edição de texto pode inserir Unicode "correto na tela, errado no arquivo".** Ao escrever
+`acervo.ts`, a regex de `slugify()` saiu com caracteres combinantes diacríticos LITERAIS
+colados nos colchetes (algo como `[<marca>-<marca>]`) em vez do escape `\u0300-\u036f`
+pretendido — visualmente quase idênticos ao ler o arquivo, mas a `Edit`
+tool recusou o fix ("old_string e new_string são exatamente iguais") porque a string digitada e a
+gravada renderizavam igual. Resolvido com um script Python à parte, que localizou a linha por
+substring e regravou com a string escapada explícita. Lição: qualquer regex com faixa Unicode
+escrita via heredoc merece uma conferência com `grep -n` ou `python3 -c "print(repr(...))"` depois,
+não só leitura visual.
+
+**`import.meta.glob` eager só sai tipado se o genérico for passado explicitamente.** Sem
+`import.meta.glob<ArtefatoProva>(..., { eager: true, import: 'default' })`, o retorno vem `unknown`
+mesmo com `eager: true` — o overload que infere pelo `query`/`as` não cobre esse caso. Consequência
+prática: o `@acervo/*` em `tsconfig.app.json` **não** precisou entrar em `include` (diferente de
+`@seeds/*.json`, que `seed.ts` importa estaticamente por arquivo) — o glob não é uma importação
+estática por caminho, é resolvido pelo Vite em runtime/build, então o TS só precisa do alias de
+`paths` para o `import.meta.glob` typar certo.
+
 ---
 
 ## Pendências
@@ -273,3 +372,30 @@ mostrar "líquido" mente na direção oposta.
 exigir NOT NULL forçaria a interface a bloquear o usuário a cada questão errada. Ficou anulável, com
 CHECK impedindo preenchimento em resposta correta. Se a tela conseguir cobrar sem atrito, apertar
 depois é uma migration de uma linha.
+
+**`7_publicar.py` (coletor) ainda não aplica a propagação prova→questão da atribuição.** A decisão
+de 2026-09-01 acima (mesma seção, "Decisões") resolve isso do lado do app local
+(`carregarAcervo()`); o `coletor` registrou a mesma lacuna no próprio diário para o script Python que
+escreve no Supabase (`docs/agents/coletor.md`, Pendências). Quando esse script escrever de verdade,
+usar o mesmo padrão — toda questão herda `autor_fonte`/`titulo_fonte` da prova do artefato — para os
+dois lados não divergirem.
+
+**`carregarAcervo()` é upsert-only: não existe caminho para retratar uma questão.** Se uma versão
+futura de um artefato remover uma questão que já foi importada (reclassificação, erro corrigido
+removendo a linha em vez de marcar `anulada`), a linha antiga fica órfã no Dexie — importar não
+apaga o que não está mais no artefato. Hoje isso não morde (o pipeline sempre marca `anulada`, nunca
+remove a linha), mas se algum dia um artefato precisar "recolher" uma questão publicada por engano,
+vai precisar de um mecanismo explícito de retratação (marcar/arquivar), não de upsert.
+
+**`app/src/dados/consultas.ts` (`estadoAcervo`/`FonteAcervo`) e `app/src/app/routes/Mais.tsx`
+mudaram nesta rodada** — novo card "Acervo" listando fonte (banca ou autor+título) com contagem, e
+o texto "Sem conta · ..." atualizado para refletir que o acervo carrega sozinho no boot. Ficou só
+texto/leitura de dado, sem decisão de layout — se o `designer` quiser tratar visualmente diferente
+(ex.: separar "Acervo" de "Questões de exemplo" com mais destaque, ou revisar a hierarquia dos
+Cards em `Mais.tsx`), é território dele, não foi reaberto aqui.
+
+**Import automático do acervo roda em todo boot sem tela de progresso.** Para os 4 artefatos atuais
+(100 questões) é instantâneo; se o acervo crescer para milhares de questões, upsert-a-cada-boot pode
+passar a valer a pena mostrar algum feedback de carregamento — hoje `main.tsx` só bloqueia o
+primeiro render até `garantirSeeds()` + `carregarAcervo()` resolverem, sem barra de progresso nem
+cache de "já rodei esta versão" (ver Decisões acima, por que isso foi deliberado por ora).

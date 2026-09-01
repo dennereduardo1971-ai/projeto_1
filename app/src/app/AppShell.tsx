@@ -1,4 +1,6 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Navigate, NavLink, Outlet } from 'react-router-dom'
+import { db } from '@/dados/db'
 import { BarraCronometro } from '@/features/ciclo/BarraCronometro'
 import { useSessao } from '@/features/ciclo/SessaoProvider'
 import { cn } from '@/lib/cn'
@@ -12,6 +14,19 @@ const DESTINOS = [
 
 export function AppShell() {
   const { sessao } = useSessao()
+  // `null` = ainda não sabemos. Não é lido de `useSessao`/contexto nenhum
+  // porque só este componente precisa da checagem — o resto do app assume
+  // perfil existente, é essa a garantia que o redirecionamento abaixo dá.
+  const [temPerfil, setTemPerfil] = useState<boolean | null>(null)
+
+  useEffect(() => {
+    void db.perfil.get('local').then((p) => setTemPerfil(!!p))
+  }, [])
+
+  // Enquanto pende, não renderiza nada — evita piscar Hoje.tsx (ou pior, a
+  // barra de navegação) antes de saber se o destino é `/bemvindo`.
+  if (temPerfil === null) return null
+  if (!temPerfil) return <Navigate to="/bemvindo" replace />
 
   return (
     <div className="min-h-dvh bg-bg">
