@@ -1,0 +1,71 @@
+# Portão de qualidade do Rito. Dois mundos independentes, dois jobs em paralelo:
+# o app (TypeScript/React) e o pipeline de ingestão + conteúdo (Python).
+# Quebrar qualquer um dos dois é quebrar o build — não existe "só um aviso".
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+# Push novo cancela a execução anterior do mesmo ref: o que interessa é o estado
+# do topo do branch, não a fila de commits intermediários.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  app:
+    name: App (TypeScript)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      # `ci` e não `install`: o lockfile manda, igual ao build da Netlify.
+      - run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      # oxlint hoje sai 0 com aviso. Quando a varredura de avisos terminar,
+      # apertar aqui com `--max-warnings 0` para não deixar o débito voltar.
+      - name: Lint
+        run: npm run lint
+
+      - name: Testes
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+  pipeline:
+    name: Pipeline e conteúdo (Python)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - run: python -m pip install -r requirements.txt
+
+      # Nenhum teste do pipeline toca a rede (ver scripts/ingest/tests/conftest.py):
+      # as fixtures são PDFs sintéticos gerados na hora.
+      - name: Testes do pipeline de ingestão
+        run: python -m pytest scripts/ingest/tests -q
+
+      # Barreira das regras 3, 4 e 5 do CLAUDE.md sobre o conteúdo publicado:
+      # atribuição, questão citada que existe e anti-cópia por janela de palavras.
+      - name: Validar esquemas publicados
+        run: python scripts/esquemas/validar.py
