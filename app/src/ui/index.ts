@@ -1,3 +1,4 @@
+export { AssinaturaComentario, Atribuicao } from './Atribuicao'
 export { Button } from './Button'
 export { Card } from './Card'
 export { EstadoVazio } from './EstadoVazio'

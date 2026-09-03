@@ -9,6 +9,11 @@ base real. O que existe é o schema **versionado** em `supabase/migrations/`, es
 que o Postgres entrar. O app da fase atual roda 100% local (IndexedDB); o Postgres é destino, não
 dependência.
 
+Mudança de 2026-09-03: o banco **local** deixou de ter as tabelas de acervo vazias.
+`app/src/dados/acervo.ts` carrega `acervo/provas/*.json` no boot — 4 provas, 100 questões, com o
+portão de publicação (regras 3 e 4) reescrito em TypeScript e testado (`acervo.test.ts`). Nada disso
+toca a SQL: continua sendo Dexie.
+
 O schema foi **validado de verdade** contra um PostgreSQL 16 efêmero levantado nesta sessão
 (`initdb` local, banco descartado ao fim). As 13 migrations aplicam limpas, na ordem, em base zerada;
 os seeds carregam e recarregam sem erro; as invariantes e o RLS foram testados com dado e com um
@@ -62,6 +67,28 @@ para decisão humana. `seeds/README.md` explica por que taxonomia é seed e não
 ---
 
 ## Decisões
+
+**2026-09-03 — `Prova.concurso_id`/`cargo_id` são anuláveis no espelho local.** Uma apostila de
+terceiro não tem concurso nem cargo, e o `CLAUDE.md` (regra 4) já diz que a atribuição dela é outra:
+autor + título, guardados na própria questão. As duas alternativas eram inventar um `concurso`
+fantasma por apostila (dado falso no lugar exato onde o projeto promete atribuição verdadeira) ou
+afrouxar a FK. Afrouxei. **Isto diverge da SQL de propósito:** lá `prova` mantém
+`banca/ano/orgao/cargo_nome` NOT NULL, conforme a decisão de 2026-08-31 (preencher com o dado real
+disponível). Quem reconciliar os dois lados um dia decide qual vence; anotado junto da divergência
+antiga em Pendências.
+
+**2026-09-03 — O portão de publicação é repetido no app, não confiado ao artefato.**
+`normalizarArtefato` (`app/src/dados/acervo.ts`) refaz em TS o que `lib/validador.py` faz em Python:
+status publicável, atribuição por origem (regra 4), gabarito casado × `revisado_humano` (regra 3),
+limiar de classificação, anulada sem letra. Duplicação consciente: o artefato é um arquivo versionado
+que qualquer um edita à mão depois que o validador passou, e "veio com `status: publicavel`" não é
+prova de nada na hora de mostrar questão para o usuário. Problema da PROVA recusa o artefato inteiro;
+problema da QUESTÃO recusa só ela — uma questão sem gabarito não pode derrubar as outras 44.
+
+**2026-09-03 — Questão que sai do acervo não some se já foi respondida.** `podarAcervo` apaga a
+questão que deixou de existir no repositório, mas se o usuário já respondeu ela vira `em_revisao`:
+para de ser servida e o histórico dele fica de pé. Apagar resposta de usuário por causa de mudança
+no repositório seria destruir dado que ele não pode recuperar.
 
 **2026-08-20 — O app se chama Rito.** Schema utilitário `rito`, GUC `rito.usuario_id`.
 
@@ -260,7 +287,12 @@ constraint `questao_apostila_exige_atribuicao_ck` da 0015 não conflita com nenh
 se algum dia isto rodar sobre uma base que já tenha `apostila_comentada` sem `revisado_humano`.
 
 **Reconciliar `tipos.ts` × `supabase/migrations/`** (ver Armadilhas acima) fica pendente para quando
-o Supabase entrar de verdade — hoje não é urgente porque nada roda sobre a SQL.
+o Supabase entrar de verdade — hoje não é urgente porque nada roda sobre a SQL. Entrou um caso novo
+nessa lista em 2026-09-03: `Prova.concurso_id`/`cargo_id` anuláveis no TS (apostila não tem concurso)
+× `prova.banca/ano/orgao/cargo_nome` NOT NULL na SQL. E, quando o Supabase entrar, `origem_fonte`,
+`autor_fonte` e `titulo_fonte` vivem na QUESTÃO nos dois lados, mas o artefato os traz no nível da
+PROVA — o carregador do app copia de um nível para o outro (`acervo.ts`), e o `7_publicar.py --banco`
+vai precisar fazer a mesma cópia.
 
 **Interface, para o `designer`:** três coisas que o schema entrega e a tela precisa tratar.
 (1) questão `desatualizada` **conta** na estatística e tem que exibir aviso, com o texto de

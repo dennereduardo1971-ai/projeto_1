@@ -6,8 +6,10 @@
 
 O pipeline existe inteiro e passa nos testes. `acervo/provas/` deixou de estar vazio: as duas
 primeiras apostilas comentadas de terceiro (Gran Cursos) foram ingeridas de ponta a ponta e
-publicadas, gate humano incluído. Nenhuma prova oficial Cebraspe foi ingerida ainda — isso segue
-dependendo da banca da RFB sair ou do dono priorizar SEFAZ/TCU/PGDF por conta própria.
+publicadas, gate humano incluído. **Desde 2026-09-03 o app carrega esses artefatos** — a ponta solta
+entre publicar e o usuário ver a questão fechou (`app/src/dados/acervo.ts`). Nenhuma prova oficial
+Cebraspe foi ingerida ainda — isso segue dependendo da banca da RFB sair ou do dono priorizar
+SEFAZ/TCU/PGDF por conta própria.
 
 ```
 scripts/ingest/
@@ -40,6 +42,11 @@ Comentadas em Aula") são esperadas — ver Armadilhas.
 
 ## Decisões
 
+- **2026-09-03 — O artefato publicado é o que o app lê, sem etapa intermediária.** Não existe um
+  "seed do acervo" gerado a partir de `acervo/provas/`: o app importa os mesmos arquivos que
+  `7_publicar.py` grava. Um formato só, uma fonte de verdade — o preço é que o app precisa repetir o
+  portão de publicação em TypeScript (ele repete: `normalizarArtefato`), porque arquivo versionado
+  pode ser editado à mão depois que o validador Python passou.
 - **2026-08-31 — Parser de apostila comentada calibrado contra os dois PDFs de amostra reais**
   (Gran Cursos: Marcelo Aragão/Auditoria-Amostragem, Carlos Elias/Direito Civil-Obrigações). Substitui
   o chute anterior por `scripts/ingest/lib/apostila.py`, um módulo novo e independente do parser
@@ -175,5 +182,11 @@ Comentadas em Aula") são esperadas — ver Armadilhas.
   decidir como `Prova.origem_fonte`/`autor_fonte`/`titulo_fonte` (nível artefato) viram
   `questao.origem_fonte`/`autor_fonte`/`titulo_fonte` (nível linha, ver `docs/agents/dados.md`,
   migration 0015) — hoje são a mesma informação em dois níveis diferentes de propósito.
-- `acervo/provas/apostila_*.json` foram publicados nesta sessão mas ainda não foram conferidos pelo
-  agente `esquemas` nem usados por nenhuma tela do app — só existem como artefato JSON no repo.
+- `acervo/provas/apostila_*.json` ainda não foram conferidos pelo agente `esquemas`. **Já são usados
+  pelo app** desde 2026-09-03 (ver Decisões), então erro de extração agora aparece na tela do
+  usuário, não só no JSON: reprocessar uma prova é mudança visível, não manutenção silenciosa.
+- **O app inclina o artefato no bundle.** `app/src/dados/acervo.ts` importa `acervo/provas/*.json`
+  com `import.meta.glob` eager — as 100 questões viraram +148 kB no JS (603 kB, 175 kB gzip). Serve
+  bem para dezenas de provas; passando disso (regra de bolso: acima de ~1 MB de JSON, ou quando o
+  gzip passar de ~400 kB), trocar por carga sob demanda é uma mudança local a esse módulo, não uma
+  reforma. Quem crescer o acervo primeiro deve olhar esse número.

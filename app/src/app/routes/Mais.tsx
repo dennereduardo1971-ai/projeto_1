@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { estadoAcervo, todosEstados, type EstadoAcervo } from '@/dados/consultas'
+import { estadoAcervo, fontesDoAcervo, todosEstados, type EstadoAcervo, type FonteDoAcervo } from '@/dados/consultas'
 import { baixarBackup, importar, BackupInvalido } from '@/dados/backup'
 import { carregarExemplo, removerExemplo, temExemplo } from '@/dados/exemplo'
 import { filaDeRevisao } from '@/features/dominio/scheduler'
@@ -14,17 +14,19 @@ import { Button, Card, InlineAlert, TopBar } from '@/ui'
  */
 export function Mais() {
   const [acervo, setAcervo] = useState<EstadoAcervo | null>(null)
+  const [fontes, setFontes] = useState<FonteDoAcervo[]>([])
   const [aviso, setAviso] = useState<{ tom: 'ok' | 'err'; texto: string } | null>(null)
   const [comExemplo, setComExemplo] = useState(false)
   const [revisoesDevidas, setRevisoesDevidas] = useState(0)
   const arquivo = useRef<HTMLInputElement>(null)
 
   const recarregar = async () => {
-    const [estado, exemplo, estados] = await Promise.all([
-      estadoAcervo(), temExemplo(), todosEstados(),
+    const [estado, exemplo, estados, listaDeFontes] = await Promise.all([
+      estadoAcervo(), temExemplo(), todosEstados(), fontesDoAcervo(),
     ])
     setAcervo(estado)
     setComExemplo(exemplo)
+    setFontes(listaDeFontes)
     setRevisoesDevidas(filaDeRevisao(estados, Date.now()).length)
   }
 
@@ -78,6 +80,38 @@ export function Mais() {
           </ul>
         </Card>
 
+        <Card className="p-4 flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
+            <h2 className="text-h3 font-semibold text-text">Acervo neste aparelho</h2>
+            <p className="text-sm text-muted max-w-[var(--measure-read)]">
+              As questões vêm dos artefatos publicados em <code className="text-mono text-caption">acervo/provas/</code>
+              {' '}e entram sozinhas — o app recarrega quando o pipeline publica uma prova nova. Toda
+              questão carrega a origem, e nenhuma passa sem gabarito conferido.
+            </p>
+          </div>
+          {fontes.length === 0 ? (
+            <p className="text-sm text-muted">Nenhuma questão carregada.</p>
+          ) : (
+            <ul className="flex flex-col gap-2">
+              {fontes.map((f) => (
+                <li key={f.provaId} className="flex items-baseline justify-between gap-3">
+                  <span className="text-sm text-text min-w-0">
+                    {f.rotulo}
+                    <span className="text-caption text-subtle">
+                      {' · '}{f.formato === 'ce' ? 'certo/errado' : 'múltipla escolha'}
+                      {f.origem === 'apostila_comentada' && ' · apostila de terceiro'}
+                      {f.origem === 'exemplo' && ' · andaime'}
+                    </span>
+                  </span>
+                  <span className="text-caption text-subtle num shrink-0">
+                    {f.questoes} q{f.anuladas > 0 ? ` · ${f.anuladas} anulada${f.anuladas === 1 ? '' : 's'}` : ''}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </Card>
+
         <Card className="p-4 flex flex-col gap-4">
           <div className="flex flex-col gap-1">
             <h2 className="text-h3 font-semibold text-text">Seu progresso</h2>
@@ -108,9 +142,9 @@ export function Mais() {
           <div className="flex flex-col gap-1">
             <h2 className="text-h3 font-semibold text-text">Questões de exemplo</h2>
             <p className="text-sm text-muted max-w-[var(--measure-read)]">
-              Dez questões escritas para este projeto — não são de prova e não têm banca. Existem só
-              para você exercitar o laço de resolver, errar e revisar enquanto o acervo Cebraspe não
-              é ingerido. Remover apaga também as respostas e o domínio de assunto que vieram delas.
+              Dez questões escritas para este projeto — não são de prova e não têm banca. Nasceram
+              como andaime, antes de existir acervo; hoje o acervo já entra sozinho e elas só fazem
+              sentido para testar o app. Remover apaga também as respostas e o domínio que vieram delas.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">

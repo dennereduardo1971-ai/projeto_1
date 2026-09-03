@@ -11,8 +11,8 @@ tema (claro no `:root`, escuro em `prefers-color-scheme` guardado por `:not([dat
 e `[data-theme="dark"]` para o botão vencer nos dois sentidos). Alternância em
 `app/src/features/tema/`.
 
-**Kit** — `app/src/ui/`: `Button`, `Card`, `EstadoVazio`, `Field` (com `Input` e `Select`),
-`IconButton`, `InlineAlert`, `NivelMeter`, `Stat`, `TopBar`.
+**Kit** — `app/src/ui/`: `Atribuicao` (+ `AssinaturaComentario`), `Button`, `Card`, `EstadoVazio`,
+`Field` (com `Input` e `Select`), `IconButton`, `InlineAlert`, `NivelMeter`, `Stat`, `TopBar`.
 
 **Telas** — `app/src/app/routes/`: Hoje, Mapa, Ciclo, Questões, Revisão, Estatísticas, Caderno,
 Mais. Em 2026-08-31 (pivô do motor de domínio, ver `docs/agents/dados.md`), `Caderno`, `Revisão` e
@@ -23,6 +23,15 @@ evolução e sem os textos re-trabalhados que essas telas merecem. Tratar como r
 
 ## Decisões
 
+- **2026-09-03 — Crédito da fonte aparece sempre, e o vazio dele é aviso, não silêncio.** Com o
+  acervo real na tela (100 questões de apostila), a regra 4 do `CLAUDE.md` deixou de ser só schema:
+  `Atribuicao` fica logo abaixo do enunciado, em `text-caption`, e quando o dado falta ela imprime
+  "origem não registrada" em tom de aviso em vez de sumir. Questão sem crédito visível é o problema
+  que o projeto se comprometeu a não ter — esconder a linha esconderia o problema, não o resolveria.
+- **2026-09-03 — Comentário de terceiro nunca aparece sem assinatura.** `AssinaturaComentario`
+  ("Comentário de {autor}, em {título}") é renderizada junto do veredito sempre que o texto vem de
+  `apostila_comentada`. É a condição da exceção temporária da regra 5 — não é enfeite, é o que
+  sustenta a permissão de exibir o texto.
 - **2026-08-20 — `EstadoVazio` exige o motivo** (`acervo` · `uso` · `filtro` · `erro`). "Nada" não é
   uma coisa só: acervo vazio é falha do produto, fila vazia é você que ainda não usou, e as duas
   pedem textos e ações diferentes. `carregando` ficou de fora de propósito — skeleton nunca
@@ -41,6 +50,10 @@ evolução e sem os textos re-trabalhados que essas telas merecem. Tratar como r
 
 ## Armadilhas
 
+- **Estado vazio escrito em HTML fixo mente no dia em que o dado chega.** A tela `Hoje` renderizava
+  "Nenhuma questão no acervo ainda" sem consultar nada — na hora em que o acervo entrou, a home
+  passou a negar 100 questões que existiam duas telas adiante (corrigido em 2026-09-03). Todo
+  `EstadoVazio` precisa ser ramo de uma condição, nunca parágrafo fixo.
 - Cor definida **dentro** de bloco de tema não existe no estado "sistema" (sem `data-theme`) — todo
   valor nasce no `:root` e é só redefinido nos outros blocos.
 - `Button` tem `tamanho="sm"`, mas ele é para barra de filtro. Ação principal de tela em `sm`

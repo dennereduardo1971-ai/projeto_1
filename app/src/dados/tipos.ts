@@ -90,8 +90,14 @@ export type OrigemFonte = 'prova_oficial' | 'apostila_comentada'
 
 export interface Prova {
   id: UUID
-  concurso_id: UUID
-  cargo_id: UUID
+  /**
+   * Nulos em `apostila_comentada`: apostila de terceiro não tem concurso nem
+   * cargo, e a atribuição dela é autor + título, guardada na própria questão
+   * (CLAUDE.md, regra 4). Em `prova_oficial` os dois são obrigatórios — é por
+   * eles que banca, ano, órgão e cargo chegam à tela.
+   */
+  concurso_id: UUID | null
+  cargo_id: UUID | null
   /** Formato e penalidade moram na PROVA, nunca no app. Regra 2 do projeto. */
   formato: FormatoProva
   penalidade_por_erro: boolean
