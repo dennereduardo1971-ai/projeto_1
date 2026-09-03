@@ -1,7 +1,9 @@
 import { dominioEfetivo } from '@/features/dominio/mastery'
+import { ehAcervo } from './acervo'
 import { db } from './db'
+import { ehExemplo } from './exemplo'
 import { derivarNivel, type Nivel } from './nivel'
-import type { Assunto, Disciplina, EstadoAssunto } from './tipos'
+import type { Assunto, Disciplina, EstadoAssunto, FormatoProva, OrigemFonte } from './tipos'
 
 /**
  * Leituras do app. Toda agregação de desempenho passa por aqui, e por aqui
@@ -176,4 +178,67 @@ export async function resumoDeHoje(): Promise<ResumoDeHoje> {
     .count()
 
   return { minutosHoje, minutosSemana, sessoesHoje, revisoesDevidas }
+}
+
+export interface FonteDoAcervo {
+  provaId: string
+  /** Quem assina: autor da apostila ou banca/órgão/ano da prova oficial. */
+  rotulo: string
+  origem: OrigemFonte | 'exemplo'
+  formato: FormatoProva
+  questoes: number
+  anuladas: number
+}
+
+/**
+ * De onde vem cada questão que está no aparelho, agrupado por prova.
+ *
+ * Existe para a tela poder mostrar a procedência do acervo inteiro, não só a
+ * da questão aberta — regra 4 do projeto vale para o conjunto também.
+ */
+export async function fontesDoAcervo(): Promise<FonteDoAcervo[]> {
+  const [provas, questoes, concursos, cargos] = await Promise.all([
+    db.prova.toArray(), db.questao.toArray(), db.concurso.toArray(), db.cargo.toArray(),
+  ])
+  const concursoPorId = new Map(concursos.map((c) => [c.id, c]))
+  const cargoPorId = new Map(cargos.map((c) => [c.id, c]))
+
+  return provas
+    .map((prova) => {
+      const daProva = questoes.filter((q) => q.prova_id === prova.id)
+      const primeira = daProva[0]
+      const concurso = prova.concurso_id ? concursoPorId.get(prova.concurso_id) : undefined
+      const cargo = prova.cargo_id ? cargoPorId.get(prova.cargo_id) : undefined
+
+      const origem: OrigemFonte | 'exemplo' = ehExemplo(prova.id)
+        ? 'exemplo'
+        : (primeira?.origem_fonte ?? 'prova_oficial')
+
+      const rotulo =
+        origem === 'exemplo'
+          ? 'Questões de exemplo — sem banca'
+          : origem === 'apostila_comentada'
+            ? [primeira?.autor_fonte, primeira?.titulo_fonte].filter(Boolean).join(' · ')
+            : [concurso?.banca, concurso?.orgao, cargo?.nome, concurso?.ano].filter(Boolean).join(' · ')
+
+      return {
+        provaId: prova.id,
+        rotulo: rotulo || 'origem não registrada',
+        origem,
+        formato: prova.formato,
+        questoes: daProva.length,
+        anuladas: daProva.filter((q) => q.anulada).length,
+      }
+    })
+    .filter((f) => f.questoes > 0)
+    .sort((a, b) => {
+      // Acervo real primeiro; o andaime desce para o fim da lista.
+      const peso = (f: FonteDoAcervo) => (f.origem === 'exemplo' ? 1 : 0)
+      return peso(a) - peso(b) || a.rotulo.localeCompare(b.rotulo, 'pt-BR')
+    })
+}
+
+/** Quantas questões vieram do acervo do repositório (fora o andaime de exemplo). */
+export async function questoesDoAcervoReal(): Promise<number> {
+  return db.questao.filter((q) => ehAcervo(q.prova_id) && q.status === 'publicada').count()
 }

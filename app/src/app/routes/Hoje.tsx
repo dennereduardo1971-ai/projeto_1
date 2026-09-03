@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { db } from '@/dados/db'
-import { resumoDeHoje, type ResumoDeHoje } from '@/dados/consultas'
+import { estadoAcervo, resumoDeHoje, type EstadoAcervo, type ResumoDeHoje } from '@/dados/consultas'
 import { blocoDaVez, minutosDoBloco } from '@/features/ciclo/ciclo'
 import { useSessao } from '@/features/ciclo/SessaoProvider'
 import { formatarMinutos } from '@/lib/tempo'
@@ -15,9 +15,11 @@ export function Hoje() {
   const [bloco, setBloco] = useState<BlocoCiclo | null>(null)
   const [disciplina, setDisciplina] = useState<Disciplina | null>(null)
   const [feitos, setFeitos] = useState(0)
+  const [acervo, setAcervo] = useState<EstadoAcervo | null>(null)
 
   const carregar = async () => {
     setResumo(await resumoDeHoje())
+    setAcervo(await estadoAcervo())
     const b = await blocoDaVez()
     setBloco(b)
     if (b) {
@@ -88,12 +90,30 @@ export function Hoje() {
           />
         )}
 
-        <EstadoVazio
-          motivo="acervo"
-          titulo="Nenhuma questão no acervo ainda."
-          corpo="As questões vêm de provas oficiais em PDF, com gabarito definitivo casado antes de publicar. Nenhuma prova foi ingerida até agora."
-          acao={<Link to="/questoes"><Button variante="outline">Como as questões entram</Button></Link>}
-        />
+        {acervo && acervo.questoesPublicadas > 0 ? (
+          <Card className="p-4 flex flex-col gap-3">
+            <div className="flex flex-col gap-1">
+              <span className="text-caption uppercase tracking-wide text-subtle">Questões</span>
+              <h2 className="text-h3 font-semibold text-text">
+                {acervo.questoesPublicadas} no acervo, de {acervo.provas}{' '}
+                {acervo.provas === 1 ? 'fonte' : 'fontes'}
+              </h2>
+              <p className="text-sm text-muted max-w-[var(--measure-read)]">
+                Cada erro entra na fila de revisão sozinho. Você não precisa marcar nada.
+              </p>
+            </div>
+            <div>
+              <Link to="/questoes"><Button>Resolver questões</Button></Link>
+            </div>
+          </Card>
+        ) : (
+          <EstadoVazio
+            motivo="acervo"
+            titulo="Nenhuma questão no acervo ainda."
+            corpo="As questões vêm de PDF ingerido pelo pipeline — prova oficial da banca ou apostila comentada de terceiro. Nenhuma foi publicada até agora."
+            acao={<Link to="/questoes"><Button variante="outline">Como as questões entram</Button></Link>}
+          />
+        )}
       </div>
     </>
   )

@@ -7,7 +7,7 @@ import {
   type Placar, type QuestaoCompleta, type Veredito,
 } from '@/features/questoes/pratica'
 import type { Confianca } from '@/dados/tipos'
-import { Button, Card, EstadoVazio, InlineAlert, Stat, TopBar } from '@/ui'
+import { AssinaturaComentario, Atribuicao, Button, Card, EstadoVazio, InlineAlert, Stat, TopBar } from '@/ui'
 
 const CONFIANCAS: { valor: Confianca; rotulo: string }[] = [
   { valor: 'chutei', rotulo: 'Chutei' },
@@ -72,7 +72,7 @@ export function Questoes() {
           <EstadoVazio
             motivo="acervo"
             titulo="Nenhuma questão no acervo ainda."
-            corpo="As questões vêm de provas oficiais em PDF. Uma questão só é publicada depois de casar com o gabarito definitivo da banca — sem isso, ela nem entra."
+            corpo="As questões vêm de PDF ingerido pelo pipeline: prova oficial da banca ou apostila comentada de terceiro. Nenhuma é publicada sem passar pelo portão — gabarito definitivo casado numa, gabarito conferido por você na outra."
             detalhe={
               <Card className="p-4 grid grid-cols-3 gap-4">
                 <Stat rotulo="Provas ingeridas" valor={String(acervo?.provas ?? 0)} />
@@ -86,12 +86,12 @@ export function Questoes() {
           <Card className="p-4 flex flex-col gap-3">
             <h2 className="text-h3 font-semibold text-text">Como as questões reais entram</h2>
             <ol className="flex flex-col gap-2 text-sm text-muted list-decimal pl-5">
-              <li>Você baixa o PDF da prova e o gabarito definitivo do site da banca.</li>
-              <li>Larga os dois em <code className="text-mono text-caption">data/00_manual/&lt;slug&gt;/</code>, sem renomear.</li>
+              <li>Você baixa o PDF (prova + gabarito definitivo da banca, ou a apostila comentada).</li>
+              <li>Larga em <code className="text-mono text-caption">data/00_manual/&lt;slug&gt;/</code>, sem renomear.</li>
               <li>Roda <code className="text-mono text-caption">python scripts/ingest/run.py &lt;slug&gt;</code>.</li>
               <li>O pipeline extrai, segmenta, casa com o gabarito e classifica por assunto.</li>
-              <li>Classificação duvidosa vai para a sua fila de revisão, não para o ar.</li>
-              <li>Só então a questão aparece aqui, com banca, ano, órgão, cargo e número originais.</li>
+              <li>Em apostila, <code className="text-mono text-caption">8_revisar.py --aprovar</code> é o seu aval — sem ele nada publica.</li>
+              <li>O artefato vai para <code className="text-mono text-caption">acervo/provas/</code> e o app o carrega sozinho no próximo boot.</li>
             </ol>
           </Card>
         </div>
@@ -135,6 +135,15 @@ export function Questoes() {
           </div>
 
           <p className="text-base leading-relaxed text-text">{questao.enunciado}</p>
+
+          <Atribuicao atribuicao={alvo.atribuicao} />
+
+          {questao.desatualizada && (
+            <InlineAlert tom="warn" titulo="Questão desatualizada">
+              {questao.motivo_desatualizacao ??
+                'A norma mudou depois desta prova. Ela continua contando na sua estatística — o gabarito é o da época.'}
+            </InlineAlert>
+          )}
 
           <div className="flex flex-col gap-2">
             {opcoes.map((o) => (
@@ -183,6 +192,12 @@ export function Questoes() {
             <div className="flex flex-col gap-3">
               <InlineAlert tom={veredito.correta ? 'ok' : 'err'} titulo={veredito.correta ? 'Certo.' : `Errou — gabarito ${veredito.gabarito}.`}>
                 {veredito.comentario}
+                {veredito.comentario && alvo.atribuicao.autorDoComentario && (
+                  <AssinaturaComentario
+                    autor={alvo.atribuicao.autorDoComentario}
+                    titulo={questao.titulo_fonte}
+                  />
+                )}
                 {!veredito.correta && veredito.atualizouDominio && (
                   <span className="block mt-2 text-caption">Entrou na sua fila de revisão.</span>
                 )}

@@ -1,3 +1,4 @@
+import { atribuicaoDaQuestao, type Atribuicao } from '@/dados/atribuicao'
 import { agora, db, novoId } from '@/dados/db'
 import { estadoInicial, registrarResposta } from '@/features/dominio/mastery'
 import type { Alternativa, Assunto, Confianca, Prova, Questao, TipoErro } from '@/dados/tipos'
@@ -16,6 +17,8 @@ export interface QuestaoCompleta {
   prova: Prova
   alternativas: Alternativa[]
   assunto: Assunto | null
+  /** Linha de crédito pronta — a tela nunca monta a sua (regra 4). */
+  atribuicao: Atribuicao
 }
 
 async function montar(questao: Questao): Promise<QuestaoCompleta | null> {
@@ -26,7 +29,11 @@ async function montar(questao: Questao): Promise<QuestaoCompleta | null> {
   )
   const vinculo = await db.questao_assunto.where('questao_id').equals(questao.id).first()
   const assunto = vinculo ? ((await db.assunto.get(vinculo.assunto_id)) ?? null) : null
-  return { questao, prova, alternativas, assunto }
+  // Banca/órgão/cargo/ano de uma prova oficial moram em concurso/cargo; a
+  // apostila não tem nem um nem outro e credita autor/título pela questão.
+  const concurso = prova.concurso_id ? ((await db.concurso.get(prova.concurso_id)) ?? null) : null
+  const cargo = prova.cargo_id ? ((await db.cargo.get(prova.cargo_id)) ?? null) : null
+  return { questao, prova, alternativas, assunto, atribuicao: atribuicaoDaQuestao(questao, { concurso, cargo }) }
 }
 
 /** Não respondida primeiro; depois a mais antiga, para reciclar sem repetir em sequência. */

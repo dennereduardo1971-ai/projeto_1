@@ -205,13 +205,14 @@ Derivado da realidade da prova, não do livro:
 |---|---|---|
 | **0** | Esqueleto: app publicado, banco criado, taxonomia de Auditoria e Direito Civil | **Feita.** App de pé, taxonomia carregada (14 + 14 assuntos). Sem login — segue fora do escopo enquanto tudo roda local |
 | **1** | Edital do concurso alvo cadastrado + Mapa + ciclo de estudos com cronômetro | **Feita, com uma ressalva.** Mapa e ciclo funcionam; o **edital não está cadastrado** porque o concurso alvo só tem edital previsto até janeiro de 2027. Até lá o Mapa usa a árvore de assuntos |
-| **2** | Pipeline de ingestão + primeiras provas Cebraspe + tela de resolver questões + caderno de erros | **Pivô em 2026-08-31.** Pipeline oficial Cebraspe segue pronto (7 etapas, 16 testes passando) mas fica em espera — a via destravada agora é PDF de apostila comentada de terceiro (Auditoria e Direito Civil), com scaffolding de ingestão pronto e parser fino pendente da primeira amostra real. Tela de questões e caderno de erros passam a rodar sobre o motor de domínio novo (seção 4.3) |
+| **2** | Pipeline de ingestão + primeiras provas Cebraspe + tela de resolver questões + caderno de erros | **Fechada em 2026-09-03, por outra via.** O pipeline ingeriu 4 artefatos de apostila comentada (100 questões: 63 de amostragem em auditoria, 37 de obrigações) e o app passou a carregá-los no boot, com a fonte creditada em cada questão. Pipeline oficial Cebraspe continua pronto e em espera — falta o PDF, não o código |
 | **3** | Fila de revisão unificada + erro vira prioridade automaticamente + streak e conquistas | **Refeita em 2026-08-31.** Card/Revisão (FSRS separado) foram substituídos por `estado_assunto` — motor de domínio único (habilidade latente + esquecimento) igual ao APP-CPA-YOHANNA, com fila de revisão explicável, gamificação (XP, sequência com congelamentos, conquistas) e estatísticas com prontidão honesta |
-| **4** | Material esquematizado dos assuntos de maior incidência | Não iniciada — depende do acervo, que define a ordem por incidência |
-| **5** | Estatísticas e diagnóstico (prioridade, falso domínio, evolução) | Não iniciada. O dado já está sendo coletado (confiança em cada resposta) |
+| **4** | Material esquematizado dos assuntos de maior incidência | Não iniciada, mas **destravada**: a fila por incidência já pode ser calculada — `auditoria-amostragem` (63 questões) na frente de `civil-obrigacoes` (37) |
+| **5** | Estatísticas e diagnóstico (prioridade, falso domínio, evolução) | Rascunho funcional em tela; falta a passada de design e o gráfico de evolução. O dado já vem sendo coletado (confiança em cada resposta) |
 
-> O gargalo é um só e não é código: **ingerir a primeira prova real**. Fases 2, 4 e 5 destravam
-> juntas quando isso acontecer.
+> O gargalo de agosto — *ingerir a primeira prova real* — caiu em 2026-09-03: existe acervo e ele
+> chega ao usuário. O gargalo agora é **cobertura**: 2 assuntos de 28 têm questão, e nenhuma prova
+> oficial da banca foi ingerida. O que destrava é PDF, não código.
 
 ---
 
